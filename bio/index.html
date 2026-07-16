@@ -1,1 +1,429 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Castro | Enlaces Estratégicos GURU SST</title>
+   
+    <!-- Favicon / Icono de pestaña (Firma de Andrea Castro) -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/academia-guru/imagenes-guru/main/firma-andrea.png">
+   
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- Configuración del Ecosistema GURU en Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        guru: {
+                            navy: '#00355a',     /* Azul Profundo */
+                            electric: '#439ae7', /* Azul Eléctrico */
+                            cyan: '#00f3ff',     /* Cyan Neón */
+                            green: '#39ff14',    /* Verde Neón */
+                            red: '#ff0000',      /* Rojo YouTube */
+                            darkBg: '#090d16',   /* Fondo Cyber */
+                            cardBg: 'rgba(19, 28, 46, 0.45)' /* Cristal Translúcido */
+                        }
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 15px rgba(0, 243, 255, 0.3)',
+                        'neon-green': '0 0 15px rgba(57, 255, 20, 0.3)',
+                        'neon-red': '0 0 15px rgba(255, 0, 0, 0.4)',
+                        'glass': '0 8px 32px 0 rgba(9, 13, 22, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #090d16;
+            overflow-x: hidden;
+        }
+
+
+        /* Lienzo de constelaciones interactivas */
+        #constellation-canvas {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: auto;
+        }
+
+
+        /* Cristal con desenfoque de fondo premium */
+        .glass-panel {
+            background: rgba(19, 28, 46, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+        }
+
+
+        /* Botón Multilink con brillo progresivo */
+        .multilink-btn {
+            background: rgba(19, 28, 46, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .multilink-btn:hover {
+            border-color: #00f3ff;
+            background: rgba(0, 53, 90, 0.4);
+            transform: translateY(-3px) scale(1.01);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+        }
+        .multilink-btn:active {
+            transform: scale(0.98);
+        }
+
+
+        /* Botón de YouTube con hover rojo característico */
+        .youtube-btn-hover:hover {
+            border-color: #ff0000 !important;
+            background: rgba(255, 0, 0, 0.1) !important;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4) !important;
+        }
+
+
+        /* Aro de luz neón giratorio para el avatar de Andrea */
+        @keyframes rotate-neon {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .avatar-glow::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #00f3ff, transparent, #439ae7, transparent);
+            animation: rotate-neon 6s linear infinite;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="font-poppins text-white antialiased min-h-screen flex flex-col items-center justify-between relative py-12 px-4 selection:bg-guru-cyan selection:text-guru-navy">
+
+
+    <!-- CANVAS INTERACTIVO DE RED NEURONAL -->
+    <canvas id="constellation-canvas"></canvas>
+
+
+    <!-- Luces ambientales de fondo -->
+    <div class="fixed top-[-20%] left-[-20%] w-[500px] h-[500px] bg-guru-cyan/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-20%] right-[-20%] w-[500px] h-[500px] bg-guru-electric/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+
+    <!-- CONTENEDOR PRINCIPAL CENTRALIZADO -->
+    <main class="w-full max-w-md relative z-10 flex flex-col items-center">
+
+
+        <!-- 1. PERFIL MAESTRO DE ANDREA CASTRO -->
+        <section class="text-center mb-8 flex flex-col items-center">
+            <!-- Contenedor del Avatar con Aro de Luz -->
+            <div class="relative w-28 h-28 rounded-full mb-4 flex items-center justify-center avatar-glow">
+                <!-- Foto real de Andrea en local Contabo VPS -->
+        <img src="/img/andrea-perfil.png" alt="Andrea Castro"
+                     class="w-[104px] h-[104px] rounded-full object-cover relative z-10 border-2 border-guru-darkBg bg-slate-950">
+            </div>
+           
+            <h1 class="font-montserrat font-extrabold text-2xl text-white uppercase tracking-wider">Andrea Castro</h1>
+            <p class="text-[10px] text-guru-cyan font-bold uppercase tracking-widest mt-1"><i class="fa-solid fa-bolt animate-pulse"></i> Consultoría SST & Automatización IA</p>
+            <p class="text-xs text-slate-400 max-w-xs mt-3 leading-relaxed">
+                Ayudo a empresas y prevencionistas a eliminar el trabajo operativo en SST usando herramientas inteligentes.
+            </p>
+        </section>
+
+
+        <!-- 2. BOTONERA DE ENLACES ESTRATÉGICOS -->
+        <section class="w-full space-y-4 mb-10">
+
+
+            <!-- ENLACE 1: AGENDAR CONSULTORÍA B2B (Corporativo) -->
+            <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20estoy%20interesado%20en%20conocer%20m%C3%A1s%20sobre%20tus%20servicios%20de%20consultor%C3%ADa%20estrat%C3%A9gica%20SST%2FPESV%20para%20mi%20empresa."
+               target="_blank"
+               class="multilink-btn w-full p-4 rounded-2xl flex items-center justify-between relative overflow-hidden group shadow-glass"
+               onclick="playSound('pop')">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan transition-all group-hover:bg-guru-cyan group-hover:text-guru-darkBg group-hover:shadow-[0_0_15px_rgba(0,243,255,0.6)]">
+                        <i class="fa-solid fa-building-circle-check text-base"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-montserrat font-bold text-xs text-white uppercase tracking-wider">Consultoría para Empresas</h4>
+                        <span class="text-[10px] text-slate-400 block mt-0.5">Diseño e Implementación de SG-SST, PESV y Auditorías SG.</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-slate-500 group-hover:text-guru-cyan transition-colors mr-1"></i>
+            </a>
+
+
+            <!-- ENLACE 2: PRESENTACIÓN DE LA ACADEMIA (Ventas) -->
+            <a href="https://andreacastrosst.com/academia"
+               class="multilink-btn w-full p-4 rounded-2xl flex items-center justify-between relative overflow-hidden group shadow-glass"
+               onclick="playSound('pop')">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-guru-electric/15 border border-guru-electric/30 flex items-center justify-center text-guru-electric transition-all group-hover:bg-guru-electric group-hover:text-white">
+                        <i class="fa-solid fa-graduation-cap text-base"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-montserrat font-bold text-xs text-white uppercase tracking-wider">Ecosistema Inteligente GURU SST VIP</h4>
+                        <span class="text-[10px] text-slate-400 block mt-0.5">Cursos, Diplomados, Talleres, Herramientas IA, Acompañamiento.</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-slate-500 group-hover:text-guru-cyan transition-colors mr-1"></i>
+            </a>
+<!-- ENLACE 3: KIT SST GRATUITO (Captura de Leads y Prospección) -->
+      <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20quiero%20descargar%20mi%20Kit%20SST%20Gratuito%20para%20aprender%20a%20cobrar%20y%20organizar%20mi%20implementaci%C3%B3n."
+         target="_blank"
+         class="multilink-btn w-full p-4 rounded-2xl flex items-center justify-between relative overflow-hidden group shadow-glass border-amber-500/20"
+         onclick="playSound('pop')">
+        <div class="flex items-center gap-4">
+          <!-- Icono con efecto Cyber-Glow Dorado/Ámbar de GURU OS -->
+          <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 transition-all group-hover:bg-amber-500 group-hover:text-slate-950 group-hover:shadow-[0_0_15px_rgba(197,160,89,0.7)]">
+            <i class="fa-solid fa-box-open text-base"></i>
+          </div>
+          <div class="text-left">
+            <h4 class="font-montserrat font-bold text-xs text-white uppercase tracking-wider">Kit SST Gratuito</h4>
+            <span class="text-[10px] text-slate-400 block mt-0.5 leading-relaxed pr-2">Calculadora de tarifas, propuestas inteligentes, Mapa de Ruta SG-SST 26 pasos sin enredos, material de Apoyo.</span>
+          </div>
+        </div>
+        <!-- Badge pulsante de regalo de alta visibilidad -->
+        <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-[8px] font-black rounded uppercase tracking-wider mr-1 animate-pulse shrink-0">REGALO</span>
+      </a>
+
+            <!-- ENLACE 4: CHATEAR CON TITÁN BOT SST (IA) -->
+            <a href="https://wa.me/573196031884?text=Hola%20Titan%20Bot%2C%20necesito%20hacerte%20una%20consulta%20sobre%20la%20normatividad%20SST."
+               target="_blank"
+               class="multilink-btn w-full p-4 rounded-2xl flex items-center justify-between relative overflow-hidden group shadow-glass"
+               onclick="playSound('pop')">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 transition-all group-hover:bg-purple-500 group-hover:text-white group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)]">
+                        <i class="fa-solid fa-robot text-base"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-montserrat font-bold text-xs text-white uppercase tracking-wider">Chatear con Titán Bot SST</h4>
+                        <span class="text-[10px] text-slate-400 block mt-0.5">Pregúntale al Consultor Experto SST  con IA en WhatsApp.</span>
+                    </div>
+                </div>
+                <span class="px-2 py-0.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 text-[8px] font-black rounded uppercase tracking-wider mr-1 animate-pulse">INTELIGENTE</span>
+            </a>
+
+            <!-- ENLACE 5: CANAL DE YOUTUBE (NUEVO BOTÓN SOLICITADO) -->
+            <a href="https://www.youtube.com/@AndreaCastroSST"
+               target="_blank"
+               class="multilink-btn youtube-btn-hover w-full p-4 rounded-2xl flex items-center justify-between relative overflow-hidden group shadow-glass"
+               onclick="playSound('pop')">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-red-600/15 border border-red-500/30 flex items-center justify-center text-red-500 transition-all group-hover:bg-[#ff0000] group-hover:text-white group-hover:shadow-[0_0_15px_rgba(255,0,0,0.6)]">
+                        <i class="fa-brands fa-youtube text-base"></i>
+                    </div>
+                    <div class="text-left">
+                        <h4 class="font-montserrat font-bold text-xs text-white uppercase tracking-wider">Visita mi Canal de YouTube</h4>
+                        <span class="text-[10px] text-slate-400 block mt-0.5">De la teoría a la práctica.</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-xs text-slate-500 group-hover:text-[#ff0000] transition-colors mr-1"></i>
+            </a>
+
+
+        </section>
+
+
+        <!-- 3. BRANDING UNIFICADO DE COEXISTENCIA -->
+        <div class="text-center opacity-70 flex flex-col items-center gap-2">
+           <img src="/img/logo-guru.png" alt="Logo GURU SST" class="h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(0,243,255,0.4)]">
+      <p class="text-[9px] text-slate-400 font-bold uppercase tracking-widest">Ecosistema integral inteligente SST</p>
+        </div>
+
+
+    </main>
+
+
+    <!-- FOOTER SIMPLE -->
+    <footer class="relative z-10 text-center text-[9px] text-slate-600 font-semibold tracking-wider uppercase mt-8">
+        &copy; 2026 Andrea Castro | GURU SST. Todos los derechos reservados.
+    </footer>
+
+
+    <!-- LÓGICA DE INTERACTIVIDAD & EFECTOS -->
+    <script>
+        // --- 1. CONFIGURACIÓN DEL CANVAS DE CONSTELACIONES INTERACTIVAS ---
+        const canvas = document.getElementById('constellation-canvas');
+        const ctx = canvas.getContext('2d');
+       
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+       
+        const numNodes = window.innerWidth < 640 ? 20 : 40;
+        const nodes = [];
+        let mouse = { x: null, y: null, maxDistance: 120 };
+
+
+        class Node {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.4;
+                this.vy = (Math.random() - 0.5) * 0.4;
+                this.radius = Math.random() * 2 + 1;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0, 243, 255, 0.4)';
+                ctx.fill();
+            }
+        }
+
+
+        function initNodes() {
+            nodes.length = 0;
+            for (let i = 0; i < numNodes; i++) {
+                nodes.push(new Node());
+            }
+        }
+
+
+        function drawLines() {
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const dx = nodes[i].x - nodes[j].x;
+                    const dy = nodes[i].y - nodes[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+
+                    if (dist < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(nodes[j].x, nodes[j].y);
+                        ctx.strokeStyle = `rgba(0, 243, 255, ${0.15 - (dist / 100) * 0.15})`;
+                        ctx.lineWidth = 0.8;
+                        ctx.stroke();
+                    }
+                }
+
+
+                // Líneas al mouse
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = nodes[i].x - mouse.x;
+                    const dy = nodes[i].y - mouse.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+
+                    if (dist < mouse.maxDistance) {
+                        ctx.beginPath();
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = `rgba(67, 154, 231, ${0.25 - (dist / mouse.maxDistance) * 0.25})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            nodes.forEach(node => {
+                node.update();
+                node.draw();
+            });
+            drawLines();
+            requestAnimationFrame(animate);
+        }
+
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            initNodes();
+        });
+
+
+        // Eventos de interacción táctil/ratón
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+        window.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                mouse.x = e.touches[0].clientX;
+                mouse.y = e.touches[0].clientY;
+            }
+        });
+        window.addEventListener('touchend', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+
+        // Arrancar animación
+        initNodes();
+        animate();
+
+
+        // --- 2. SINTETIZADOR DE SONIDOS (Web Audio API) ---
+        let audioCtx;
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+       
+        function playSound(type) {
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+               
+                if (type === 'pop') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.1);
+                    gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                    gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.1);
+                    osc.start(); osc.stop(audioCtx.currentTime + 0.1);
+                }
+            } catch (e) {}
+        }
+    </script>
+</body>
+</html>
+
+
 
