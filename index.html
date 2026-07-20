@@ -252,7 +252,7 @@
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan font-semibold text-xs mb-6 shadow-[0_0_15px_rgba(0,243,255,0.15)] backdrop-blur-sm">
                 <span class="w-2 h-2 rounded-full bg-guru-cyan animate-ping absolute"></span>
                 <span class="w-2 h-2 rounded-full bg-guru-cyan relative"></span>
-                Auditora Experta y Cumplimiento SST/PESV
+                Auditora Experta y Cumplimiento SST-PESV-SIG
             </div>
            
             <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight tracking-tight uppercase drop-shadow-2xl">
@@ -270,19 +270,24 @@
 
 
 
-            <!-- Chamadas á Acción: Finas e estruturadas -->
+          <!-- Chamadas á Acción: Finas e estruturadas (Solo cambia el botón de Explorar) -->
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                
+                <!-- Botón Explorar: Ahora con Hover Blanco y Efecto de Clic Físico -->
                 <a href="#academia-highlight"
-                   class="btn-sweep px-8 py-4 bg-guru-cyan text-slate-950 font-montserrat font-black text-[11px] sm:text-xs uppercase tracking-widest rounded-xl transition-all shadow-[0_0_20px_rgba(0,243,255,0.3)] hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] text-center flex items-center justify-center gap-2"
+                   class="px-8 py-4 bg-guru-cyan hover:bg-white text-slate-950 font-montserrat font-black text-[11px] sm:text-xs uppercase tracking-widest rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(0,243,255,0.3)] hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2"
                    onclick="playSound('pop')">
                     <i class="fa-solid fa-graduation-cap text-lg"></i> Explorar Ecosistema Inteligente GURU SST VIP
                 </a>
+
+                <!-- Botón Agendar: Se mantiene 100% original, tal como lo tenías en tu código -->
                 <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20vengo%20de%20tu%20p%C3%A1gina%20web%20y%20me%20interesa%20agendar%20el%20Diagn%C3%B3stico%20Gratuito%20de%2015%20minutos%20para%20mi%20empresa.%20%C2%BFQu%C3%A9%20horarios%20tienes%20disponibles%3F"
-   target="_blank"
-   class="px-8 py-4 bg-slate-900/50 backdrop-blur-md hover:bg-slate-800 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-white font-montserrat font-bold text-xs uppercase tracking-widest rounded-xl transition-all text-center flex items-center justify-center gap-2 group"
-   onclick="playSound('pop')">
-    Agendar Diagnóstico para mi Empresa <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1.5 transition-transform"></i>
-</a>
+                   target="_blank"
+                   class="px-8 py-4 bg-slate-900/50 backdrop-blur-md hover:bg-slate-800 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-white font-montserrat font-bold text-xs uppercase tracking-widest rounded-xl transition-all text-center flex items-center justify-center gap-2 group"
+                   onclick="playSound('pop')">
+                    Agendar Diagnóstico para mi Empresa <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1.5 transition-transform"></i>
+                </a>
+
             </div>
         </div>
 
@@ -317,103 +322,175 @@
            
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                
-                <!-- Información da Academia -->
+                <!-- Información del Ecosistema -->
                 <div class="lg:col-span-6 space-y-6">
-                    <span class="px-3.5 py-1.5 bg-guru-green/10 border border-guru-green/30 text-guru-green text-[10px] font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
-                        <i class="fa-solid fa-star"></i> Membresía Premium Abierta
+                    <span class="px-3.5 py-1.5 bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan text-[10px] font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2 shadow-[0_0_15px_rgba(0,243,255,0.15)]">
+                        <i class="fa-solid fa-microchip animate-pulse"></i> Ecosistema Inteligente GURU SST VIP
                     </span>
-                    <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white uppercase leading-tight drop-shadow-lg">
-                        La Plataforma #1 de Aprendizaje Práctico para Prevencionistas
-                    </h2>
-                    <p class="text-sm text-slate-300 leading-relaxed font-light">
-                        Formación inteligente para tu gestión en SST. En la <strong class="text-white font-medium">Academia GURU SST 2.0</strong> accedes a un ecosistema educativo y tecnológico diseñado para que pases de la teoría a la práctica de manera ágil y aplicable.
+                    
+                   <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white uppercase leading-tight drop-shadow-lg">
+    La plataforma práctica en SST: <br class="hidden sm:inline" />
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] via-white to-[#439ae7] text-gradient-animate drop-shadow-[0_0_15px_rgba(0,243,255,0.3)]">
+        Herramientas IA, Plantillas & Cursos
+    </span> <br class="hidden sm:inline" />
+    todo en un solo lugar
+</h2>
+                    
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light text-justify">
+                        Diseñado exclusivamente para <strong class="text-white font-semibold">Responsables SST, Asesores, Especialistas, Técnicos, Tecnólogos y Estudiantes</strong> que quieren optimizar el tiempo de gestión diaria, automatizar su documentación y blindar legalmente sus empresas sin asfixiar la operación diaria.
                     </p>
 
-
-
-
-                    <!-- Beneficios Rápidos da Academia (Clean List) -->
-                    <ul class="space-y-4 text-sm font-medium text-slate-200 mt-6">
-                        <li class="flex items-center gap-3">
-                            <div class="w-6 h-6 rounded-full bg-guru-cyan/10 flex items-center justify-center text-guru-cyan shrink-0 border border-guru-cyan/20">
-                                <i class="fa-solid fa-check text-[10px]"></i>
+                    <!-- Los 3 Pilares del Ecosistema GURU (Lema de Marca) -->
+                    <div class="space-y-4 pt-2">
+                        <!-- Pilar 1: ACCESIBILIDAD -->
+                        <div class="flex items-start gap-3.5 group">
+                            <div class="w-8 h-8 rounded-lg bg-guru-cyan/10 border border-guru-cyan/20 flex items-center justify-center text-guru-cyan shrink-0 transition-all group-hover:bg-guru-cyan group-hover:text-slate-900 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] mt-0.5">
+                                <i class="fa-solid fa-unlock-keyhole text-xs"></i>
                             </div>
-                            <span>Plantillas y material descargable editable.</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-6 h-6 rounded-full bg-guru-cyan/10 flex items-center justify-center text-guru-cyan shrink-0 border border-guru-cyan/20">
-                                <i class="fa-solid fa-check text-[10px]"></i>
+                            <div>
+                                <h4 class="font-montserrat font-extrabold text-[11px] sm:text-xs text-white uppercase tracking-wider">1. ACCESIBILIDAD (Ahorro Inteligente)</h4>
+                                <p class="text-[11px] text-slate-400 font-light mt-0.5 leading-relaxed">Olvídate de pagar cursos y diplomados costosos por separado. Una sola membresía te da acceso a toda nuestra videoteca de talleres, herramientas cursos y actualizaciones.</p>
                             </div>
-                            <span>2 sesiones de acompañamiento en vivo al mes.</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-6 h-6 rounded-full bg-guru-cyan/10 flex items-center justify-center text-guru-cyan shrink-0 border border-guru-cyan/20">
-                                <i class="fa-solid fa-check text-[10px]"></i>
+                        </div>
+
+                        <!-- Pilar 2: UTILIDAD -->
+                        <div class="flex items-start gap-3.5 group">
+                            <div class="w-8 h-8 rounded-lg bg-guru-electric/10 border border-guru-electric/20 flex items-center justify-center text-guru-electric shrink-0 transition-all group-hover:bg-guru-electric group-hover:text-white group-hover:shadow-[0_0_15px_rgba(67,154,231,0.4)] mt-0.5">
+                                <i class="fa-solid fa-screwdriver-wrench text-xs"></i>
                             </div>
-                            <span>Herramientas de IA para potenciar tu gestión.</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-6 h-6 rounded-full bg-guru-cyan/10 flex items-center justify-center text-guru-cyan shrink-0 border border-guru-cyan/20">
-                                <i class="fa-solid fa-check text-[10px]"></i>
+                            <div>
+                                <h4 class="font-montserrat font-extrabold text-[11px] sm:text-xs text-white uppercase tracking-wider">2. UTILIDAD PRÁCTICA (Herramientas, no solo teoría)</h4>
+                                <p class="text-[11px] text-slate-400 font-light mt-0.5 leading-relaxed">Aquí no vienes solo a escuchar conferencias. Accedes a software interactivo con IA: el Motor de Autoevaluación 0312, el Radar PESV, app de Inspecciones y la mayor bóveda de plantillas y matrices editables en Word y Excel de Colombia.</p>
                             </div>
-                            <span>Talleres prácticos de implementación paso a paso.</span>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+
+                        <!-- Pilar 3: ACOMPAÑAMIENTO -->
+                        <div class="flex items-start gap-3.5 group">
+                            <div class="w-8 h-8 rounded-lg bg-guru-green/10 border border-guru-green/20 flex items-center justify-center text-[#39ff14] shrink-0 transition-all group-hover:bg-[#39ff14] group-hover:text-slate-900 group-hover:shadow-[0_0_15px_rgba(57,255,20,0.4)] mt-0.5">
+                                <i class="fa-solid fa-users-viewfinder text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-montserrat font-extrabold text-[11px] sm:text-xs text-white uppercase tracking-wider">3. ACOMPAÑAMIENTO (Soporte en Vivo)</h4>
+                                <p class="text-[11px] text-slate-400 font-light mt-0.5 leading-relaxed">Participa en nuestras sesiones en vivo de preguntas, respuestas y análisis estratégico, un espacio para resolver inquietudes técnicas y asegurar que pases con éxito de la teoría a la práctica.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doble Llamado a la Acción Estratégico (SaaS CTA) -->
+                    <div class="flex flex-col sm:flex-row gap-3 pt-4 w-full">
+                       <!-- Botón 1: Explorar Ecosistema (Redirección a Ventas) - Con Hover Blanco Brillante & Clic Físico -->
+<a href="https://andreacastrosst.com/ecosistema/" 
+   class="flex-1 px-5 py-3.5 bg-guru-cyan hover:bg-white text-slate-950 font-montserrat font-black text-[10px] uppercase tracking-widest rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(0,243,255,0.3)] hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-1.5"
+   onclick="playSound('pop')">
+    <i class="fa-solid fa-rocket text-xs"></i> Ver Planes de Acceso
+</a>
+                        
+                        <!-- Botón 2: Probar Titán Bot Gratis (WhatsApp Lead Magnet - NÚMERO CORREGIDO) -->
+                            <a href="https://api.whatsapp.com/send?phone=573227519132&text=Hola%20Titan%20Bot%2C%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20tengo%20una%20consulta%20sobre%20la%20normatividad%20del%20SG-SST" 
+                               target="_blank"
+                               class="flex-1 px-5 py-3.5 bg-purple-500/10 hover:bg-purple-500 border border-purple-500/40 hover:border-purple-500 text-purple-400 hover:text-white font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all text-center flex items-center justify-center gap-1.5 group"
+                               onclick="playSound('pop')">
+                                <i class="fa-solid fa-robot text-xs animate-pulse"></i> Probar TITÁN Bot Gratis
+                            </a>
+                        </div>
+                        
+                       <!-- Micro-leyenda de conversión de contactos (Look SaaS) -->
+<p class="text-[11px] text-slate-400 text-center sm:text-left font-mono tracking-wide">
+    <i class="fa-solid fa-circle-info text-purple-400 animate-pulse mr-1"></i> 
+    Tip: Guarda el número del bot como <span class="text-white font-bold">"TITÁN Bot SST"</span> en tus contactos para habilitar sus respuestas en WhatsApp.
+</p>
+                    </div>
 
 
 
 
-                <!-- Os Dous Grandes Plans de Subscrición (Pricing Cards) -->
-<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-
-
-    <!-- Plan Élite (Minimalista) -->
-    <div class="bg-slate-900/50 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-slate-700/50 hover:border-guru-cyan/50 transition-all duration-300 flex flex-col justify-between group">
-        <div>
-            <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">Plan Élite</span>
-            <h3 class="text-xl font-montserrat font-black text-white mt-1">Semestral</h3>
-            <div class="my-5">
-                <span class="flex items-baseline gap-1 text-4xl font-black text-white tracking-tighter">
-                    $700.000 <span class="text-xs text-slate-400 font-medium tracking-normal">COP</span>
-                </span>
+               <!-- COLUMNA DERECHA: SHOWROOM DEL ECOSISTEMA TECNOLÓGICO (MOCKUP SAAS CYBERPUNK) -->
+<div class="lg:col-span-6 w-full space-y-6">
+    <!-- Contenedor Consola de Software GURU SST -->
+    <div class="glass-panel bg-slate-950/80 rounded-3xl border border-[#00f3ff]/20 p-5 sm:p-6 shadow-[0_0_30px_rgba(0,243,255,0.1)] relative overflow-hidden group">
+        <!-- Efecto decorativo superior de consola -->
+        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+            <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#39ff14]/80"></div>
             </div>
-            <p class="text-xs text-slate-400 leading-relaxed font-light">Acceso total a toda la Academia Guru SST 2.0 y todos sus beneficios por 6 meses.</p>
+            <span class="text-[9px] font-mono text-slate-500 uppercase tracking-widest flex items-center gap-1.5">
+                <i class="fa-solid fa-server animate-pulse text-[#00f3ff]"></i> GURU_SST_VIP
+            </span>
         </div>
-        <div class="mt-8 w-full flex flex-col gap-3">
-            <a href="https://andreacastrosst.com/bio" class="w-full py-3.5 bg-slate-800 hover:bg-guru-cyan text-white hover:text-slate-950 font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-colors flex justify-center items-center gap-2">
-                Adquirir Membresía
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20tengo%20un%20cup%C3%B3n%20de%20descuento%20para%20la%20Membres%C3%ADa%20Semestral." target="_blank" class="w-full text-center text-guru-cyan hover:text-guru-electric font-poppins font-bold text-[11px] underline transition-colors flex justify-center items-center gap-1.5 cursor-pointer">
-                🎟️¿Tienes un Cupón de Descuento? Valídalo aquí
-            </a>
+
+        <!-- Grid de Herramientas del Ecosistema -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Herramienta 1: Motor 0312 -->
+            <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 hover:border-[#00f3ff]/40 transition-all duration-300 group/card">
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-7 h-7 rounded-lg bg-[#00f3ff]/10 flex items-center justify-center text-[#00f3ff] text-xs transition-all group-hover/card:bg-[#00f3ff] group-hover/card:text-slate-950">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h4 class="font-montserrat font-extrabold text-[10px] text-white uppercase tracking-wider">Motor 0312 IA</h4>
+                </div>
+                <p class="text-[10px] text-slate-400 font-light leading-relaxed">Autoevaluación guiada interactiva. Genera plan de trabajo anual, plan de mejoramiento e informe Gerencial automatizado.</p>
+            </div>
+
+            <!-- Herramienta 2: Radar PESV -->
+            <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 hover:border-[#00f3ff]/40 transition-all duration-300 group/card">
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-7 h-7 rounded-lg bg-[#00f3ff]/10 flex items-center justify-center text-[#00f3ff] text-xs transition-all group-hover/card:bg-[#00f3ff] group-hover/card:text-slate-950">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h4 class="font-montserrat font-extrabold text-[10px] text-white uppercase tracking-wider">Radar PESV 40595</h4>
+                </div>
+                <p class="text-[10px] text-slate-400 font-light leading-relaxed">Construye tu matriz de seguridad vial. Ingresa los datos de tu empresa, asocia riesgos específicos por cargo y descarga tu base de datos formalizada en formato Excel/CSV (Resolución 40595).</p>
+            </div>
+
+            <!-- Herramienta 3: Titán Bot -->
+            <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 hover:border-[#00f3ff]/40 transition-all duration-300 group/card">
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-7 h-7 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-xs transition-all group-hover/card:bg-purple-500 group-hover/card:text-white">
+                        <i class="fa-solid fa-comment-sms"></i>
+                    </div>
+                    <h4 class="font-montserrat font-extrabold text-[10px] text-white uppercase tracking-wider">TITÁN Bot SST</h4>
+                </div>
+                <p class="text-[10px] text-slate-400 font-light leading-relaxed">Tu asesor SST experto en tu bolsillo. Escríbele a TITÁN desde tu celular para resolver tus dudas y deja que te guíe paso a paso para estructurar tu Matriz de Requisitos Legales.</p>
+            </div>
+
+            <!-- Herramienta 4: Cursos, Diplomados & Recursos -->
+                    <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 hover:border-[#00f3ff]/40 transition-all duration-300 group/card">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-7 h-7 rounded-lg bg-[#00f3ff]/10 flex items-center justify-center text-[#00f3ff] text-xs transition-all group-hover/card:bg-[#00f3ff] group-hover/card:text-slate-950">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="font-montserrat font-extrabold text-[10px] text-white uppercase tracking-wider">Cursos, Diplomados & Plantillas</h4>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-light leading-relaxed">
+                            Accede a diplomados y cursos en <strong class="text-white font-medium">SG-SST, PESV e ISO 45001</strong>, y descarga al instante cientos de plantillas, formatos y matrices editables en Word y Excel.
+                        </p>
+                    </div>
+
+                </div> <!-- 👈 ¡ESTE ES EL DIV QUE FALTABA! Cierra el contenedor de las herramientas (space-y-4) -->
+
+                <!-- Footer interno de la consola (Feedback Visual SaaS) -->
+                <div class="mt-4 pt-4 border-t border-slate-800/80 flex items-center justify-between text-[9px] text-slate-500 font-bold tracking-widest uppercase">
+                    <span>Formato de Descargas: .docx / .xlsx</span>
+                    <span class="text-[#00f3ff] animate-pulse">Ecosistema IA Activo</span>
+                </div>
+            </div>
+
+    <!-- Bloque Destacado: Matriz Legal Automatizada con IA -->
+    <div class="bg-gradient-to-r from-purple-950/20 to-[#090d16] p-4 rounded-2xl border border-purple-500/20 flex items-center gap-4 hover:border-purple-400/40 transition-all duration-300 group">
+        <!-- Ícono de Balanza de la Ley que se Ilumina en Morado al pasar el Mouse -->
+        <div class="w-10 h-10 rounded-full bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 shrink-0 shadow-[0_0_15px_rgba(168,85,247,0.2)] group-hover:bg-purple-500 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] transition-all duration-300">
+            <i class="fa-solid fa-scale-balanced text-base animate-pulse"></i>
+        </div>
+        <div>
+            <h4 class="text-[11px] font-montserrat font-black text-white uppercase tracking-wider">¿Matriz Legal 100% Automatizada?</h4>
+            <p class="text-[10px] text-slate-400 leading-relaxed font-light mt-0.5">
+                ¡Sí, Titán! Nuestra inteligencia artificial analiza la actividad económica de tu empresa, asocia de inmediato tus tareas operativas de riesgo e inyecta solo las leyes vigentes aplicables en Colombia. Al terminar, recibes tu Matriz de Requisitos Legales personalizada y actualizada.
+            </p>
         </div>
     </div>
-
-
-    <!-- Plan Master (Destacado Neón) -->
-    <div class="bg-gradient-to-b from-[#0a1929] to-slate-900 p-6 sm:p-8 rounded-3xl border border-guru-green/50 shadow-[0_0_20px_rgba(57,255,20,0.1)] hover:shadow-[0_0_30px_rgba(57,255,20,0.2)] transition-all duration-300 flex flex-col justify-between relative transform sm:-translate-y-2">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-guru-green text-slate-950 font-black text-[9px] uppercase tracking-widest py-1 px-4 rounded-b-lg shadow-sm">
-            GURU Recomendado
-        </div>
-        <div class="mt-2">
-            <span class="text-[10px] font-bold text-guru-green tracking-widest uppercase drop-shadow-md">Plan Master</span>
-            <h3 class="text-xl font-montserrat font-black text-white mt-1">Anual</h3>
-            <div class="my-5">
-                <span class="flex items-baseline gap-1 text-4xl font-black text-white tracking-tighter">
-                    $1.200.000 <span class="text-xs text-slate-400 font-medium tracking-normal">COP</span>
-                </span>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed font-light">1Acceso total a toda la Academia Guru SST 2.0 y todos sus beneficios por 12 meses.</p>
-        </div>
-        <div class="mt-8 w-full flex flex-col gap-3">
-            <a href="https://andreacastrosst.com/bio" class="w-full py-3.5 bg-guru-green hover:bg-emerald-400 text-slate-900 font-montserrat font-black text-[10px] uppercase tracking-widest rounded-xl transition-all shadow-[0_0_15px_rgba(57,255,20,0.3)] flex justify-center items-center gap-2 group">
-                Adquirir Membresía <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20tengo%20un%20cup%C3%B3n%20de%20descuento%20para%20la%20Membres%C3%ADa%20Anual." target="_blank" class="w-full text-center text-yellow-400 hover:text-yellow-300 font-poppins font-bold text-[11px] underline transition-colors flex justify-center items-center gap-1.5 cursor-pointer">
-                🎟️¿Tienes un Cupón de Descuento? Valídalo aquí
-            </a>
-        </div>
+</div>
     </div>
 
 
@@ -447,7 +524,7 @@
                         A través de nuestra Metodología FAR, convertimos tu SG-SST en una verdadera cultura organizacional, asegurando el cumplimiento de los estándares mínimos y los requisitos legales aplicables a tu actividad económica.
                     </p>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20cotizar%20el%20Dise%C3%B1o%20e%20Implementaci%C3%B3n%20del%20SG-SST%20para%20mi%20empresa." target="_blank" class="mt-auto py-3.5 text-center bg-slate-950/50 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-guru-cyan font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 group-hover:bg-slate-900">
+                <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20quiero%20cotizar%20el%20Dise%C3%B1o%20e%20Implementaci%C3%B3n%20del%20SG-SST%20para%20mi%20empresa." target="_blank" class="mt-auto py-3.5 text-center bg-slate-950/50 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-guru-cyan font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 group-hover:bg-slate-900">
                     Cotizar Servicio <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                 </a>
             </div>
@@ -463,10 +540,10 @@
                     </div>
                     <h3 class="font-montserrat font-black text-lg text-white uppercase tracking-wide leading-snug">Plan Estratégico de Seg. Vial (PESV)</h3>
                     <p class="text-sm text-slate-300 leading-relaxed font-light">
-                        Fortalecemos tu seguridad vial y garantizamos el cumplimiento exacto de la Resolución 40595. Sistematizamos la evaluación de tus riesgos con el Radar PESV Inteligente para que siempre estés listo para auditorías.
+                        Fortalecemos tu seguridad vial y garantizamos el cumplimiento de la Resolución 40595. Sistematizamos la evaluación de tus riesgos con el Radar PESV Inteligente para que siempre estés listo para auditorías.
                     </p>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20necesito%20estructurar%20el%20PESV%20de%20mi%20flota%20vehicular." target="_blank" class="mt-auto py-3.5 text-center bg-slate-950/50 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-guru-cyan font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 group-hover:bg-slate-900">
+                <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20necesito%20estructurar%20el%20PESV%20de%20mi%20empresa." target="_blank" class="mt-auto py-3.5 text-center bg-slate-950/50 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-guru-cyan font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 group-hover:bg-slate-900">
                     Cotizar Servicio <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                 </a>
             </div>
@@ -485,7 +562,7 @@
                         Evaluamos tus Sistemas Integrados combinando nuestra experiencia técnica con metodologías ágiles de verificación. Detectamos vacíos legales y diseñamos planes de acción para un cumplimiento normativo impecable.
                     </p>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20estoy%20interesado%20en%20auditor%C3%ADas%20internas%20o%20sistemas%20integrados%20ISO." target="_blank" class="mt-auto py-3.5 text-center bg-slate-950/50 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-guru-cyan font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 group-hover:bg-slate-900">
+                <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20estoy%20interesado%20en%20auditor%C3%ADas%20internas%20o%20sistemas%20integrados%20ISO." target="_blank" class="mt-auto py-3.5 text-center bg-slate-950/50 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-guru-cyan font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 group-hover:bg-slate-900">
                     Cotizar Servicio <i class="fa-solid fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
                 </a>
             </div>
@@ -514,31 +591,37 @@
 
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-            <!-- Plan 1: Mentoría Gratuíta -->
-            <div class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 hover:border-white/20 transition-colors">
+             <!-- Plan 1: Diagnóstico Inicial (15 Minutos Gratis) -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 hover:border-white/20 transition-all duration-300">
                 <div>
-                    <span class="text-slate-400 font-bold text-[10px] uppercase tracking-widest block mb-2">Diagnóstico Inicial</span>
-                    <h3 class="font-montserrat font-black text-xl text-white uppercase tracking-wider">15 Minutos</h3>
-                    <div class="my-5">
-                        <span class="text-3xl font-black text-white opacity-90">Gratis</span>
+                    <span class="text-slate-400 font-mono text-[10px] uppercase tracking-widest block mb-2">Mentoría Inicial</span>
+                    <h3 class="font-montserrat font-extrabold text-lg sm:text-xl text-white uppercase tracking-wider">15 Minutos</h3>
+                    
+                    <div class="my-4">
+                        <span class="text-2xl sm:text-3xl font-black text-[#00f3ff] drop-shadow-[0_0_10px_rgba(0,243,255,0.3)]">Gratis</span>
                     </div>
-                    <ul class="space-y-4 text-sm text-slate-300 font-light">
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-guru-cyan mt-1 text-xs"></i>
-                            <span>Sesión gratuita en vivo para aclarar tus dudas operativas.</span>
+
+                    <ul class="space-y-3.5 text-xs text-slate-300 font-light mb-6">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-check text-guru-cyan mt-0.5 text-xs"></i>
+                            <span>Sesión individual en vivo para analizar tu mayor reto técnico o bloqueo actual como profesional de SST.</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-guru-cyan mt-1 text-xs"></i>
-                            <span>Análisis exprés de necesidades y orientación.</span>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-check text-guru-cyan mt-0.5 text-xs"></i>
+                            <span>Claridad inmediata sobre el camino normativo o metodológico exacto que debes seguir para solucionarlo.</span>
                         </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fa-solid fa-check text-guru-cyan mt-1 text-xs"></i>
-                            <span>Aclaración sobre nuestro Ecosistema Educativo.</span>
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-check text-guru-cyan mt-0.5 text-xs"></i>
+                            <span>Orientación práctica sobre cómo las herramientas GURU pueden acelerar tu gestión y ahorrarte reprocesos.</span>
                         </li>
                     </ul>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20agendar%20mi%20mentor%C3%ADa%20gratuita%20de%2015%20minutos." target="_blank" class="mt-8 py-3.5 text-center bg-slate-800/50 hover:bg-slate-700 text-white font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-colors">
-                    Reservar Diagnóstico
+
+                <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20soy%20prevencionista%20y%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20diagn%C3%B3stico%20profesional%20de%2015%20minutos." 
+                   target="_blank"
+                   class="w-full py-3.5 text-center bg-slate-800/50 hover:bg-slate-700 text-white hover:text-guru-cyan border border-slate-700 hover:border-guru-cyan/50 font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-1.5"
+                   onclick="playSound('pop')">
+                    Reservar Sesión <i class="fa-solid fa-chevron-right text-[8px] ml-1"></i>
                 </a>
             </div>
 
@@ -553,27 +636,34 @@
                 <div class="mt-2">
                     <span class="text-guru-cyan font-bold text-[10px] uppercase tracking-widest block mb-2">Acompañamiento Táctico</span>
                     <h3 class="font-montserrat font-black text-xl text-white uppercase tracking-wider">4 Horas GURU</h3>
+                    
                     <div class="my-5">
                         <span class="text-xs text-slate-500 line-through font-medium block mb-1">$360.000 COP</span>
                         <span class="block text-4xl font-black text-white tracking-tighter">$300k <span class="text-sm text-guru-cyan font-bold tracking-normal">COP</span></span>
                     </div>
                     <p class="text-[10px] text-slate-400 italic mb-5">La hora individual equivale a $90.000 COP</p>
-                    <ul class="space-y-4 text-sm text-slate-200 font-light">
+                    
+                    <ul class="space-y-4 text-xs text-slate-200 font-light">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-guru-cyan mt-1 text-xs"></i>
-                            <span>4 horas de acompañamiento personalizado de alto impacto.</span>
+                            <span>4 horas de acompañamiento a tu medida: programa las sesiones según tu agenda (en bloques de 2 horas o la jornada completa).</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-guru-cyan mt-1 text-xs"></i>
-                            <span>Material de apoyo táctico y formatos adaptables.</span>
+                            <span>Resuelve cualquier caso real de SST, PESV o SIG: trae tus dudas técnicas, de implementación o de auditorías y pasa de la teoría a la práctica.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-guru-cyan mt-1 text-xs"></i>
-                            <span>Pasa de la teoría a la práctica en un tema específico SST.</span>
+                            <span>Formatos y herramientas editables directas: llévate de inmediato las matrices, documentos y recursos en Word y Excel que necesites para tu caso.</span>
                         </li>
                     </ul>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20agendar%20la%20mentor%C3%ADa%20especializada%20de%204%20horas." target="_blank" class="mt-8 py-3.5 text-center bg-guru-cyan hover:bg-guru-electric text-slate-950 font-montserrat font-black text-[10px] uppercase tracking-widest rounded-xl transition-all shadow-[0_0_15px_rgba(0,243,255,0.3)] group flex justify-center items-center gap-2">
+                
+                <!-- Enlace al WhatsApp Directo de Andrea (573157800532 - Mensaje Corregido Universal) -->
+                <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20quiero%20agendar%20mi%20mentor%C3%ADa%20personalizada%20de%204%20horas%20para%20coordinar%20los%20temas%20a%20trabajar%20contigo." 
+                   target="_blank" 
+                   class="mt-8 py-3.5 text-center bg-guru-cyan hover:bg-guru-electric text-slate-950 font-montserrat font-black text-[10px] uppercase tracking-widest rounded-xl transition-all shadow-[0_0_15px_rgba(0,243,255,0.3)] group flex justify-center items-center gap-2"
+                   onclick="playSound('pop')">
                     Reservar Mentoría <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
                 </a>
             </div>
@@ -581,32 +671,38 @@
 
 
 
-            <!-- Plan 3: Mentoría Intensiva -->
-            <div class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 hover:border-guru-green/30 transition-colors group">
+            <!-- Plan 3: Mentoría Intensiva (8 Horas Élite) -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 hover:border-guru-green/30 transition-all duration-300 group">
                 <div>
-                    <span class="text-slate-400 font-bold text-[10px] uppercase tracking-widest block mb-2 group-hover:text-guru-green transition-colors">Inmersión Absoluta</span>
+                    <span class="text-slate-400 font-bold text-[10px] uppercase tracking-widest block mb-2 group-hover:text-guru-green transition-colors">Acompañamiento Avanzado</span>
                     <h3 class="font-montserrat font-black text-xl text-white uppercase tracking-wider">8 Horas Élite</h3>
+                    
                     <div class="my-5">
                         <span class="text-xs text-slate-500 line-through font-medium block mb-1">$720.000 COP</span>
                         <span class="block text-3xl font-black text-white tracking-tighter">$550k <span class="text-sm text-guru-green font-bold tracking-normal">COP</span></span>
                     </div>
-                    <p class="text-[10px] text-slate-400 italic mb-5">Ahorro masivo en consultoría avanzada</p>
-                    <ul class="space-y-4 text-sm text-slate-300 font-light">
+                    <p class="text-[10px] text-slate-400 italic mb-5">La tarifa por hora más económica para proyectos extensos</p>
+                    
+                    <ul class="space-y-4 text-xs text-slate-300 font-light mb-6">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-guru-green mt-1 text-xs"></i>
-                            <span>8 horas completas de inmersión y direccionamiento uno a uno.</span>
+                            <span>8 horas de consultoría flexible: distribuye el tiempo como mejor te funcione (en bloques de 2 o 4 horas) para revisar tus temas progresivamente.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-guru-green mt-1 text-xs"></i>
-                            <span>Seguimiento adecuado para garantizar una transición efectiva al estado deseado.</span>
+                            <span>Soporte en SST, PESV o SIG: el espacio ideal para profundizar en temás específicos SST, PESV y Sistemas de Gestión en General.</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-check text-guru-green mt-1 text-xs"></i>
-                            <span>Ideal para profundizar temas altamente técnicos y complejos.</span>
+                            <span>Recursos y formatos editables: llévate de inmediato las matrices, actas y documentos en Word y Excel que necesites.</span>
                         </li>
                     </ul>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20agendar%20la%20mentor%C3%ADa%20intensiva%20de%208%20horas." target="_blank" class="mt-8 py-3.5 text-center bg-slate-800/50 border border-transparent hover:border-guru-green text-white hover:text-guru-green font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all">
+                
+                <!-- Enlace al WhatsApp Directo de Andrea (573157800532 - Mensaje Corto y Abierto) -->
+                <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20quiero%20agendar%20mi%20mentor%C3%ADa%20personalizada%20de%208%20horas%20GURU%20para%20coordinar%20los%20temas%20a%20trabajar%20contigo." 
+                   target="_blank" 
+                   class="mt-8 py-3.5 text-center bg-slate-800/50 border border-transparent hover:border-guru-green text-white hover:text-guru-green font-montserrat font-bold text-[10px] uppercase tracking-widest rounded-xl transition-all">
                     Reservar Intensiva
                 </a>
             </div>
@@ -695,22 +791,24 @@
 
 
 
-    <!-- 5. SECCIÓN CTA: O GRAN CHAMADO Á ACCIÓN -->
+    <!-- 5. SECCIÓN CTA: EL GRAN LLAMADO A LA ACCIÓN -->
     <section class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center w-full">
         <div class="glass-panel bg-gradient-to-b from-guru-navy/30 to-slate-900 p-8 sm:p-16 rounded-[2.5rem] border border-guru-cyan/30 shadow-[0_0_40px_rgba(0,243,255,0.15)] relative overflow-hidden">
             <div class="absolute -right-24 -top-24 w-64 h-64 bg-guru-cyan/10 rounded-full blur-[80px] pointer-events-none"></div>
             <div class="absolute -left-24 -bottom-24 w-64 h-64 bg-guru-electric/10 rounded-full blur-[80px] pointer-events-none"></div>
            
+            <!-- Título Premium con Degradado "Cyber-Glow" -->
             <h2 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white mb-6 uppercase leading-tight tracking-tight relative z-10">
-                ¿Listo para llevar el cumplimiento de tu empresa al siguiente nivel?
+                ¿Listo para llevar el cumplimiento de tu empresa <span class="text-transparent bg-clip-text bg-gradient-to-r from-guru-cyan via-white to-guru-electric">al siguiente nivel?</span>
             </h2>
             <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light relative z-10">
                 Agenda hoy mismo una sesión de evaluación gratuita con Andrea Castro. Analizaremos el estado actual de tu gestión y descubriremos cómo optimizar tus sistemas sin asfixiar tu operación.
             </p>
            
-            <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20evaluaci%C3%B3n%20gratuita%20para%20llevar%20mi%20cumplimiento%20al%20siguiente%20nivel."
+             <!-- Botón con Enlace directo al WhatsApp de Andrea (3157800532) - Efecto Hover Blanco & Clic Físico -->
+            <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20quiero%20agendar%20mi%20sesi%C3%B3n%20de%20evaluaci%C3%B3n%20gratuita%20para%20mi%20empresa."
                target="_blank"
-               class="px-8 py-5 bg-gradient-to-r from-guru-cyan to-guru-electric text-slate-950 font-montserrat font-black text-xs sm:text-sm uppercase tracking-widest rounded-2xl transition-all shadow-[0_0_20px_rgba(0,243,255,0.3)] hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] hover:scale-105 inline-flex items-center gap-3 relative z-10"
+               class="px-8 py-5 bg-gradient-to-r from-guru-cyan to-guru-electric hover:from-white hover:to-white text-slate-950 font-montserrat font-black text-xs sm:text-sm uppercase tracking-widest rounded-2xl transition-all duration-300 shadow-[0_0_20px_rgba(0,243,255,0.3)] hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 inline-flex items-center gap-3 relative z-10"
                onclick="playSound('pop')">
                 <i class="fa-brands fa-whatsapp text-xl"></i> Agendar Diagnóstico por WhatsApp
             </a>
@@ -725,8 +823,8 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p>&copy; 2026 Andrea Castro | GURU SST. Todos los derechos reservados.</p>
             <div class="flex items-center gap-6">
-                <a href="https://ssecamconsultores.com/politica-de-privacidad" target="_blank" class="hover:text-guru-cyan transition-colors">Privacidad</a>
-                <a href="https://ssecamconsultores.com/terminos-y-condiciones" target="_blank" class="hover:text-guru-cyan transition-colors">Condiciones</a>
+                <a href="https://andreacastrosst.com/politica-de-privacidad" target="_blank" class="hover:text-guru-cyan transition-colors">Privacidad</a>
+                <a href="https://andreacastrosst.com/terminos-y-condiciones" target="_blank" class="hover:text-guru-cyan transition-colors">Condiciones</a>
             </div>
         </div>
     </footer>
