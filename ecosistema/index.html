@@ -287,104 +287,383 @@
 
 
 
-    <!-- 3. PAIN POINT & SOLUCIÓN (SECCIÓN AGITADORA) -->
-    <section class="relative z-10 w-full bg-gradient-to-b from-transparent to-slate-900/50 border-y border-slate-800/50 py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <i class="fa-solid fa-triangle-exclamation text-4xl text-guru-red mb-6 opacity-80 animate-pulse"></i>
-            <h2 class="font-montserrat font-black text-2xl sm:text-3xl lg:text-4xl text-white mb-6 leading-tight uppercase">
-                ¿Te sientes abrumado por exceso de información <span class="text-guru-red">poco útil y teórica</span>?
+    <!-- 3. INTERACTIVE SHOWROOM DE HERRAMIENTAS (Look SaaS CloneVoice con Consola de Video y Simulador Jugable) -->
+    <section id="showroom" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full border-t border-white/5 scroll-mt-24">
+        
+        <!-- CEREBRO DE ANIMACIÓN CSS (Glows dinámicos y texto láser) -->
+        <style>
+            /* Animación del texto con haz de luz en movimiento continuo */
+            .text-laser-showroom {
+                background: linear-gradient(to right, #00f3ff, #ffffff, #439ae7, #00f3ff);
+                background-size: 200% auto;
+                color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                animation: shineLaserShowroom 4s linear infinite;
+            }
+            @keyframes shineLaserShowroom {
+                to { background-position: 200% center; }
+            }
+            /* Scrollbar personalizado para el simulador de celular */
+            .chat-scroll::-webkit-scrollbar {
+                width: 4px;
+            }
+            .chat-scroll::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            .chat-scroll::-webkit-scrollbar-thumb {
+                background: rgba(0, 243, 255, 0.2);
+                border-radius: 10px;
+            }
+        </style>
+
+        <!-- Luces de fondo masivas (Spotlights) estilo CloneVoice -->
+        <div class="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-guru-cyan/5 rounded-full blur-[130px] pointer-events-none z-0"></div>
+        <div class="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] bg-guru-electric/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+        <!-- Encabezado de la Sección -->
+        <div class="text-center max-w-3xl mx-auto mb-16 relative z-10">
+            <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-guru-cyan/10 text-guru-cyan font-montserrat font-bold text-[10px] sm:text-xs tracking-widest uppercase border border-guru-cyan/20">
+                <span class="w-2 h-2 rounded-full bg-[#39ff14] animate-pulse"></span> Soluciones Inteligentes en SST
+            </span>
+            <h2 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white mt-4 uppercase leading-tight tracking-tight">
+                Herramientas IA y Cursos Prácticos <br>
+                <span class="text-laser-showroom drop-shadow-[0_0_20px_rgba(0,243,255,0.3)]">funcionando ante tus ojos</span>
             </h2>
-            <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light mb-8">
-                ¡No te preocupes más! Olvídate del ruido innecesario y enfócate en lo que realmente importa. Nos enfocamos en brindarte no solo la teoría, sino las <strong class="text-white">herramientas tecnológicas y prácticas</strong> para aplicarla de manera efectiva en el mundo laboral.
+            <p class="font-poppins text-sm sm:text-base text-slate-400 mt-4 leading-relaxed font-light">
+                Pasa de la teoría a la acción. Explora nuestras soluciones interactivas y descubre cómo simplificar tu gestión diaria sin complicaciones.
             </p>
-            <div class="w-24 h-1 bg-gradient-to-r from-guru-cyan to-guru-electric mx-auto rounded-full shadow-neon-cyan"></div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-    <!-- 4. SECCIÓN: POR QUÉ ELEGIRNOS (LOS 3 PILARES GURU) -->
-    <section id="diferenciales" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
-        <div class="text-center mb-16">
-            <span class="text-guru-cyan font-bold text-xs uppercase tracking-widest block mb-2"><i class="fa-solid fa-scale-balanced"></i> Por qué creamos esta Academia</span>
-            <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white uppercase">Nuestros 3 Pilares Fundamentales</h2>
         </div>
 
+        <!-- TABS SELECTORAS (Botonera Táctil y Cómoda para Celulares y PC) -->
+        <div class="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-3.5 mb-12 relative z-10">
+            <button onclick="switchShowroom('chat-bot')" id="tab-bot" class="px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-guru-cyan text-slate-950 shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-robot text-sm"></i> TITÁN SST Bot
+            </button>
+            <button onclick="switchShowroom('motor-0312')" id="tab-motor" class="px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-guru-cyan transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-calculator text-sm"></i> Motor 0312 IA
+            </button>
+            <button onclick="switchShowroom('radar-pesv')" id="tab-radar" class="px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-guru-cyan transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-satellite-dish text-sm"></i> Radar PESV 40595
+            </button>
+            <button onclick="switchShowroom('cursos-vip')" id="tab-cursos" class="px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-guru-cyan transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-sm"></i> Cursos & Talleres
+            </button>
+        </div>
 
+        <!-- CONTENEDOR CENTRAL DE CRISTAL (Doble Columna: Texto Persuasivo + Simuladores/Videos) -->
+        <div class="glass-panel rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border border-white/10 shadow-2xl relative overflow-hidden bg-slate-950/40 backdrop-blur-xl">
+            
+            <!-- Glow decorativo interno -->
+            <div class="absolute -right-32 -top-32 w-96 h-96 bg-guru-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-
-
-
-
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-           
-            <!-- Pilar 1: Accesibilidad -->
-            <div class="premium-card glass-panel rounded-3xl p-8 flex flex-col justify-between border-t border-guru-cyan/30">
-                <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-guru-cyan/10 border border-guru-cyan/20 flex items-center justify-center text-guru-cyan text-2xl">
-                        <i class="fa-solid fa-unlock-keyhole"></i>
-                    </div>
-                    <h3 class="font-montserrat font-extrabold text-xl text-white uppercase tracking-wider">1. Accesibilidad</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed font-light text-justify">
-                        Ya no tendrás que pagar por cursos costosos por separado. Como miembro activo de la Academia, tendrás acceso a todo nuestro ecosistema educativo sin restricciones. Queremos que la educación de alto nivel en SST sea accesible para todos.
+            <!-- ================= TAB A: TITÁN SST BOT ================= -->
+            <div id="show-chat-bot" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Columna Izquierda: Mensajes y Botones de Interacción -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
+                        <i class="fa-solid fa-robot animate-pulse"></i> Asistente 24/7 en WhatsApp
+                    </span>
+                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Tu Consultor Experto de Bolsillo</h3>
+                    <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
+                        Soporte de supervivencia técnica directo en tu celular. Resuelve dudas normativas complejas en el acto, audita tus criterios de inspección y estructura tu matriz legal con argumentos sólidos de la ley colombiana.
                     </p>
+                    
+                    <div class="space-y-3 pt-2">
+                        <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Haz clic para auditar la simulación en vivo:</p>
+                        <div class="flex flex-col gap-2">
+                            <button onclick="sendMockMessage('hc')" class="text-left text-xs bg-slate-900/60 hover:bg-slate-800 border border-slate-850 hover:border-[#00f3ff] p-3.5 rounded-xl transition-all duration-300 flex items-center justify-between group">
+                                <span class="truncate pr-4 text-slate-300 group-hover:text-white">📁 ¿Se pueden archivar historias clínicas en RRHH?</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] text-slate-500 group-hover:translate-x-1.5 transition-transform text-[#00f3ff]"></i>
+                            </button>
+                            <button onclick="sendMockMessage('cons')" class="text-left text-xs bg-slate-900/60 hover:bg-slate-800 border border-slate-850 hover:border-[#00f3ff] p-3.5 rounded-xl transition-all duration-300 flex items-center justify-between group">
+                                <span class="truncate pr-4 text-slate-300 group-hover:text-white">⚖️ ¿Cuánto dura la retención documental legal del SG-SST?</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] text-slate-500 group-hover:translate-x-1.5 transition-transform text-[#00f3ff]"></i>
+                            </button>
+                            <button onclick="sendMockMessage('pesv')" class="text-left text-xs bg-slate-900/60 hover:bg-slate-800 border border-slate-850 hover:border-[#00f3ff] p-3.5 rounded-xl transition-all duration-300 flex items-center justify-between group">
+                                <span class="truncate pr-4 text-slate-300 group-hover:text-white">🚗 ¿Cómo se reporta la autogestión del PESV?</span>
+                                <i class="fa-solid fa-arrow-right text-[10px] text-slate-500 group-hover:translate-x-1.5 transition-transform text-[#00f3ff]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Celular Inteligente de Doble Modo (Chat / Video) -->
+                <div class="lg:col-span-6 w-full flex justify-center">
+                    <div class="w-full max-w-sm bg-[#0b121f] rounded-[2.5rem] border-4 border-slate-800 shadow-2xl overflow-hidden flex flex-col h-[460px] relative">
+                        
+                        <!-- Cabecera del Celular con Selectores de Modo -->
+                        <div class="bg-[#121b2a] px-4 pt-4 pb-3 border-b border-slate-800/80 flex flex-col gap-3 shrink-0">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-7 h-7 rounded-full bg-purple-500/20 border border-purple-400/40 flex items-center justify-center text-purple-400 relative">
+                                        <i class="fa-solid fa-robot text-xs"></i>
+                                        <span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-[#39ff14] border border-[#121b2a]"></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-[11px] font-bold text-white uppercase tracking-wide">TITÁN Bot SST</h4>
+                                        <span class="text-[8px] text-[#39ff14] font-bold uppercase tracking-widest block leading-none">Online</span>
+                                    </div>
+                                </div>
+                                <span class="text-[8px] bg-purple-500/10 border border-purple-500/30 text-purple-400 px-2 py-0.5 rounded font-bold uppercase font-mono">IA v2.0</span>
+                            </div>
+
+                            <!-- Interruptores de Modo: Chat Simulado vs Video Demo -->
+                            <div class="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-lg border border-slate-800">
+                                <button id="btn-mode-chat" onclick="toggleCellMode('chat')" class="py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md bg-[#00f3ff] text-slate-950 transition-all flex items-center justify-center gap-1">
+                                    <i class="fa-solid fa-comments"></i> Simulador
+                                </button>
+                                <button id="btn-mode-video" onclick="toggleCellMode('video')" class="py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1">
+                                    <i class="fa-solid fa-circle-play"></i> Video Demo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- MODO CHAT ACTIVO -->
+                        <div id="cell-chat-view" class="flex-grow p-4 space-y-3 overflow-y-auto chat-scroll flex flex-col bg-[#0b141a]">
+                            <div class="bg-[#1f2c34] text-slate-200 text-[11px] p-3 rounded-2xl rounded-tl-none max-w-[85%] self-start leading-relaxed shadow-sm">
+                                🤖 ¡Hola, Titán! Soy <strong>TITÁN SST</strong>, tu consultor de inteligencia artificial. Haz clic en cualquiera de las dudas de auditoría de la izquierda para ver cómo las analizo y las resuelvo con base en la ley colombiana.
+                            </div>
+                        </div>
+
+                        <!-- MODO VIDEO DEMO ACTIVO (Oculto por defecto, Bunny CDN optimizado para celular) -->
+                        <div id="cell-video-view" class="absolute inset-0 top-[88px] bg-slate-950 hidden flex-col items-center justify-center p-3">
+                            <div class="relative w-full h-full rounded-2xl overflow-hidden border border-white/5 bg-black">
+                                <iframe id="cell-video-iframe" src="" class="w-full h-full border-0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
-
-
-
-
-
-
-
-            <!-- Pilar 2: Utilidad -->
-            <div class="premium-card glass-panel rounded-3xl p-8 flex flex-col justify-between border-t border-guru-electric/30">
-                <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-guru-electric/10 border border-guru-electric/20 flex items-center justify-center text-guru-electric text-2xl">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
-                    <h3 class="font-montserrat font-extrabold text-xl text-white uppercase tracking-wider">2. Utilidad Práctica</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed font-light text-justify">
-                        Nuestra información está basada en la experiencia de más de 15 años de asesorías en diferentes sectores. Nuestra metodología te permitirá pasar de la teoría a la práctica para mejorar tus competencias reales.
+            <!-- ================= TAB B: MOTOR 0312 IA ================= -->
+            <div id="show-motor-0312" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center hidden">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="px-4 py-2 bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> Diagnóstico Automatizado
+                    </span>
+                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Simulador Autoevaluación 0312</h3>
+                    <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
+                        El primer simulador interactivo de estándares mínimos de Colombia. Completa tu diagnóstico asistido por nuestra inteligencia y genera de forma automatizada tus entregables listos en Excel y Word.
                     </p>
+                    <ul class="space-y-4 text-sm text-slate-300 font-light border-t border-white/5 pt-6">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-guru-cyan text-base"></i><span>Formulario oficial programado según la Resolución 0312 de 2019.</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-guru-cyan text-base"></i><span>Plan de Trabajo Anual (PTA) formulado en Excel al instante.</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-guru-cyan text-base"></i><span>Plan de mejoramiento con acciones preventivas redactadas por IA.</span></li>
+                    </ul>
+                </div>
+                <!-- Columna Derecha: Video Consola del Motor -->
+                <div class="lg:col-span-6 flex flex-col items-center">
+                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-slate-950 p-1 shadow-2xl">
+                        <iframe src="https://iframe.mediadelivery.net/embed/229239/dea87434-3264-4765-80f4-b6fcd75812d8?autoplay=false&loop=true&muted=true&preload=true&responsive=true" 
+                                class="w-full h-full rounded-xl border-0" 
+                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen;" 
+                                allowfullscreen="true"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <span class="text-[10px] text-slate-500 mt-3 uppercase tracking-wider font-mono"><i class="fa-solid fa-video mr-1"></i> Video Demostrativo: Simulador 0312</span>
                 </div>
             </div>
 
-
-
-
-
-
-
-
-            <!-- Pilar 3: Acompañamiento -->
-            <div class="premium-card glass-panel rounded-3xl p-8 flex flex-col justify-between border-t border-guru-green/30">
-                <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-guru-green/10 border border-guru-green/20 flex items-center justify-center text-guru-green text-2xl">
-                        <i class="fa-solid fa-users-viewfinder"></i>
-                    </div>
-                    <h3 class="font-montserrat font-extrabold text-xl text-white uppercase tracking-wider">3. Acompañamiento</h3>
-                    <p class="text-sm text-slate-300 leading-relaxed font-light text-justify">
-                        Queremos que te sientas acompañado en todo momento. Por eso, ponemos a tu disposición <strong class="text-white">2 sesiones de acompañamiento EN VIVO al mes</strong> para auditar tus metas y resolver dudas.
+            <!-- ================= TAB C: RADAR PESV 40595 ================= -->
+            <div id="show-radar-pesv" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center hidden">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="px-4 py-2 bg-[#39ff14]/10 border border-[#39ff14]/30 text-[#39ff14] text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
+                        <i class="fa-solid fa-satellite-dish"></i> Seguridad Vial Inteligente
+                    </span>
+                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Estructurador Vial Paso a Paso</h3>
+                    <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
+                        Estructura tu Plan Estratégico de Seguridad Vial bajo la Resolución 40595 de forma determinista. Asocia los riesgos por cargo, evalúa la criticidad y calcula tus fórmulas de ley en un clic.
                     </p>
+                    <ul class="space-y-4 text-sm text-slate-300 font-light border-t border-white/5 pt-6">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#39ff14] text-base"></i><span>Diagnóstico del nivel de diseño y pasos obligatorios del PESV.</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#39ff14] text-base"></i><span>Cálculo automatizado de indicadores de Siniestralidad (Paso 20).</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#39ff14] text-base"></i><span>Matriz de riesgos en vía unificada con tu matriz tradicional.</span></li>
+                    </ul>
+                </div>
+                <!-- Columna Derecha: Video Consola del Radar -->
+                <div class="lg:col-span-6 flex flex-col items-center">
+                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-slate-950 p-1 shadow-2xl">
+                        <iframe src="https://iframe.mediadelivery.net/embed/229239/51cf7127-e262-45b6-a875-8671c23d73a0?autoplay=false&loop=true&muted=true&preload=true&responsive=true" 
+                                class="w-full h-full rounded-xl border-0" 
+                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen;" 
+                                allowfullscreen="true"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <span class="text-[10px] text-slate-500 mt-3 uppercase tracking-wider font-mono"><i class="fa-solid fa-video mr-1"></i> Video Demostrativo: Radar PESV</span>
                 </div>
             </div>
 
-
-
-
-
-
-
+            <!-- ================= TAB D: CURSES & WORKSHOPS ================= -->
+            <div id="show-cursos-vip" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center hidden">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap"></i> Formación y Recursos
+                    </span>
+                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Tu Ruta de Aprendizaje Práctico</h3>
+                    <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
+                        Accede de inmediato a diplomados y workshops tácticos grabados de alto nivel. Estudia a tu propio ritmo junto a Andrea Castro y llévate un arsenal completo de formatos editables para tus clientes.
+                    </p>
+                    <ul class="space-y-4 text-sm text-slate-300 font-light border-t border-white/5 pt-6">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base"></i><span>Cursos y diplomados estructurados para pasar directo a la práctica.</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base"></i><span>Casos de estudio reales, simuladores de fórmulas y dinámicas.</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base"></i><span>Material de descarga y formatos en Word y Excel listos para usar.</span></li>
+                    </ul>
+                </div>
+                <!-- Columna Derecha: Catálogo de Cursos en Rejilla Responsiva -->
+                <div class="lg:col-span-6 flex justify-center w-full">
+                    <div class="grid grid-cols-2 gap-4 w-full max-w-[420px]">
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
+                            <span class="text-[8px] bg-slate-950 text-slate-400 px-2 py-0.5 rounded font-black w-max uppercase mb-2">SG-SST</span>
+                            <h4 class="text-xs font-bold text-white leading-tight">Mapa de Ruta SG-SST</h4>
+                            <p class="text-[10px] text-slate-500 mt-1 font-light">Implementación rápida.</p>
+                        </div>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
+                            <span class="text-[8px] bg-blue-900/20 text-guru-cyan px-2 py-0.5 rounded font-black w-max uppercase mb-2">Diplomado</span>
+                            <h4 class="text-xs font-bold text-white leading-tight">Diplomado 0312</h4>
+                            <p class="text-[10px] text-slate-500 mt-1 font-light">Paso a paso completo.</p>
+                        </div>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
+                            <span class="text-[8px] bg-emerald-900/20 text-[#39ff14] px-2 py-0.5 rounded font-black w-max uppercase mb-2">PESV</span>
+                            <h4 class="text-xs font-bold text-white leading-tight">Implementador PESV</h4>
+                            <p class="text-[10px] text-slate-500 mt-1 font-light">Resolución 40595.</p>
+                        </div>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
+                            <span class="text-[8px] bg-purple-900/20 text-purple-400 px-2 py-0.5 rounded font-black w-max uppercase mb-2">Negocio</span>
+                            <h4 class="text-xs font-bold text-white leading-tight">Cobra lo que Vales</h4>
+                            <p class="text-[10px] text-slate-500 mt-1 font-light">Estrategia B2B.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
+
+        <!-- MOTOR JAVASCRIPT DEL SHOWROOM (NATIVO & COMPLETAMENTE AUTÓNOMO) -->
+        <script>
+            // Base de datos de respuestas realistas simuladas para TITÁN Bot
+            const mockReplies = {
+                hc: {
+                    user: "📁 ¿Se pueden archivar historias clínicas en RRHH?",
+                    bot: "❌ <strong>¡No, bajo ninguna circunstancia!</strong><br><br>De acuerdo con la <strong>Resolución 2346 de 2007</strong> y la <strong>Resolución 1918 de 2009</strong>, la custodia de la Historia Clínica Ocupacional es de uso exclusivo de la IPS médica o médico especialista que realiza las evaluaciones.<br><br>Archivarlas en la carpeta de Talento Humano viola la estricta confidencialidad médica, lo que expone a la empresa a multas graves del Ministerio del Trabajo en Colombia."
+                },
+                cons: {
+                    user: "⚖️ ¿Cuánto dura la retención documental legal del SG-SST?",
+                    bot: "🕒 <strong>Obligatoriedad de 20 años:</strong><br><br>Según el <strong>Artículo 2.2.4.6.13 del Decreto 1072 de 2015</strong>, el empleador está obligado a conservar los registros y evidencias del SG-SST por un periodo mínimo de <strong>veinte (20) años</strong>.<br><br>Este tiempo empieza a contar desde el momento en que cese la relación laboral del trabajador con la empresa. Evidencias de capacitaciones, entregas de EPP e investigaciones deben estar totalmente legibles durante todo este plazo."
+                },
+                pesv: {
+                    user: "🚗 ¿Cómo se reporta la autogestión anual del PESV?",
+                    bot: "📊 <strong>Reporte de Indicadores de Ley:</strong><br><br>Bajo la <strong>Resolución 40595 de 2022</strong> y los nuevos lineamientos, el reporte de autogestión del PESV se debe realizar de manera anual ante la entidad que ejerza control o vigilancia sobre tu organización (Supertransporte, alcaldías o secretarías de movilidad).<br><br>Es obligatorio reportar los indicadores matemáticos de siniestralidad contemplados en el <strong>Paso 20</strong> del PESV durante el primer trimestre para mantener la conformidad."
+                }
+            };
+
+            // Cambiar entre Pestañas Principales del Showroom
+            function switchShowroom(tabId) {
+                document.querySelectorAll('.showroom-content').forEach(el => el.classList.add('hidden'));
+                document.getElementById('show-' + tabId).classList.remove('hidden');
+                
+                const tabs = ['bot', 'motor', 'radar', 'cursos'];
+                tabs.forEach(t => {
+                    const btn = document.getElementById('tab-' + t);
+                    if (btn) {
+                        btn.className = "px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-guru-cyan transition-all duration-300 flex items-center justify-center gap-2";
+                    }
+                });
+                
+                const activeBtn = document.getElementById('tab-' + tabId);
+                if (activeBtn) {
+                    activeBtn.className = "px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-guru-cyan text-slate-950 shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300 flex items-center justify-center gap-2";
+                }
+                
+                if (typeof playSound === 'function') {
+                    playSound('pop');
+                }
+            }
+
+            // Cambiar entre modo Chat y modo Video dentro del Celular Simulado
+            function toggleCellMode(mode) {
+                const chatView = document.getElementById('cell-chat-view');
+                const videoView = document.getElementById('cell-video-view');
+                const btnChat = document.getElementById('btn-mode-chat');
+                const btnVideo = document.getElementById('btn-mode-video');
+                const videoIframe = document.getElementById('cell-video-iframe');
+
+                if (typeof playSound === 'function') {
+                    playSound('pop');
+                }
+
+                if (mode === 'chat') {
+                    chatView.classList.remove('hidden');
+                    videoView.classList.add('hidden');
+                    videoIframe.src = ""; // Detiene el video
+
+                    btnChat.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md bg-[#00f3ff] text-slate-950 transition-all flex items-center justify-center gap-1";
+                    btnVideo.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1";
+                } else {
+                    chatView.classList.add('hidden');
+                    videoView.classList.remove('hidden');
+                    // Inyectar el video de muestra optimizado para móvil ( Bunny CDN )
+                    videoIframe.src = "https://iframe.mediadelivery.net/embed/229239/c5400b5f-bd34-41ed-8351-d9f53680b8fc?autoplay=true&loop=true&muted=false";
+
+                    btnVideo.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md bg-[#00f3ff] text-slate-950 transition-all flex items-center justify-center gap-1";
+                    btnChat.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1";
+                }
+            }
+
+            // Escritura automatizada y simulador del bot de WhatsApp
+            function sendMockMessage(type) {
+                const chatContainer = document.getElementById('cell-chat-view');
+                if (!chatContainer) return;
+
+                // Si está en modo video, regresa automáticamente al simulador
+                const videoView = document.getElementById('cell-video-view');
+                if (videoView && !videoView.classList.contains('hidden')) {
+                    toggleCellMode('chat');
+                }
+
+                const data = mockReplies[type];
+                if (!data) return;
+
+                if (typeof playSound === 'function') {
+                    playSound('pop');
+                }
+
+                // 1. Mensaje del Usuario
+                const userDiv = document.createElement('div');
+                userDiv.className = "bg-[#005c4b] text-white text-[11px] p-3 rounded-2xl rounded-tr-none max-w-[85%] self-end leading-relaxed shadow-sm animate-fade-in mb-3";
+                userDiv.innerHTML = data.user;
+                chatContainer.appendChild(userDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+
+                // 2. Burbuja de "typing..."
+                const typingDiv = document.createElement('div');
+                typingDiv.className = "bg-[#1f2c34] text-slate-400 text-[11px] px-3.5 py-3 rounded-2xl rounded-tl-none max-w-[50%] self-start flex items-center gap-1 italic mb-3";
+                typingDiv.id = "titan-typing-indicator";
+                typingDiv.innerHTML = `<span>typing</span> <span class="animate-pulse">...</span>`;
+                chatContainer.appendChild(typingDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+
+                // 3. Respuesta final de TITÁN después del tiempo de escritura simulado
+                setTimeout(() => {
+                    const indicator = document.getElementById('titan-typing-indicator');
+                    if (indicator) indicator.remove();
+
+                    const botDiv = document.createElement('div');
+                    botDiv.className = "bg-[#1f2c34] text-slate-200 text-[11px] p-3 rounded-2xl rounded-tl-none max-w-[85%] self-start leading-relaxed shadow-sm animate-fade-in text-justify mb-3";
+                    botDiv.innerHTML = "🤖 " + data.bot;
+                    chatContainer.appendChild(botDiv);
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                    
+                    if (typeof playSound === 'function') {
+                        playSound('pop');
+                    }
+                }, 1300);
+            }
+        </script>
     </section>
 
 
