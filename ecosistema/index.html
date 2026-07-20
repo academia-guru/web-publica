@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia GURU SST 2.0 | Formación Inteligente en SST</title>
+    <title>GURU SST VIP | Formación Inteligente en SST</title>
    
-    <!-- Favicon / Icono de pestaña (Firma de Andrea Castro) -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/academia-guru/imagenes-guru/main/firma-andrea_fondo_oscuro.png">
-   
-    <!-- Google Fonts -->
+    <!-- Favicon Local Unificado -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    
+    <!-- Google Fonts del Ecosistema GURU -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    
-    <!-- Tailwind CSS (CDN) -->
+    <!-- Tailwind CSS & FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
-   
-    <!-- FontAwesome para Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Canvas Confetti for Gamification Celebrations -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
-
-
-
-    <!-- Configuración del Ecosistema GURU en Tailwind -->
+    <!-- Configuración de Colores Oficial GURU OS -->
     <script>
         tailwind.config = {
             theme: {
@@ -32,11 +30,11 @@
                             navy: '#00355a',     /* Azul Profundo */
                             electric: '#439ae7', /* Azul Eléctrico */
                             cyan: '#00f3ff',     /* Cyan Neón */
-                            green: '#39ff14',    /* Verde Neón */
-                            red: '#ff3131',      /* Rojo Neón */
-                            gold: '#ffd700',     /* Dorado VIP */
-                            darkBg: '#090d16',   /* Fondo Ultra Oscuro */
-                            cardBg: '#131c2e'    /* Tarjeta de Cristal */
+                            green: '#39ff14',    /* Verde Neón - Éxito */
+                            red: '#ff3131',      /* Rojo Neón - Riesgo */
+                            gold: '#C5A059',     /* Dorado Premium - VIP */
+                            darkBg: '#05080f',   /* Fondo Ultra Oscuro */
+                            cardBg: '#0f172a'    /* Slate Oscuro */
                         }
                     },
                     fontFamily: {
@@ -46,7 +44,8 @@
                     boxShadow: {
                         'neon-cyan': '0 0 20px rgba(0, 243, 255, 0.35)',
                         'neon-green': '0 0 20px rgba(57, 255, 20, 0.35)',
-                        'neon-gold': '0 0 20px rgba(255, 215, 0, 0.25)',
+                        'neon-red': '0 0 20px rgba(255, 49, 49, 0.35)',
+                        'neon-gold': '0 0 25px rgba(197, 160, 89, 0.3)',
                         'glass': '0 8px 32px 0 rgba(9, 13, 22, 0.6)'
                     }
                 }
@@ -54,27 +53,29 @@
         }
     </script>
 
-
-
-
     <style>
         body {
-            background-color: #090d16;
+            background-color: #05080f;
             color: #ffffff;
             overflow-x: hidden;
         }
        
-        /* Glassmorphism Refinado */
+        /* Glassmorphism Refinado al Estilo CloneVoice.ai */
         .glass-panel {
-            background: rgba(15, 23, 35, 0.6);
+            background: rgba(15, 23, 42, 0.65);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(0, 243, 255, 0.1);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
 
-
-
+        .gold-glass-panel {
+            background: rgba(20, 15, 5, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(197, 160, 89, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(197, 160, 89, 0.1);
+        }
 
         #particles-js {
             position: fixed;
@@ -86,9 +87,6 @@
             pointer-events: none;
         }
 
-
-
-
         /* Animación de flotación */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -97,9 +95,6 @@
         .animate-float {
             animation: float 6s ease-in-out infinite;
         }
-
-
-
 
         /* Aro de luz neón giratorio para el mockup */
         @keyframes rotate-neon {
@@ -116,9 +111,6 @@
             z-index: 0;
             opacity: 0.8;
         }
-
-
-
 
         /* Hover de las tarjetas */
         .premium-card {
@@ -137,123 +129,160 @@
         details > summary::-webkit-details-marker {
             display: none;
         }
+
+        /* Gradiente animado estilo CloneVoice */
+        .text-gradient-animate {
+            background-size: 200% auto;
+            animation: textShine 4s linear infinite;
+        }
+        @keyframes textShine {
+            to { background-position: 200% center; }
+        }
+
+        /* Estilo de la terminal del chat del Bot */
+        .chat-container {
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        /* Animación Shake para Alertas */
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+        .animate-shake {
+            animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #05080f;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #439ae7;
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body class="font-poppins antialiased min-h-screen flex flex-col justify-between relative selection:bg-guru-cyan selection:text-guru-navy">
-
-
-
 
     <!-- FONDO VIVO: Partículas Neuronal -->
     <div id="particles-js"></div>
     <div class="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-guru-cyan/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-guru-electric/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
-
-
-
-
+    
     <!-- NOTIFICACIONES TOAST -->
     <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-3 pointer-events-none"></div>
 
-
-
-
-    <!-- 1. HEADER / NAVEGACIÓN FIJA (STICKY) -->
-    <header class="sticky top-0 bg-[#090d16]/80 backdrop-blur-xl border-b border-white/5 z-50 py-4 w-full shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-            <div class="flex items-center gap-4 sm:gap-5">
-                <a href="https://andreacastrosst.com" class="flex items-center gap-4">
-                    <img src="https://raw.githubusercontent.com/academia-guru/imagenes-guru/main/firma-andrea_fondo_oscuro.png" alt="Firma Andrea Castro" class="h-10 sm:h-12 w-auto object-contain transition-transform hover:scale-105">
-                </a>
-                <div class="border-l border-slate-700/60 h-8"></div>
-                <img src="https://raw.githubusercontent.com/academia-guru/imagenes-guru/main/logo-guru.png" alt="Academia GURU SST 2.0" class="h-14 sm:h-16 w-auto object-contain transition-transform hover:scale-105">
+    <!-- 1. HEADER / NAVEGACIÓN FIJA (STICKY - NAKED SIN FUGAS) -->
+    <header class="sticky top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+            
+            <!-- Coexistencia de Logos Unificados y Balanceados (Locales) -->
+            <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                <img src="/img/firma-andrea.png" alt="Firma Andrea Castro" class="h-6 sm:h-11 w-auto object-contain hover:scale-105 transition-transform">
+                <div class="border-l border-slate-700/60 h-6 sm:h-10"></div>
+                <img src="/img/logo-guru.png" alt="Logo GURU SST" class="h-6 sm:h-10 w-auto object-contain hover:scale-105 transition-transform">
             </div>
 
-
-
-
-            <!-- Botones de Navegación Rápida -->
-            <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-400">
-                <a href="#experiencia" class="hover:text-white transition-colors">Netflix SST</a>
-                <a href="#diferenciales" class="hover:text-white transition-colors">Diferenciales</a>
-                <a href="#testimonios" class="hover:text-white transition-colors">Testimonios</a>
-                <a href="#planes" class="hover:text-guru-cyan transition-colors text-white">Ver Planes</a>
-            </nav>
-
-
-
-
-            <!-- Acceso Directo Aula Virtual (Portal Miembros VIP) -->
-            <a href="https://andreacastrosst.com/bio" class="px-5 py-2.5 bg-guru-cyan/10 hover:bg-guru-cyan border border-guru-cyan/40 hover:border-guru-cyan text-guru-cyan hover:text-slate-900 font-montserrat font-bold text-[10px] sm:text-xs rounded-xl transition-all shadow-md hover:shadow-neon-cyan flex items-center gap-2 uppercase tracking-wider group">
-                <i class="fa-solid fa-crown group-hover:scale-110 transition-transform"></i> <span class="hidden sm:inline">Portal Miembros VIP</span>
-            </a>
+            <!-- Botones de Acción del Naked Header (Sin menú central para evitar fugas de tráfico) -->
+            <div class="flex items-center gap-3">
+                <!-- Botón Secundario: Iniciar Sesión (Para alumnos activos) -->
+                <a href="https://vip.andreacastrosst.com/" 
+                   class="px-4 py-2 sm:py-2.5 bg-transparent hover:bg-white/5 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-white font-montserrat font-bold text-[10px] sm:text-xs rounded-xl transition-all active:scale-95 duration-300"
+                   onclick="playSound('pop')">
+                    Iniciar Sesión
+                </a>
+                
+                <!-- Botón Principal: Ver Planes (Smooth scroll a precios) -->
+                <a href="#planes" 
+                   class="px-4 py-2 sm:py-2.5 bg-guru-cyan hover:bg-white text-slate-950 font-montserrat font-black text-[10px] sm:text-xs rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(0,243,255,0.25)] hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] hover:scale-105 active:scale-95 uppercase tracking-wider"
+                   onclick="playSound('pop')">
+                    Ver Planes
+                </a>
+            </div>
         </div>
     </header>
 
-
-
-
-    <!-- 2. HERO SECTION: PERSUASIÓN ALTA CONVERSIÓN -->
+    <!-- 2. HERO SECTION: PERSUASIÓN ALTA CONVERSIÓN Y ESTÉICA PRO (PROTOCOL GURU OS) -->
     <section id="inicio" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
        
-        <!-- COLUMNA IZQUIERDA: MENSAJE COPYS -->
+        <!-- COLUMNA IZQUIERDA: MENSAJE & COPYS DE CONVERSIÓN -->
         <div class="flex-1 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan font-semibold text-[10px] sm:text-xs mb-6 shadow-[0_0_15px_rgba(0,243,255,0.15)] backdrop-blur-sm uppercase tracking-widest">
-                <span class="w-2 h-2 rounded-full bg-guru-cyan animate-ping absolute"></span>
-                <span class="w-2 h-2 rounded-full bg-guru-cyan relative"></span>
-                Aprende cuando quieras, cancela cuando quieras
+            
+            <!-- Badge Flotante con Pulso Neón -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00f3ff]/10 border border-[#00f3ff]/30 text-[#00f3ff] font-montserrat font-bold text-[10px] sm:text-xs mb-6 shadow-[0_0_15px_rgba(0,243,255,0.2)] backdrop-blur-md uppercase tracking-widest relative">
+                <span class="w-2 h-2 rounded-full bg-[#00f3ff] animate-ping absolute"></span>
+                <span class="w-2 h-2 rounded-full bg-[#00f3ff] relative"></span>
+                <span>Aprende cuando quieras, cancela cuando quieras</span>
             </div>
            
-            <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight tracking-tight uppercase">
+            <!-- Título Principal Impactante con Gradiente Dynamic Cyan -->
+            <h1 class="font-montserrat font-black text-4xl sm:text-5xl lg:text-6xl text-white mb-6 leading-tight tracking-tight uppercase drop-shadow-md">
                 Domina la SST<br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-guru-cyan via-white to-guru-electric">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] via-white to-[#439ae7] drop-shadow-[0_0_20px_rgba(0,243,255,0.4)] text-gradient-animate">
                     Sin Morir en el Intento
                 </span>
             </h1>
            
-            <p class="font-poppins text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed mb-10 font-light">
-                Bienvenido a la <strong class="text-white font-medium">Academia GURU SST 2.0:</strong> El primer ecosistema digital de SST. Diseñado para que pases de la teoría a la práctica, impulsado por Inteligencia Artificial.
+            <!-- Descripción Ultra-Legible (Poppins / Negritas Destacadas) -->
+            <p class="font-poppins text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed mb-10 font-normal text-left sm:text-justify">
+                Bienvenido al <strong class="text-white font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">Ecosistema Inteligente GURU SST VIP</strong>. El primer holding digital en Colombia diseñado exclusivamente para que pases <span class="text-[#00f3ff] font-bold">de la teoría a la práctica</span> de inmediato, impulsado por <strong class="text-white font-bold">Inteligencia Artificial</strong> y metodologías de gestión proactiva.
             </p>
 
-
-
-
+            <!-- Botones Primario y Secundario con Efecto Táctil Reclamado -->
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <a href="#planes"
-                   class="px-8 py-4 bg-guru-cyan text-slate-950 font-montserrat font-black text-sm uppercase tracking-widest rounded-xl transition-all shadow-[0_0_20px_rgba(0,243,255,0.3)] hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] text-center flex items-center justify-center gap-2"
-                   onclick="playSound('pop')">
-                    <i class="fa-solid fa-bolt text-base"></i> Asegurar mi Membresía
+                   class="px-8 py-4 bg-[#00f3ff] hover:bg-white text-slate-950 font-montserrat font-black text-xs sm:text-sm uppercase tracking-widest rounded-xl transition-all duration-300 shadow-[0_0_25px_rgba(0,243,255,0.4)] hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2"
+                   onclick="if(typeof playSound==='function') playSound('pop')">
+                    <i class="fa-solid fa-bolt text-sm"></i> Asegurar mi Membresía
                 </a>
-                <a href="#experiencia"
-                   class="px-8 py-4 bg-slate-900/50 backdrop-blur-md hover:bg-slate-800 border border-slate-700 hover:border-guru-cyan text-slate-300 hover:text-white font-montserrat font-bold text-xs uppercase tracking-widest rounded-xl transition-all text-center flex items-center justify-center gap-2 group"
-                   onclick="playSound('pop')">
-                    ¿Cómo funciona? <i class="fa-solid fa-arrow-down text-[10px] group-hover:translate-y-1.5 transition-transform"></i>
+                
+                <a href="#showroom"
+                   class="px-8 py-4 bg-slate-900/80 backdrop-blur-md hover:bg-slate-800 border border-slate-700 hover:border-[#00f3ff] text-slate-300 hover:text-white font-montserrat font-bold text-xs uppercase tracking-widest rounded-xl transition-all duration-300 hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2 group shadow-lg"
+                   onclick="if(typeof playSound==='function') playSound('pop')">
+                    Explorar Herramientas <i class="fa-solid fa-arrow-down text-[10px] group-hover:translate-y-1.5 transition-transform text-[#00f3ff]"></i>
                 </a>
             </div>
         </div>
 
-
-
-
-        <!-- COLUMNA DERECHA: REPRODUCTOR MOCKUP DE LA ACADEMIA (VSL TOUR) -->
+        <!-- COLUMNA DERECHA: MOCKUP CINEMATOGRÁFICO DE LA ACADEMIA (VSL CON HALO PRO) -->
         <div class="flex-1 flex justify-center lg:justify-end w-full relative">
-            <div class="relative w-full max-w-md md:max-w-lg aspect-video rounded-3xl overflow-hidden shadow-2xl animate-float mockup-glow flex items-center justify-center">
-                <div class="absolute inset-0 bg-[#090d16]/40 z-10 pointer-events-none"></div>
-                <!-- Frame de video real o imagen del Centro de Mando -->
-                <img src="https://raw.githubusercontent.com/academia-guru/imagenes-guru/main/andrea-perfil.png"
-                     alt="Tour Ecosistema GURU OS"
-                     class="w-full h-full object-cover relative z-0 opacity-30 filter blur-[2px] bg-slate-950">
-                     
-                <!-- Botón de Play Flotante Central -->
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20ver%20el%20Tour%20en%20Video%20por%20dentro%20de%20la%20Academia%20GURU%20SST."
+            
+            <!-- Glow de fondo de la tarjeta -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-[#00f3ff]/30 to-[#439ae7]/30 rounded-[2.5rem] blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+
+            <div class="relative w-full max-w-md md:max-w-lg aspect-video rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] border border-[#00f3ff]/30 bg-slate-950 flex items-center justify-center group">
+                
+                <!-- Sombra dinámica -->
+                <div class="absolute inset-0 bg-[#090d16]/50 z-10 pointer-events-none group-hover:bg-[#090d16]/30 transition-colors duration-500"></div>
+
+                <!-- Foto de Andrea en el VPS con opacidad estilizada -->
+                <img src="/img/andrea-perfil.png" alt="Tour Ecosistema GURU OS" class="w-full h-full object-cover relative z-0 opacity-40 filter blur-[1px] group-hover:scale-105 group-hover:blur-0 transition-all duration-700 bg-slate-950" onerror="this.src='https://placehold.co/600x400/05080f/00f3ff?text=GURU+SST+VIP'">
+
+                <!-- Botón de Play Central con Anillo Vibrante -->
+                <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20quiero%20ver%20el%20Tour%20en%20Video%20por%20dentro%20del%20Ecosistema%20GURU%20SST%20VIP."
                    target="_blank"
-                   class="absolute z-20 w-20 h-20 rounded-full bg-guru-navy/90 hover:bg-guru-cyan border-2 border-guru-cyan flex items-center justify-center text-guru-cyan hover:text-slate-950 transition-all shadow-[0_0_20px_rgba(0,243,255,0.4)] hover:shadow-[0_0_30px_rgba(0,243,255,0.8)]">
+                   class="absolute z-20 w-20 h-20 rounded-full bg-[#00355a]/90 hover:bg-white border-2 border-[#00f3ff] hover:border-white text-[#00f3ff] hover:text-slate-950 transition-all active:scale-90 duration-300 flex items-center justify-center shadow-[0_0_30px_rgba(0,243,255,0.5)] hover:shadow-[0_0_40px_rgba(255,255,255,0.9)] group-hover:scale-110">
                     <i class="fa-solid fa-play text-2xl ml-1"></i>
                 </a>
-                <span class="absolute bottom-4 left-4 z-20 text-[10px] font-bold tracking-widest text-guru-cyan uppercase bg-slate-950/80 px-3 py-1.5 rounded-lg border border-white/5 backdrop-blur-sm">🎬 Dale Play: Tour de la Plataforma</span>
+
+                <!-- Badge Informativo Inferior en Cristal -->
+                <span class="absolute bottom-4 left-4 z-20 text-[10px] font-montserrat font-bold tracking-widest text-[#00f3ff] uppercase bg-slate-950/90 px-3.5 py-1.5 rounded-xl border border-[#00f3ff]/20 backdrop-blur-md flex items-center gap-2 shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#39ff14] animate-ping"></span> 🎬 Dale Play: Tour del Ecosistema
+                </span>
             </div>
         </div>
     </section>
+
+
+
+
 
 
 
@@ -275,12 +304,20 @@
 
 
 
+
+
+
+
     <!-- 4. SECCIÓN: POR QUÉ ELEGIRNOS (LOS 3 PILARES GURU) -->
     <section id="diferenciales" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
         <div class="text-center mb-16">
             <span class="text-guru-cyan font-bold text-xs uppercase tracking-widest block mb-2"><i class="fa-solid fa-scale-balanced"></i> Por qué creamos esta Academia</span>
             <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white uppercase">Nuestros 3 Pilares Fundamentales</h2>
         </div>
+
+
+
+
 
 
 
@@ -303,6 +340,10 @@
 
 
 
+
+
+
+
             <!-- Pilar 2: Utilidad -->
             <div class="premium-card glass-panel rounded-3xl p-8 flex flex-col justify-between border-t border-guru-electric/30">
                 <div class="space-y-4">
@@ -315,6 +356,10 @@
                     </p>
                 </div>
             </div>
+
+
+
+
 
 
 
@@ -335,8 +380,16 @@
 
 
 
+
+
+
+
         </div>
     </section>
+
+
+
+
 
 
 
@@ -345,6 +398,10 @@
     <section id="experiencia" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
         <div class="bg-gradient-to-r from-slate-950 to-guru-navy/20 border border-slate-800 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
             <div class="absolute -right-24 -top-24 w-80 h-80 bg-guru-cyan/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+
+
+
 
 
 
@@ -361,6 +418,10 @@
                     <p class="text-sm text-slate-300 leading-relaxed text-justify font-light">
                         Disfruta de un entorno diseñado para que aprendas de forma práctica y sencilla.
                     </p>
+
+
+
+
 
 
 
@@ -401,6 +462,10 @@
 
 
 
+
+
+
+
                 <!-- Imagen conceptual / Mockup -->
                 <div class="lg:col-span-5 flex justify-center w-full relative">
                     <div class="w-full max-w-xs relative bg-slate-950 border border-slate-800 p-3 rounded-[32px] shadow-2xl">
@@ -432,6 +497,10 @@
 
 
 
+
+
+
+
     <!-- 6. SECCIÓN: PLANES DE MEMBRESÍA & PROMOCIONES (TARJETAS SAAS 2 COLUMNAS UNIFICADAS) -->
     <section id="planes" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
         <div class="text-center mb-16">
@@ -446,7 +515,13 @@
 
 
 
+
+
+
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-stretch max-w-4xl mx-auto">
+
+
 
 
     <!-- Plan Élite (Semestral) -->
@@ -476,6 +551,8 @@
             </a>
         </div>
     </div>
+
+
 
 
     <!-- Plan Master (Anual - Recomendado) -->
@@ -510,7 +587,13 @@
     </div>
 
 
+
+
 </div>
+
+
+
+
 
 
 
@@ -535,6 +618,10 @@
 
 
 
+
+
+
+
     <!-- 7. SECCIÓN: SOCIAL PROOF / TESTIMONIOS -->
     <section id="testimonios" class="relative z-10 w-full bg-slate-900/40 border-y border-slate-800/50 py-16 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -543,6 +630,10 @@
                 <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white uppercase">¡Esto es lo que dicen nuestros participantes!</h2>
                 <div class="w-16 h-1 bg-guru-cyan mx-auto mt-4 rounded-full shadow-neon-cyan"></div>
             </div>
+
+
+
+
 
 
 
@@ -568,6 +659,10 @@
 
 
 
+
+
+
+
                 <!-- Testimonio 2 -->
                 <div class="glass-panel p-8 rounded-3xl border border-slate-700 hover:border-guru-cyan/30 transition-colors flex flex-col">
                     <div class="flex items-center gap-1 text-yellow-400 text-sm mb-4">
@@ -584,6 +679,10 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
 
 
 
@@ -611,11 +710,19 @@
 
 
 
+
+
+
+
     <!-- 8. SECCIÓN: PREGUNTAS FRECUENTES (FAQ) -->
     <section id="faq" class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
         <div class="text-center mb-12">
             <h2 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase">Preguntas Frecuentes</h2>
         </div>
+
+
+
+
 
 
 
@@ -637,6 +744,10 @@
 
 
 
+
+
+
+
             <!-- FAQ 2 -->
             <details class="glass-panel rounded-2xl group border border-slate-800 open:border-guru-cyan/50 transition-colors">
                 <summary class="flex items-center justify-between p-6 font-bold cursor-pointer text-white hover:text-guru-cyan transition-colors outline-none text-sm sm:text-base">
@@ -649,6 +760,10 @@
                     Sí, absolutamente. Todo el material entregado en Excel y Word es 100% editable para que lo adaptes con los logos y la información específica de la empresa en la que trabajas o asesoras.
                 </div>
             </details>
+
+
+
+
 
 
 
@@ -667,6 +782,10 @@
             </details>
         </div>
     </section>
+
+
+
+
 
 
 
@@ -695,6 +814,10 @@
 
 
 
+
+
+
+
     <!-- 10. FOOTER CORPORATIVO -->
     <footer class="relative z-10 w-full bg-[#05080f] border-t border-white/5 py-8 text-center text-xs text-slate-500 font-poppins mt-auto">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -706,6 +829,10 @@
             </div>
         </div>
     </footer>
+
+
+
+
 
 
 
@@ -732,6 +859,10 @@
                 "retina_detect": false
             });
         }
+
+
+
+
 
 
 
@@ -766,6 +897,17 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
