@@ -328,7 +328,7 @@
             </span>
             <h2 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white mt-4 uppercase leading-tight tracking-tight">
                 Herramientas IA y Cursos Prácticos <br>
-                <span class="text-laser-showroom drop-shadow-[0_0_20px_rgba(0,243,255,0.3)]">funcionando ante tus ojos</span>
+                <span class="text-laser-showroom drop-shadow-[0_0_20px_rgba(0,243,255,0.3)]">Diseñadas para facilitarte el día a día</span>
             </h2>
             <p class="font-poppins text-sm sm:text-base text-slate-400 mt-4 leading-relaxed font-light">
                 Pasa de la teoría a la acción. Explora nuestras soluciones interactivas y descubre cómo simplificar tu gestión diaria sin complicaciones.
@@ -357,32 +357,35 @@
             <!-- Glow decorativo interno -->
             <div class="absolute -right-32 -top-32 w-96 h-96 bg-guru-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-            <!-- ================= TAB A: TITÁN SST BOT ================= -->
+            <!-- ================= TAB A: TITÁN SST BOT (SIMULADOR DETECTIVE + MATRIZ LEGAL) ================= -->
             <div id="show-chat-bot" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                 
                 <!-- Columna Izquierda: Mensajes y Botones de Interacción -->
                 <div class="lg:col-span-6 space-y-6">
-                    <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
-                        <i class="fa-solid fa-robot animate-pulse"></i> Asistente 24/7 en WhatsApp
+                    <span class="px-3.5 py-1.5 bg-purple-500/10 border border-purple-500/30 text-purple-400 text-[10px] font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
+                        <i class="fa-solid fa-robot animate-pulse"></i> Asistente sst IA en WhatsApp
                     </span>
-                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Tu Consultor Experto de Bolsillo</h3>
-                    <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
-                        Soporte de supervivencia técnica directo en tu celular. Resuelve dudas normativas complejas en el acto, audita tus criterios de inspección y estructura tu matriz legal con argumentos sólidos de la ley colombiana.
+                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Tu Consultor Experto 24/7</h3>
+                    <p class="font-poppins text-base text-slate-300 leading-relaxed font-light text-justify">
+                        Tu consultor de confianza especializado en la normativa de SST y PESV en Colombia. No es un chat genérico de internet; es un asistente técnico entrenado para resolver tus dudas de campo diarias y validar tus decisiones con base en la ley vigente.
                     </p>
                     
                     <div class="space-y-3 pt-2">
-                        <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Haz clic para auditar la simulación en vivo:</p>
+                        <p class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Prueba el simulador o mira el video de como funciona:</p>
                         <div class="flex flex-col gap-2">
-                            <button onclick="sendMockMessage('hc')" class="text-left text-xs bg-slate-900/60 hover:bg-slate-800 border border-slate-850 hover:border-[#00f3ff] p-3.5 rounded-xl transition-all duration-300 flex items-center justify-between group">
-                                <span class="truncate pr-4 text-slate-300 group-hover:text-white">📁 ¿Se pueden archivar historias clínicas en RRHH?</span>
+                            <!-- NUEVA PREGUNTA 1: Matriz Legal unificada -->
+                            <button onclick="sendMockMessage('matriz')" class="text-left text-xs bg-slate-900/60 hover:bg-slate-800 border border-slate-850 hover:border-[#00f3ff] p-3.5 rounded-xl transition-all duration-300 flex items-center justify-between group shadow-md">
+                                <span class="truncate pr-4 text-slate-300 group-hover:text-white">✨ 7️⃣ Diseñar Matriz Legal Personalizada</span>
                                 <i class="fa-solid fa-arrow-right text-[10px] text-slate-500 group-hover:translate-x-1.5 transition-transform text-[#00f3ff]"></i>
                             </button>
+                            <!-- RESTAURADA PREGUNTA 2 -->
                             <button onclick="sendMockMessage('cons')" class="text-left text-xs bg-slate-900/60 hover:bg-slate-800 border border-slate-850 hover:border-[#00f3ff] p-3.5 rounded-xl transition-all duration-300 flex items-center justify-between group">
                                 <span class="truncate pr-4 text-slate-300 group-hover:text-white">⚖️ ¿Cuánto dura la retención documental legal del SG-SST?</span>
                                 <i class="fa-solid fa-arrow-right text-[10px] text-slate-500 group-hover:translate-x-1.5 transition-transform text-[#00f3ff]"></i>
                             </button>
+                            <!-- RESTAURADA PREGUNTA 3 -->
                             <button onclick="sendMockMessage('pesv')" class="text-left text-xs bg-slate-900/60 hover:bg-slate-800 border border-slate-850 hover:border-[#00f3ff] p-3.5 rounded-xl transition-all duration-300 flex items-center justify-between group">
-                                <span class="truncate pr-4 text-slate-300 group-hover:text-white">🚗 ¿Cómo se reporta la autogestión del PESV?</span>
+                                <span class="truncate pr-4 text-slate-300 group-hover:text-white">🚗 ¿Cómo se reporta la autogestión anual del PESV?</span>
                                 <i class="fa-solid fa-arrow-right text-[10px] text-slate-500 group-hover:translate-x-1.5 transition-transform text-[#00f3ff]"></i>
                             </button>
                         </div>
@@ -406,7 +409,7 @@
                                         <span class="text-[8px] text-[#39ff14] font-bold uppercase tracking-widest block leading-none">Online</span>
                                     </div>
                                 </div>
-                                <span class="text-[8px] bg-purple-500/10 border border-purple-500/30 text-purple-400 px-2 py-0.5 rounded font-bold uppercase font-mono">IA v2.0</span>
+                                <span class="text-[8px] bg-purple-500/10 border border-purple-500/30 text-purple-400 px-2 py-0.5 rounded font-bold uppercase font-mono">IA v2.3</span>
                             </div>
 
                             <!-- Interruptores de Modo: Chat Simulado vs Video Demo -->
@@ -427,7 +430,7 @@
                             </div>
                         </div>
 
-                        <!-- MODO VIDEO DEMO ACTIVO (Oculto por defecto, Bunny CDN optimizado para celular) -->
+                        <!-- MODO VIDEO DEMO ACTIVO (Bunny CDN optimizado para celular) -->
                         <div id="cell-video-view" class="absolute inset-0 top-[88px] bg-slate-950 hidden flex-col items-center justify-center p-3">
                             <div class="relative w-full h-full rounded-2xl overflow-hidden border border-white/5 bg-black">
                                 <iframe id="cell-video-iframe" src="" class="w-full h-full border-0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
@@ -438,25 +441,54 @@
                 </div>
             </div>
 
-            <!-- ================= TAB B: MOTOR 0312 IA ================= -->
+            <!-- ================= TAB B: MOTOR 0312 IA (Look SaaS Altamente Persuasivo) ================= -->
             <div id="show-motor-0312" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center hidden">
+                
+                <!-- Columna Izquierda: Copys de Puro Beneficio e Impacto Financiero -->
                 <div class="lg:col-span-6 space-y-6">
                     <span class="px-4 py-2 bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
-                        <i class="fa-solid fa-calculator"></i> Diagnóstico Automatizado
+                        <i class="fa-solid fa-calculator animate-pulse"></i> autoevaluación SST-pta
                     </span>
-                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Simulador Autoevaluación 0312</h3>
-                    <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
-                        El primer simulador interactivo de estándares mínimos de Colombia. Completa tu diagnóstico asistido por nuestra inteligencia y genera de forma automatizada tus entregables listos en Excel y Word.
+                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Evaluador Inteligente de Estándares Mínimos</h3>
+                    
+                    <p class="font-poppins text-base text-slate-300 leading-relaxed font-light text-justify">
+                        Olvídate de pasar semanas enteras digitando celdas en blanco o intentando estructurar el Plan de Trabajo Anual desde cero. Nuestra Herramienta potenciada con IA te ahorra horas de trabajo, audita tu nivel de cumplimiento y genera al instante toda tu documentación en archivos editables.
                     </p>
-                    <ul class="space-y-4 text-sm text-slate-300 font-light border-t border-white/5 pt-6">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-guru-cyan text-base"></i><span>Formulario oficial programado según la Resolución 0312 de 2019.</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-guru-cyan text-base"></i><span>Plan de Trabajo Anual (PTA) formulado en Excel al instante.</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-guru-cyan text-base"></i><span>Plan de mejoramiento con acciones preventivas redactadas por IA.</span></li>
-                    </ul>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-white/5 pt-6 text-sm text-slate-300 font-light">
+    <div class="space-y-3">
+        <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-guru-cyan mt-1 flex-shrink-0"></i>
+            <span><strong class="font-bold text-white">Estándares Mínimos:</strong> Evalúa los estándares mínimos de la 0312 con el alcance legal del Decreto 1072.</span>
+        </div>
+        <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-guru-cyan mt-1 flex-shrink-0"></i>
+            <span><strong class="font-bold text-white">Plan Anual (PTA):</strong> Generado automáticamente por la IA según tu actividad económica y resultados de la autoevaluación. Descarga tu archivo 100 % editable.</span>
+        </div>
+    </div>
+    <div class="space-y-3">
+        <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-guru-cyan mt-1 flex-shrink-0"></i>
+            <span><strong class="font-bold text-white">Plan de Mejora Inteligente:</strong> Acciones preventivas y correctivas redactadas por la IA si tu calificación es menor al 85%.</span>
+        </div>
+        <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-guru-cyan mt-1 flex-shrink-0"></i>
+            <span><strong class="font-bold text-white">Informe Gerencial Editable:</strong> Descarga tu informe ejecutivo listo para presentar a Gerencia, edítalo y personalízalo.</span>
+        </div>
+    </div>
+</div>
+                            
+
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-xs text-slate-400">
+                        <span class="font-bold text-white block mb-1 uppercase tracking-wider"><i class="fa-solid fa-clock mr-1 text-guru-cyan"></i> Impacto en tu Productividad:</span>
+                        Ahorra más de 40 horas de trabajo administrativo manual en cada diagnóstico. Audita más empresas en menos tiempo y entrega PTA, PM e informe Ejecutivo en minutos.
+                    </div>
                 </div>
+
                 <!-- Columna Derecha: Video Consola del Motor -->
                 <div class="lg:col-span-6 flex flex-col items-center">
                     <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-slate-950 p-1 shadow-2xl">
+                        <!-- Video Demo del Motor 0312 -->
                         <iframe src="https://iframe.mediadelivery.net/embed/229239/dea87434-3264-4765-80f4-b6fcd75812d8?autoplay=false&loop=true&muted=true&preload=true&responsive=true" 
                                 class="w-full h-full rounded-xl border-0" 
                                 allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen;" 
@@ -464,7 +496,7 @@
                                 loading="lazy">
                         </iframe>
                     </div>
-                    <span class="text-[10px] text-slate-500 mt-3 uppercase tracking-wider font-mono"><i class="fa-solid fa-video mr-1"></i> Video Demostrativo: Simulador 0312</span>
+                    <span class="text-[10px] text-slate-500 mt-3 uppercase tracking-wider font-mono"><i class="fa-solid fa-video mr-1"></i> Video Demostrativo: Autoevaluación 0312 en Acción</span>
                 </div>
             </div>
 
@@ -543,13 +575,13 @@
 
         </div>
 
-        <!-- MOTOR JAVASCRIPT DEL SHOWROOM (NATIVO & COMPLETAMENTE AUTÓNOMO) -->
+       <!-- MOTOR JAVASCRIPT DEL SHOWROOM (Sincronizado e Iluminado al 100%) -->
         <script>
-            // Base de datos de respuestas realistas simuladas para TITÁN Bot
+            // Base de datos de respuestas realistas simuladas
             const mockReplies = {
-                hc: {
-                    user: "📁 ¿Se pueden archivar historias clínicas en RRHH?",
-                    bot: "❌ <strong>¡No, bajo ninguna circunstancia!</strong><br><br>De acuerdo con la <strong>Resolución 2346 de 2007</strong> y la <strong>Resolución 1918 de 2009</strong>, la custodia de la Historia Clínica Ocupacional es de uso exclusivo de la IPS médica o médico especialista que realiza las evaluaciones.<br><br>Archivarlas en la carpeta de Talento Humano viola la estricta confidencialidad médica, lo que expone a la empresa a multas graves del Ministerio del Trabajo en Colombia."
+                matriz: {
+                    user: "7️⃣ Diseñar Matriz Legal Personalizada ✨",
+                    bot: "¡Excelente elección, Titán! 📋✨<br><br>Tu Matriz Legal personalizada ha sido compilada con éxito.<br><br>Acabo de enviarte un correo electrónico con el acceso a tu Matriz Legal Actualizada y Automatizada <strong>Excel (.xlsx)</strong>.<br><br>👉 <strong>¡Revisa tu bandeja de entrada y descárgala.!</strong> 🚀"
                 },
                 cons: {
                     user: "⚖️ ¿Cuánto dura la retención documental legal del SG-SST?",
@@ -563,18 +595,34 @@
 
             // Cambiar entre Pestañas Principales del Showroom
             function switchShowroom(tabId) {
+                // Ocultar todos los contenedores de contenido
                 document.querySelectorAll('.showroom-content').forEach(el => el.classList.add('hidden'));
-                document.getElementById('show-' + tabId).classList.remove('hidden');
                 
-                const tabs = ['bot', 'motor', 'radar', 'cursos'];
-                tabs.forEach(t => {
-                    const btn = document.getElementById('tab-' + t);
+                // Mostrar el contenedor de la herramienta seleccionada
+                const activeContent = document.getElementById('show-' + tabId);
+                if (activeContent) {
+                    activeContent.classList.remove('hidden');
+                }
+                
+                // Relación exacta: ID de contenido -> ID del Botón físico en el HTML
+                const tabToBtnMap = {
+                    'chat-bot': 'tab-bot',
+                    'motor-0312': 'tab-motor',
+                    'radar-pesv': 'tab-radar',
+                    'cursos-vip': 'tab-cursos'
+                };
+                
+                // 1. Apagar todos los botones (Volver al estado inactivo oscuro)
+                Object.values(tabToBtnMap).forEach(btnId => {
+                    const btn = document.getElementById(btnId);
                     if (btn) {
                         btn.className = "px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-slate-900 border border-slate-700 text-slate-300 hover:text-white hover:border-guru-cyan transition-all duration-300 flex items-center justify-center gap-2";
                     }
                 });
                 
-                const activeBtn = document.getElementById('tab-' + tabId);
+                // 2. Encender únicamente el botón de la herramienta activa (Glow cian de neón)
+                const targetBtnId = tabToBtnMap[tabId];
+                const activeBtn = document.getElementById(targetBtnId);
                 if (activeBtn) {
                     activeBtn.className = "px-5 py-4 rounded-xl font-montserrat font-black text-xs uppercase tracking-wider bg-guru-cyan text-slate-950 shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300 flex items-center justify-center gap-2";
                 }
