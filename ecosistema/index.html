@@ -506,14 +506,14 @@
                     <span class="px-4 py-2 bg-[#39ff14]/10 border border-[#39ff14]/30 text-[#39ff14] text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
                         <i class="fa-solid fa-satellite-dish"></i> Seguridad Vial Inteligente
                     </span>
-                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Estructurador Vial Paso a Paso</h3>
+                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Evaluador de Riesgos Viales PESV</h3>
                     <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
-                        Estructura tu Plan Estratégico de Seguridad Vial bajo la Resolución 40595 de forma determinista. Asocia los riesgos por cargo, evalúa la criticidad y calcula tus fórmulas de ley en un clic.
+                        Identifica peligros viales bajo la Resolución 40595 asociando riesgos por rol en la vía. Mapea factores críticos, evalúa la gravedad y calcula matemáticamente tus indicadores del Paso 20 en un clic.
                     </p>
                     <ul class="space-y-4 text-sm text-slate-300 font-light border-t border-white/5 pt-6">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#39ff14] text-base"></i><span>Diagnóstico del nivel de diseño y pasos obligatorios del PESV.</span></li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#39ff14] text-base"></i><span>Cálculo automatizado de indicadores de Siniestralidad (Paso 20).</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#39ff14] text-base"></i><span>Matriz de riesgos en vía unificada con tu matriz tradicional.</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-[#39ff14] text-base"></i><span>Matriz de riesgos viales en Excel lista para integrar en SST.</span></li>
                     </ul>
                 </div>
                 <!-- Columna Derecha: Video Consola del Radar -->
@@ -530,50 +530,415 @@
                 </div>
             </div>
 
-            <!-- ================= TAB D: CURSES & WORKSHOPS ================= -->
-            <div id="show-cursos-vip" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center hidden">
-                <div class="lg:col-span-6 space-y-6">
-                    <span class="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2">
-                        <i class="fa-solid fa-graduation-cap"></i> Formación y Recursos
-                    </span>
-                    <h3 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-wider">Tu Ruta de Aprendizaje Práctico</h3>
-                    <p class="font-poppins text-base sm:text-lg text-slate-300 leading-relaxed font-light text-justify">
-                        Accede de inmediato a diplomados y workshops tácticos grabados de alto nivel. Estudia a tu propio ritmo junto a Andrea Castro y llévate un arsenal completo de formatos editables para tus clientes.
-                    </p>
-                    <ul class="space-y-4 text-sm text-slate-300 font-light border-t border-white/5 pt-6">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base"></i><span>Cursos y diplomados estructurados para pasar directo a la práctica.</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base"></i><span>Casos de estudio reales, simuladores de fórmulas y dinámicas.</span></li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base"></i><span>Material de descarga y formatos en Word y Excel listos para usar.</span></li>
-                    </ul>
-                </div>
-                <!-- Columna Derecha: Catálogo de Cursos en Rejilla Responsiva -->
-                <div class="lg:col-span-6 flex justify-center w-full">
-                    <div class="grid grid-cols-2 gap-4 w-full max-w-[420px]">
-                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
-                            <span class="text-[8px] bg-slate-950 text-slate-400 px-2 py-0.5 rounded font-black w-max uppercase mb-2">SG-SST</span>
-                            <h4 class="text-xs font-bold text-white leading-tight">Mapa de Ruta SG-SST</h4>
-                            <p class="text-[10px] text-slate-500 mt-1 font-light">Implementación rápida.</p>
-                        </div>
-                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
-                            <span class="text-[8px] bg-blue-900/20 text-guru-cyan px-2 py-0.5 rounded font-black w-max uppercase mb-2">Diplomado</span>
-                            <h4 class="text-xs font-bold text-white leading-tight">Diplomado 0312</h4>
-                            <p class="text-[10px] text-slate-500 mt-1 font-light">Paso a paso completo.</p>
-                        </div>
-                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
-                            <span class="text-[8px] bg-emerald-900/20 text-[#39ff14] px-2 py-0.5 rounded font-black w-max uppercase mb-2">PESV</span>
-                            <h4 class="text-xs font-bold text-white leading-tight">Implementador PESV</h4>
-                            <p class="text-[10px] text-slate-500 mt-1 font-light">Resolución 40595.</p>
-                        </div>
-                        <div class="bg-slate-900/60 p-4 rounded-xl border border-white/5 flex flex-col justify-between hover:border-guru-cyan/30 transition-all">
-                            <span class="text-[8px] bg-purple-900/20 text-purple-400 px-2 py-0.5 rounded font-black w-max uppercase mb-2">Negocio</span>
-                            <h4 class="text-xs font-bold text-white leading-tight">Cobra lo que Vales</h4>
-                            <p class="text-[10px] text-slate-500 mt-1 font-light">Estrategia B2B.</p>
+            <!-- ================= TAB D: CURSES & WORKSHOPS (VERSION ELITE V14 - CON ICONOS REINSTALADOS) ================= -->
+<div id="show-cursos-vip" class="showroom-content hidden space-y-10 w-full">
+    <!-- 1. Cabecera Centrada con Estilo SaaS de Alta Conversión -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+        <span class="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold rounded-full uppercase tracking-widest inline-flex items-center gap-2 shadow-[0_0_15px_rgba(245,158,11,0.15)]">
+            <i class="fa-solid fa-crown text-amber-400 animate-pulse"></i> Formación y Recursos
+        </span>
+        <h3 class="font-montserrat font-black text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-wider leading-tight">
+    Tu Ruta de <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f3ff] via-white to-[#439ae7] text-gradient-animate drop-shadow-[0_0_15px_rgba(0,243,255,0.3)]">Aprendizaje Práctico</span>
+</h3>
+        <p class="font-poppins text-base text-slate-300 leading-relaxed font-light text-center">
+            Accede a Cursos, Diplomados, Talleres Prácticos, Material Descargable y usa Herramientas IA. Estudia a tu propio ritmo y accede a sesiones de acompañamiento en vivo.
+        </p>
+    </div>
+
+    <!-- 2. Video Showcase Centrado -->
+    <div class="max-w-4xl mx-auto space-y-3">
+        <div class="relative w-full aspect-video rounded-3xl overflow-hidden border border-white/10 bg-slate-950 p-1 shadow-2xl group/video">
+            <iframe src="https://iframe.mediadelivery.net/embed/229239/7e955ec5-50cc-4dfd-a617-b1596d490105?autoplay=false&loop=true&muted=true&preload=true&responsive=true"
+                    class="w-full h-full rounded-2xl border-0"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
+                    allowfullscreen="true"
+                    loading="lazy"></iframe>
+        </div>
+        <div class="flex items-center justify-between text-[10px] text-slate-500 uppercase tracking-wider font-mono px-2">
+            <span><i class="fa-solid fa-video mr-1 text-[#00f3ff]"></i> Tour del Aula Virtual VIP</span>
+            <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#39ff14] animate-ping"></span> En Vivo</span>
+        </div>
+    </div>
+
+    <!-- 3. Selector de Categorías -->
+    <div class="flex justify-center pt-4">
+        <div class="flex bg-slate-900/60 p-1.5 rounded-2xl border border-white/5 gap-2 w-full max-w-md shadow-inner">
+            <button onclick="switchSubTabV14('cursos')" id="subbtn-v14-cursos" class="flex-1 py-3 text-xs font-bold font-montserrat uppercase rounded-xl bg-[#00f3ff] text-slate-950 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,243,255,0.25)]">
+                <i class="fa-solid fa-graduation-cap"></i> Cursos & Diplomados
+            </button>
+            <button onclick="switchSubTabV14('talleres')" id="subbtn-v14-talleres" class="flex-1 py-3 text-xs font-bold font-montserrat uppercase rounded-xl text-slate-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-toolbox"></i> Talleres Prácticos
+            </button>
+        </div>
+    </div>
+
+    <!-- 4. Contenedor de Carrusel Deslizable Horizontal -->
+    <div class="relative w-full max-w-7xl mx-auto px-4 group/carousel">
+        <!-- Flecha de Navegación Izquierda -->
+        <button onclick="slideCarouselV14('left')" class="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-950/80 border border-white/10 hover:border-[#00f3ff]/40 text-white hover:text-[#00f3ff] flex items-center justify-center z-10 transition-all duration-300 backdrop-blur-md shadow-lg opacity-0 group-hover/carousel:opacity-100">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        
+        <!-- Flecha de Navegación Derecha -->
+        <button onclick="slideCarouselV14('right')" class="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-950/80 border border-white/10 hover:border-[#00f3ff]/40 text-white hover:text-[#00f3ff] flex items-center justify-center z-10 transition-all duration-300 backdrop-blur-md shadow-lg opacity-0 group-hover/carousel:opacity-100">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <!-- SUB-TAB A: CURSOS & DIPLOMADOS -->
+        <div id="subtab-v14-cursos-container" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth custom-scrollbar">
+            <!-- CURSO 1: DIPLOMADO 0312 -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#00f3ff]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-[#00f3ff]/10 text-[#00f3ff] border border-[#00f3ff]/20 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">SG-SST (Res. 0312-Dec. 1072)</span>
+                        <div class="w-8 h-8 rounded-lg bg-[#00f3ff]/10 flex items-center justify-center text-[#00f3ff] border border-[#00f3ff]/20 shadow-[0_0_10px_rgba(0,243,255,0.1)]">
+                            <i class="fa-solid fa-graduation-cap text-xs"></i>
                         </div>
                     </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-[#00f3ff] transition-colors leading-snug">Diplomado SG-SST Paso a Paso</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Entrenamiento práctico aplicable a cualquier actividad y sector económico. Incluye tutoriales, tips y herramientas 100% automatizadas.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-[#39ff14]"></i> Material Descargable</span>
                 </div>
             </div>
 
+            <!-- CURSO 2: IMPLEMENTADOR PESV -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#39ff14]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-[#39ff14]/10 text-[#39ff14] border border-[#39ff14]/20 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Seguridad Vial</span>
+                        <div class="w-8 h-8 rounded-lg bg-[#39ff14]/10 flex items-center justify-center text-[#39ff14] border border-[#39ff14]/20 shadow-[0_0_10px_rgba(57,255,20,0.1)]">
+                            <i class="fa-solid fa-truck-fast text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-[#39ff14] transition-colors leading-snug">Diplomado Implementador PESV Res. 40595</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Diseña tu Plan Estratégico de Seguridad Vial bajo el enfoque de "Rol en la Vía" requerido por la ley y calcula los indicadores de ley del Paso 20.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-[#39ff14]"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- CURSO 3: AUDITOR DECRETO 1072 -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-purple-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-purple-900/30 text-purple-400 border border-purple-800/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Curso Especializado</span>
+                        <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20 shadow-[0_0_10px_rgba(168,85,247,0.1)]">
+                            <i class="fa-solid fa-user-shield text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-purple-400 transition-colors leading-snug">Auditor Interno Decreto 1072</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        "Potencializa tus habilidades". Adquiere las competencias esenciales para auditar el rendimiento del SG-SST, identificar áreas de mejora y garantizar la conformidad reglamentaria.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-purple-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- CURSO 4: EXPERTO EN ALTURAS -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-amber-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Curso Especializado (Res. 4272)</span>
+                        <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 border border-amber-500/20 shadow-[0_0_10px_rgba(245,158,11,0.1)]">
+                            <i class="fa-solid fa-helmet-safety text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-amber-400 transition-colors leading-snug">Prevención y Protección de Caídas</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Estructura e Implementa Como un experto". Domina todos los requisitos técnicos de la Resolución 4272/2021, con herramientas prácticas para evaluar el riesgo.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-amber-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- CURSO 5: IMPLEMENTADOR MASTER ISO 45001 -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-emerald-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-emerald-900/30 text-emerald-400 border border-emerald-800/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Curso Especializado</span>
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                            <i class="fa-solid fa-globe text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-emerald-400 transition-colors leading-snug">Implementador Master ISO 45001</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Diseña, estructura e implementa Sistemas de Gestión de Seguridad y Salud en el Trabajo bajo estándares internacionales. Una formación diseñada para consultores de élite.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-emerald-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- CURSO 6: MAPA DE RUTA CORRECTO -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-slate-400/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-slate-800 text-slate-300 border border-slate-700 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Arranque Rápido- Mini APPS</span>
+                        <div class="w-8 h-8 rounded-lg bg-slate-800/40 flex items-center justify-center text-slate-300 border border-slate-700 shadow-[0_0_10px_rgba(148,163,184,0.1)]">
+                            <i class="fa-solid fa-route text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-slate-300 transition-colors leading-snug">Mapa de Ruta del SG-SST (26 Pasos)</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Rompe la parálisis del lienzo en blanco. Conoce la secuencia práctica y lógica de 26 pasos consecutivos para estructurar el sistema completo. Usa las Mini APPS disponibles.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-slate-300"></i> Material Descargable</span>
+                </div>
+            </div>
         </div>
+
+        <!-- SUB-TAB B: TALLERES PRÁCTICOS -->
+        <div id="subtab-v14-talleres-container" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth custom-scrollbar hidden">
+            <!-- TALLER 1: MATRIZ PESV -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#39ff14]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-[#39ff14]/10 text-[#39ff14] border border-[#39ff14]/20 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #1 • PESV</span>
+                        <div class="w-8 h-8 rounded-lg bg-[#39ff14]/10 flex items-center justify-center text-[#39ff14] border border-[#39ff14]/20 shadow-[0_0_10px_rgba(57,255,20,0.1)]">
+                            <i class="fa-solid fa-map-pin text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-[#39ff14] transition-colors leading-snug">Matriz de Riesgos Viales en Acción</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Estructura el Paso 6 (IPEVR vial) bajo la Resolución 40595 de 2022. Evaluación detallada por factores y cálculo de controles residuales.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-[#39ff14]"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 2: INVESTIGACIÓN ATEL -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-red-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-red-950 text-red-400 border border-red-900/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #2 • ATEL</span>
+                        <div class="w-8 h-8 rounded-lg bg-red-950/20 flex items-center justify-center text-red-400 border border-red-900/20 shadow-[0_0_10px_rgba(239,68,68,0.1)]">
+                            <i class="fa-solid fa-magnifying-glass-chart text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-red-400 transition-colors leading-snug">Investigación ATEL</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Llenado correcto del FURAT (Resolución 156 de 2005) y análisis de causa raíz combinando Ishikawa con la codificación de la NTC 3701.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-red-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 3: INDICADORES -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#00f3ff]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-[#00f3ff]/10 text-[#00f3ff] border border-[#00f3ff]/20 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #3 • INDICADORES sst</span>
+                        <div class="w-8 h-8 rounded-lg bg-[#00f3ff]/10 flex items-center justify-center text-[#00f3ff] border border-[#00f3ff]/20 shadow-[0_0_10px_rgba(0,243,255,0.1)]">
+                            <i class="fa-solid fa-calculator text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-[#00f3ff] transition-colors leading-snug">Formulación de Indicadores del SG-SST</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Aprende a medir el impacto del SG-SST mediante indicadores de Estructura (recursos asignados), Proceso (actividades ejecutadas) y Resultado (reducción de accidentes lograda).
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-[#00f3ff]"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 4: PLAN DE EMERGENCIAS -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-amber-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #4 • Emergencias</span>
+                        <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 border border-amber-500/20 shadow-[0_0_10px_rgba(245,158,11,0.1)]">
+                            <i class="fa-solid fa-fire-extinguisher text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-amber-400 transition-colors leading-snug">Plan de Emergencias y PONs</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Modelado del diamante de análisis de vulnerabilidad locativa, preparación de brigadas de respuesta y Procedimientos Operativos Normalizados.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-amber-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 5: MEDICIONES HIGIENICAS -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-purple-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-purple-900/30 text-purple-400 border border-purple-800/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #5 • Higiene</span>
+                        <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20 shadow-[0_0_10px_rgba(168,85,247,0.1)]">
+                            <i class="fa-solid fa-wind text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-purple-400 transition-colors leading-snug">Mediciones Higiénicas en el Trabajo</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Aprende a interpretar informes externos de laboratorios bajo ISO 17025, dosimetrías de ruido y a calcular el ajuste matemático de Brief & Scala para turnos extendidos de trabajo.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-purple-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 6: IDENTIFICACION PELIGROS -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-blue-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-blue-950 text-blue-400 border border-blue-900/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #6 • Peligros-Riesgos</span>
+                        <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.1)]">
+                            <i class="fa-solid fa-shield-virus text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-blue-400 transition-colors leading-snug">Identificación de Peligros</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Estructuración de la matriz general de peligros bajo los lineamientos de la guía GTC 45 asegurando la jerarquía estricta de controles.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-blue-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 7: PTA -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-emerald-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-emerald-900/30 text-emerald-400 border border-emerald-800/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #7 • Planificación</span>
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                            <i class="fa-solid fa-calendar-check text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-emerald-400 transition-colors leading-snug">Plan de Trabajo Anual</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Diseña el Plan de Trabajo y el Plan de Mejoramiento basados en tu autoevaluación real de la 0312. 
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-emerald-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 8: COBRA LO QUE VALES -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#C5A059]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-[#C5A059]/10 text-[#C5A059] border border-[#C5A059]/20 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #8 • Negociación</span>
+                        <div class="w-8 h-8 rounded-lg bg-[#C5A059]/10 flex items-center justify-center text-[#C5A059] border border-[#C5A059]/20 shadow-[0_0_10px_rgba(197,160,89,0.1)]">
+                            <i class="fa-solid fa-hand-holding-dollar text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-[#C5A059] transition-colors leading-snug">Cobra lo que Vales en SST</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Aprende a cotizar tus servicios SST usando la Calculadora Financiera Pro. Define tu margen de ganancia, diseña ofertas comerciales efectivas y descarga tu propuesta con un solo clic.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-[#C5A059]"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 9: INTEGRACIÓN IND -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-cyan-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-cyan-950 text-cyan-400 border border-cyan-900/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #9 • Indicadores SST-PESV</span>
+                        <div class="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20 shadow-[0_0_10px_rgba(6,182,212,0.1)]">
+                            <i class="fa-solid fa-link text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-cyan-400 transition-colors leading-snug">Integración de Indicadores SST y PESV</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Estrategia de unificación de objetivos y tableros estadísticos para presentar un solo reporte gerencial consolidado de seguridad vial.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-cyan-400"></i> Material Descargable</span>
+                </div>
+            </div>
+
+            <!-- TALLER 10: CIERRE MAESTRO -->
+            <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-emerald-400/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[8px] bg-emerald-950 text-emerald-400 border border-emerald-900/40 px-2.5 py-1 rounded-full font-black uppercase tracking-widest inline-block">Taller #10 • Cierre del SG-SST</span>
+                        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                            <i class="fa-solid fa-check-double text-xs"></i>
+                        </div>
+                    </div>
+                    <h4 class="text-sm font-bold text-white font-montserrat group-hover/card:text-emerald-400 transition-colors leading-snug">Cierre Maestro del SG-SST (IRRADIA)</h4>
+                    <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        Domina las 7 fases del Protocolo IRRADIA para asegurar un cierre de año impecable. Aprende a evaluar tus metas, consolidar tus informes finales y estructurar un reporte de gestión exitoso que demuestre tu verdadero valor ante la gerencia.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-white/5 flex items-center text-[10px] text-slate-500 font-mono">
+                    <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-emerald-400"></i> Material Descargable</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT DE CONTROL PARA LAS SUB-PESTAÑAS Y EL DESLIZAMIENTO DEL CARRUSEL -->
+<script>
+    function switchSubTabV14(subTab) {
+        try { playSound('pop'); } catch(e) {}
+        
+        const btnCursos = document.getElementById('subbtn-v14-cursos');
+        const btnTalleres = document.getElementById('subbtn-v14-talleres');
+        const contCursos = document.getElementById('subtab-v14-cursos-container');
+        const contTalleres = document.getElementById('subtab-v14-talleres-container');
+
+        if (subTab === 'cursos') {
+            btnCursos.className = "flex-1 py-3 text-xs font-bold font-montserrat uppercase rounded-xl bg-[#00f3ff] text-slate-950 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,243,255,0.25)]";
+            btnTalleres.className = "flex-1 py-3 text-xs font-bold font-montserrat uppercase rounded-xl text-slate-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2";
+            
+            contCursos.classList.remove('hidden');
+            contTalleres.classList.add('hidden');
+        } else if (subTab === 'talleres') {
+            btnTalleres.className = "flex-1 py-3 text-xs font-bold font-montserrat uppercase rounded-xl bg-[#00f3ff] text-slate-950 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,243,255,0.25)]";
+            btnCursos.className = "flex-1 py-3 text-xs font-bold font-montserrat uppercase rounded-xl text-slate-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2";
+            
+            contTalleres.classList.remove('hidden');
+            contCursos.classList.add('hidden');
+        }
+    }
+
+    function slideCarouselV14(direction) {
+        try { playSound('pop'); } catch(e) {}
+        
+        const contCursos = document.getElementById('subtab-v14-cursos-container');
+        const contTalleres = document.getElementById('subtab-v14-talleres-container');
+        const container = contCursos.classList.contains('hidden') ? contTalleres : contCursos;
+
+        const scrollAmount = 340; // Ancho promedio de la tarjeta + gap
+        if (direction === 'left') {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    }
+</script>
+
+
+
 
        <!-- MOTOR JAVASCRIPT DEL SHOWROOM (Sincronizado e Iluminado al 100%) -->
         <script>
