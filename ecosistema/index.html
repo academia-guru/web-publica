@@ -2296,51 +2296,48 @@ Fecha: Julio de 2026
 </section>
 
 
-<!-- ========================================================================= -->
-<!-- 🏝️ ISLA DE NAVEGACIÓN FLOTANTE (DOCK CYBERPUNK V2) - 100% BLINDADA PARA MÓVILES -->
-<!-- ========================================================================= -->
-<!-- Ubicación recomendada: Colocar al final de tu index.html, justo antes de la etiqueta </body> -->
-
-<nav class="fixed bottom-4 left-0 right-0 mx-auto w-[92%] max-w-[380px] bg-slate-950/90 backdrop-blur-xl border border-cyan-500/25 rounded-full shadow-[0_10px_35px_rgba(0,243,255,0.2)] px-2 sm:px-3 py-2 transition-all duration-300 hover:border-cyan-400/40" style="z-index: 99999 !important;">
-    <div class="flex justify-between items-center w-full">
+<!-- ================= MENÚ DE NAVEGACIÓN FLOTANTE (VERSIÓN v3 - 100% BLINDADA MÓVIL Y PC) ================= -->
+<!-- Ubicación recomendada: Colocar justo antes de la etiqueta de cierre </body> de tu index.html -->
+<nav class="fixed bottom-4 left-4 right-4 md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-full md:max-w-[400px] bg-slate-950/90 backdrop-blur-xl border border-cyan-500/25 rounded-full shadow-[0_10px_35px_rgba(0,243,255,0.2)] px-2.5 sm:px-4 py-2 transition-all duration-300 hover:border-cyan-400/40" style="z-index: 99999 !important;">
+    <div class="flex justify-between items-center gap-1">
         
         <!-- 1. Inicio -->
-        <a href="#inicio" class="flex flex-col items-center justify-center py-0.5 px-1 flex-1 text-slate-400 hover:text-[#00f3ff] active:text-[#00f3ff] transition-all group duration-300">
-            <i class="fa-solid fa-house text-xs group-hover:scale-110 transition-transform mb-0.5"></i>
-            <span class="text-[8px] font-bold uppercase tracking-wide text-center">Inicio</span>
+        <a href="#inicio" class="flex flex-col items-center gap-0.5 p-1 flex-1 text-slate-400 hover:text-[#00f3ff] active:text-[#00f3ff] transition-all group duration-300">
+            <i class="fa-solid fa-house text-[13px] sm:text-sm group-hover:scale-110 transition-transform"></i>
+            <span class="text-[8px] sm:text-[9px] font-bold uppercase tracking-normal text-center">Inicio</span>
         </a>
 
-        <!-- Divisor sutil -->
-        <div class="w-px h-5 bg-slate-800/80 shrink-0"></div>
+        <!-- Línea divisora sutil (Oculta en móviles para salvar espacio crítico) -->
+        <div class="w-px h-5 bg-slate-800/60 hidden sm:block"></div>
 
         <!-- 2. Tecnología IA -->
-        <a href="#showroom" class="flex flex-col items-center justify-center py-0.5 px-1 flex-1 text-slate-400 hover:text-[#00f3ff] active:text-[#00f3ff] transition-all group duration-300">
-            <i class="fa-solid fa-robot text-xs group-hover:scale-110 transition-transform mb-0.5"></i>
-            <span class="text-[8px] font-bold uppercase tracking-wide text-center">Tech</span>
+        <a href="#showroom" class="flex flex-col items-center gap-0.5 p-1 flex-1 text-slate-400 hover:text-[#00f3ff] active:text-[#00f3ff] transition-all group duration-300">
+            <i class="fa-solid fa-robot text-[13px] sm:text-sm group-hover:scale-110 transition-transform"></i>
+            <span class="text-[8px] sm:text-[9px] font-bold uppercase tracking-normal text-center">Tech</span>
         </a>
 
-        <!-- Divisor sutil -->
-        <div class="w-px h-5 bg-slate-800/80 shrink-0"></div>
+        <!-- Línea divisora sutil (Oculta en móviles para salvar espacio crítico) -->
+        <div class="w-px h-5 bg-slate-800/60 hidden sm:block"></div>
 
-        <!-- 3. Membresías (Resaltado Ámbar/Dorado) -->
-        <a href="#planes" class="flex flex-col items-center justify-center py-0.5 px-1 flex-1 text-slate-400 hover:text-amber-400 active:text-amber-400 transition-all group duration-300">
-            <i class="fa-solid fa-gem text-xs group-hover:scale-110 transition-transform mb-0.5"></i>
-            <span class="text-[8px] font-bold uppercase tracking-wide text-center">Planes</span>
+        <!-- 3. Membresías / Planes (Resaltado Dorado de Valor) -->
+        <a href="#planes" class="flex flex-col items-center gap-0.5 p-1 flex-1 text-slate-400 hover:text-amber-400 active:text-amber-400 transition-all group duration-300">
+            <i class="fa-solid fa-gem text-[13px] sm:text-sm group-hover:scale-110 transition-transform"></i>
+            <span class="text-[8px] sm:text-[9px] font-bold uppercase tracking-normal text-center">Planes</span>
         </a>
 
-        <!-- Divisor sutil -->
-        <div class="w-px h-5 bg-slate-800/80 shrink-0"></div>
+        <!-- Línea divisora sutil (Oculta en móviles para salvar espacio crítico) -->
+        <div class="w-px h-5 bg-slate-800/60 hidden sm:block"></div>
 
-        <!-- 4. Comunidad -->
-        <a href="#testimonios" class="flex flex-col items-center justify-center py-0.5 px-1 flex-1 text-slate-400 hover:text-[#00f3ff] active:text-[#00f3ff] transition-all group duration-300">
-            <i class="fa-solid fa-star text-xs group-hover:scale-110 transition-transform mb-0.5"></i>
-            <span class="text-[8px] font-bold uppercase tracking-wide text-center">Casos</span>
+        <!-- 4. Comunidad / Testimonios -->
+        <a href="#testimonios" class="flex flex-col items-center gap-0.5 p-1 flex-1 text-slate-400 hover:text-[#00f3ff] active:text-[#00f3ff] transition-all group duration-300">
+            <i class="fa-solid fa-star text-[13px] sm:text-sm group-hover:scale-110 transition-transform"></i>
+            <span class="text-[8px] sm:text-[9px] font-bold uppercase tracking-normal text-center">Casos</span>
         </a>
 
-        <!-- Botón de Login (Visualmente alineado y compacto) -->
-        <div class="pl-2 border-l border-slate-800/80 flex items-center shrink-0">
+        <!-- Botón de Entrada Rápida de Login (Espaciado y alineación optimizados) -->
+        <div class="pl-1.5 sm:pl-2 border-l border-slate-800/80 flex items-center shrink-0">
             <a href="https://vip.andreacastrosst.com/" 
-               class="w-8 h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-[#00f3ff] hover:bg-[#00f3ff] hover:text-slate-950 transition-all shadow-[0_0_10px_rgba(0,243,255,0.2)] hover:scale-105 active:scale-95 duration-300"
+               class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-[#00f3ff] hover:bg-[#00f3ff] hover:text-slate-950 transition-all shadow-[0_0_10px_rgba(0,243,255,0.2)] hover:scale-105 active:scale-95 duration-300"
                title="Ingresar a la Academia"
                onclick="if(typeof playSound==='function') playSound('pop')">
                 <i class="fa-solid fa-right-to-bracket text-xs"></i>
