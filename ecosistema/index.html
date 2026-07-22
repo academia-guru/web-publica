@@ -1417,74 +1417,6 @@
 </section>
 
 
-
-    <!-- CSS DE ESTILOS Y ANIMACIONES ULTRA-PREMIUM (GURU OS) -->
-<style>
-/* Animación de humo flotante para la taza de café */
-@keyframes steam-rise {
-    0% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 2px rgba(245,158,11,0.2)); }
-    50% { transform: translateY(-4px) scale(1.08); filter: drop-shadow(0 -3px 12px rgba(245,158,11,0.8)); }
-    100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 2px rgba(245,158,11,0.2)); }
-}
-.animate-steam-coffee {
-    display: inline-block;
-    animation: steam-rise 3s ease-in-out infinite;
-}
-
-/* Efecto de borde láser animado en hover para las tarjetas */
-.neon-border-card {
-    position: relative;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.neon-border-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px; /* Grosor del borde láser */
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-/* Plan Mensual: Láser Gris Acero / Metalizado */
-.neon-border-card-slate::before {
-    background: linear-gradient(90deg, #64748b, #cbd5e1, #334155, #94a3b8);
-    background-size: 300% 300%;
-}
-
-/* Plan Semestral: Láser Cyan Eléctrico */
-.neon-border-card-cyan::before {
-    background: linear-gradient(90deg, #00f3ff, #001424, #00a3ff, #00f3ff);
-    background-size: 300% 300%;
-}
-
-/* Plan Anual: Láser Dorado / Brillo Solar */
-.neon-border-card-gold::before {
-    background: linear-gradient(90deg, #fbbf24, #ffffff, #f59e0b, #fbbf24);
-    background-size: 300% 300%;
-}
-
-@keyframes laser-spin {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.neon-border-card:hover::before {
-    opacity: 1;
-    animation: laser-spin 4s linear infinite;
-}
-
-.neon-border-card:hover {
-    transform: translateY(-6px);
-}
-</style>
-
 <!-- SECCIÓN: PLANES DE MEMBRESÍA & RECURSOS (GURU SST VIP 2.0) -->
 <section id="planes" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
     
@@ -1736,167 +1668,356 @@
 
         </div>
 
-        <!-- EXTRALISTADO DE ALTO IMPACTO (BÓVEDA DE ARCHIVOS & REFUERZO DE ACTUALIZACIÓN) -->
-        <div class="mt-8 pt-8 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- La Bóveda -->
-            <div class="bg-slate-900/30 border border-white/5 p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-10 h-10 rounded-xl bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan shrink-0">
-                    <i class="fa-solid fa-file-excel text-lg"></i>
-                </div>
-                <div>
-                    <h4 class="text-xs font-bold text-white font-montserrat">150+ Plantillas y Soportes Editables</h4>
-                    <p class="text-[11px] text-slate-400 mt-0.5">Descarga libre de matrices, planes, contratos, actas e informes listos en Word y Excel.</p>
-                </div>
-            </div>
-            <!-- Bono de Actualización (Para todos los planes) -->
-            <div class="bg-amber-400/5 border border-amber-400/10 p-4 rounded-2xl flex items-center gap-4">
-                <div class="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-amber-400 shrink-0">
-                    <i class="fa-solid fa-gem text-lg animate-pulse"></i>
-                </div>
-                <div>
-                    <h4 class="text-xs font-bold text-amber-400 font-montserrat">Bono VIP: Actualización de por Vida</h4>
-                    <p class="text-[11px] text-slate-300 mt-0.5">Todos los planes incluyen actualizaciones normativas de ley y cursos constantemente reestructurados.</p>
-                </div>
-            </div>
-        </div>
+        
 
-    </div>
+    <!--
+=============================================================================
+ECOSISTEMA GURU SST VIP - SECCIÓN DE PLANES DE ACCESO PREMIUM V8
+MAQUETACIÓN ADAPTATIVA DE ALTA CONVERSIÓN - ESTILO SAAS DE SILICON VALLEY
+=============================================================================
+Diseño: Ricardo (Inteligencia Natural) & NotebookLM (Inteligencia Artificial)
+Fecha: Julio de 2026
+-->
 
+<!-- ESTILOS CSS PERSONALIZADOS DE ALTO IMPACTO (Copiar en el <head> de la página) -->
+<style>
+    /* --- 💫 EFECTO LÁSER "GURU OS" EN BORDES (HOVER INTERACTIVO) --- */
+    .neon-border-card {
+        position: relative;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .neon-border-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 2.5px; /* Grosor del borde láser */
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        z-index: 10;
+    }
+
+    /* Plan Mensual: Láser Gris Acero Metalizado (Look sobrio y "apagado") */
+    .neon-border-card-slate::before {
+        background: linear-gradient(90deg, #475569, #94a3b8, #334155, #475569);
+        background-size: 300% 300%;
+    }
+
+    /* Plan Semestral: Láser Cyan Eléctrico (Look Tecnológico Activo) */
+    .neon-border-card-cyan::before {
+        background: linear-gradient(90deg, #00f3ff, #0284c7, #439ae7, #00f3ff);
+        background-size: 300% 300%;
+    }
+
+    /* Plan Anual: Láser Dorado Real / Brillo Solar (Look Máster Premium) */
+    .neon-border-card-gold::before {
+        background: linear-gradient(90deg, #f59e0b, #ffffff, #d97706, #f59e0b);
+        background-size: 300% 300%;
+    }
+
+    @keyframes laser-spin {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Activación del láser y levante de la tarjeta en hover */
+    .neon-border-card:hover::before {
+        opacity: 1;
+        animation: laser-spin 4s linear infinite;
+    }
+
+    .neon-border-card:hover {
+        transform: translateY(-8px);
+    }
+
+    /* --- ✨ EFECTO DE BRILLO DINÁMICO CONTINUO EN BOTONES --- */
+    @keyframes btn-shining {
+        0% { left: -100%; }
+        50% { left: 100%; }
+        100% { left: 100%; }
+    }
+
+    .btn-shine-effect {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-shine-effect::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+        animation: btn-shining 4s infinite ease-in-out;
+        pointer-events: none;
+    }
+
+    /* --- ☕ ANIMACIÓN DE HUMO FLOTANTE PARA LA TAZA DE CAFÉ --- */
+    @keyframes steam-rise {
+        0% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 2px rgba(245,158,11,0.2)); }
+        50% { transform: translateY(-4px) scale(1.08); filter: drop-shadow(0 -3px 12px rgba(245,158,11,0.8)); }
+        100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 2px rgba(245,158,11,0.2)); }
+    }
+
+    .animate-steam-coffee {
+        display: inline-block;
+        animation: steam-rise 3s ease-in-out infinite;
+    }
+
+    /* --- 🎨 REFLEJO DE GLOW INTERNO PARA EVITAR LA OSCURIDAD EXCESIVA --- */
+    .premium-glass {
+        background: rgba(15, 23, 42, 0.75); /* Slate 900 con 75% de opacidad para más cuerpo */
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .premium-glow-slate:hover {
+        box-shadow: 0 0 50px rgba(148, 163, 184, 0.06);
+    }
+
+    .premium-glow-cyan:hover {
+        box-shadow: 0 0 50px rgba(0, 243, 255, 0.15);
+    }
+
+    .premium-glow-gold:hover {
+        box-shadow: 0 0 50px rgba(197, 160, 89, 0.2);
+    }
+</style>
+
+
+    <!-- ========================================================================= -->
     <!-- PISO 2: LAS TARJETAS DE TARIFAS (3 Columnas con Efecto Señuelo / Decoy Pricing) -->
+    <!-- ========================================================================= -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
 
-        <!-- PLAN A: MENSUAL SEÑUELO (Diseñado para anclar el valor y desincentivar fuga de IP) -->
-        <div class="neon-border-card neon-border-card-slate glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 bg-slate-950/40 opacity-80 hover:opacity-100 shadow-xl transition-all duration-300">
-            <div class="absolute -top-24 -left-24 w-48 h-48 bg-slate-800/10 rounded-full blur-[80px] pointer-events-none"></div>
-            
-            <div class="text-center border-b border-slate-900 pb-6 mb-6">
-                <span class="text-[9px] font-bold text-slate-500 tracking-widest uppercase block mb-1">Inversión Sin Permanencia</span>
-                <h3 class="font-montserrat font-black text-xl text-slate-400 uppercase tracking-wider mt-2">Plan Mensual Pro</h3>
-                
-                <div class="my-6 space-y-1">
-                    <span class="text-slate-600 line-through font-semibold text-xs block">$450.000 COP</span>
-                    <span class="flex items-baseline justify-center gap-1 text-4xl font-black text-white tracking-tighter">
-                        $197.000 <span class="text-xs text-slate-400 font-bold tracking-normal uppercase ml-1">COP / Mes</span>
-                    </span>
-                    <p class="text-[11px] text-slate-500 mt-3 font-light leading-relaxed">Pagas el valor completo mes a mes sin descuento promocional.</p>
-                </div>
-            </div>
+        <!-- PLAN A: MENSUAL SEÑUELO (Optimizado para simetría vertical y decoy pricing) -->
+<div class="neon-border-card neon-border-card-slate premium-glass premium-glow-slate rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 shadow-xl transition-all duration-300 relative overflow-hidden group min-h-full">
+    
+    <!-- Efecto sutil de iluminación interior de fondo -->
+    <div class="absolute -top-24 -left-24 w-48 h-48 bg-slate-800/15 rounded-full blur-[80px] pointer-events-none group-hover:bg-slate-700/25 transition-all duration-500"></div>
 
-            <!-- Resumen de acceso simple -->
-            <div class="space-y-4 flex-grow">
-                <p class="text-xs text-slate-400 leading-relaxed text-center font-light">
-                    Desbloquea el acceso temporal por <strong class="text-white">30 días</strong> al aula virtual, descargas de la bóveda de formatos y la suite de aplicativos con IA de GURU.
-                </p>
-                <div class="p-3 bg-slate-900/30 rounded-xl border border-white/5 text-[11px] text-slate-500 text-center font-light">
-                    ⚠️ No se incluye acompañamiento estratégico semanal ni mentorías personalizadas en vivo.
-                </div>
-            </div>
+    <!-- Cabecera del plan -->
+    <div class="text-center border-b border-slate-900 pb-6 mb-6">
+        <span class="text-[9px] font-bold text-slate-500 tracking-widest uppercase block mb-1">CANCELA CUANDO QUIERAS</span>
+        <h3 class="font-montserrat font-black text-xl text-slate-400 uppercase tracking-wider mt-2">Plan Mensual</h3>
+        
+        <div class="my-6 space-y-1">
+            <span class="text-slate-500 font-semibold text-xs block">
+                Precio Regular: <span class="line-through">$450.000 COP</span>
+            </span>
+            <span class="flex items-baseline justify-center gap-1 text-4xl font-black text-white tracking-tighter">
+                $197.000 <span class="text-xs text-slate-400 font-bold tracking-normal uppercase ml-1">COP / Mes</span>
+            </span>
+            <p class="text-[11px] text-slate-500 mt-3 font-light leading-relaxed">
+                Ideal si solo necesitas resolver un proyecto puntual este mes, con total libertad.
+            </p>
+        </div>
+    </div>
 
-            <!-- Botón exclusivo a WhatsApp para evitar compras autónomas rápidas y piratería de la bóveda -->
-            <div class="mt-8 w-full">
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20estoy%20interesado%20en%20adquirir%20el%20Plan%20Mensual%20de%20GURU%20SST%20por%20$197.000%20COP.%20Quiero%20saber%20c%C3%B3mo%20es%20el%20proceso%20de%20ingreso." 
-                   target="_blank" 
-                   class="w-full py-4 bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-montserrat font-bold text-xs uppercase tracking-widest rounded-xl transition-all flex justify-center items-center gap-2 cursor-pointer">
-                    <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> Solicitar en WhatsApp
-                </a>
+    <!-- Resumen de acceso (Llena el espacio vertical con una simetría impecable en PC) -->
+    <div class="space-y-4 flex-grow flex flex-col justify-center my-4">
+        <div class="space-y-3">
+            <!-- Item 1 -->
+            <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+                <i class="fa-solid fa-circle-check text-slate-500 text-sm"></i>
+                <span>Acceso garantizado por <strong class="text-white font-medium">30 días </strong></span>
+            </div>
+            <!-- Item 2 -->
+            <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+                <i class="fa-solid fa-circle-check text-slate-500 text-sm"></i>
+                <span>Acceso al 100% de todo el Ecosistema Inteligente</span>
+            </div>
+            <!-- Item 3 -->
+            <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+                <i class="fa-solid fa-circle-check text-slate-500 text-sm"></i>
+                <span>Descargas ilimitadas de Formatos</span>
+            </div>
+            <!-- Divisor y Refuerzo de Acompañamiento -->
+            <div class="border-t border-slate-900/60 pt-4 mt-2">
+                <div class="flex items-start gap-2.5 text-slate-300 text-xs font-light">
+                    <i class="fa-solid fa-users text-emerald-400 text-sm shrink-0 mt-0.5"></i>
+                    <span class="leading-relaxed">Incluye participación en todas las <strong class="text-white font-medium">sesiones grupales en vivo</strong> de tus 30 días.</span>
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- Botón de acción -->
+    <div class="mt-8 w-full">
+        <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20activar%20mi%20Plan%20Mensual%20de%20GURU%20SST%20por%20$197.000%20COP."
+           target="_blank"
+           class="w-full py-4 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white font-montserrat font-bold text-xs uppercase tracking-widest rounded-xl transition-all flex justify-center items-center gap-2 cursor-pointer shadow-md hover:scale-[1.02] active:scale-95 duration-300">
+            <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> Activar Plan Mensual
+        </a>
+    </div>
+
+</div>
+
 
         <!-- PLAN B: EL SEMESTRAL ÉLITE (Altísima rentabilidad de retención en recurrencia) -->
-        <div class="neon-border-card neon-border-card-cyan glass-panel rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 hover:border-[#00f3ff]/20 transition-all duration-300 shadow-2xl relative">
-            <div class="absolute -top-24 -left-24 w-48 h-48 bg-[#00f3ff]/5 rounded-full blur-[80px] pointer-events-none"></div>
+        <div class="neon-border-card neon-border-card-cyan premium-glass premium-glow-cyan rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 shadow-2xl relative overflow-hidden group">
             
+            <!-- Efecto sutil de iluminación interior de fondo (Cyan) -->
+            <div class="absolute -top-24 -left-24 w-48 h-48 bg-[#00f3ff]/5 rounded-full blur-[80px] pointer-events-none group-hover:bg-[#00f3ff]/15 transition-all duration-500"></div>
+
             <div class="text-center border-b border-slate-900 pb-6 mb-6">
-                <span class="text-[9px] font-bold text-[#00f3ff] tracking-widest uppercase block mb-1">Membresía Flex-Recurrente</span>
-                <h3 class="font-montserrat font-black text-2xl text-white uppercase tracking-wider mt-2">Plan Élite Semestral</h3>
+                <span class="text-[9px] font-bold text-[#00f3ff] tracking-widest uppercase block mb-1">Membresía Élite</span>
+                <h3 class="font-montserrat font-black text-2xl text-white uppercase tracking-wider mt-2">Plan Semestral</h3>
                 
-                <div class="my-6 space-y-1">
-                    <span class="text-slate-500 line-through font-medium text-xs block">$700.000 COP</span>
+                 <div class="my-6 space-y-1">
+                    <span class="text-slate-500 font-medium text-xs block">
+                        Precio Regular: <span class="line-through">$700.000 COP</span>
+                    </span>
                     <span class="flex items-baseline justify-center gap-1 text-5xl font-black text-white tracking-tighter">
                         $350K <span class="text-sm text-[#00f3ff] font-bold tracking-normal uppercase ml-1">COP</span>
                     </span>
                     <span class="block text-[10px] text-slate-400 mt-2 uppercase tracking-wider">Ahorras el 50% de inmediato</span>
                     <span class="text-[11px] text-emerald-400 block font-semibold mt-1">¡Solo unos <strong class="font-bold">$1.900 COP diarios!</strong></span>
                 </div>
-            </div>
-
-            <!-- Resumen de acceso -->
-            <div class="space-y-4 flex-grow">
-                <p class="text-xs text-slate-300 leading-relaxed text-center font-light">
-                    Desbloquea el acceso ilimitado por <strong class="text-white">6 meses completos</strong> al aula virtual, descargas y la suite de aplicativos con IA de GURU.
-                </p>
-                <div class="p-3 bg-[#00f3ff]/5 rounded-xl border border-[#00f3ff]/10 text-[11px] text-slate-300 text-center font-light">
-                    🚀 Incluye 2 sesiones mensuales de acompañamiento estratégico grupal en vivo con Andrea Castro.
                 </div>
-            </div>
 
-            <!-- Dual CTA Actions (Checkout + WhatsApp) -->
-            <div class="mt-8 w-full flex flex-col gap-3">
-                <a href="https://vip.andreacastrosst.com/checkout/?plan=SST_SEMESTRAL" 
-                   class="w-full py-4 bg-slate-800 hover:bg-[#00f3ff] text-white hover:text-slate-950 font-montserrat font-black text-xs uppercase tracking-widest rounded-xl transition-all flex justify-center items-center gap-2 [box-shadow:0_0_15px_rgba(0,243,255,0.05)] cursor-pointer">
-                    Adquirir Plan Semestral
-                </a>
-                
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20adquirir%20el%20Plan%20%C3%89lite%20Semestral%20de%20$350.000%20COP%20mediante%20transferencia%20manual%20(Nequi%20/%20Bancolombia)." 
-                   target="_blank" 
-                   class="w-full py-3 bg-slate-950/40 border border-emerald-500/20 hover:border-emerald-400 text-emerald-400 hover:bg-emerald-500/10 font-poppins font-bold text-[11px] rounded-xl transition-colors flex justify-center items-center gap-1.5 cursor-pointer">
-                    <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> Pagar por Nequi / Bancolombia / Dudas
-                </a>
-            </div>
+           <div class="space-y-4 flex-grow flex flex-col justify-center my-4">
+    <!-- Cajita Premium de Cristal para agrupar los accesos -->
+    <div class="p-4 bg-slate-900/35 border border-white/5 rounded-2xl shadow-inner space-y-3.5">
+        
+        <!-- Item 1 -->
+        <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+            <i class="fa-solid fa-circle-check text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)] text-sm"></i>
+            <span>Acceso garantizado por <strong class="text-white font-semibold">180 días </strong></span>
         </div>
 
-        <!-- PLAN C: EL ANUAL MASTER (El recomendado, mayor volumen de retención y valor percibido) -->
-        <div class="neon-border-card neon-border-card-gold bg-gradient-to-b from-[#002440] to-slate-950 rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-amber-400/30 shadow-[0_0_25px_rgba(245,158,11,0.15)] hover:shadow-[0_0_35px_rgba(245,158,11,0.3)] transition-all duration-300 relative transform lg:-translate-y-4">
-            
-            <!-- Insignia Flotante GURU OS -->
-            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-950 font-black text-[9px] uppercase tracking-widest py-1.5 px-4 rounded-full shadow-md z-20">
-                Súper Aceleración
-            </div>
+        <!-- Item 2 -->
+        <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+            <i class="fa-solid fa-circle-check text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)] text-sm"></i>
+            <span>Acceso al <strong class="text-white font-semibold">100% de todo el Ecosistema Inteligente</strong></span>
+        </div>
 
-            <div class="text-center border-b border-slate-800 pb-6 mb-6 mt-2">
-                <span class="text-[10px] font-bold text-amber-400 tracking-widest uppercase block mb-1">La Opción Recomendada</span>
-                <h3 class="font-montserrat font-black text-2xl text-white uppercase tracking-wider mt-2">Plan Máster Anual</h3>
-                
-                <div class="my-6 space-y-1">
-                    <span class="text-slate-500 line-through font-medium text-xs block">$1.200.000 COP</span>
-                    <span class="flex items-baseline justify-center gap-1 text-5xl font-black text-white tracking-tighter">
-                        $500K <span class="text-sm text-amber-400 font-bold tracking-normal uppercase ml-1">COP</span>
-                    </span>
-                    <span class="block text-[10px] text-slate-300 mt-2 uppercase tracking-wider">Ahorras un 58% Real de Lanzamiento</span>
-                    <span class="text-[11px] text-amber-400 block font-semibold mt-1">
-                        <i class="fa-solid fa-mug-hot text-amber-400 animate-steam-coffee mr-1"></i> ¡Solo unos <strong class="font-bold">$1.370 COP al día!</strong>
-                    </span>
-                </div>
-            </div>
+        <!-- Item 3 -->
+        <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+            <i class="fa-solid fa-circle-check text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)] text-sm"></i>
+            <span>Descargas <strong class="text-white font-semibold">ilimitadas de Formatos</strong></span>
+        </div>
 
-            <!-- Resumen de acceso -->
-            <div class="space-y-4 flex-grow">
-                <p class="text-xs text-slate-200 leading-relaxed text-center font-light">
-                    Desbloquea el acceso completo e ilimitado por <strong class="text-white font-medium">1 año completo (12 meses)</strong> al aula virtual, descargas y la suite de aplicativos con IA de GURU.
-                </p>
-                <div class="p-3 bg-amber-400/5 rounded-xl border border-amber-400/10 text-[11px] text-amber-200 text-center font-light">
-                    👑 Incluye acceso preferencial a las mentorías grupales semanales en vivo directamente con Andrea.
-                </div>
-            </div>
-
-            <!-- Dual CTA Actions (Checkout + WhatsApp) -->
-            <div class="mt-8 w-full flex flex-col gap-3">
-                <a href="https://vip.andreacastrosst.com/checkout/?plan=SST_ANUAL" 
-                   class="w-full py-4 bg-amber-400 hover:bg-white text-slate-950 font-montserrat font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-[0_0_15px_rgba(245,158,11,0.25)] flex justify-center items-center gap-2 group cursor-pointer">
-                    Adquirir Plan Máster Anual <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                
-                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20adquirir%20el%20Plan%20M%C3%A1ster%20Anual%20de%20$500.000%20COP%20mediante%20transferencia%20manual%20(Nequi%20/%20Bancolombia)." 
-                   target="_blank" 
-                   class="w-full py-3 bg-slate-950/40 border border-emerald-500/20 hover:border-emerald-400 text-emerald-400 hover:bg-emerald-500/10 font-poppins font-bold text-[11px] rounded-xl transition-colors flex justify-center items-center gap-1.5 cursor-pointer">
-                    <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> Pagar por Nequi / Bancolombia / Dudas
-                </a>
+        <!-- Divisor y Refuerzo de Acompañamiento -->
+        <div class="border-t border-slate-800/80 pt-3.5 mt-1">
+            <div class="flex items-start gap-2.5 text-slate-300 text-xs font-light">
+                <i class="fa-solid fa-users text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.4)] text-sm shrink-0 mt-0.5"></i>
+                <span class="leading-relaxed">Incluye participación en todas las <strong class="text-white font-semibold">sesiones grupales en vivo</strong> durante 6 meses.</span>
             </div>
         </div>
 
     </div>
+</div>
 
-    <!-- NOTAS EN LETRA PEQUEÑA EMPÁTICA (CONDICIONES DE CONVIVENCIA Y USO DE SERVIDORES IA) -->
+            <!-- Dual CTA Actions (Checkout + WhatsApp) -->
+            <div class="mt-8 w-full flex flex-col gap-3">
+                <!-- Botón Principal con Brillo "Liquid Sweep" Premium y sombra neón -->
+                <a href="https://vip.andreacastrosst.com/checkout/?plan=SST_SEMESTRAL"
+                   class="btn-shine-effect w-full py-4 bg-gradient-to-r from-guru-electric to-guru-navy hover:from-[#00f3ff] hover:to-guru-electric text-white hover:text-slate-950 font-montserrat font-black text-xs uppercase tracking-widest rounded-xl transition-all flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(0,243,255,0.2)] hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] cursor-pointer hover:scale-[1.02] active:scale-95 duration-300">
+                    Adquirir Plan Semestral
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20adquirir%20el%20Plan%20%C3%89lite%20Semestral%20de%20$350.000%20COP%20mediante%20transferencia%20manual%20(Nequi%20/%20Bancolombia)."
+                   target="_blank"
+                   class="w-full py-3 bg-slate-950/40 border border-emerald-500/20 hover:border-emerald-400 text-emerald-400 hover:bg-emerald-500/10 font-poppins font-bold text-[11px] rounded-xl transition-all flex justify-center items-center gap-1.5 cursor-pointer hover:scale-[1.02] active:scale-95 duration-300">
+                    <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> Pagar por Nequi / Bancolombia / Dudas
+                </a>
+            </div>
+
+        </div>
+
+        <!-- PLAN C: EL ANUAL MASTER (El recomendado, optimizado contra recortes y con simetría de cajita) -->
+<div class="neon-border-card neon-border-card-gold bg-gradient-to-b from-[#002440] to-slate-950/95 premium-glow-gold rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-amber-400/30 shadow-[0_0_25px_rgba(245,158,11,0.15)] hover:shadow-[0_0_35px_rgba(245,158,11,0.35)] transition-all duration-300 relative group transform lg:-translate-y-4">
+    
+    <!-- Insignia Flotante GURU OS (Ya no se corta gracias a la remoción de overflow-hidden superior) -->
+    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-slate-950 font-black text-[9px] uppercase tracking-widest py-1.5 px-5 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.6)] z-20 animate-pulse">
+        La Opción Recomendada
+    </div>
+
+    <!-- Contenedor interno aislado con overflow-hidden para que las luces respeten el rounded-3xl de la tarjeta -->
+    <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-amber-400/5 rounded-full blur-[80px] group-hover:bg-amber-400/15 transition-all duration-500"></div>
+    </div>
+
+    <!-- Cabecera del plan -->
+    <div class="text-center border-b border-slate-800 pb-6 mb-6 mt-2 relative z-10">
+        <span class="text-[10px] font-bold text-amber-400 tracking-widest uppercase block mb-1">membresía master</span>
+        <h3 class="font-montserrat font-black text-2xl text-white uppercase tracking-wider mt-2">Plan Anual</h3>
+        
+        <div class="my-6 space-y-1">
+            <span class="text-slate-500 font-medium text-xs block">
+                Precio Regular: <span class="line-through">$1.200.000 COP</span>
+            </span>
+            <span class="flex items-baseline justify-center gap-1 text-5xl font-black text-white tracking-tighter">
+                $500K <span class="text-sm text-amber-400 font-bold tracking-normal uppercase ml-1">COP</span>
+            </span>
+            <span class="block text-[10px] text-slate-300 mt-2 uppercase tracking-wider">Ahorras un 58% Real de Lanzamiento</span>
+            <span class="text-[11px] text-amber-400 block font-semibold mt-1">
+                <i class="fa-solid fa-mug-hot text-amber-400 animate-steam-coffee mr-1"></i> ¡Solo unos <strong class="font-bold">$1.370 COP al día!</strong>
+            </span>
+        </div>
+    </div>
+
+    <!-- Resumen de acceso (Sincronizado con la cajita de cristal premium e iconos dorados) -->
+    <div class="space-y-4 flex-grow flex flex-col justify-center my-4 relative z-10">
+        <div class="p-4 bg-slate-900/35 border border-white/5 rounded-2xl shadow-inner space-y-3.5">
+            
+            <!-- Item 1 -->
+            <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+                <i class="fa-solid fa-circle-check text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)] text-sm"></i>
+                <span>Acceso garantizado por <strong class="text-white font-semibold">365 días completos</strong></span>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+                <i class="fa-solid fa-circle-check text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)] text-sm"></i>
+                <span>Acceso al <strong class="text-white font-semibold">100% de todo el Ecosistema Inteligente</strong></span>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
+                <i class="fa-solid fa-circle-check text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)] text-sm"></i>
+                <span>Descargas <strong class="text-white font-semibold">ilimitadas de Formatos</strong></span>
+            </div>
+
+            <!-- Divisor y Refuerzo de Acompañamiento Preferencial -->
+            <div class="border-t border-slate-800/80 pt-3.5 mt-1">
+                <div class="flex items-start gap-2.5 text-slate-300 text-xs font-light">
+                    <i class="fa-solid fa-users text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.4)] text-sm shrink-0 mt-0.5"></i>
+                    <span class="leading-relaxed">👑 Incluye participación en todas las <strong class="text-white font-semibold">sesiones grupales en vivo</strong> durante 12 meses.</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+            <!-- Dual CTA Actions (Checkout + WhatsApp) -->
+            <div class="mt-8 w-full flex flex-col gap-3">
+                <!-- Botón Principal Dorado con Brillo "Liquid Sweep" y Sombra de Oro Activa -->
+                <a href="https://vip.andreacastrosst.com/checkout/?plan=SST_ANUAL"
+                   class="btn-shine-effect w-full py-4 bg-amber-400 hover:bg-white text-slate-950 font-montserrat font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)] hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] flex justify-center items-center gap-2 group cursor-pointer hover:scale-[1.02] active:scale-95 duration-300">
+                    Adquirir Plan Máster Anual <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20adquirir%20el%20Plan%20M%C3%A1ster%20Anual%20de%20$500.000%20COP%20mediante%20transferencia%20manual%20(Nequi%20/%20Bancolombia)."
+                   target="_blank"
+                   class="w-full py-3 bg-slate-950/40 border border-emerald-500/20 hover:border-emerald-400 text-emerald-400 hover:bg-emerald-500/10 font-poppins font-bold text-[11px] rounded-xl transition-all flex justify-center items-center gap-1.5 cursor-pointer hover:scale-[1.02] active:scale-95 duration-300">
+                    <i class="fa-brands fa-whatsapp text-sm text-emerald-400"></i> Pagar por Nequi / Bancolombia / Dudas
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NOTAS EN LETRA PEQUEÑA EMPÁTICA (CONDICIONES DE USO DE SERVIDORES IA) -->
     <div class="mt-12 max-w-4xl mx-auto text-center space-y-2">
         <p class="text-[11px] text-slate-500 font-light leading-relaxed italic">
             * Para asegurar la máxima velocidad de respuesta de nuestro sistema de Inteligencia Artificial para todos los prevencionistas de la comunidad, el uso de las consultas automatizadas a través de WhatsApp o web cuenta con un margen diario generoso de consumo recomendado.
@@ -1907,17 +2028,18 @@
     </div>
 
     <!-- BANNER DE SOPORTE TÉCNICO DIRECTO CON ANDREA (CERO FACTURAS CORPORATIVAS) -->
-    <div class="mt-12 bg-gradient-to-r from-emerald-500/10 to-transparent border border-emerald-500/20 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto shadow-glass">
+    <div class="mt-12 bg-gradient-to-r from-emerald-500/10 to-transparent border border-emerald-500/20 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto shadow-glass backdrop-blur-md">
         <div class="flex items-center gap-4 text-center sm:text-left">
-            <i class="fa-solid fa-circle-question text-3xl text-emerald-400 shrink-0"></i>
+            <i class="fa-solid fa-circle-question text-3xl text-emerald-400 shrink-0 drop-shadow-[0_0_8px_rgba(16,185,129,0.4)]"></i>
             <div>
                 <h4 class="font-montserrat font-bold text-base text-white">¿Tienes alguna duda técnica sobre el aula o los accesos?</h4>
                 <p class="text-xs text-slate-400 mt-1">Si necesitas resolver preguntas antes de realizar tu compra, escríbenos directamente para darte soporte.</p>
             </div>
         </div>
+        <!-- Botón de WhatsApp con animación de pulso y brillo neón -->
         <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20tengo%20unas%20dudas%20t%C3%A9cnicas%20sobre%20los%20accesos%20al%20aula%20y%20las%20herramientas%20VIP%20antes%20de%20comprar.%20%C2%BFMe%20ayudas%3F"
            target="_blank"
-           class="shrink-0 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-lg flex items-center gap-2 cursor-pointer">
+           class="btn-shine-effect shrink-0 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.6)] flex items-center gap-2 cursor-pointer hover:scale-[1.02] active:scale-95 duration-300">
             <i class="fa-brands fa-whatsapp text-base"></i> Resolver Inquietudes con Andrea
         </a>
     </div>
