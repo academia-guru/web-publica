@@ -441,12 +441,25 @@
         let selectedPlan = 'anual';
         let customCouponVal = 'LAUNCH58';
 
-        // Inicializador
-        document.addEventListener('DOMContentLoaded', () => {
-            selectPlan('anual');
-            trackExitIntent();
-            setupDynamicWhatsApp();
-        });
+        // Inicializador corregido (Soporta plan=SST_SEMESTRAL, plan=semestral y defaults)
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  let planParam = urlParams.get('plan');
+  
+  if (planParam) {
+    planParam = planParam.toLowerCase();
+    if (planParam.includes('semestral')) {
+      selectPlan('semestral');
+    } else {
+      selectPlan('anual');
+    }
+  } else {
+    selectPlan('anual'); // Plan por defecto si entran al link limpio
+  }
+  
+  trackExitIntent();
+  setupDynamicWhatsApp();
+});
 
         // Toggle para visualizar contraseñas
         function togglePasswords() {
@@ -718,6 +731,5 @@
     </script>
 </body>
 </html>
-
 
 
