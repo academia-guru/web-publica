@@ -20,6 +20,7 @@
     <!-- Canvas Confetti for Gamification Celebrations -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+
     <!-- Configuración de Colores Oficial GURU OS -->
     <script>
         tailwind.config = {
@@ -53,6 +54,7 @@
         }
     </script>
 
+
     <style>
         body {
             background-color: #05080f;
@@ -69,6 +71,7 @@
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
         }
 
+
         .gold-glass-panel {
             background: rgba(20, 15, 5, 0.7);
             backdrop-filter: blur(16px);
@@ -76,6 +79,7 @@
             border: 1px solid rgba(197, 160, 89, 0.25);
             box-shadow: 0 8px 32px 0 rgba(197, 160, 89, 0.1);
         }
+
 
         #particles-js {
             position: fixed;
@@ -87,6 +91,7 @@
             pointer-events: none;
         }
 
+
         /* Animación de flotación */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -95,6 +100,7 @@
         .animate-float {
             animation: float 6s ease-in-out infinite;
         }
+
 
         /* Aro de luz neón giratorio para el mockup */
         @keyframes rotate-neon {
@@ -111,6 +117,7 @@
             z-index: 0;
             opacity: 0.8;
         }
+
 
         /* Hover de las tarjetas */
         .premium-card {
@@ -130,6 +137,7 @@
             display: none;
         }
 
+
         /* Gradiente animado estilo CloneVoice */
         .text-gradient-animate {
             background-size: 200% auto;
@@ -139,11 +147,13 @@
             to { background-position: 200% center; }
         }
 
+
         /* Estilo de la terminal del chat del Bot */
         .chat-container {
             max-height: 280px;
             overflow-y: auto;
         }
+
 
         /* Animación Shake para Alertas */
         @keyframes shake {
@@ -155,6 +165,7 @@
         .animate-shake {
             animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
         }
+
 
         /* Custom Scrollbar */
         .custom-scrollbar::-webkit-scrollbar {
@@ -171,6 +182,7 @@
 </head>
 <body class="font-poppins antialiased min-h-screen flex flex-col justify-between relative selection:bg-guru-cyan selection:text-guru-navy">
 
+
     <!-- FONDO VIVO: Partículas Neuronal -->
     <div id="particles-js"></div>
     <div class="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-guru-cyan/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
@@ -178,6 +190,7 @@
     
     <!-- NOTIFICACIONES TOAST -->
     <div id="toast-container" class="fixed top-5 right-5 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
 
     <!-- 1. HEADER / NAVEGACIÓN FIJA (STICKY - NAKED SIN FUGAS) -->
     <header class="sticky top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
@@ -189,6 +202,7 @@
                 <div class="border-l border-slate-700/60 h-6 sm:h-10"></div>
                 <img src="/img/logo-guru.png" alt="Logo GURU SST" class="h-6 sm:h-10 w-auto object-contain hover:scale-105 transition-transform">
             </div>
+
 
             <!-- Botones de Acción del Naked Header (Sin menú central para evitar fugas de tráfico) -->
             <div class="flex items-center gap-3">
@@ -208,6 +222,7 @@
             </div>
         </div>
     </header>
+
 
     <!-- 2. HERO SECTION: PERSUASIÓN ALTA CONVERSIÓN Y ESTÉICA PRO (PROTOCOL GURU OS) -->
     <section id="inicio" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
@@ -235,6 +250,7 @@
                 Bienvenido al <strong class="text-white font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">Ecosistema Inteligente GURU SST VIP</strong>. El primer holding digital en Colombia diseñado exclusivamente para que pases <span class="text-[#00f3ff] font-bold">de la teoría a la práctica</span> de inmediato, impulsado por <strong class="text-white font-bold">Inteligencia Artificial</strong> y metodologías de gestión proactiva.
             </p>
 
+
             <!-- Botones Primario y Secundario con Efecto Táctil Reclamado -->
             <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <a href="#planes"
@@ -251,19 +267,23 @@
             </div>
         </div>
 
+
         <!-- COLUMNA DERECHA: MOCKUP CINEMATOGRÁFICO DE LA ACADEMIA (VSL CON HALO PRO) -->
         <div class="flex-1 flex justify-center lg:justify-end w-full relative">
             
             <!-- Glow de fondo de la tarjeta -->
             <div class="absolute -inset-1 bg-gradient-to-r from-[#00f3ff]/30 to-[#439ae7]/30 rounded-[2.5rem] blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 
+
             <div class="relative w-full max-w-md md:max-w-lg aspect-video rounded-3xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] border border-[#00f3ff]/30 bg-slate-950 flex items-center justify-center group">
                 
                 <!-- Sombra dinámica -->
                 <div class="absolute inset-0 bg-[#090d16]/50 z-10 pointer-events-none group-hover:bg-[#090d16]/30 transition-colors duration-500"></div>
 
+
                 <!-- Foto de Andrea en el VPS con opacidad estilizada -->
                 <img src="/img/andrea-perfil.png" alt="Tour Ecosistema GURU OS" class="w-full h-full object-cover relative z-0 opacity-40 filter blur-[1px] group-hover:scale-105 group-hover:blur-0 transition-all duration-700 bg-slate-950" onerror="this.src='https://placehold.co/600x400/05080f/00f3ff?text=GURU+SST+VIP'">
+
 
                 <!-- Botón de Play Central con Anillo Vibrante -->
                 <a href="https://api.whatsapp.com/send?phone=573157800532&text=Hola%20Andrea%2C%20quiero%20ver%20el%20Tour%20en%20Video%20por%20dentro%20del%20Ecosistema%20GURU%20SST%20VIP."
@@ -272,6 +292,7 @@
                     <i class="fa-solid fa-play text-2xl ml-1"></i>
                 </a>
 
+
                 <!-- Badge Informativo Inferior en Cristal -->
                 <span class="absolute bottom-4 left-4 z-20 text-[10px] font-montserrat font-bold tracking-widest text-[#00f3ff] uppercase bg-slate-950/90 px-3.5 py-1.5 rounded-xl border border-[#00f3ff]/20 backdrop-blur-md flex items-center gap-2 shadow-md">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#39ff14] animate-ping"></span> 🎬 Dale Play: Tour del Ecosistema
@@ -279,6 +300,14 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
 
 
 
@@ -317,9 +346,11 @@
             }
         </style>
 
+
         <!-- Luces de fondo masivas (Spotlights) estilo CloneVoice -->
         <div class="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-guru-cyan/5 rounded-full blur-[130px] pointer-events-none z-0"></div>
         <div class="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] bg-guru-electric/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
 
         <!-- Encabezado de la Sección -->
         <div class="text-center max-w-3xl mx-auto mb-16 relative z-10">
@@ -334,6 +365,7 @@
                 Pasa de la teoría a la acción. Explora nuestras soluciones interactivas y descubre cómo simplificar tu gestión diaria sin complicaciones.
             </p>
         </div>
+
 
         <!-- TABS SELECTORAS (Botonera Táctil y Cómoda para Celulares y PC) -->
         <div class="grid grid-cols-2 md:flex md:flex-wrap justify-center gap-3.5 mb-12 relative z-10">
@@ -351,11 +383,13 @@
             </button>
         </div>
 
+
         <!-- CONTENEDOR CENTRAL DE CRISTAL (Doble Columna: Texto Persuasivo + Simuladores/Videos) -->
         <div class="glass-panel rounded-[2.5rem] p-6 sm:p-10 lg:p-12 border border-white/10 shadow-2xl relative overflow-hidden bg-slate-950/40 backdrop-blur-xl">
             
             <!-- Glow decorativo interno -->
             <div class="absolute -right-32 -top-32 w-96 h-96 bg-guru-cyan/5 rounded-full blur-[100px] pointer-events-none"></div>
+
 
             <!-- ================= TAB A: TITÁN SST BOT (SIMULADOR DETECTIVE + MATRIZ LEGAL) ================= -->
             <div id="show-chat-bot" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -392,6 +426,7 @@
                     </div>
                 </div>
 
+
                 <!-- Columna Derecha: Celular Inteligente de Doble Modo (Chat / Video) -->
                 <div class="lg:col-span-6 w-full flex justify-center">
                     <div class="w-full max-w-sm bg-[#0b121f] rounded-[2.5rem] border-4 border-slate-800 shadow-2xl overflow-hidden flex flex-col h-[460px] relative">
@@ -412,6 +447,7 @@
                                 <span class="text-[8px] bg-purple-500/10 border border-purple-500/30 text-purple-400 px-2 py-0.5 rounded font-bold uppercase font-mono">IA v2.3</span>
                             </div>
 
+
                             <!-- Interruptores de Modo: Chat Simulado vs Video Demo -->
                             <div class="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-lg border border-slate-800">
                                 <button id="btn-mode-chat" onclick="toggleCellMode('chat')" class="py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md bg-[#00f3ff] text-slate-950 transition-all flex items-center justify-center gap-1">
@@ -423,12 +459,14 @@
                             </div>
                         </div>
 
+
                         <!-- MODO CHAT ACTIVO -->
                         <div id="cell-chat-view" class="flex-grow p-4 space-y-3 overflow-y-auto chat-scroll flex flex-col bg-[#0b141a]">
                             <div class="bg-[#1f2c34] text-slate-200 text-[11px] p-3 rounded-2xl rounded-tl-none max-w-[85%] self-start leading-relaxed shadow-sm">
                                 🤖 ¡Hola, Titán! Soy <strong>TITÁN SST</strong>, tu consultor de inteligencia artificial. Haz clic en cualquiera de las dudas de auditoría de la izquierda para ver cómo las analizo y las resuelvo con base en la ley colombiana.
                             </div>
                         </div>
+
 
                         <!-- MODO VIDEO DEMO ACTIVO (Bunny CDN optimizado para celular) -->
                         <div id="cell-video-view" class="absolute inset-0 top-[88px] bg-slate-950 hidden flex-col items-center justify-center p-3">
@@ -437,9 +475,11 @@
                             </div>
                         </div>
 
+
                     </div>
                 </div>
             </div>
+
 
             <!-- ================= TAB B: MOTOR 0312 IA (Look SaaS Altamente Persuasivo) ================= -->
             <div id="show-motor-0312" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center hidden">
@@ -454,6 +494,7 @@
                     <p class="font-poppins text-base text-slate-300 leading-relaxed font-light text-justify">
                         Olvídate de pasar semanas enteras digitando celdas en blanco o intentando estructurar el Plan de Trabajo Anual desde cero. Nuestra Herramienta potenciada con IA te ahorra horas de trabajo, audita tu nivel de cumplimiento y genera al instante toda tu documentación en archivos editables.
                     </p>
+
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-white/5 pt-6 text-sm text-slate-300 font-light">
     <div class="space-y-3">
@@ -479,11 +520,13 @@
 </div>
                             
 
+
                     <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-xs text-slate-400">
                         <span class="font-bold text-white block mb-1 uppercase tracking-wider"><i class="fa-solid fa-clock mr-1 text-guru-cyan"></i> Impacto en tu Productividad:</span>
                         Ahorra más de 40 horas de trabajo administrativo manual en cada diagnóstico. Audita más empresas en menos tiempo y entrega PTA, PM e informe Ejecutivo en minutos.
                     </div>
                 </div>
+
 
                 <!-- Columna Derecha: Video Consola del Motor -->
                 <div class="lg:col-span-6 flex flex-col items-center">
@@ -499,6 +542,7 @@
                     <span class="text-[10px] text-slate-500 mt-3 uppercase tracking-wider font-mono"><i class="fa-solid fa-video mr-1"></i> Video Demostrativo: Autoevaluación 0312 en Acción</span>
                 </div>
             </div>
+
 
             <!-- ================= TAB C: RADAR PESV 40595 ================= -->
             <div id="show-radar-pesv" class="showroom-content grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center hidden">
@@ -530,6 +574,7 @@
                 </div>
             </div>
 
+
             <!-- ================= TAB D: CURSES & WORKSHOPS (VERSION ELITE V14 - CON ICONOS REINSTALADOS) ================= -->
 <div id="show-cursos-vip" class="showroom-content hidden space-y-10 w-full">
     <!-- 1. Cabecera Centrada con Estilo SaaS de Alta Conversión -->
@@ -544,6 +589,7 @@
             Accede a Cursos, Diplomados, Talleres Prácticos, Material Descargable y usa Herramientas IA. Estudia a tu propio ritmo y accede a sesiones de acompañamiento en vivo.
         </p>
     </div>
+
 
     <!-- 2. Video Showcase Centrado -->
     <div class="max-w-4xl mx-auto space-y-3">
@@ -560,6 +606,7 @@
         </div>
     </div>
 
+
     <!-- 3. Selector de Categorías -->
     <div class="flex justify-center pt-4">
         <div class="flex bg-slate-900/60 p-1.5 rounded-2xl border border-white/5 gap-2 w-full max-w-md shadow-inner">
@@ -572,6 +619,7 @@
         </div>
     </div>
 
+
     <!-- 4. Contenedor de Carrusel Deslizable Horizontal -->
     <div class="relative w-full max-w-7xl mx-auto px-4 group/carousel">
         <!-- Flecha de Navegación Izquierda -->
@@ -583,6 +631,7 @@
         <button onclick="slideCarouselV14('right')" class="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-slate-950/80 border border-white/10 hover:border-[#00f3ff]/40 text-white hover:text-[#00f3ff] flex items-center justify-center z-10 transition-all duration-300 backdrop-blur-md shadow-lg opacity-0 group-hover/carousel:opacity-100">
             <i class="fa-solid fa-chevron-right text-lg"></i>
         </button>
+
 
         <!-- SUB-TAB A: CURSOS & DIPLOMADOS -->
         <div id="subtab-v14-cursos-container" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth custom-scrollbar">
@@ -605,6 +654,7 @@
                 </div>
             </div>
 
+
             <!-- CURSO 2: IMPLEMENTADOR PESV -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#39ff14]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -623,6 +673,7 @@
                     <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-[#39ff14]"></i> Material Descargable</span>
                 </div>
             </div>
+
 
             <!-- CURSO 3: AUDITOR DECRETO 1072 -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-purple-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
@@ -643,6 +694,7 @@
                 </div>
             </div>
 
+
             <!-- CURSO 4: EXPERTO EN ALTURAS -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-amber-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -661,6 +713,7 @@
                     <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-amber-400"></i> Material Descargable</span>
                 </div>
             </div>
+
 
             <!-- CURSO 5: IMPLEMENTADOR MASTER ISO 45001 -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-emerald-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
@@ -681,6 +734,7 @@
                 </div>
             </div>
 
+
             <!-- CURSO 6: MAPA DE RUTA CORRECTO -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-slate-400/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -700,6 +754,7 @@
                 </div>
             </div>
         </div>
+
 
         <!-- SUB-TAB B: TALLERES PRÁCTICOS -->
         <div id="subtab-v14-talleres-container" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth custom-scrollbar hidden">
@@ -722,6 +777,7 @@
                 </div>
             </div>
 
+
             <!-- TALLER 2: INVESTIGACIÓN ATEL -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-red-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -740,6 +796,7 @@
                     <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-red-400"></i> Material Descargable</span>
                 </div>
             </div>
+
 
             <!-- TALLER 3: INDICADORES -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#00f3ff]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
@@ -760,6 +817,7 @@
                 </div>
             </div>
 
+
             <!-- TALLER 4: PLAN DE EMERGENCIAS -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-amber-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -778,6 +836,7 @@
                     <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-amber-400"></i> Material Descargable</span>
                 </div>
             </div>
+
 
             <!-- TALLER 5: MEDICIONES HIGIENICAS -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-purple-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
@@ -798,6 +857,7 @@
                 </div>
             </div>
 
+
             <!-- TALLER 6: IDENTIFICACION PELIGROS -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-blue-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -816,6 +876,7 @@
                     <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-blue-400"></i> Material Descargable</span>
                 </div>
             </div>
+
 
             <!-- TALLER 7: PTA -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-emerald-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
@@ -836,6 +897,7 @@
                 </div>
             </div>
 
+
             <!-- TALLER 8: COBRA LO QUE VALES -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-[#C5A059]/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -855,6 +917,7 @@
                 </div>
             </div>
 
+
             <!-- TALLER 9: INTEGRACIÓN IND -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-cyan-500/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
                 <div class="space-y-4">
@@ -873,6 +936,7 @@
                     <span><i class="fa-solid fa-cloud-arrow-down mr-1 text-cyan-400"></i> Material Descargable</span>
                 </div>
             </div>
+
 
             <!-- TALLER 10: CIERRE MAESTRO -->
             <div class="min-w-[280px] sm:min-w-[320px] max-w-[320px] bg-slate-900/40 border border-white/5 rounded-2xl p-5 hover:border-emerald-400/30 transition-all duration-300 group/card flex flex-col justify-between snap-start">
@@ -896,6 +960,7 @@
     </div>
 </div>
 
+
 <!-- SCRIPT DE CONTROL PARA LAS SUB-PESTAÑAS Y EL DESLIZAMIENTO DEL CARRUSEL -->
 <script>
     function switchSubTabV14(subTab) {
@@ -905,6 +970,7 @@
         const btnTalleres = document.getElementById('subbtn-v14-talleres');
         const contCursos = document.getElementById('subtab-v14-cursos-container');
         const contTalleres = document.getElementById('subtab-v14-talleres-container');
+
 
         if (subTab === 'cursos') {
             btnCursos.className = "flex-1 py-3 text-xs font-bold font-montserrat uppercase rounded-xl bg-[#00f3ff] text-slate-950 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,243,255,0.25)]";
@@ -921,12 +987,14 @@
         }
     }
 
+
     function slideCarouselV14(direction) {
         try { playSound('pop'); } catch(e) {}
         
         const contCursos = document.getElementById('subtab-v14-cursos-container');
         const contTalleres = document.getElementById('subtab-v14-talleres-container');
         const container = contCursos.classList.contains('hidden') ? contTalleres : contCursos;
+
 
         const scrollAmount = 340; // Ancho promedio de la tarjeta + gap
         if (direction === 'left') {
@@ -936,6 +1004,10 @@
         }
     }
 </script>
+
+
+
+
 
 
 
@@ -957,6 +1029,7 @@
                     bot: "📊 <strong>Reporte de Indicadores de Ley:</strong><br><br>Bajo la <strong>Resolución 40595 de 2022</strong> y los nuevos lineamientos, el reporte de autogestión del PESV se debe realizar de manera anual ante la entidad que ejerza control o vigilancia sobre tu organización (Supertransporte, alcaldías o secretarías de movilidad).<br><br>Es obligatorio reportar los indicadores matemáticos de siniestralidad contemplados en el <strong>Paso 20</strong> del PESV durante el primer trimestre para mantener la conformidad."
                 }
             };
+
 
             // Cambiar entre Pestañas Principales del Showroom
             function switchShowroom(tabId) {
@@ -997,6 +1070,7 @@
                 }
             }
 
+
             // Cambiar entre modo Chat y modo Video dentro del Celular Simulado
             function toggleCellMode(mode) {
                 const chatView = document.getElementById('cell-chat-view');
@@ -1005,14 +1079,17 @@
                 const btnVideo = document.getElementById('btn-mode-video');
                 const videoIframe = document.getElementById('cell-video-iframe');
 
+
                 if (typeof playSound === 'function') {
                     playSound('pop');
                 }
+
 
                 if (mode === 'chat') {
                     chatView.classList.remove('hidden');
                     videoView.classList.add('hidden');
                     videoIframe.src = ""; // Detiene el video
+
 
                     btnChat.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md bg-[#00f3ff] text-slate-950 transition-all flex items-center justify-center gap-1";
                     btnVideo.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1";
@@ -1022,15 +1099,18 @@
                     // Inyectar el video de muestra optimizado para móvil ( Bunny CDN )
                     videoIframe.src = "https://iframe.mediadelivery.net/embed/229239/c5400b5f-bd34-41ed-8351-d9f53680b8fc?autoplay=true&loop=true&muted=false";
 
+
                     btnVideo.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md bg-[#00f3ff] text-slate-950 transition-all flex items-center justify-center gap-1";
                     btnChat.className = "py-1.5 text-[9px] font-montserrat font-black uppercase tracking-wider rounded-md text-slate-400 hover:text-white transition-all flex items-center justify-center gap-1";
                 }
             }
 
+
             // Escritura automatizada y simulador del bot de WhatsApp
             function sendMockMessage(type) {
                 const chatContainer = document.getElementById('cell-chat-view');
                 if (!chatContainer) return;
+
 
                 // Si está en modo video, regresa automáticamente al simulador
                 const videoView = document.getElementById('cell-video-view');
@@ -1038,12 +1118,15 @@
                     toggleCellMode('chat');
                 }
 
+
                 const data = mockReplies[type];
                 if (!data) return;
+
 
                 if (typeof playSound === 'function') {
                     playSound('pop');
                 }
+
 
                 // 1. Mensaje del Usuario
                 const userDiv = document.createElement('div');
@@ -1051,6 +1134,7 @@
                 userDiv.innerHTML = data.user;
                 chatContainer.appendChild(userDiv);
                 chatContainer.scrollTop = chatContainer.scrollHeight;
+
 
                 // 2. Burbuja de "typing..."
                 const typingDiv = document.createElement('div');
@@ -1060,10 +1144,12 @@
                 chatContainer.appendChild(typingDiv);
                 chatContainer.scrollTop = chatContainer.scrollHeight;
 
+
                 // 3. Respuesta final de TITÁN después del tiempo de escritura simulado
                 setTimeout(() => {
                     const indicator = document.getElementById('titan-typing-indicator');
                     if (indicator) indicator.remove();
+
 
                     const botDiv = document.createElement('div');
                     botDiv.className = "bg-[#1f2c34] text-slate-200 text-[11px] p-3 rounded-2xl rounded-tl-none max-w-[85%] self-start leading-relaxed shadow-sm animate-fade-in text-justify mb-3";
@@ -1086,6 +1172,14 @@
 
 
 
+
+
+
+
+
+
+
+
     <!-- ================= SECTION: BENTO GRID GURU SST VIP (COMBINED ELITE) ================= -->
 <section id="bento-valor-vip" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
     <!-- Cabecera de la Sección -->
@@ -1100,6 +1194,7 @@
             Diseñado para optimizar tu gestión y brindarte acompañamiento especializado y práctico en tu día a día.
         </p>
     </div>
+
 
     <!-- Contenedor Bento Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
@@ -1127,9 +1222,11 @@
                     </div>
                 </div>
 
+
                 <p class="font-poppins text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
                     No te dejamos solo con Teoría. Cada semana nos reunimos por Google Meet para resolver tus principales dudas en SST/PESV y ayudarte a optimizar tu tiempo de gestión.
                 </p>
+
 
                 <!-- Estructura de las Sesiones en 2 Partes -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -1145,6 +1242,7 @@
                         </p>
                     </div>
 
+
                     <!-- Parte 2 -->
                     <div class="bg-slate-950/40 p-4 rounded-2xl border border-white/5 space-y-2 hover:bg-slate-950/60 transition-colors">
                         <div class="flex items-center gap-2">
@@ -1158,6 +1256,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- Previsualización Visual de la Sesión en Vivo (Espacio para Demo de Acompañamiento) -->
             <div class="mt-6 space-y-2">
@@ -1182,6 +1281,7 @@
             </div>
         </div>
 
+
          <!-- CARD 2: MATRIZ LEGAL CON DEMO EN PC MOCKUP Y PASOS DE CONSTRUCCIÓN (Ocupa 5 columnas en Desktop) -->
 <div class="lg:col-span-5 bg-gradient-to-b from-slate-900/60 to-slate-950/90 border border-white/5 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-[#00f3ff]/30 transition-all duration-500 group/feed shadow-2xl relative overflow-hidden">
     <!-- Efecto de Brillo de Fondo -->
@@ -1203,9 +1303,11 @@
             </div>
         </div>
 
+
         <p class="font-poppins text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
             La normatividad cambia constantemente. Obtén tu Matriz Legal Automatizada y con notificación de actualizaciones mensuales.
         </p>
+
 
         <!-- Mockup de PC/Laptop para tu Video Demo -->
         <div class="space-y-2">
@@ -1230,6 +1332,7 @@
             </div>
             <span class="text-[9px] text-slate-500 text-center block uppercase tracking-wider font-mono"><i class="fa-solid fa-laptop mr-1 text-[#00f3ff]"></i> Demo Matriz Legal</span>
         </div>
+
 
         <!-- Pasos de Construcción (How it works - Relleno de Espacio con Alta Conversión) -->
         <div class="space-y-2.5 pt-4 border-t border-white/5">
@@ -1256,6 +1359,7 @@
         </div>
     </div>
 
+
     <!-- Botón Oficial "Probar Titán Bot" -->
     <div class="pt-6 mt-6 border-t border-white/5">
         <a href="https://wa.me/573227519132?text=Hola%20Titan%20Bot%2C%20necesito%20hacerte%20una%20consulta%20sobre%20la%20normatividad%20SST." 
@@ -1266,6 +1370,7 @@
         </a>
     </div>
 </div>
+
 
         <!-- CARD 3: EL VALUE STACK / EL ARSENAL COMPLETO GURU (Ocupa las 12 columnas en Desktop) -->
 <div class="lg:col-span-12 bg-gradient-to-b from-[#001424]/60 to-slate-950 border border-white/5 rounded-3xl p-6 sm:p-8 hover:border-amber-400/30 transition-all duration-500 group/stack shadow-2xl relative overflow-hidden">
@@ -1287,6 +1392,7 @@
                 </p>
             </div>
 
+
             <!-- Grilla de Recursos Compactos Incluidos -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <!-- Recurso 1 -->
@@ -1300,6 +1406,7 @@
                     </div>
                 </div>
 
+
                 <!-- Recurso 2 -->
                 <div class="bg-slate-900/40 border border-white/5 p-3 rounded-xl flex items-center gap-3 transition-colors hover:bg-slate-900/60">
                     <div class="w-8 h-8 rounded-lg bg-[#00f3ff]/10 border border-[#00f3ff]/20 flex items-center justify-center text-[#00f3ff] shrink-0 shadow-lg">
@@ -1310,6 +1417,7 @@
                         <p class="text-[10px] text-slate-400 truncate">Resuelve tus dudas frecuentes.</p>
                     </div>
                 </div>
+
 
                 <!-- Recurso 3 -->
                 <div class="bg-slate-900/40 border border-white/5 p-3 rounded-xl flex items-center gap-3 transition-colors hover:bg-slate-900/60">
@@ -1322,6 +1430,7 @@
                     </div>
                 </div>
 
+
                 <!-- Recurso 4 -->
                 <div class="bg-slate-900/40 border border-white/5 p-3 rounded-xl flex items-center gap-3 transition-colors hover:bg-slate-900/60">
                     <div class="w-8 h-8 rounded-lg bg-purple-400/10 border border-purple-400/20 flex items-center justify-center text-purple-400 shrink-0 shadow-lg">
@@ -1333,6 +1442,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- Bloque de Comparativa de Precios Estratégica Premium (Enfoque de Café/Tinto) -->
 <div class="bg-slate-950/80 border border-amber-400/10 rounded-2xl p-5 relative overflow-hidden group/price transition-all hover:border-amber-400/20 shadow-inner">
@@ -1365,6 +1475,7 @@
 }
 </style>
 
+
 <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-white to-amber-200 text-gradient-animate drop-shadow-[0_0_20px_rgba(245,158,11,0.35)] animate-pulse font-montserrat font-black text-xl sm:text-2xl uppercase tracking-wide flex items-center justify-start sm:justify-end gap-2.5">
     <i class="fa-solid fa-mug-hot text-amber-400 animate-steam-coffee"></i> Menos de un café al día
 </span>
@@ -1379,6 +1490,7 @@
             </p>
         </div>
 
+
         <!-- Columna Derecha: El Reproductor del Demo Técnico en PC (col-span-5) -->
         <div class="lg:col-span-5 space-y-4">
             <div class="space-y-2">
@@ -1389,6 +1501,7 @@
                     Observa cómo operan nuestros aplicativos (nuestras apps se actualizan constantemente y agregamos nuevas soluciones periódicamente).
                 </p>
             </div>
+
 
             <!-- Mockup de PC/Laptop para el Demo de Aplicativos -->
             <div class="relative mx-auto w-full pt-4">
@@ -1417,6 +1530,8 @@
 </section>
 
 
+
+
 <!-- SECCIÓN: PLANES DE MEMBRESÍA & RECURSOS (GURU SST VIP 2.0) -->
 <section id="planes" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
     
@@ -1431,11 +1546,13 @@
         <div class="w-20 h-1 bg-[#00f3ff] mx-auto mt-4 rounded-full shadow-[0_0_10px_#00f3ff]"></div>
         
 
+
     <!-- PISO 1: LA GRAN VITRINA UNIFICADA (Showcase de 21 Activos Reales) -->
     <div class="bg-gradient-to-b from-[#001424]/80 to-slate-950/90 border border-white/5 rounded-3xl p-6 sm:p-8 lg:p-10 mb-16 shadow-2xl relative overflow-hidden group/showcase">
         <!-- Resplandor sutil de fondo -->
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-[#00f3ff]/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-amber-400/5 rounded-full blur-[120px] pointer-events-none"></div>
+
 
         <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
             <h3 class="font-montserrat font-black text-xl sm:text-2xl text-white uppercase tracking-wider">
@@ -1448,6 +1565,8 @@
     TODOS LOS PLANES INCLUYEN:
 </p>
 </div>
+
+
 
 
         <!-- REJILLA ADAPTATIVA DE ACTIVOS (3 Columnas en Desktop) -->
@@ -1480,6 +1599,7 @@
     </div>
 </div>
 
+
                     <!-- Activo 3 -->
 <div class="p-3.5 bg-slate-900/40 border border-white/5 rounded-2xl flex items-start gap-3 hover:bg-slate-900/60 transition-colors">
     <div class="w-7 h-7 rounded-lg bg-purple-400/10 border border-purple-400/20 flex items-center justify-center text-purple-400 shrink-0">
@@ -1490,6 +1610,7 @@
         <p class="text-[11px] text-slate-400 mt-0.5 text-left">Sistema rápido para el reporte y control de inspecciones.</p>
     </div>
 </div>
+
 
                     <!-- Activo 4: Matriz Legal Sincronizada -->
 <div class="p-3.5 bg-slate-900/40 border border-white/5 rounded-2xl flex items-start gap-3 hover:bg-slate-900/60 transition-colors">
@@ -1502,6 +1623,7 @@
     </div>
 </div>
 
+
                   <!-- Activo 5 -->
 <div class="p-3.5 bg-slate-900/40 border border-white/5 rounded-2xl flex items-start gap-3 hover:bg-slate-900/60 transition-colors">
     <div class="w-7 h-7 rounded-lg bg-[#39ff14]/10 border border-[#39ff14]/20 flex items-center justify-center text-[#39ff14] shrink-0">
@@ -1512,6 +1634,7 @@
         <p class="text-[11px] text-slate-400 mt-0.5 text-left">Tu consultor especialista SST de bolsillo en tu celular.</p>
     </div>
 </div>
+
 
                     <!-- Activo 6: Expansión de Valor (Y mucho más...) -->
 <div class="p-3.5 bg-gradient-to-br from-slate-900/40 to-amber-950/10 border border-amber-500/10 rounded-2xl flex items-start gap-3 hover:bg-slate-900/60 transition-all hover:border-amber-500/30 group">
@@ -1524,8 +1647,10 @@
     </div>
 </div>
 
+
                 </div>
             </div>
+
 
             <!-- CATEGORÍA 2: FORMACIONES Y CERTIFICACIONES -->
         <div class="space-y-4">
@@ -1541,6 +1666,7 @@
                     </div>
                     <h5 class="text-xs font-bold text-white font-montserrat tracking-wide">Diplomado SG-SST Paso a Paso (Res. 0312/Dec. 1072)</h5>
                 </div>
+
 
                 <!-- Activo 7: Implementador PESV -->
                 <div class="p-3 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center gap-3.5 hover:bg-slate-900/60 transition-colors group">
@@ -1558,6 +1684,7 @@
                     <h5 class="text-xs font-bold text-white font-montserrat tracking-wide">Diplomado Implementador Master ISO 45001</h5>
                 </div>
 
+
                 <!-- Activo 9: Auditor Interno Decreto 1072 -->
                 <div class="p-3 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center gap-3.5 hover:bg-slate-900/60 transition-colors group">
                     <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 shadow-[0_0_12px_rgba(16,185,129,0.25)] group-hover:scale-105 transition-transform">
@@ -1566,6 +1693,7 @@
                     <h5 class="text-xs font-bold text-white font-montserrat tracking-wide">Auditor Interno Decreto 1072</h5>
                 </div>
 
+
                 <!-- Activo 10: Prevención y Protección contra Caídas -->
                 <div class="p-3 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center gap-3.5 hover:bg-slate-900/60 transition-colors group">
                     <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 shadow-[0_0_12px_rgba(16,185,129,0.25)] group-hover:scale-105 transition-transform">
@@ -1573,6 +1701,7 @@
                     </div>
                     <h5 class="text-xs font-bold text-white font-montserrat tracking-wide">Prevención y Protección contra Caídas (Res. 4272)</h5>
                 </div>
+
 
                 <!-- Diplomado 6 -->
                     <div class="p-3 bg-slate-900/40 border border-white/5 rounded-2xl flex items-center gap-3.5 hover:bg-slate-900/60 transition-colors group">
@@ -1583,6 +1712,7 @@
                     </div>
                 </div>
             </div>
+
 
             <!-- COLUMNA 3: LOS 10 WORKSHOPS TÁCTICOS (REPLICADOS EXCLUSIVAMENTE CON CHECKS NEÓN CIAN) -->
             <div class="space-y-4">
@@ -1663,12 +1793,16 @@
                 </div>
             </div>
 
+
         </div>
     </div>
 
+
         </div>
 
+
         
+
 
     <!--
 =============================================================================
@@ -1679,6 +1813,7 @@ Diseño: Ricardo (Inteligencia Natural) & NotebookLM (Inteligencia Artificial)
 Fecha: Julio de 2026
 -->
 
+
 <!-- ESTILOS CSS PERSONALIZADOS DE ALTO IMPACTO (Copiar en el <head> de la página) -->
 <style>
     /* --- 💫 EFECTO LÁSER "GURU OS" EN BORDES (HOVER INTERACTIVO) --- */
@@ -1686,6 +1821,7 @@ Fecha: Julio de 2026
         position: relative;
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
 
     .neon-border-card::before {
         content: '';
@@ -1702,11 +1838,13 @@ Fecha: Julio de 2026
         z-index: 10;
     }
 
+
     /* Plan Mensual: Láser Gris Acero Metalizado (Look sobrio y "apagado") */
     .neon-border-card-slate::before {
         background: linear-gradient(90deg, #475569, #94a3b8, #334155, #475569);
         background-size: 300% 300%;
     }
+
 
     /* Plan Semestral: Láser Cyan Eléctrico (Look Tecnológico Activo) */
     .neon-border-card-cyan::before {
@@ -1714,11 +1852,13 @@ Fecha: Julio de 2026
         background-size: 300% 300%;
     }
 
+
     /* Plan Anual: Láser Dorado Real / Brillo Solar (Look Máster Premium) */
     .neon-border-card-gold::before {
         background: linear-gradient(90deg, #f59e0b, #ffffff, #d97706, #f59e0b);
         background-size: 300% 300%;
     }
+
 
     @keyframes laser-spin {
         0% { background-position: 0% 50%; }
@@ -1726,15 +1866,18 @@ Fecha: Julio de 2026
         100% { background-position: 0% 50%; }
     }
 
+
     /* Activación del láser y levante de la tarjeta en hover */
     .neon-border-card:hover::before {
         opacity: 1;
         animation: laser-spin 4s linear infinite;
     }
 
+
     .neon-border-card:hover {
         transform: translateY(-8px);
     }
+
 
     /* --- ✨ EFECTO DE BRILLO DINÁMICO CONTINUO EN BOTONES --- */
     @keyframes btn-shining {
@@ -1743,10 +1886,12 @@ Fecha: Julio de 2026
         100% { left: 100%; }
     }
 
+
     .btn-shine-effect {
         position: relative;
         overflow: hidden;
     }
+
 
     .btn-shine-effect::after {
         content: '';
@@ -1760,6 +1905,7 @@ Fecha: Julio de 2026
         pointer-events: none;
     }
 
+
     /* --- ☕ ANIMACIÓN DE HUMO FLOTANTE PARA LA TAZA DE CAFÉ --- */
     @keyframes steam-rise {
         0% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 2px rgba(245,158,11,0.2)); }
@@ -1767,10 +1913,12 @@ Fecha: Julio de 2026
         100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 2px rgba(245,158,11,0.2)); }
     }
 
+
     .animate-steam-coffee {
         display: inline-block;
         animation: steam-rise 3s ease-in-out infinite;
     }
+
 
     /* --- 🎨 REFLEJO DE GLOW INTERNO PARA EVITAR LA OSCURIDAD EXCESIVA --- */
     .premium-glass {
@@ -1780,13 +1928,16 @@ Fecha: Julio de 2026
         transition: border-color 0.4s ease, box-shadow 0.4s ease;
     }
 
+
     .premium-glow-slate:hover {
         box-shadow: 0 0 50px rgba(148, 163, 184, 0.06);
     }
 
+
     .premium-glow-cyan:hover {
         box-shadow: 0 0 50px rgba(0, 243, 255, 0.15);
     }
+
 
     .premium-glow-gold:hover {
         box-shadow: 0 0 50px rgba(197, 160, 89, 0.2);
@@ -1794,16 +1945,20 @@ Fecha: Julio de 2026
 </style>
 
 
+
+
     <!-- ========================================================================= -->
     <!-- PISO 2: LAS TARJETAS DE TARIFAS (3 Columnas con Efecto Señuelo / Decoy Pricing) -->
     <!-- ========================================================================= -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+
 
         <!-- PLAN A: MENSUAL SEÑUELO (Optimizado para simetría vertical y decoy pricing) -->
 <div class="neon-border-card neon-border-card-slate premium-glass premium-glow-slate rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-white/5 shadow-xl transition-all duration-300 relative overflow-hidden group min-h-full">
     
     <!-- Efecto sutil de iluminación interior de fondo -->
     <div class="absolute -top-24 -left-24 w-48 h-48 bg-slate-800/15 rounded-full blur-[80px] pointer-events-none group-hover:bg-slate-700/25 transition-all duration-500"></div>
+
 
     <!-- Cabecera del plan -->
     <div class="text-center border-b border-slate-900 pb-6 mb-6">
@@ -1822,6 +1977,7 @@ Fecha: Julio de 2026
             </p>
         </div>
     </div>
+
 
     <!-- Resumen de acceso (Llena el espacio vertical con una simetría impecable en PC) -->
     <div class="space-y-4 flex-grow flex flex-col justify-center my-4">
@@ -1851,6 +2007,7 @@ Fecha: Julio de 2026
         </div>
     </div>
 
+
     <!-- Botón de acción -->
     <div class="mt-8 w-full">
         <a href="https://api.whatsapp.com/send?phone=573196031884&text=Hola%20Andrea%2C%20quiero%20activar%20mi%20Plan%20Mensual%20de%20GURU%20SST%20por%20$197.000%20COP."
@@ -1860,7 +2017,10 @@ Fecha: Julio de 2026
         </a>
     </div>
 
+
 </div>
+
+
 
 
         <!-- PLAN B: EL SEMESTRAL ÉLITE (Altísima rentabilidad de retención en recurrencia) -->
@@ -1868,6 +2028,7 @@ Fecha: Julio de 2026
             
             <!-- Efecto sutil de iluminación interior de fondo (Cyan) -->
             <div class="absolute -top-24 -left-24 w-48 h-48 bg-[#00f3ff]/5 rounded-full blur-[80px] pointer-events-none group-hover:bg-[#00f3ff]/15 transition-all duration-500"></div>
+
 
             <div class="text-center border-b border-slate-900 pb-6 mb-6">
                 <span class="text-[9px] font-bold text-[#00f3ff] tracking-widest uppercase block mb-1">Membresía Élite</span>
@@ -1885,6 +2046,7 @@ Fecha: Julio de 2026
                 </div>
                 </div>
 
+
            <div class="space-y-4 flex-grow flex flex-col justify-center my-4">
     <!-- Cajita Premium de Cristal para agrupar los accesos -->
     <div class="p-4 bg-slate-900/35 border border-white/5 rounded-2xl shadow-inner space-y-3.5">
@@ -1895,17 +2057,20 @@ Fecha: Julio de 2026
             <span>Acceso garantizado por <strong class="text-white font-semibold">180 días </strong></span>
         </div>
 
+
         <!-- Item 2 -->
         <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
             <i class="fa-solid fa-circle-check text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)] text-sm"></i>
             <span>Acceso al <strong class="text-white font-semibold">100% de todo el Ecosistema Inteligente</strong></span>
         </div>
 
+
         <!-- Item 3 -->
         <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
             <i class="fa-solid fa-circle-check text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)] text-sm"></i>
             <span>Descargas <strong class="text-white font-semibold">ilimitadas de Formatos</strong></span>
         </div>
+
 
         <!-- Divisor y Refuerzo de Acompañamiento -->
         <div class="border-t border-slate-800/80 pt-3.5 mt-1">
@@ -1915,13 +2080,15 @@ Fecha: Julio de 2026
             </div>
         </div>
 
+
     </div>
 </div>
+
 
             <!-- Dual CTA Actions (Checkout + WhatsApp) -->
             <div class="mt-8 w-full flex flex-col gap-3">
                 <!-- Botón Principal con Brillo "Liquid Sweep" Premium y sombra neón -->
-                <a href="https://vip.andreacastrosst.com/checkout/?plan=SST_SEMESTRAL"
+                <a href="https://andreacastrosst.com/checkout/?plan=SST_SEMESTRAL"
                    class="btn-shine-effect w-full py-4 bg-gradient-to-r from-guru-electric to-guru-navy hover:from-[#00f3ff] hover:to-guru-electric text-white hover:text-slate-950 font-montserrat font-black text-xs uppercase tracking-widest rounded-xl transition-all flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(0,243,255,0.2)] hover:shadow-[0_0_30px_rgba(0,243,255,0.5)] cursor-pointer hover:scale-[1.02] active:scale-95 duration-300">
                     Adquirir Plan Semestral
                 </a>
@@ -1932,7 +2099,9 @@ Fecha: Julio de 2026
                 </a>
             </div>
 
+
         </div>
+
 
         <!-- PLAN C: EL ANUAL MASTER (El recomendado, optimizado contra recortes y con simetría de cajita) -->
 <div class="neon-border-card neon-border-card-gold bg-gradient-to-b from-[#002440] to-slate-950/95 premium-glow-gold rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-amber-400/30 shadow-[0_0_25px_rgba(245,158,11,0.15)] hover:shadow-[0_0_35px_rgba(245,158,11,0.35)] transition-all duration-300 relative group transform lg:-translate-y-4">
@@ -1942,10 +2111,12 @@ Fecha: Julio de 2026
         Más Vendido
     </div>
 
+
     <!-- Contenedor interno aislado con overflow-hidden para que las luces respeten el rounded-3xl de la tarjeta -->
     <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
         <div class="absolute -top-24 -left-24 w-48 h-48 bg-amber-400/5 rounded-full blur-[80px] group-hover:bg-amber-400/15 transition-all duration-500"></div>
     </div>
+
 
     <!-- Cabecera del plan -->
     <div class="text-center border-b border-slate-800 pb-6 mb-6 mt-2 relative z-10">
@@ -1966,6 +2137,7 @@ Fecha: Julio de 2026
         </div>
     </div>
 
+
     <!-- Resumen de acceso (Sincronizado con la cajita de cristal premium e iconos dorados) -->
     <div class="space-y-4 flex-grow flex flex-col justify-center my-4 relative z-10">
         <div class="p-4 bg-slate-900/35 border border-white/5 rounded-2xl shadow-inner space-y-3.5">
@@ -1976,17 +2148,20 @@ Fecha: Julio de 2026
                 <span>Acceso garantizado por <strong class="text-white font-semibold">365 días completos</strong></span>
             </div>
 
+
             <!-- Item 2 -->
             <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
                 <i class="fa-solid fa-circle-check text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)] text-sm"></i>
                 <span>Acceso al <strong class="text-white font-semibold">100% de todo el Ecosistema Inteligente</strong></span>
             </div>
 
+
             <!-- Item 3 -->
             <div class="flex items-center gap-2.5 text-slate-300 text-xs font-light">
                 <i class="fa-solid fa-circle-check text-amber-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)] text-sm"></i>
                 <span>Descargas <strong class="text-white font-semibold">ilimitadas de Formatos</strong></span>
             </div>
+
 
             <!-- Divisor y Refuerzo de Acompañamiento Preferencial -->
             <div class="border-t border-slate-800/80 pt-3.5 mt-1">
@@ -1996,13 +2171,15 @@ Fecha: Julio de 2026
                 </div>
             </div>
 
+
         </div>
     </div>
+
 
             <!-- Dual CTA Actions (Checkout + WhatsApp) -->
             <div class="mt-8 w-full flex flex-col gap-3">
                 <!-- Botón Principal Dorado con Brillo "Liquid Sweep" y Sombra de Oro Activa -->
-                <a href="https://vip.andreacastrosst.com/checkout/?plan=SST_ANUAL"
+                <a href="https://andreacastrosst.com/checkout/?plan=SST_ANUAL"
                    class="btn-shine-effect w-full py-4 bg-amber-400 hover:bg-white text-slate-950 font-montserrat font-black text-xs uppercase tracking-widest rounded-xl transition-all shadow-[0_0_20px_rgba(245,158,11,0.35)] hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] flex justify-center items-center gap-2 group cursor-pointer hover:scale-[1.02] active:scale-95 duration-300">
                     Adquirir Plan Máster Anual <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </a>
@@ -2013,9 +2190,12 @@ Fecha: Julio de 2026
                 </a>
             </div>
 
+
         </div>
 
+
     </div>
+
 
     <!-- NOTAS EN LETRA PEQUEÑA EMPÁTICA (CONDICIONES DE USO DE SERVIDORES IA) -->
     <div class="mt-12 max-w-4xl mx-auto text-center space-y-2">
@@ -2026,6 +2206,7 @@ Fecha: Julio de 2026
             En caso de requerir un uso extraordinario a gran escala o superar con frecuencia estas cuotas, el sistema podría sugerir de forma empática pequeñas recargas de saldo o aportes por consumo de servidor externo, protegiendo así la estabilidad técnica de todo nuestro ecosistema.
         </p>
     </div>
+
 
     <!-- BANNER DE SOPORTE TÉCNICO DIRECTO CON ANDREA (CERO FACTURAS CORPORATIVAS) -->
     <div class="mt-12 bg-gradient-to-r from-emerald-500/10 to-transparent border border-emerald-500/20 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto shadow-glass backdrop-blur-md">
@@ -2044,7 +2225,20 @@ Fecha: Julio de 2026
         </a>
     </div>
 
+
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2064,6 +2258,7 @@ Fecha: Julio de 2026
     <div class="absolute top-[-10%] left-[-10%] w-[400px] h-[400px] bg-[#00f3ff]/5 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] bg-amber-400/5 rounded-full blur-[120px] pointer-events-none"></div>
 
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Encabezado de la Sección -->
@@ -2079,6 +2274,7 @@ Fecha: Julio de 2026
                Esto es lo que opinan los responsables de SST y consultores en Colombia que han pasado de la teoría a la práctica.
         </div>
 
+
         <!-- 🎥 CONSOLA DEL VIDEO SHOWREEL (LOOK SAAS PREMIUM) -->
         <div class="max-w-4xl mx-auto mb-16 relative z-10">
             <div class="glass-panel bg-slate-950/80 rounded-3xl border border-[#00f3ff]/20 p-2 shadow-[0_0_40px_rgba(0,243,255,0.1)] overflow-hidden group">
@@ -2091,6 +2287,7 @@ Fecha: Julio de 2026
                     </div>
                     <span class="text-[9px] text-[#00f3ff] font-mono tracking-wider">Testimonios</span>
                 </div>
+
 
                 <!-- Reproductor de Video -->
                 <div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-950 shadow-inner">
@@ -2107,6 +2304,7 @@ Fecha: Julio de 2026
                 <i class="fa-solid fa-play text-[#00f3ff] mr-1"></i> Dale play y escucha la transformación de nuestros prevencionistas VIP
             </p>
         </div>
+
 
         <!-- 📋 GRID DE TESTIMONIOS ESCRITOS (ESTRATEGIA AVATAR DE CONVERSIÓN) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
@@ -2130,6 +2328,7 @@ Fecha: Julio de 2026
                 </div>
             </div>
 
+
             <!-- Testimonio 2: Avatar Consultor Independiente -->
             <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-[#00f3ff]/30 transition-all duration-300 flex flex-col justify-between bg-gradient-to-b from-slate-950 to-slate-900/40">
                 <div>
@@ -2148,6 +2347,7 @@ Fecha: Julio de 2026
                     </div>
                 </div>
             </div>
+
 
             <!-- Testimonio 3: Avatar Líder PESV / Transporte -->
             <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-[#00f3ff]/30 transition-all duration-300 flex flex-col justify-between bg-gradient-to-b from-slate-950 to-slate-900/40">
@@ -2168,10 +2368,20 @@ Fecha: Julio de 2026
                 </div>
             </div>
 
+
         </div>
+
 
     </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 
@@ -2186,13 +2396,16 @@ Fecha: Julio de 2026
     <!-- Luces de Fondo sutiles -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#00f3ff]/5 rounded-full blur-[100px] pointer-events-none"></div>
 
+
     <div class="text-center mb-12 relative z-10">
         <span class="text-[#00f3ff] font-mono text-[10px] uppercase tracking-widest block mb-2">Despeja tus dudas de inmediato</span>
         <h2 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">Preguntas Frecuentes</h2>
         <div class="w-12 h-1 bg-[#00f3ff] mx-auto mt-4 rounded-full shadow-[0_0_8px_#00f3ff]"></div>
     </div>
 
+
     <div class="space-y-4 relative z-10">
+
 
         <!-- FAQ 1 -->
         <details class="glass-panel rounded-2xl group border border-slate-800/80 open:border-[#00f3ff]/40 bg-slate-950/40 transition-colors duration-300">
@@ -2207,6 +2420,7 @@ Fecha: Julio de 2026
 </div>
         </details>
 
+
         <!-- FAQ 2 -->
         <details class="glass-panel rounded-2xl group border border-slate-800/80 open:border-[#00f3ff]/40 bg-slate-950/40 transition-colors duration-300">
             <summary class="flex items-center justify-between p-6 font-montserrat font-bold cursor-pointer text-white hover:text-[#00f3ff] transition-colors outline-none text-xs sm:text-sm uppercase tracking-wide">
@@ -2219,6 +2433,7 @@ Fecha: Julio de 2026
                 Sí, al 100%. Todos los entregables (formatos en Word, matrices e indicadores formulados en Excel y diapositivas en PowerPoint) son completamente editables y descargables en un clic. No tienen candados, bloqueos ni marcas de agua molestas, por lo que podrás personalizarlos con los logos de tu marca o de las empresas que asesoras.
             </div>
         </details>
+
 
         <!-- FAQ 3 -->
         <details class="glass-panel rounded-2xl group border border-slate-800/80 open:border-[#00f3ff]/40 bg-slate-950/40 transition-colors duration-300">
@@ -2233,6 +2448,7 @@ Fecha: Julio de 2026
     </div>
         </details>
 
+
         <!-- FAQ 4 -->
         <details class="glass-panel rounded-2xl group border border-slate-800/80 open:border-[#00f3ff]/40 bg-slate-950/40 transition-colors duration-300">
             <summary class="flex items-center justify-between p-6 font-montserrat font-bold cursor-pointer text-white hover:text-[#00f3ff] transition-colors outline-none text-xs sm:text-sm uppercase tracking-wide">
@@ -2246,8 +2462,17 @@ Fecha: Julio de 2026
             </div>
         </details>
 
+
     </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 
@@ -2274,6 +2499,7 @@ Fecha: Julio de 2026
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> SOPORTE
             </span>
 
+
             <h2 class="font-montserrat font-black text-2xl sm:text-3xl text-white mb-4 uppercase leading-tight tracking-wide">
                 ¿Aún no sabes cuál plan se adapta mejor a tu situación?
             </h2>
@@ -2291,14 +2517,18 @@ Fecha: Julio de 2026
             </a>
         </div>
 
+
     </div>
 </section>
+
+
 
 
 <!-- ========================================================================= -->
 <!-- 🏝️ MENÚ DE NAVEGACIÓN FLOTANTE CYBER-DOCK (v4 - 100% BLINDADO Y AUTO-CENTRADOR) -->
 <!-- Ubicación recomendada: Justo al final de tu archivo index.html, antes de </body> -->
 <!-- ========================================================================= -->
+
 
 <!-- 🛡️ ESCUDO ANTI-DESBORDE Y CENTRADOR DIRECTO -->
 <style>
@@ -2313,6 +2543,7 @@ Fecha: Julio de 2026
   }
 </style>
 
+
 <nav class="fixed bottom-5 left-0 right-0 mx-auto w-[90%] max-w-[350px] bg-slate-950/85 backdrop-blur-xl border border-cyan-500/20 rounded-full shadow-[0_10px_35px_rgba(0,243,255,0.2)] px-3 py-2 transition-all duration-300 hover:border-cyan-400/40" 
      style="z-index: 99999 !important; box-sizing: border-box;">
     
@@ -2325,11 +2556,13 @@ Fecha: Julio de 2026
             <span class="text-[8px] font-bold text-center block whitespace-nowrap">Inicio</span>
         </a>
 
+
         <!-- 2. Tecnología (Tech) -->
         <a href="#showroom" class="flex flex-col items-center gap-0.5 p-1 w-12 text-slate-400 hover:text-[#00f3ff] transition-all duration-300">
             <i class="fa-solid fa-robot text-xs"></i>
             <span class="text-[8px] font-bold text-center block whitespace-nowrap">Tech</span>
         </a>
+
 
         <!-- 3. Planes (Membresías) -->
         <a href="#planes" class="flex flex-col items-center gap-0.5 p-1 w-12 text-slate-400 hover:text-amber-400 transition-all duration-300">
@@ -2337,14 +2570,17 @@ Fecha: Julio de 2026
             <span class="text-[8px] font-bold text-center block whitespace-nowrap">Planes</span>
         </a>
 
+
         <!-- 4. Casos (Comunidad) -->
         <a href="#testimonios" class="flex flex-col items-center gap-0.5 p-1 w-12 text-slate-400 hover:text-[#00f3ff] transition-all duration-300">
             <i class="fa-solid fa-star text-xs"></i>
             <span class="text-[8px] font-bold text-center block whitespace-nowrap">Casos</span>
         </a>
 
+
         <!-- Separador Fino -->
         <div class="w-px h-5 bg-slate-800/80 mx-1 shrink-0"></div>
+
 
         <!-- 5. Acceso Rápido Login (Look Icono Compacto) -->
         <div class="flex items-center shrink-0">
@@ -2356,8 +2592,15 @@ Fecha: Julio de 2026
             </a>
         </div>
 
+
     </div>
 </nav>
+
+
+
+
+
+
 
 
 
@@ -2375,6 +2618,14 @@ Fecha: Julio de 2026
             </div>
         </div>
     </footer>
+
+
+
+
+
+
+
+
 
 
 
@@ -2413,6 +2664,14 @@ Fecha: Julio de 2026
 
 
 
+
+
+
+
+
+
+
+
         // --- SINTETIZADOR DE AUDIO PARA BOTONES ---
         let audioCtx;
         function initAudio() {
@@ -2443,3 +2702,6 @@ Fecha: Julio de 2026
     </script>
 </body>
 </html>
+
+
+
