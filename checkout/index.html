@@ -684,7 +684,26 @@ document.addEventListener('DOMContentLoaded', () => {
         // LÓGICA DE SUBMISIÓN SEGURO AL WEBHOOK (POST n8n)
         document.getElementById('checkoutForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+            // =========================================================================
+    // 🛡️ ESCUDO DE SEGURIDAD LEGAL: Verificar consentimiento de Habeas Data (Ley 1581 de 2012)
+    // =========================================================================
+    const habeasCheck = document.getElementById('habeas_data');
+    if (!habeasCheck || !habeasCheck.checked) {
+        // Validación adaptada a la estética GURU SST
+        alert('🚨 Atención Titán: Debes autorizar el tratamiento de tus datos personales conforme a la Ley 1581 de 2012 para proceder al pago.');
+        
+        if (habeasCheck) {
+            habeasCheck.focus(); // Enfoca visualmente la casilla para que el alumno la marque
+        }
+        return false; // Bloquea físicamente que los datos salgan hacia el webhook de n8n
+    }
+    // =========================================================================
+
+    // 🔑 CONTINÚA TU LÓGICA ORIGINAL DE PAGOS (No tocar nada de aquí hacia abajo) [1]:
+    const password = document.getElementById('password').value;
+    const confirm_password = document.getElementById('confirm_password').value;
+    
+    // ... resto de tu código de Mercado Pago y guardado en LocalStorage [1-3]
             const password = document.getElementById('password').value;
             const confirm_password = document.getElementById('confirm_password').value;
             const passwordAlert = document.getElementById('password-alert');
