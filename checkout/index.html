@@ -354,13 +354,26 @@
                                 <i class="fa-solid fa-triangle-exclamation"></i> Las contraseñas no coinciden. Por favor verifica.
                             </p>
                             
-                            <!-- Checkbox Mostrar Contraseñas -->
-                            <div class="flex items-center ml-1">
-                                <input type="checkbox" id="show-passwords-check" onchange="togglePasswords()" class="w-4 h-4 rounded border-slate-700 text-guru-cyan focus:ring-guru-cyan bg-slate-950/60 cursor-pointer accent-guru-cyan">
-                                <label for="show-passwords-check" class="text-[10px] font-semibold text-slate-400 select-none ml-2 cursor-pointer hover:text-white transition-colors">Mostrar contraseñas</label>
-                            </div>
-                        </div>
+                            <!-- Contenedor Unificado: Seguridad y Legal GURU OS -->
+<div class="space-y-4 pt-4 border-t border-slate-800/80 mt-4">
+    
+    <!-- 1. Checkbox: Mostrar Contraseñas -->
+    <div class="flex items-center ml-1 group">
+        <input type="checkbox" id="show-passwords-check" onchange="togglePasswords()" class="w-4 h-4 rounded border-slate-700 text-guru-cyan focus:ring-guru-cyan bg-slate-950/60 cursor-pointer accent-guru-cyan transition-colors">
+        <label for="show-passwords-check" class="text-[10px] font-semibold text-slate-400 select-none ml-2.5 cursor-pointer group-hover:text-white transition-colors">
+            Mostrar contraseñas
+        </label>
+    </div>
 
+    <!-- 2. Checkbox: Habeas Data Obligatorio -->
+    <div class="flex items-start ml-1 group">
+        <input type="checkbox" id="habeas_data" required class="mt-0.5 w-4 h-4 rounded border-slate-700 text-guru-cyan focus:ring-guru-cyan bg-slate-950/60 cursor-pointer accent-guru-cyan transition-colors">
+        <label for="habeas_data" class="text-[10px] leading-relaxed text-slate-400 select-none ml-2.5 cursor-pointer group-hover:text-slate-300 transition-colors">
+            Acepto los <a href="https://andreacastrosst.com/terminos-y-condiciones" target="_blank" class="text-guru-cyan underline font-medium hover:text-white transition-colors">Términos y Condiciones</a>, la <a href="https://andreacastrosst.com/politica-de-privacidad" target="_blank" class="text-guru-cyan underline font-medium hover:text-white transition-colors">Política de Privacidad</a> y autorizo el tratamiento de mis datos de acuerdo con la <strong class="text-slate-300">Ley 1581 de 2012</strong>.
+        </label>
+    </div>
+
+</div>
                         <!-- 4. CASILLERO DE CUPÓN INTERACTIVO -->
                         <div class="space-y-3">
                             <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">¿Tienes un Cupón de Lanzamiento?</label>
@@ -762,5 +775,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </script>
 </body>
 </html>
+
+
 
 
