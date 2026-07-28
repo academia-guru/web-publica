@@ -139,19 +139,29 @@
     <main class="w-full max-w-md relative z-10 flex flex-col items-center">
 
 
-        <!-- 1. PERFIL MAESTRO DE ANDREA CASTRO -->
-        <section class="text-center mb-8 flex flex-col items-center">
-            <!-- Contenedor del Avatar con Aro de Luz -->
-            <div class="relative w-28 h-28 rounded-full mb-4 flex items-center justify-center avatar-glow">
-                <!-- Foto real de Andrea en local Contabo VPS -->
-        <img src="/img/andrea-perfil.png" alt="Andrea Castro"
-                     class="w-[104px] h-[104px] rounded-full object-cover relative z-10 border-2 border-guru-darkBg bg-slate-950">
+        <!-- 1. PERFIL MAESTRO DE ANDREA CASTRO CON VIDEO INTEGRADO -->
+        <section class="text-center mb-8 flex flex-col items-center w-full">
+            
+            <!-- Contenedor con Borde Láser Delgado "Efecto WOW" (GURU OS Standard) -->
+            <div class="relative w-full rounded-2xl overflow-hidden border border-[#00f3ff]/20 shadow-[0_0_15px_rgba(0,243,255,0.15)] bg-slate-950 p-1 mb-6 hover:border-[#00f3ff]/50 hover:shadow-[0_0_25px_rgba(0,243,255,0.3)] transition-all duration-500">
+                
+                <!-- Contenedor Responsivo 16:9 para evitar saltos o desbordes en móviles -->
+                <div class="relative w-full overflow-hidden rounded-xl bg-black" style="padding-top: 56.25%;">
+                    <iframe src="https://iframe.mediadelivery.net/embed/471618/067d1384-a8bc-4cc1-b385-3bac8d8de4d0?autoplay=false&loop=false&muted=false&preload=true&responsive=true" 
+                            loading="lazy" 
+                            style="border:0; position:absolute; top:0; left:0; height:100%; width:100%;" 
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen;" 
+                            allowfullscreen="true">
+                    </iframe>
+                </div>
+                
             </div>
+
            
             <h1 class="font-montserrat font-extrabold text-2xl text-white uppercase tracking-wider">Andrea Castro</h1>
             <p class="text-[10px] text-guru-cyan font-bold uppercase tracking-widest mt-1"><i class="fa-solid fa-bolt animate-pulse"></i> Consultoría SST & Automatización IA</p>
             <p class="text-xs text-slate-400 max-w-xs mt-3 leading-relaxed">
-                Ayudo a empresas y prevencionistas a eliminar el trabajo operativo en SST usando herramientas inteligentes.
+                Ayudo a empresas y prevencionistas a optimizar el trabajo operativo en SST usando herramientas inteligentes.
             </p>
         </section>
 
