@@ -4051,24 +4051,21 @@ Fecha: Julio de 2026
 
 <!-- 🛡️ ESCUDO ANTI-DESBORDE Y CENTRADOR DIRECTO -->
 <style>
-/* Este bloque de estilos actúa como un cortafuegos físico */
-/* Impide que cualquier elemento de la página cause scroll horizontal en celulares sin romper el sticky header */
-body {
+/* Este bloque de estilos actúa como un cortafuegos físico de nivel raíz */
+/* Impide que cualquier elemento de la página cause scroll horizontal en celulares de forma hermética */
+html, body {
     overflow-x: hidden !important;
+    position: relative;
     width: 100%;
+    max-width: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 </style>
 
-
-
-
-
-
-
-
-<nav class="fixed bottom-5 left-0 right-0 mx-auto w-[90%] max-w-[350px] bg-slate-950/85 backdrop-blur-xl border border-cyan-500/20 rounded-full shadow-[0_10px_35px_rgba(0,243,255,0.2)] px-3 py-2 transition-all duration-300 hover:border-cyan-400/40" 
+<!-- 🚀 SE CAMBIÓ left-0 right-0 mx-auto POR left-1/2 -translate-x-1/2 PARA CENTRADO MATEMÁTICO EN MÓVILES -->
+<nav class="fixed bottom-5 left-1/2 -translate-x-1/2 w-[90%] max-w-[350px] bg-slate-950/85 backdrop-blur-xl border border-cyan-500/20 rounded-full shadow-[0_10px_35px_rgba(0,243,255,0.2)] px-3 py-2 transition-all duration-300 hover:border-cyan-400/40" 
      style="z-index: 99999 !important; box-sizing: border-box;">
     
     <!-- justify-around distribuye los espacios de forma 100% simétrica sin empujar los bordes -->
