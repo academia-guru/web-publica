@@ -3612,13 +3612,14 @@ Fecha: Julio de 2026
             </div>
 
 
-            <!-- URL del video de Bunny CDN se conserva debajo para evitar errores de herencia -->
-            <iframe src="https://iframe.mediadelivery.net/embed/229239/dea87434-3264-4765-80f4-b6fcd75812d8?autoplay=false&loop=false&muted=false"
-                    class="w-full h-full border-0 absolute inset-0"
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen;"
-                    allowfullscreen="true"
-                    loading="lazy">
-            </iframe>
+            <!-- CORREGIDO (100% AISLADO CONTRA TOQUES FANTASMA EN MÓVIL) -->
+<!-- URL del video de Bunny CDN se conserva debajo para evitar errores de herencia -->
+<iframe src="https://iframe.mediadelivery.net/embed/229239/dea87434-3264-4765-80f4-b6fcd75812d8?autoplay=false&loop=false&muted=true"
+        class="w-full h-full border-0 absolute inset-0 pointer-events-none"
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen;"
+        allowfullscreen="true"
+        loading="lazy">
+</iframe>
         </div>
     </div>
     <p class="text-center text-[10px] text-slate-500 font-mono mt-3 uppercase tracking-wider">
