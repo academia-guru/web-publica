@@ -2988,15 +2988,14 @@ Fecha: Julio de 2026
 
 <!-- 🛡️ ESCUDO ANTI-DESBORDE Y CENTRADOR DIRECTO -->
 <style>
-  /* Este bloque de estilos actúa como un cortafuegos físico */
-  /* Impide que cualquier elemento de la página (incluido el dock) cause scroll horizontal en celulares */
-  html, body {
+/* Este bloque de estilos actúa como un cortafuegos físico */
+/* Impide que cualquier elemento de la página cause scroll horizontal en celulares sin romper el sticky header */
+body {
     overflow-x: hidden !important;
-    position: relative;
     width: 100%;
     margin: 0;
     padding: 0;
-  }
+}
 </style>
 
 
@@ -3219,20 +3218,26 @@ Fecha: Julio de 2026
 function activarVslInteractiva() {
     const placeholder = document.getElementById('vsl-placeholder');
     const wrapper = document.getElementById('vsl-video-wrapper');
-    
+
     if (placeholder && wrapper) {
-        // Reproducir sonido sutil si manejas el sintetizador del sistema
         try { playSound('pop'); } catch(e) {}
-        
+
         // 1. Ocultar la portada
         placeholder.classList.add('hidden');
-        
+
         // 2. Revelar el wrapper del reproductor
         wrapper.classList.remove('hidden');
-        
-        // 3. Inyectar el iframe con autoplay activo
+
+        // 3. Inyectar el iframe con autoplay activo y sonido encendido (muted=false)
         wrapper.innerHTML = `
-            <div style="position:relative;padding-top:56.25%;"><iframe src="https://player.mediadelivery.net/embed/471618/d13d7d26-9fde-4c32-bf04-ac84fcd914bd?autoplay=false&loop=false&muted=true&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;" allowfullscreen="true"></iframe></div>
+            <div style="position:relative;padding-top:56.25%;">
+                <iframe src="https://player.mediadelivery.net/embed/471618/d13d7d26-9fde-4c32-bf04-ac84fcd914bd?autoplay=true&loop=false&muted=false&preload=true&responsive=true" 
+                        loading="lazy" 
+                        style="border:0;position:absolute;top:0;height:100%;width:100%;" 
+                        allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;" 
+                        allowfullscreen="true">
+                </iframe>
+            </div>
         `;
     }
 }
