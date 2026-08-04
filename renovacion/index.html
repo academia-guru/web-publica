@@ -393,12 +393,14 @@
             const fullWhatsapp = countryCode + phoneInput;
 
             const payload = {
-                nombre: nombre,
-                email: email,
-                whatsapp: fullWhatsapp,
-                plan: selectedPlan,
-                password: "" // Se envía vacío para que el backend de Postgres no altere su clave actual
-            };
+            const payload = {
+        nombre: nombre,
+        email: email,
+        whatsapp: fullWhatsapp,
+        plan: selectedPlan,
+        password: "", // Se envía vacío para que el backend de Postgres no altere su clave actual
+        is_renewal: true // 🔑 CON ESTO N8N SABRÁ QUE SÍ ES UNA RENOVACIÓN
+      };
 
             try {
                 // Envío seguro a tu Webhook oficial de facturación
@@ -451,3 +453,5 @@
     </script>
 </body>
 </html>
+
+
