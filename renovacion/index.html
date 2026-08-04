@@ -72,14 +72,14 @@
         <div class="flex items-center gap-3">
             <img src="https://vip.andreacastrosst.com/img/logo-guru.png" alt="Logo GURU SST" class="h-8 w-auto">
             <span class="text-slate-500 font-mono text-xs">|</span>
-            <span class="text-[9px] font-black text-guru-cyan uppercase tracking-widest bg-guru-cyan/10 px-3 py-1 rounded-full border border-guru-cyan/20">RENOVACIÓN ECOSISTEMA INTELIGENTE </span>
+            <span class="text-[9px] font-black text-guru-cyan uppercase tracking-widest bg-guru-cyan/10 px-3 py-1 rounded-full border border-guru-cyan/20">RENOVACIÓN ECOSISTEMA INTELIGENTE</span>
         </div>
         <div class="flex items-center gap-2">
-            <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider hidden sm:inline-block"><i class="fa-solid fa-lock text-guru-cyan mr-1"></i> Conexión Cibersegura SSL</span>
+            <span class="text-[9px] text-slate-400 font-bold uppercase tracking-wider hidden sm:inline-block"><i class="fa-solid fa-lock text-guru-cyan mr-1"></i> Conexión Cibersegura SSL, Mantén tu Estatus VIP</span>
         </div>
     </header>
 
-    <!-- Contenedor del Formulario -->
+    <!-- Contenedor del Formulario (Estilo 15_web_renovar Único) -->
     <main class="flex-grow w-full max-w-6xl mx-auto px-4 py-12 relative z-10 flex flex-col justify-center">
         <div class="w-full bg-[#121b2a]/30 border border-slate-800/80 p-6 sm:p-10 rounded-[2.5rem] shadow-[0_0_40px_rgba(0,243,255,0.03)] relative overflow-hidden">
             
@@ -166,14 +166,14 @@
                     </div>
                 </div>
 
-                <!-- PASO 2: DATOS DE IDENTIDAD -->
+                <!-- PASO 2: DATOS DE IDENTIDAD (Saneados con selector de país) -->
                 <div class="space-y-4">
                     <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1"><i class="fa-solid fa-id-card text-guru-cyan mr-1.5"></i> Paso 2: Datos de tu Cuenta Registrada</label>
                     
                     <div class="bg-guru-cyan/5 border border-guru-cyan/20 p-4 rounded-2xl flex gap-3 text-justify">
                         <i class="fa-solid fa-circle-info text-guru-cyan text-lg shrink-0 mt-0.5"></i>
                         <p class="text-[11px] text-slate-300 leading-relaxed">
-                            <strong>IMPORTANTE:</strong> Para renovación, debes diligenciar el formulario escribiendo exactamente el<strong>, mismo correo electrónico</strong> con el que ingresas<strong> al Ecosistema.</strong>
+                            <strong>IMPORTANTE:</strong> Para renovación, debes diligenciar el formulario escribiendo exactamente el, <strong>mismo correo electrónico</strong> con el que ingresas <strong>al Ecosistema.</strong>
                         </p>
                     </div>
 
@@ -187,16 +187,25 @@
                             </div>
                         </div>
 
-                        <!-- WhatsApp -->
+                        <!-- WhatsApp con selector físico de país -->
                         <div>
                             <label class="block text-[9px] font-black text-slate-400 uppercase tracking-wider mb-2 ml-1">Número de WhatsApp</label>
-                            <div class="relative">
-                                <i class="fa-brands fa-whatsapp absolute left-4 top-3.5 text-slate-500 text-xs"></i>
-                                <input type="tel" id="whatsapp" required placeholder="Ej: 573133542769" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-xs text-white outline-none focus:border-guru-cyan transition-all">
+                            <div class="flex gap-2">
+                                <select id="country_code" class="bg-slate-950 border border-slate-800 rounded-xl px-3 py-3 text-xs text-slate-300 outline-none focus:border-guru-cyan cursor-pointer transition-all">
+                                    <option value="57">🇨🇴 +57</option>
+                                    <option value="593">🇪🇨 +593</option>
+                                    <option value="51">🇵🇪 +51</option>
+                                    <option value="52">🇲🇽 +52</option>
+                                    <option value="1">🇺🇸 +1</option>
+                                </select>
+                                <div class="relative flex-grow">
+                                    <i class="fa-brands fa-whatsapp absolute left-4 top-3.5 text-slate-500 text-xs"></i>
+                                    <input type="number" id="whatsapp" required placeholder="Ej: 3133542769" class="w-full bg-slate-950 border border-slate-800 rounded-xl pl-10 pr-4 py-3 text-xs text-white outline-none focus:border-guru-cyan transition-all">
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Correo Electrónico (El anclaje principal para renovar) -->
+                        <!-- Correo Electrónico -->
                         <div>
                             <label class="block text-[9px] font-black text-slate-400 uppercase tracking-wider mb-2 ml-1">Tu Correo Electrónico Registrado</label>
                             <div class="relative">
@@ -221,13 +230,13 @@
                     <h4 class="font-montserrat font-extrabold text-[10px] text-slate-400 uppercase tracking-widest pb-1.5 border-b border-slate-800/60">Resumen de Renovación Segura</h4>
                     
                     <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-400 font-medium" id="summary-plan-title">Plan Máster Anual (Renovación)</span>
+                        <span class="text-slate-400 font-medium" id="summary-plan-title">Membresía Plan Máster Anual</span>
                         <span class="font-bold text-slate-300" id="summary-plan-price">$1.200.000 COP</span>
                     </div>
 
                     <div class="flex justify-between items-center text-xs text-guru-green" id="summary-discount-row">
                         <span class="font-bold">Descuento Especial Aplicado:</span>
-                        <span class="font-mono font-bold" id="summary-discount-value">-$700.000 COP</span>
+                        <span class="font-mono font-bold" id="summary-discount-value">-$700.000 COP (LAUNCH58)</span>
                     </div>
 
                     <div class="border-t border-slate-800/85 pt-4 flex justify-between items-center">
@@ -260,7 +269,7 @@
         Ecosistema Inteligente GURU SST VIP &copy; 2026 | Desarrollado bajo la metodología LXD & FAR
     </footer>
 
-    <!-- PANTALLA DE CARGA INMERSIVA (LOODING OVERLAY) -->
+    <!-- PANTALLA DE CARGA INMERSIVA (LOADING OVERLAY) -->
     <div id="loading-overlay" class="fixed inset-0 z-[1] bg-[#0f172a]/95 backdrop-blur-md flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="text-center p-8">
             <div class="relative w-24 h-24 mx-auto flex items-center justify-center mb-6">
@@ -268,16 +277,16 @@
                 <i class="fa-solid fa-microchip text-3xl text-guru-cyan animate-pulse"></i>
             </div>
             <h2 class="font-montserrat font-black text-2xl text-white tracking-widest uppercase">Generando Enlace</h2>
-            <p class="mt-2 font-poppins text-guru-cyan animate-pulse text-sm">Creando tu orden de renovación segura en Mercado Pago...</p>
+            <p id="loading-message" class="mt-2 font-poppins text-guru-cyan animate-pulse text-sm">Creando tu orden de renovación segura en Mercado Pago...</p>
         </div>
     </div>
 
-    <!-- Lógica JavaScript del Selector e Interacción de Planes -->
+    <!-- Lógica JavaScript de Selector e Interacción de Planes -->
     <script>
         let selectedPlan = 'SST_ANUAL';
 
+        // 🔄 SELECCIÓN DINÁMICA DE PLANES (SOPORTA CLICS EN TARJETAS)
         function selectPlan(plan) {
-            // Homologar el plan al identificador oficial de la base de datos
             if (plan === 'mensual' || plan === 'SST_MENSUAL') {
                 selectedPlan = 'SST_MENSUAL';
             } else if (plan === 'semestral' || plan === 'SST_SEMESTRAL') {
@@ -286,7 +295,6 @@
                 selectedPlan = 'SST_ANUAL';
             }
 
-            // Referencias del DOM
             const cardMensual = document.getElementById('card-mensual');
             const cardSemestral = document.getElementById('card-semestral');
             const cardAnual = document.getElementById('card-anual');
@@ -305,24 +313,22 @@
             const discountValue = document.getElementById('summary-discount-value');
             const finalTotal = document.getElementById('summary-final-total');
 
-            // Resetear clases de las tarjetas
+            // Resetear clases visuales a inactivas
             if (cardMensual) cardMensual.className = 'glass-panel p-5 rounded-3xl cursor-pointer flex flex-col justify-between border-slate-800 opacity-60';
             if (cardSemestral) cardSemestral.className = 'glass-panel p-5 rounded-3xl cursor-pointer flex flex-col justify-between border-slate-800 opacity-60';
             if (cardAnual) cardAnual.className = 'glass-panel p-5 rounded-3xl cursor-pointer flex flex-col justify-between border-slate-800 opacity-60';
 
-            // Limpiar puntos de selección
             if (dotMensual) dotMensual.innerHTML = '';
             if (dotSemestral) dotSemestral.innerHTML = '';
             if (dotAnual) dotAnual.innerHTML = '';
 
-            // Activar la tarjeta seleccionada con su persuasión nativa
+            // Activar visualmente el plan seleccionado
             if (selectedPlan === 'SST_MENSUAL') {
                 if (cardMensual) cardMensual.className = 'border-2 border-slate-600 bg-slate-900/40 glass-panel p-5 rounded-3xl cursor-pointer flex flex-col justify-between relative';
                 if (radioMensual) radioMensual.checked = true;
                 if (dotMensual) dotMensual.innerHTML = "<div class='w-2 h-2 rounded-full bg-slate-400 shadow-[0_0_8px_rgba(255,255,255,0.5)]'></div>";
                 
-                // Actualizar resumen
-                if (summaryTitle) summaryTitle.innerText = "Membresía Plan Mensual";
+                if (summaryTitle) summaryTitle.innerText = "Acceso Mensual";
                 if (summaryPrice) summaryPrice.innerText = "$450.000 COP";
                 if (discountRow) discountRow.classList.remove('hidden');
                 if (discountValue) discountValue.innerText = "-$253.000 COP (LAUNCH)";
@@ -333,11 +339,10 @@
                 if (radioSemestral) radioSemestral.checked = true;
                 if (dotSemestral) dotSemestral.innerHTML = "<div class='w-2 h-2 rounded-full bg-guru-cyan shadow-[0_0_10px_rgba(0,243,255,0.6)]'></div>";
                 
-                // Actualizar resumen
-                if (summaryTitle) summaryTitle.innerText = "Membresía Élite Semestral";
+                if (summaryTitle) summaryTitle.innerText = "Membresía Plan Semestral";
                 if (summaryPrice) summaryPrice.innerText = "$700.000 COP";
                 if (discountRow) discountRow.classList.remove('hidden');
-                if (discountValue) discountValue.innerText = "-$350.000 COP (GURU50)";
+                if (discountValue) discountValue.innerText = "-$350.000 COP (LAUNCH50)";
                 if (finalTotal) finalTotal.innerText = "$350.000 COP";
 
             } else if (selectedPlan === 'SST_ANUAL') {
@@ -345,7 +350,6 @@
                 if (radioAnual) radioAnual.checked = true;
                 if (dotAnual) dotAnual.innerHTML = "<div class='w-2 h-2 rounded-full bg-guru-gold shadow-[0_0_10px_rgba(197,160,89,0.6)]'></div>";
                 
-                // Actualizar resumen
                 if (summaryTitle) summaryTitle.innerText = "Membresía Plan Máster Anual";
                 if (summaryPrice) summaryPrice.innerText = "$1.200.000 COP";
                 if (discountRow) discountRow.classList.remove('hidden');
@@ -354,29 +358,46 @@
             }
         }
 
-       // Procesador de Formulario (Envío Seguro de Renovación)
+        // 🚀 ENVÍO SEGURO DEL FORMULARIO SIN CONFLICTOS DE ENRUTAMIENTO
         document.getElementById('renovacionForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = document.getElementById('btnSubmit');
             const originalContent = btn.innerHTML;
             const loader = document.getElementById('loading-overlay');
 
-            // Mostrar pantalla de carga inmersiva GURU OS
+            const email = document.getElementById('email').value.trim().toLowerCase();
+            const nombre = document.getElementById('nombre').value.trim();
+            const countryCode = document.getElementById('country_code').value;
+            const phoneInput = document.getElementById('whatsapp').value.toString().trim().replace(/[^0-9]/g, '');
+            const habeasData = document.getElementById('habeas_data').checked;
+
+            if (!email || !nombre || !phoneInput) {
+                alert("🚨 Todos los campos son obligatorios para proceder con la renovación.");
+                return;
+            }
+
+            if (!habeasData) {
+                alert("🚨 Debes autorizar el tratamiento de datos personales conforme a la Ley 1581.");
+                return;
+            }
+
+            // Mostrar cargador inmersivo GURU OS
             if (loader) {
                 loader.classList.remove('pointer-events-none');
                 loader.classList.add('opacity-100');
             }
 
             btn.disabled = true;
-            // 🛡️ TEXTO DE CARGA LIMPIO Y PROFESIONAL (CERO JERGA DE DESARROLLO)
             btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> Conectando con el servidor seguro...';
 
+            const fullWhatsapp = countryCode + phoneInput;
+
             const payload = {
-                nombre: document.getElementById('nombre').value.trim(),
-                whatsapp: document.getElementById('whatsapp').value.trim(),
-                email: document.getElementById('email').value.trim().toLowerCase(),
+                nombre: nombre,
+                email: email,
+                whatsapp: fullWhatsapp,
                 plan: selectedPlan,
-                password: "" // Campo vacío que indica al motor Postgres no alterar su clave de acceso
+                password: "" // Se envía vacío para que el backend de Postgres no altere su clave actual
             };
 
             try {
@@ -389,10 +410,11 @@
 
                 if (response.ok) {
                     const data = await response.json();
-                    if (data.redirect_url) {
-                        window.location.href = data.redirect_url;
+                    const redirectUrl = data.redirect_url || data.url;
+
+                    if (redirectUrl) {
+                        window.location.href = redirectUrl;
                     } else {
-                        // 🛡️ ALERTA PARA EL CLIENTE FINAL
                         alert("Servicio temporalmente fuera de línea. Por favor, inténtalo de nuevo en unos minutos o ponte en contacto con soporte.");
                         if (loader) {
                             loader.classList.add('pointer-events-none');
@@ -402,7 +424,6 @@
                         btn.innerHTML = originalContent;
                     }
                 } else {
-                    // 🛡️ ALERTA PARA EL CLIENTE FINAL
                     alert("No se pudo procesar la solicitud de pago en este momento. Código de respuesta: " + response.status);
                     if (loader) {
                         loader.classList.add('pointer-events-none');
@@ -413,7 +434,6 @@
                 }
             } catch (err) {
                 console.error("Error de red:", err);
-                // 🛡️ CERO PORTEROS, CERO N8N: UN MENSAJE DE CONEXIÓN ESTÁNDAR DE LA INDUSTRIA
                 alert("Fallo de conexión con la pasarela de pagos. Por favor, comprueba tu conexión a internet e inténtalo de nuevo.");
                 if (loader) {
                     loader.classList.add('pointer-events-none');
@@ -426,9 +446,8 @@
 
         // Inicialización nativa en Plan Anual Máster
         document.addEventListener("DOMContentLoaded", () => {
-            selectPlan('SST_ANUAL');
+            selectPlan('anual');
         });
     </script>
 </body>
 </html>
-
