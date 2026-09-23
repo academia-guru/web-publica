@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Auditor VIP | GURU SST VIP</title>
+
+    <!-- Portero VIP Universal de Seguridad GURU OS -->
+    <script src="/seguridad.js?v=1.1" onerror="console.warn('GURU OS: Portero global offline o redirección simulada.')"></script>
+
+    <!-- Favicon Oficial GURU SST VIP -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <!-- Google Fonts del Ecosistema GURU -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6.4.0 para Iconografía Táctica -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN Oficial) -->
+    <script src="https://cdn.tailwindcss.com" onload="window.tailwindLoaded = true; document.documentElement.classList.remove('no-tailwind');" onerror="desplegarArmaduraLocal()"></script>
+
+    <!-- Configuración GURU OS para Tailwind -->
+    <script>
+        window.tailwind = window.tailwind || {};
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        fondo: '#05080f',
+                        'guru-navy': '#00355a',     /* Azul Profundo GURU */
+                        'guru-electric': '#439ae7', /* Azul Eléctrico */
+                        'guru-cyan': '#00f3ff',     /* Cyan Neón Principal */
+                        'guru-green': '#39ff14',    /* Verde Neón - Éxito */
+                        'guru-red': '#ff3131',      /* Rojo Neón - Alerta */
+                        'guru-gold': '#C5A059',     /* Oro Premium - VIP */
+                        'guru-darkBg': '#05080f',   /* Fondo Ultra Oscuro */
+                        'guru-cardBg': '#131c2e'    /* Tarjeta Cyberpunk */
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 20px rgba(0, 243, 255, 0.45)',
+                        'neon-green': '0 0 20px rgba(57, 255, 20, 0.45)',
+                        'neon-gold': '0 0 25px rgba(197, 160, 89, 0.45)',
+                        'glass': '0 8px 32px 0 rgba(9, 13, 22, 0.65)'
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(0, 243, 255, 0.25)', borderColor: 'rgba(0, 243, 255, 0.2)' },
+                            '50%': { boxShadow: '0 0 25px rgba(0, 243, 255, 0.6)', borderColor: 'rgba(0, 243, 255, 0.8)' }
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Armadura Estática CSS de Fallback (Defensivo contra saltos de pantalla (CLS) e internet lento) -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #05080f;
+            color: #cbd5e1;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        #constellation-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #05080f;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #439ae7;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #00f3ff;
+        }
+        .glass-panel {
+            background: rgba(19, 28, 46, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+        }
+        .text-gradient-cyan {
+            background: linear-gradient(90deg, #00f3ff 0%, #439ae7 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(90deg, #C5A059 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+       /* ========================================================================= */
+/* 🎛️ BARRA DE DESPLAZAMIENTO ULTRA-PREMIUM CON DOBLE GROSOR Y FLECHAS     */
+/* ========================================================================= */
+
+/* 1. Grosor total de la barra (Se subió a 14px para agarrar fácil con el mouse) */
+#subtab-v14-cursos-container::-webkit-scrollbar {
+    height: 14px; 
+}
+
+/* 2. El canal de fondo por donde se desliza la barra */
+#subtab-v14-cursos-container::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.7); 
+    border-radius: 9999px;
+}
+
+/* 3. El "botón" central que arrastras con el mouse */
+#subtab-v14-cursos-container::-webkit-scrollbar-thumb {
+    background: #439ae7; /* Azul eléctrico de la marca */
+    border-radius: 9999px;
+    border: 3px solid rgba(15, 23, 42, 0.9); /* Crea un colchón visual súper cómodo */
+}
+
+/* 4. Cuando pasas el mouse por encima del botón central, brilla en Cyan */
+#subtab-v14-cursos-container::-webkit-scrollbar-thumb:hover {
+    background: #00f3ff; 
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+/* 5. Flecha de la Izquierda (Para retroceder al hacer clic) */
+#subtab-v14-cursos-container::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    display: block;
+    width: 18px;
+    height: 14px;
+    /* Inyectamos una flecha izquierda en formato digital de alta definición */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23439ae7'><path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+    cursor: pointer;
+}
+/* Al pasar el mouse por la flecha izquierda, brilla en verde neón/cyan */
+#subtab-v14-cursos-container::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300f3ff'><path d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/></svg>");
+}
+
+/* 6. Flecha de la Derecha (Para avanzar al hacer clic) */
+#subtab-v14-cursos-container::-webkit-scrollbar-button:single-button:horizontal:increment {
+    display: block;
+    width: 18px;
+    height: 14px;
+    /* Inyectamos una flecha derecha en formato digital de alta definición */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23439ae7'><path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px;
+    cursor: pointer;
+}
+/* Al pasar el mouse por la flecha derecha, brilla en verde neón/cyan */
+#subtab-v14-cursos-container::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300f3ff'><path d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/></svg>");
+}
+/* ========================================================================= */
+        /* 🛡️ VACUNA CONTROL DE ASFIXIA UNIFICADA GURU OS (SANEADA Y ESTÉTICA)       */
+        /* ========================================================================= */
+        html.no-tailwind {
+            background-color: #05080f !important;
+            color: #cbd5e1 !important;
+            font-family: 'Poppins', sans-serif !important;
+        }
+        html.no-tailwind body {
+            background-color: #05080f !important;
+            color: #cbd5e1 !important;
+            padding-top: 96px !important; /* Evita que el contenido choque bajo el header fijo */
+            display: flex !important;
+            flex-direction: column !important;
+            min-height: 100vh !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+        }
+        html.no-tailwind .hidden {
+            display: none !important;
+        }
+/* 1.1 El Chasis Principal (MAIN) y Secciones (Sección F12 Blindada) */
+        html.no-tailwind main {
+            display: block !important;
+            width: 100% !important;
+            max-width: 1280px !important;
+            margin: 0 auto !important;
+            padding: 24px !important;
+            box-sizing: border-box !important;
+        }
+        html.no-tailwind section {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            background-color: rgba(15, 23, 42, 0.4) !important;
+            border: 1px solid rgba(148, 163, 184, 0.1) !important;
+            border-radius: 1.5rem !important;
+            padding: 2rem !important;
+            margin-bottom: 2rem !important;
+            box-sizing: border-box !important;
+        }
+        /* 1. Mapeo de Posicionamiento Crítico */
+        html.no-tailwind .relative { position: relative !important; }
+        html.no-tailwind .absolute { position: absolute !important; }
+        html.no-tailwind .inset-0 { top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; }
+        html.no-tailwind .w-full { width: 100% !important; }
+        html.no-tailwind .h-full { height: 100% !important; }
+
+        /* 2. Mapeo de Estructuras Flexbox y Grillas */
+        html.no-tailwind .flex { display: flex !important; }
+        html.no-tailwind .flex-col { flex-direction: column !important; }
+        html.no-tailwind .items-center { align-items: center !important; }
+        html.no-tailwind .justify-between { justify-content: space-between !important; }
+        
+        /* Grilla Base para Celulares (Fuerza 1 columna estética con espacio) */
+        html.no-tailwind .grid { 
+            display: grid !important; 
+            grid-template-columns: 1fr !important;
+            gap: 1.5rem !important;
+            width: 100% !important;
+        }
+        /* HUD y mini métricas que sí deben ir lado a lado en móvil */
+        html.no-tailwind .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+
+        @media (min-width: 1024px) {
+            html.no-tailwind .grid {
+                display: grid !important;
+                grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+                gap: 2rem !important;
+            }
+            html.no-tailwind .lg\:col-span-7 { grid-column: span 7 / span 7 !important; }
+            html.no-tailwind .lg\:col-span-6 { grid-column: span 6 / span 6 !important; }
+            html.no-tailwind .lg\:col-span-5 { grid-column: span 5 / span 5 !important; }
+        }
+
+        /* 2.1 Cajas del HUD de Progreso y Acordeones Bento */
+        html.no-tailwind .bg-slate-950\/70,
+        html.no-tailwind .bg-slate-950\/20,
+        html.no-tailwind .bg-slate-950\/80 {
+            background-color: rgba(2, 6, 23, 0.75) !important;
+            border: 1px solid rgba(148, 163, 184, 0.15) !important;
+            border-radius: 1rem !important;
+            padding: 1.25rem !important;
+            box-sizing: border-box !important;
+        }
+        /* 3. Sellar el Header para que quede fijo arriba (Saneado sin duplicados) */
+        html.no-tailwind header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 64px !important;
+            background-color: rgba(15, 23, 42, 0.95) !important;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.15) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            box-sizing: border-box !important;
+            z-index: 100 !important;
+            padding: 0 24px !important;
+        }
+        html.no-tailwind header > div {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            width: 100% !important;
+            max-width: 1280px !important;
+            margin: 0 auto !important;
+        }
+
+        /* 4. Solución Vacuna para Videos e Imágenes Gigantes */
+        html.no-tailwind .aspect-video,
+        html.no-tailwind .aspect-\[16\/10\],
+        html.no-tailwind .aspect-\[16\/9\] {
+            position: relative !important;
+            padding-top: 56.25% !important; /* Fuerza la proporción áurea 16:9 en asfixia */
+            height: 0 !important;
+            overflow: hidden !important;
+            width: 100% !important;
+            border-radius: 1rem !important;
+        }
+        html.no-tailwind .aspect-video iframe,
+        html.no-tailwind .aspect-\[16\/10\] img,
+        html.no-tailwind .aspect-\[16\/9\] img {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border: 0 !important;
+        }
+
+        /* 5. Solución Vacuna para el Carrusel de Tarjetas Columnar */
+        html.no-tailwind #subtab-v14-cursos-container {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 16px !important;
+        }
+        html.no-tailwind .snap-start {
+            width: 100% !important;
+            max-width: 100% !important;
+            background-color: #0f172a !important;
+            border: 1px solid rgba(0, 243, 255, 0.2) !important;
+            border-radius: 1rem !important;
+            padding: 20px !important;
+            box-sizing: border-box !important;
+        }
+
+        /* 6. Estética de Textos, Títulos y Botón Premium */
+        html.no-tailwind h1 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 900 !important;
+            font-size: 2.25rem !important;
+            color: #ffffff !important;
+            text-transform: uppercase !important;
+            line-height: 1.1 !important;
+        }
+        html.no-tailwind h3 {
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: bold !important;
+            font-size: 1.1rem !important;
+            color: #ffffff !important;
+            margin: 8px 0 !important;
+        }
+        html.no-tailwind p {
+            font-size: 0.85rem !important;
+            color: #94a3b8 !important;
+            line-height: 1.5 !important;
+        }
+        html.no-tailwind a[href="#misiones"],
+        html.no-tailwind .px-4.py-2.bg-guru-cyan {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 12px 24px !important;
+            background: #00f3ff !important;
+            color: #05080f !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+            text-decoration: none !important;
+            border-radius: 0.75rem !important;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4) !important;
+            cursor: pointer !important;
+        }
+         /* ========================================================================= */
+        /* 🎨 RETROALIMENTACIÓN DE COLORES, BORDES Y BOTÓN PREMIUM (INMUNIZADOS v2)  */
+        /* ========================================================================= */
+        
+        /* 1. Rescatar grosores de bordes anulados por el reset global */
+        .border { border-width: 1px !important; border-style: solid !important; }
+        .border-2 { border-width: 2px !important; border-style: solid !important; }
+        
+        /* 2. Saneamiento de colores de bordes GURU */
+        .border-slate-800\/60 { border-color: rgba(30, 41, 59, 0.6) !important; }
+        .border-slate-800\/80 { border-color: rgba(30, 41, 59, 0.8) !important; }
+        .border-guru-cyan\/30 { border-color: rgba(0, 243, 255, 0.3) !important; }
+        .border-guru-cyan\/35 { border-color: rgba(0, 243, 255, 0.35) !important; }
+        .border-guru-green { border-color: #39ff14 !important; }
+        
+        /* 🔥 BORDES DE LAS TARJETAS DE CONOCIMIENTO Y MALETÍN EN F12 */
+        .border-guru-gold\/30 { border-color: rgba(197, 160, 89, 0.3) !important; }
+        .border-guru-gold { border-color: #C5A059 !important; }
+        .border-guru-red\/30 { border-color: rgba(255, 49, 49, 0.3) !important; }
+        .border-guru-red { border-color: #ff3131 !important; }
+
+        /* 3. Rescatar colores de fondo oscuros/azules de las cajas contenedoras */
+        .bg-slate-900\/40 { background-color: rgba(15, 23, 42, 0.45) !important; }
+        .bg-slate-900\/30 { background-color: rgba(15, 23, 42, 0.35) !important; }
+        .bg-slate-950\/70 { background-color: rgba(2, 6, 23, 0.75) !important; }
+        .bg-slate-950\/20 { background-color: rgba(2, 6, 23, 0.2) !important; }
+        .bg-slate-950\/80 { background-color: rgba(2, 6, 23, 0.8) !important; }
+        .bg-guru-cardBg\/30 { background-color: rgba(19, 28, 46, 0.3) !important; }
+        
+        /* 4. Vacuna total para botones en asfixia */
+        .bg-guru-cyan {
+            background-color: #00f3ff !important;
+            background: #00f3ff !important;
+            color: #05080f !important;
+        }
+        
+        /* 🔥 FUERZA BRUTA BLANCA EN HOVER EN F12 Y PRODUCCIÓN */
+        a[href="#misiones"]:hover,
+        a.bg-guru-cyan:hover,
+        button.bg-guru-cyan:hover,
+        .bg-guru-cyan:hover {
+            background-color: #ffffff !important;
+            background: #ffffff !important;
+            color: #05080f !important;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6) !important;
+        }
+        
+        /* 🔥 BOTÓN DE MALETÍN (DORADO PREMIUM COMPLETO EN ASFIXIA) */
+        a[href*="maletin"] {
+            background-color: #C5A059 !important;
+            background: linear-gradient(90deg, #C5A059, #b45309) !important;
+            color: #05080f !important;
+        }
+        
+        /* 🔥 BOTÓN DE CERTIFICACIÓN (ROJO ALERTA COMPLETO EN ASFIXIA) */
+        a[href*="evaluacion"] {
+            background-color: #ff3131 !important;
+            background: linear-gradient(90deg, #ff3131, #b91c1c) !important;
+            color: #ffffff !important;
+        }
+        
+        .text-slate-950 {
+            color: #05080f !important;
+        }
+
+        /* 5. Mapeo de Badges y Textos del Hero e Indicadores */
+        .bg-guru-cyan\/10 { background-color: rgba(0, 243, 255, 0.1) !important; }
+        .bg-guru-cyan\/15 { background-color: rgba(0, 243, 255, 0.15) !important; }
+        .bg-guru-green\/15 { background-color: rgba(57, 255, 20, 0.15) !important; }
+        .bg-guru-gold\/15 { background-color: rgba(197, 160, 89, 0.15) !important; }
+        .bg-guru-red\/15 { background-color: rgba(255, 49, 49, 0.15) !important; }
+
+        /* 🔥 CLASES DE TEXTO NEÓN (CURA PARA INDICADORES XP Y PROGRESO) */
+        .text-guru-cyan { color: #00f3ff !important; }
+        .text-guru-green { color: #39ff14 !important; }
+        .text-guru-gold { color: #C5A059 !important; }
+        .text-guru-red { color: #ff3131 !important; }
+    </style>
+</head>
+
+<!-- 📡 LA VACUNA Y DETECTOR REACTIVO GURU OS -->
+<script>
+function desplegarArmaduraLocal() {
+    if (!window.tailwindAsfixiaTriggered) {
+        window.tailwindAsfixiaTriggered = true;
+        console.warn("⚠️ GURU OS: ¡Alerta de asfixia detectada! Activando contingencia...");
+        document.documentElement.classList.add('no-tailwind');
+        
+        // Cargamos el Tailwind Local de su servidor de respaldo para compilar offline
+        var localTailwind = document.createElement('script');
+        localTailwind.src = '/tailwind.js';
+        localTailwind.onload = function() {
+            console.log("🚀 GURU OS: ¡Tailwind local cargado con éxito!");
+            document.documentElement.classList.remove('no-tailwind');
+        };
+        document.head.appendChild(localTailwind);
+    }
+}
+
+// Respaldo síncrono si el CDN se congela silenciosamente en F12
+setTimeout(function() {
+    if (typeof tailwind === 'undefined' || !window.tailwindLoaded || Object.keys(tailwind).length <= 1) {
+        desplegarArmaduraLocal();
+    }
+}, 1500);
+</script>
+
+<body class="font-poppins text-slate-300 antialiased min-h-screen relative flex flex-col pt-24 selection:bg-guru-cyan selection:text-guru-navy">
+
+    <!-- CANVAS DE CONSTELACIONES INTERACTIVAS (Efecto WOW GURU OS) -->
+    <canvas id="constellation-canvas"></canvas>
+
+    <!-- LUCES AMBIENTALES DE NEÓN -->
+    <div class="fixed top-[-10%] left-[-10%] w-[500px] h-[500px] bg-guru-cyan/5 rounded-full blur-[120px] pointer-events-none z-0 animate-spin-slow"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-guru-electric/5 rounded-full blur-[120px] pointer-events-none z-0 animate-spin-slow" style="animation-direction: reverse;"></div>
+
+    <!-- ========================================== -->
+    <!-- ENCABEZADO FIJO MAESTRO GURU VIP (IDÉNTICO A 02_WEB_MIS_CURSOS) -->
+    <!-- ========================================== -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/90 backdrop-blur-xl border-b border-[#00f3ff]/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+
+            <!-- Logos Co-Branding locales unificados con medidas nativas fijas contra F12 -->
+<div class="flex items-center gap-2 sm:gap-4 shrink-0">
+    <!-- Firma de Andrea Castro -->
+    <img src="/img/firma-andrea.png" alt="Firma Andrea Castro" width="144" height="40" style="max-height: 40px; width: auto; aspect-ratio: 18/5;" class="h-6 sm:h-11 w-auto object-contain hover:scale-105 transition-transform">
+    
+    <!-- Divisor Físico -->
+    <div class="border-l border-slate-700/60 h-6 sm:h-10" style="border-left: 1.5px solid rgba(148, 163, 184, 0.25) !important; height: 24px !important; margin: 0 12px !important; display: inline-block !important;"></div>
+    
+    <!-- Logo GURU SST -->
+    <img src="/img/logo-guru.png" alt="Logo GURU SST" width="78" height="30" style="max-height: 30px; width: auto; aspect-ratio: 13/5;" class="h-7 sm:h-11 w-auto object-contain hover:scale-105 transition-transform">
+</div>
+
+            <!-- Menú de Navegación Rápida Híbrido (Desktop - IDÉNTICO) -->
+            <nav class="hidden lg:flex items-center gap-2 sm:gap-4">
+                <!-- 1. Inicio -->
+                <a href="https://vip.andreacastrosst.com/centro-de-mando/" class="relative px-3 py-2 text-[10px] sm:text-xs font-black text-slate-300 uppercase tracking-widest transition-all duration-300 hover:text-[#00f3ff] group flex items-center justify-center" title="Centro de Mando">
+                    <i class="fa-solid fa-house relative z-10 text-[12px] group-hover:text-[#00f3ff] transition-colors"></i>
+                    <div class="absolute inset-0 rounded-lg bg-[#00f3ff]/0 group-hover:bg-[#00f3ff]/10 border border-transparent group-hover:border-[#00f3ff]/40 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300"></div>
+                </a>
+                <!-- 2. Cursos (ACTIVO - Con capa fija brillante de color) -->
+                <a href="https://vip.andreacastrosst.com/cursos/" class="relative px-3 py-2 text-[10px] sm:text-xs font-black text-[#00f3ff] uppercase tracking-widest transition-all duration-300 group flex items-center" title="Mis Cursos">
+                    <i class="fa-solid fa-rocket relative z-10 border-b-2 border-[#00f3ff] pb-1"></i>
+                    <span class="relative z-10 ml-1.5 font-montserrat">Cursos</span>
+                    <div class="absolute inset-0 rounded-lg bg-[#00f3ff]/10 border border-[#00f3ff]/40 shadow-[0_0_15px_rgba(0,243,255,0.2)] transition-all duration-300"></div>
+                </a>
+                <!-- 3. Talleres -->
+                <a href="https://vip.andreacastrosst.com/talleres/" class="relative px-3 py-2 text-[10px] sm:text-xs font-black text-slate-300 uppercase tracking-widest transition-all duration-300 hover:text-[#00f3ff] group flex items-center">
+                    <i class="fa-solid fa-circle-play relative z-10 text-[12px]"></i>
+                    <span class="relative z-10 ml-1.5 font-montserrat">Talleres</span>
+                    <div class="absolute inset-0 rounded-lg bg-[#00f3ff]/0 group-hover:bg-[#00f3ff]/10 border border-transparent group-hover:border-[#00f3ff]/40 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300"></div>
+                </a>
+                <!-- 4. Sesiones (Cámara de Grabación) -->
+                <a href="https://meet.google.com/iow-qhyz-qbu" target="_blank" class="relative px-3 py-2 text-[10px] sm:text-xs font-black text-slate-300 uppercase tracking-widest transition-all duration-300 hover:text-[#39ff14] group flex items-center">
+                    <i class="fa-solid fa-video relative z-10 text-[12px] group-hover:text-[#39ff14]"></i>
+                    <span class="relative z-10 ml-1.5 font-montserrat">Sesiones</span>
+                    <div class="absolute inset-0 rounded-lg bg-[#39ff14]/0 group-hover:bg-[#39ff14]/10 border border-transparent group-hover:border-[#39ff14]/40 group-hover:shadow-[0_0_15px_rgba(57,255,20,0.4)] transition-all duration-300"></div>
+                </a>
+                <!-- 5. Red Titán -->
+                <a href="https://vip.andreacastrosst.com/red-titan/" class="relative px-3 py-2 text-[10px] sm:text-xs font-black text-slate-300 uppercase tracking-widest transition-all duration-300 hover:text-[#00f3ff] group flex items-center">
+                    <i class="fa-solid fa-users relative z-10 text-[12px]"></i>
+                    <span class="relative z-10 max-w-0 group-hover:max-w-[110px] transition-all duration-500 ease-in-out whitespace-nowrap overflow-hidden opacity-0 group-hover:opacity-100 group-hover:ml-1.5 font-montserrat">Red Titán</span>
+                    <div class="absolute inset-0 rounded-lg bg-[#00f3ff]/0 group-hover:bg-[#00f3ff]/10 border border-transparent group-hover:border-[#00f3ff]/40 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300"></div>
+                </a>
+                <!-- 6. Ranking -->
+                <a href="https://vip.andreacastrosst.com/ranking/" class="relative px-3 py-2 text-[10px] sm:text-xs font-black text-slate-300 uppercase tracking-widest transition-all duration-300 hover:text-[#00f3ff] group flex items-center">
+                    <i class="fa-solid fa-trophy relative z-10 text-[14px]"></i>
+                    <span class="relative z-10 max-w-0 group-hover:max-w-[110px] transition-all duration-500 ease-in-out whitespace-nowrap overflow-hidden opacity-0 group-hover:opacity-100 group-hover:ml-1.5 font-montserrat">Ranking</span>
+                    <div class="absolute inset-0 rounded-lg bg-[#00f3ff]/0 group-hover:bg-[#00f3ff]/10 border border-transparent group-hover:border-[#00f3ff]/40 group-hover:shadow-[0_0_15px_rgba(0,243,255,0.4)] transition-all duration-300"></div>
+                </a>
+            </nav>
+
+            <!-- Info de Sesión del Estudiante (Sin Botón Salir/Cerrar Sesión) -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="https://vip.andreacastrosst.com/perfil/" class="flex flex-col items-end hover:scale-105 transition-transform duration-300 group mr-1 sm:mr-2">
+                    <span class="text-[8px] sm:text-[9px] text-[#00f3ff] font-bold uppercase tracking-widest"><i class="fa-solid fa-user mr-1"></i> Ver Perfil</span>
+                    <span id="nombre-usuario-header" class="text-[10px] sm:text-xs font-bold text-white transition-colors tracking-wide truncate max-w-[80px] sm:max-w-[120px]">Cargando...</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- 🏛️ ÁREA CENTRAL DE CONTENIDO (CON PADDING INFERIOR SEGURO PARA EL DOCK)    -->
+    <!-- ========================================================================= -->
+    <main class="relative z-10 flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-8 pb-32 lg:pb-12">
+
+        <!-- ========================================================================= -->
+        <!-- 📦 BLOQUE 1: EL ESCUDO DE ENTRADA (CAJA SUPERIOR ÚNICA DE PRESENTACIÓN)   -->
+        <!-- ========================================================================= -->
+        <section class="w-full bg-slate-900/40 p-6 sm:p-8 lg:p-10 rounded-3xl border border-slate-800/60 shadow-2xl relative overflow-hidden mt-6">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-guru-cyan/10 rounded-full blur-[80px]"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+
+                <!-- Info de Presentación (Columna Izquierda - Balanceada a 6/12) -->
+                <div class="lg:col-span-6 flex flex-col text-left space-y-4">
+                    <span class="inline-flex w-fit items-center gap-1.5 px-3 py-1.5 rounded-full bg-guru-cyan/10 border border-guru-cyan/20 text-guru-cyan font-bold text-[10px] tracking-widest uppercase shadow-neon-cyan animate-pulse">
+                        <span class="w-1.5 h-1.5 rounded-full bg-guru-green animate-ping"></span>
+                        <i class="fa-solid fa-graduation-cap"></i> Entrenamiento Especializado
+                    </span>
+                    
+                    <h1 class="font-montserrat font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white uppercase tracking-tight leading-none">
+                        Auditor Interno<br>
+                        <span class="text-gradient-cyan drop-shadow-[0_0_15px_rgba(0,243,255,0.3)]">Decreto 1072 & Res 0312</span>
+                    </h1>
+                    
+                    <p class="text-xs sm:text-sm lg:text-base text-slate-400 leading-relaxed font-medium text-justify">
+                        Domina la estructuración de la auditoría obligatoria en el SG-SST Establecido en el Decreto 1072 de 2015 (Art. 2.2.4.6.29) y la Resolución 0312 de 2019 (Estándar 6.1.2). Es de carácter anual y con participación obligatoria del COPASST. Alineado al estándar de auditoría internacional <strong class="text-white">ISO 19011:2026</strong>. Pasa de la teoría al diseño legal de entregables en campo sin un solo reproceso.
+                    </p>
+<!-- 🚀 BOTÓN GURU PORTADA ALINEADO Y ESTIRADO DE FORMA ESTABLE -->
+<div class="pt-2 relative z-10 text-left max-w-2xl w-full">
+    <a href="#misiones" class="w-full inline-flex px-6 py-4 bg-guru-cyan text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow-[0_0_15px_rgba(0,243,255,0.4)] uppercase hover:bg-white hover:scale-[1.02] transition-all items-center justify-center gap-2 font-montserrat">
+        Comenzar el Curso <i class="fa-solid fa-rocket text-sm"></i>
+    </a>
+</div>
+
+<!-- HUD de Progreso y XP -->
+<div class="grid grid-cols-2 gap-4 pt-2">
+    <div class="bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800/80 flex flex-col justify-center shadow-inner">
+        <span class="text-[8px] sm:text-[9px] font-black tracking-widest uppercase text-slate-500">Mi Experiencia</span>
+        <strong id="hero-xp-display" class="font-montserrat font-black text-xl lg:text-2xl text-guru-cyan mt-0.5">0 XP</strong>
+    </div>
+
+    <div class="bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800/80 flex flex-col justify-center shadow-inner">
+        <span class="text-[8px] sm:text-[9px] font-black tracking-widest uppercase text-slate-500">Progreso del Curso</span>
+        <strong id="hero-progress-display" class="font-montserrat font-black text-xl lg:text-2xl text-guru-green mt-0.5">0%</strong>
+    </div>
+</div>
+
+<!-- 📊 BARRA DE PROGRESO DE NEÓN GAMIFICADA EN PORCENTAJE (Sincronizada con el Progreso) -->
+<div class="w-full bg-slate-950/70 p-3.5 rounded-2xl border border-slate-800/80 mt-3 shadow-inner relative overflow-hidden">
+    <div class="flex justify-between items-center mb-1.5">
+        <span class="text-[8px] sm:text-[9px] font-black tracking-widest uppercase text-slate-500">Progreso de Aprendizaje</span>
+        <span id="hero-bar-text-display" class="text-[9px] font-black text-guru-cyan uppercase tracking-widest">0% Completado</span>
+    </div>
+    <div class="w-full bg-slate-900 rounded-full h-2.5 overflow-hidden border border-slate-800/60 relative">
+        <div id="hero-progress-bar" class="bg-gradient-to-r from-guru-cyan to-guru-green h-full rounded-full transition-all duration-700 ease-out shadow-[0_0_10px_rgba(0,243,255,0.4)]" style="width: 0%;"></div>
+    </div>
+</div>
+                </div>
+
+                <!-- Columna Derecha: Portada Oficial del Curso (Agrandada con balance 6/12 y aspecto superior) -->
+                <div class="lg:col-span-6 w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border-2 border-guru-cyan/35 relative group shadow-glass shrink-0 transition-all duration-300 hover:border-guru-cyan/60">
+                    <!-- Imagen de Portada con su Ruta de Producción Oficial y Fallback Directo de GitHub RAW -->
+                    <img src="/cursos/auditor-interno-1072/img/portada-auditor.png" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-85 filter saturate-125 contrast-110 brightness-110 group-hover:scale-105 transition-transform duration-700 z-0" 
+                         onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/academia-guru/portal-academia/main/cursos/auditor-interno-1072/img/portada-auditor.png'">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/20 to-transparent z-10 flex flex-col justify-between p-6">
+                        <div class="flex justify-end">
+                            <div class="w-11 h-11 rounded-xl bg-slate-950/80 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan shadow-md backdrop-blur-sm group-hover:shadow-[0_0_20px_rgba(0,243,255,0.5)] group-hover:border-guru-cyan transition-all animate-pulse-glow" title="Auditor de Élite">
+                                <i class="fa-solid fa-user-shield text-base"></i>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-left">
+                            <span class="inline-flex items-center gap-1.5 text-[9px] font-black text-guru-cyan uppercase tracking-widest bg-slate-950/90 px-3.5 py-2 rounded-xl border border-guru-cyan/25 shadow-md backdrop-blur-sm">
+                                <span class="w-1.5 h-1.5 rounded-full bg-guru-green animate-ping"></span>
+                                <i class="fa-solid fa-award"></i> Certificación de 40 Horas
+                            </span>
+                            <h3 class="text-xs sm:text-sm font-black text-white uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">ESTÁNDAR ISO 19011:2026</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ========================================================================= -->
+        <!-- 📦 BLOQUE 2: EL TALLER INDUCTIVO (VIDEO + COMPETENCIAS)                   -->
+        <!-- ========================================================================= -->
+        <section class="w-full bg-slate-900/40 p-6 sm:p-8 rounded-3xl border border-slate-800/60 shadow-2xl relative overflow-hidden">
+            <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-guru-electric/10 rounded-full blur-[80px]"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+                <!-- Video de Bienvenida Iframe (Columna Izquierda) -->
+                <div class="lg:col-span-7 flex flex-col text-left space-y-3">
+                    <h3 class="font-montserrat font-black text-white text-base sm:text-lg uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-circle-play text-guru-cyan"></i> Bienvenida
+                    </h3>
+                    <div class="relative w-full aspect-video rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 shrink-0">
+                        <iframe src="https://player.mediadelivery.net/embed/179128/b7ebd522-376f-4c5f-84ef-63f0b0314b25?autoplay=false&loop=false&muted=true&preload=true&responsive=true"
+                                loading="lazy"
+                                style="border:0;position:absolute;top:0;height:100%;width:100%;"
+                                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;"
+                                allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+
+                <!-- Tus 3 Competencias GURU Acordeón (Columna Derecha) -->
+<div class="lg:col-span-5 flex flex-col justify-center space-y-4 text-left">
+    <span class="block text-xs font-black text-slate-500 uppercase tracking-widest pl-1">
+        OBJETIVOS
+    </span>
+
+    <!-- Competencia 1 -->
+    <div class="border-2 border-slate-800/80 rounded-2xl overflow-hidden bg-slate-950/20 transition-all duration-300 hover:border-guru-cyan/50 hover:shadow-[0_0_15px_rgba(0,243,255,0.1)]" id="acordeon-obj-1">
+        <button onclick="toggleObjetivoBento(1)" class="w-full p-4 sm:p-5 flex items-center justify-between text-left hover:bg-slate-900/30 transition-colors">
+            <span class="text-xs sm:text-base lg:text-lg font-extrabold text-slate-200 flex items-center gap-3 uppercase tracking-wide">
+                <!-- Cyber-Badge Mediano-Grande Balanceado -->
+                <span class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-guru-cyan/15 border-2 border-guru-cyan flex items-center justify-center text-xs sm:text-lg font-black text-guru-cyan shrink-0 shadow-[0_0_10px_rgba(0,243,255,0.25)]">1</span>
+                Conceptos y Herramientas
+            </span>
+            <i class="fa-solid fa-chevron-down text-xs sm:text-sm text-slate-500 transition-transform duration-300" id="arrow-obj-1"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="content-obj-1">
+            <div class="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-slate-400 space-y-2 border-t border-slate-900/50 bg-slate-950/40 leading-relaxed">
+                <p class="text-justify font-medium">Dominar los elementos clave del Decreto 1072 Y Resolución 0312 para estructurar auditorías asertivas.</p>
+                <span class="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-black text-guru-cyan uppercase tracking-wider mt-1 bg-guru-cyan/10 px-2.5 py-1 rounded-lg border border-guru-cyan/20">
+                    <i class="fa-solid fa-screwdriver-wrench"></i> Arma: Matriz de 60 Estándares
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Competencia 2 -->
+    <div class="border-2 border-slate-800/80 rounded-2xl overflow-hidden bg-slate-950/20 transition-all duration-300 hover:border-guru-green/50 hover:shadow-[0_0_15px_rgba(57,255,20,0.1)]" id="acordeon-obj-2">
+        <button onclick="toggleObjetivoBento(2)" class="w-full p-4 sm:p-5 flex items-center justify-between text-left hover:bg-slate-900/30 transition-colors">
+            <span class="text-xs sm:text-base lg:text-lg font-extrabold text-slate-200 flex items-center gap-3 uppercase tracking-wide">
+                <span class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-guru-green/15 border-2 border-guru-green flex items-center justify-center text-xs sm:text-lg font-black text-guru-green shrink-0 shadow-[0_0_10px_rgba(57,255,20,0.25)]">2</span>
+                Criterios y Técnicas
+            </span>
+            <i class="fa-solid fa-chevron-down text-xs sm:text-sm text-slate-500 transition-transform duration-300" id="arrow-obj-2"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="content-obj-2">
+            <div class="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-slate-400 space-y-2 border-t border-slate-900/50 bg-slate-950/40 leading-relaxed">
+                <p class="text-justify font-medium">Aplicar metodologías para evaluar de forma crítica las brechas y hallazgos en campo.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Competencia 3 -->
+    <div class="border-2 border-slate-800/80 rounded-2xl overflow-hidden bg-slate-950/20 transition-all duration-300 hover:border-guru-gold/50 hover:shadow-[0_0_15px_rgba(197,160,89,0.1)]" id="acordeon-obj-3">
+        <button onclick="toggleObjetivoBento(3)" class="w-full p-4 sm:p-5 flex items-center justify-between text-left hover:bg-slate-900/30 transition-colors">
+            <span class="text-xs sm:text-base lg:text-lg font-extrabold text-slate-200 flex items-center gap-3 uppercase tracking-wide">
+                <span class="w-8 h-8 sm:w-11 sm:h-11 rounded-xl bg-guru-gold/15 border-2 border-guru-gold flex items-center justify-center text-xs sm:text-lg font-black text-guru-gold shrink-0 shadow-[0_0_10px_rgba(197,160,89,0.25)]">3</span>
+                Comunicación de Resultados
+            </span>
+            <i class="fa-solid fa-chevron-down text-xs sm:text-sm text-slate-500 transition-transform duration-300" id="arrow-obj-3"></i>
+        </button>
+        <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out" id="content-obj-3">
+            <div class="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-slate-400 space-y-2 border-t border-slate-900/50 bg-slate-950/40 leading-relaxed">
+                <p class="text-justify font-medium">Redactar informes de auditoría sólidos y defender el dictamen técnico ante la alta gerencia.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </section>
+
+        <!-- MAPA DE MISIÓN: Grid de Bento Tarjetas del Curso -->
+<section id="misiones" class="space-y-6 scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div class="text-center sm:text-left">
+                    <span class="text-guru-cyan font-bold text-[10px] sm:text-xs uppercase tracking-widest block mb-1"><i class="fa-solid fa-map-location-dot animate-pulse"></i> Hoja de Ruta</span>
+                    <h2 class="font-montserrat font-extrabold text-2xl sm:text-3xl text-white uppercase">Formación a tu Medida</h2>
+                    <p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">Cada módulo está disponible sin restricciones. Recorre el curso paso a paso o ingresa al módulo que te ayude a resolver tus retos actuales.</p>
+                </div>
+
+                <!-- Botones de Desplazamiento del Carrusel -->
+                <div class="flex gap-2 justify-center shrink-0">
+                    <button onclick="slideCarouselV14('left')" class="w-10 h-10 rounded-full bg-slate-900 border border-guru-cyan/20 hover:border-guru-cyan text-slate-400 hover:text-guru-cyan flex items-center justify-center transition-all shadow-inner outline-none active:scale-95" title="Deslizar izquierda">
+                        <i class="fa-solid fa-chevron-left text-sm"></i>
+                    </button>
+                    <button onclick="slideCarouselV14('right')" class="w-10 h-10 rounded-full bg-slate-900 border border-guru-cyan/20 hover:border-guru-cyan text-slate-400 hover:text-guru-cyan flex items-center justify-center transition-all shadow-inner outline-none active:scale-95" title="Deslizar derecha">
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARRUSEL DESLIZABLE HORIZONTAL SNAP (AMPLIO, GRANDE Y SÚPER LEGIBLE) -->
+            <div id="subtab-v14-cursos-container" class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth custom-scrollbar pb-4">
+
+                <!-- INTRODUCCIÓN -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-guru-cyan/50 hover:shadow-neon-cyan p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-guru-cyan tracking-widest uppercase bg-slate-950 border border-guru-cyan/10 px-2.5 py-1 rounded">INTRODUCCIÓN</span>
+                            <div class="w-10 h-10 rounded-lg bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan">
+                                <i class="fa-solid fa-book-open text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-cyan transition-colors uppercase leading-snug">FUNDAMENTOS DEL SG-SST</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium">Un recorrido inicial por los fundamentos, contexto normativo, definiciones esenciales y metodología de auditoría en 7 pasos.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-intro" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                        <a href="./introduccion/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 1 -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-guru-cyan/50 hover:shadow-neon-cyan p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-guru-cyan tracking-widest uppercase bg-slate-950 border border-guru-cyan/10 px-2.5 py-1 rounded">Módulo 1</span>
+                            <div class="w-10 h-10 rounded-lg bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan">
+                                <i class="fa-solid fa-circle-nodes text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-cyan transition-colors uppercase leading-snug">Conceptos y Principios</h3>
+                       <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Paso 1:</strong> Los 7 pilares éticos e integridad de la auditoría bajo la norma internacional ISO 19011:2026.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-mod1" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                        <a href="./modulo-1/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 2 -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-guru-cyan/50 hover:shadow-neon-cyan p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-guru-cyan tracking-widest uppercase bg-slate-950 border border-guru-cyan/10 px-2.5 py-1 rounded">Módulo 2</span>
+                            <div class="w-10 h-10 rounded-lg bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan">
+                                <i class="fa-solid fa-calendar-check text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-cyan transition-colors uppercase leading-snug">Planificación</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Paso 2:</strong> Aprende a diseñar y organizar un plan de auditoría sólido, con pasos claros y formatos listos para aplicar en tu empresa.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-mod2" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                        <a href="./modulo-2/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 3 -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-guru-cyan/50 hover:shadow-neon-cyan p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-guru-cyan tracking-widest uppercase bg-slate-950 border border-guru-cyan/10 px-2.5 py-1 rounded">Módulo 3</span>
+                            <div class="w-10 h-10 rounded-lg bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan">
+                                <i class="fa-solid fa-gavel text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-cyan transition-colors uppercase leading-snug">Realización y Ejecución</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Paso 3:</strong> Guía práctica para ejecutar auditorías eficaces: desde la recolección de evidencias hasta la aplicación de herramientas de documentación en cada fase del ciclo PHVA.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-mod3" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                        <a href="./modulo-3/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 4 (7 CASOS PINE LTDA NATIVOS) -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-amber-500/50 hover:shadow-neon-gold p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-[#ffb703] tracking-widest uppercase bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded">Módulo 4</span>
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-[#ffb703] shadow-[0_0_10px_rgba(245,158,11,0.2)]">
+                                <i class="fa-solid fa-tower-observation text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-gold transition-colors uppercase leading-snug">Generación de Hallazgos</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Paso 4:</strong> Un módulo para entrenar tu capacidad de reconocer hallazgos y aplicar la auditoría en situaciones simuladas.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-mod4" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                        <a href="./modulo-4/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 5 (LAB C-E-I NATIVO) -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-amber-500/50 hover:shadow-neon-gold p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-[#ffb703] tracking-widest uppercase bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded">Módulo 5</span>
+                            <div class="w-10 h-10 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-[#ffb703] shadow-[0_0_10px_rgba(245,158,11,0.2)]">
+                                <i class="fa-solid fa-puzzle-piece text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-gold transition-colors uppercase leading-snug">Definición de Conclusiones</h3>
+                       <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Paso 5:</strong> Un módulo práctico para definir conclusiones precisas y coherentes en tus auditorías.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-mod5" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                        <a href="./modulo-5/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 6 -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-guru-cyan/50 hover:shadow-neon-cyan p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-guru-cyan tracking-widest uppercase bg-slate-950 border border-guru-cyan/10 px-2.5 py-1 rounded">Módulo 6</span>
+                            <div class="w-10 h-10 rounded-lg bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan">
+                                <i class="fa-solid fa-users-viewfinder text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-cyan transition-colors uppercase leading-snug">Reunión de Cierre</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Paso 6:</strong> Negociación bajo presión en la reunión de cierre con la gerencia general (Manejo de objeciones).</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-mod6" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                        <a href="./modulo-6/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+                <!-- MÓDULO 7 -->
+                <div class="min-w-[340px] sm:min-w-[380px] max-w-[380px] bg-guru-cardBg/30 border border-slate-800 rounded-2xl hover:border-guru-cyan/50 hover:shadow-neon-cyan p-6 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden snap-start">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-black text-guru-cyan tracking-widest uppercase bg-slate-950 border border-guru-cyan/10 px-2.5 py-1 rounded">Módulo 7</span>
+                            <div class="w-10 h-10 rounded-lg bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan">
+                                <i class="fa-solid fa-file-signature text-base"></i>
+                            </div>
+                        </div>
+                        <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-cyan transition-colors uppercase leading-snug">Informe de Auditoría</h3>
+                       <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Paso 7:</strong> Estructuración legal, compilación estadística de hallazgos y cierre formal de la auditoría del SG-SST.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                        <span id="logro-mod7" class="text-[10px] uppercase font-bold text-slate-500"><i class="fa-solid fa-clock mr-1 text-[8px]"></i> Pendiente</span>
+                       <a href="./modulo-7/" class="px-4 py-2 bg-guru-cyan text-guru-darkBg font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:bg-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 🏆 EXAMEN DE CERTIFICACIÓN & MALETÍN DE DESCARGAS (AISLADOS DE LA RUTA)    -->
+        <!-- ========================================================================= -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+
+            <!-- TARJETA: MALETÍN DE HERRAMIENTAS -->
+            <div class="glass-panel p-6 rounded-2xl border-guru-gold/30 hover:border-guru-gold hover:shadow-neon-gold transition-all duration-500 flex flex-col justify-between group relative overflow-hidden bg-gradient-to-br from-slate-900/40 via-slate-900/10 to-transparent">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[9px] font-black text-guru-gold tracking-widest uppercase bg-slate-950 border border-guru-gold/20 px-2.5 py-1 rounded">Material Descargable</span>
+                        <div class="w-10 h-10 rounded-lg bg-guru-gold/15 border border-guru-gold/30 flex items-center justify-center text-guru-gold shadow-[0_0_10px_rgba(197,160,89,0.25)]">
+                            <i class="fa-solid fa-toolbox text-base"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-gold transition-colors uppercase leading-snug">Maletín de Herramientas</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium"><strong class="text-white font-black">Tu kit de apoyo:</strong> Descarga formatos y plantillas listas para usar y adaptar a tus necesidades.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                    <span class="text-[10px] uppercase font-bold text-guru-gold"><i class="fa-solid fa-cloud-arrow-down mr-1 animate-pulse text-[8px]"></i> 100% Editable</span>
+                    <a href="./maletin/" class="px-4 py-2 bg-gradient-to-r from-guru-gold to-amber-600 text-slate-950 font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:from-white hover:to-white hover:scale-105 active:scale-95 transition-all">Ingresar</a>
+                </div>
+            </div>
+
+            <!-- TARJETA: EXAMEN DE CERTIFICACIÓN (LIBRE - SIN CANDADOS) -->
+            <div class="glass-panel p-6 rounded-2xl border-guru-red/30 hover:border-guru-red hover:shadow-[0_0_20px_rgba(255,49,49,0.3)] transition-all duration-500 flex flex-col justify-between group relative overflow-hidden bg-gradient-to-br from-slate-900/40 via-slate-900/10 to-transparent">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[9px] font-black text-guru-red tracking-widest uppercase bg-slate-950 border border-guru-red/20 px-2.5 py-1 rounded">CERTIFICACIÓN</span>
+                        <div class="w-10 h-10 rounded-lg bg-guru-red/15 border border-guru-red/30 flex items-center justify-center text-guru-red shadow-[0_0_10px_rgba(255,49,49,0.25)]">
+                            <i class="fa-solid fa-trophy text-base"></i>
+                        </div>
+                    </div>
+                    <h3 class="font-montserrat font-black text-base sm:text-lg text-white group-hover:text-guru-red transition-colors uppercase leading-snug">Apropiación del Conocimiento</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-justify font-medium">Responde la evaluación final, valida tu aprendizaje y accede a tu certificado como evidencia de tu formación complementaria.</p>
+                </div>
+                <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between mt-4">
+                    <span class="text-[10px] uppercase font-bold text-guru-red flex items-center gap-1"><i class="fa-solid fa-lock-open text-[8px]"></i> Acceso Libre</span>
+                    <a href="./evaluacion/" class="px-4 py-2 bg-gradient-to-r from-guru-red to-red-700 text-white font-montserrat font-black text-[10px] uppercase tracking-widest rounded-lg shadow-md hover:from-white hover:to-slate-900 hover:text-slate-950 hover:scale-105 active:scale-95 transition-all">Iniciar Examen</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- 👥 SECCIÓN: DIRIGIDO A & PROYECCIÓN DE MERCADO (ESTÉTICA)                 -->
+        <!-- ========================================================================= -->
+        <section class="w-full bg-slate-900/30 p-6 sm:p-8 rounded-3xl border border-slate-800/60 shadow-xl relative overflow-hidden">
+
+            <!-- Cabecera de la Sección (Centrada de forma Perfecta) -->
+<div class="max-w-3xl mx-auto text-center space-y-2 mb-8 relative z-10">
+    <span class="text-guru-cyan font-bold text-[10px] sm:text-xs uppercase tracking-widest block"><i class="fa-solid fa-users"></i> Perfiles de Destino</span>
+    <h2 class="font-montserrat font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">¿A quién va dirigido?</h2>
+    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed text-center">Diseñado especialmente para prevencionistas, coordinadores de SST, inspectores, técnicos, tecnólogos, profesionales y asesores que deseen dominar las auditorías internas obligatorias del SG-SST en Colombia.</p>
+</div>
+
+            <!-- Selectores de Perfil Táctiles -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 max-w-5xl mx-auto mb-6">
+                <button onclick="simularPerfil('estudiante')" class="btn-perfil p-3 rounded-xl bg-slate-950/60 hover:bg-slate-900 border border-slate-800 hover:border-guru-cyan/50 text-slate-400 hover:text-white font-montserrat font-black text-[9px] sm:text-xs uppercase tracking-wider transition-all select-none outline-none active:scale-95" id="btn-perf-estudiante">Estudiante</button>
+                <button onclick="simularPerfil('tecnico')" class="btn-perfil p-3 rounded-xl bg-slate-950/60 hover:bg-slate-900 border border-slate-800 hover:border-guru-cyan/50 text-slate-400 hover:text-white font-montserrat font-black text-[9px] sm:text-xs uppercase tracking-wider transition-all select-none outline-none active:scale-95" id="btn-perf-tecnico">Técnico</button>
+                <button onclick="simularPerfil('tecnologo')" class="btn-perfil p-3 rounded-xl bg-slate-950/60 hover:bg-slate-900 border border-slate-800 hover:border-guru-cyan/50 text-slate-400 hover:text-white font-montserrat font-black text-[9px] sm:text-xs uppercase tracking-wider transition-all select-none outline-none active:scale-95" id="btn-perf-tecnologo">Tecnólogo</button>
+                <button onclick="simularPerfil('profesional')" class="btn-perfil p-3 rounded-xl bg-slate-950/60 hover:bg-slate-900 border border-slate-800 hover:border-guru-cyan/50 text-slate-400 hover:text-white font-montserrat font-black text-[9px] sm:text-xs uppercase tracking-wider transition-all select-none outline-none active:scale-95" id="btn-perf-profesional">Profesional</button>
+                <button onclick="simularPerfil('especialista')" class="btn-perfil p-3 rounded-xl bg-slate-950/60 hover:bg-slate-900 border border-slate-800 hover:border-guru-cyan/50 text-slate-400 hover:text-white font-montserrat font-black text-[9px] sm:text-xs uppercase tracking-wider transition-all select-none outline-none active:scale-95" id="btn-perf-especialista">Especialista</button>
+            </div>
+
+            <!-- Pantalla Consola del Simulador de Perfiles -->
+            <div id="simulador-pantalla" class="max-w-5xl mx-auto p-4 bg-slate-950/80 border border-slate-800/80 rounded-2xl hidden text-left animate-float">
+                <span class="block text-[8px] font-black text-guru-gold tracking-widest uppercase mb-1" id="sim-perfil-tag">PERFIL SELECCIONADO</span>
+                <h4 class="text-xs font-black text-white uppercase tracking-wider mb-2" id="sim-perfil-titulo">Título del Rol</h4>
+                <p class="text-xs text-slate-400 leading-relaxed text-justify mb-3" id="sim-perfil-mision">Descripción de la misión técnica.</p>
+                <div class="flex items-center justify-between border-t border-slate-900 pt-2">
+                    <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Tarifa de Cobro Sugerida:</span>
+                    <span class="font-black text-guru-green text-sm sm:text-base font-mono" id="sim-perfil-tarifa">$0 COP</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MENÚ DE NAVEGACIÓN MÓVIL (CYBER-DOCK / ISLA FLOTANTE DE ALTO TRÁFICO - IDÉNTICO) -->
+    <nav class="lg:hidden fixed bottom-3 left-0 right-0 mx-auto w-[95%] max-w-[400px] z-50 bg-[#0f172a]/95 backdrop-blur-xl border border-[#00f3ff]/20 rounded-full shadow-[0_15px_30px_rgba(0,0,0,0.6)] px-2">
+        <div class="flex justify-between items-center py-2 relative">
+            <a href="https://vip.andreacastrosst.com/centro-de-mando/" class="flex flex-col items-center gap-1 p-1 w-12 text-slate-400 active:text-[#00f3ff] transition-all">
+                <i class="fa-solid fa-house text-sm"></i>
+                <span class="text-[6px] font-black uppercase tracking-widest text-center">Inicio</span>
+            </a>
+            <a href="https://vip.andreacastrosst.com/cursos/" class="flex flex-col items-center gap-1 p-1 w-12 text-[#00f3ff] transition-all">
+                <i class="fa-solid fa-rocket text-sm"></i>
+                <span class="text-[6px] font-black uppercase tracking-widest text-center">Cursos</span>
+            </a>
+            <a href="https://vip.andreacastrosst.com/talleres/" class="flex flex-col items-center gap-1 p-1 w-12 text-slate-400 active:text-[#00f3ff] transition-all">
+                <i class="fa-solid fa-circle-play text-sm"></i>
+                <span class="text-[6px] font-black uppercase tracking-widest text-center">Talleres</span>
+            </a>
+            <a href="https://meet.google.com/iow-qhyz-qbu" target="_blank" class="flex flex-col items-center gap-1 p-1 w-12 text-[#39ff14] transition-all">
+                <i class="fa-solid fa-video text-[16px] animate-pulse relative">
+                    <div class="absolute -top-0.5 -right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full animate-ping"></div>
+                    <div class="absolute -top-0.5 -right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full border-[0.5px] border-slate-900"></div>
+                </i>
+                <span class="text-[6px] font-black uppercase tracking-widest text-center">Sesiones</span>
+            </a>
+            <a href="https://vip.andreacastrosst.com/red-titan/" class="flex flex-col items-center gap-1 p-1 w-12 text-slate-400 active:text-[#00f3ff] transition-all">
+                <i class="fa-solid fa-users text-sm"></i>
+                <span class="text-[6px] font-black uppercase tracking-widest text-center">Red Titán</span>
+            </a>
+            <a href="https://vip.andreacastrosst.com/ranking/" class="flex flex-col items-center gap-1 p-1 w-12 text-slate-400 active:text-[#00f3ff] transition-all">
+                <i class="fa-solid fa-trophy text-sm"></i>
+                <span class="text-[6px] font-black uppercase tracking-widest text-center">Ranking</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ========================================================================= -->
+    <!-- 📡 SCRIPTS DE CONTROL DE INTELIGENCIA, PERSISTENCIA & ANIMACIÓN            -->
+    <!-- ========================================================================= -->
+    <script>
+        // Data del Simulador "Dirigido a"
+        const TARIFAS_Y_MISIONES = {
+            estudiante: {
+                titulo: "Estudiante de Seguridad y Salud en el Trabajo",
+                mision: "Fogueo andragógico y comprensión interactiva de los 21 pasos y estándares mínimos de la Resolución 0312 de 2019. Su misión es aprender la teoría de auditoría preventiva.",
+                tarifa: "$1.200.000 COP a $1.800.000 COP (Por diseño documental básico)"
+            },
+            tecnico: {
+                titulo: "Técnico Profesional en SST",
+                mision: "Ejecución de auditorías internas operativas para microempresas de hasta 10 trabajadores clasificadas en Riesgo I, II, III. Inspección de riesgos locativos directos.",
+                tarifa: "$1.800.000 COP a $2.500.000 COP (Por auditoría/asesoría directa)"
+            },
+            tecnologo: {
+                titulo: "Tecnólogo en Seguridad y Salud en el Trabajo",
+                mision: "Estructuración de planes anuales y auditoría del Planear/Hacer para pymes de hasta 50 trabajadores en Riesgo I, II, III. Verificación física y documental de campo.",
+                tarifa: "$2.500.000 COP a $3.500.000 COP (Por diseño del plan de mejoramiento)"
+            },
+            profesional: {
+                titulo: "Profesional en SST con Licencia Vigente",
+                mision: "Estructuración legal y auditoría interna completa para cualquier tamaño de empresa, incluyendo corporaciones en Riesgo IV y V (Transporte, Minería, Construcción). Blindaje de responsabilidad patronal.",
+                tarifa: "$4.000.000 COP a $6.000.000 COP (Por auditoría integral del SG-SST)"
+            },
+            especialista: {
+                titulo: "Especialista en SST / HSEQ / Asesor de Alta Gerencia",
+                mision: "Auditoría de Certificación de Tercera Parte bajo el estándar ISO 45001:2018 e ISO 19011:2026. Auditorías preventivas de responsabilidad civil y penal para multinacionales.",
+                tarifa: "$7.000.000 COP a $12.000.000 COP (Por proyecto de blindaje corporativo)"
+            }
+        };
+
+        function simularPerfil(perfilKey) {
+            const data = TARIFAS_Y_MISIONES[perfilKey];
+            if (!data) return;
+
+            // Conmutador de clases activas en botones
+            document.querySelectorAll('.btn-perfil').forEach(btn => {
+                btn.classList.remove('border-guru-cyan', 'bg-guru-cyan/10', 'text-white', 'shadow-neon-cyan');
+                btn.classList.add('border-slate-800', 'bg-slate-950/60', 'text-slate-400');
+            });
+
+            const btnActivo = document.getElementById(`btn-perf-${perfilKey}`);
+            if (btnActivo) {
+                btnActivo.classList.remove('border-slate-800', 'bg-slate-950/60', 'text-slate-400');
+                btnActivo.classList.add('border-guru-cyan', 'bg-guru-cyan/10', 'text-white', 'shadow-neon-cyan');
+            }
+
+            // Pintar consola
+            document.getElementById('sim-perfil-tag').innerText = `PERFIL ACTIVADO: ${perfilKey.toUpperCase()}`;
+            document.getElementById('sim-perfil-titulo').innerText = data.titulo;
+            document.getElementById('sim-perfil-mision').innerText = data.mision;
+            document.getElementById('sim-perfil-tarifa').innerText = data.tarifa;
+
+            const pantalla = document.getElementById('simulador-pantalla');
+            pantalla.classList.remove('hidden');
+        }
+
+
+       // =========================================================================
+// 📡 REHIDRATACIÓN REACTIVA DESDE POSTGRESQL (NUBE GURU OS 2.0 v20)
+// =========================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    inicializarConstelaciones();
+    // Añadimos un pequeño retraso de 150ms para evitar colisiones de hilos con seguridad.js
+    setTimeout(rehidratarProgresoLobby, 150);
+});
+
+async function rehidratarProgresoLobby() {
+    // 1. Inicializar con LocalStorage para cero latencia visual (MÁSCARA PREVENTIVA)
+    const localName = localStorage.getItem("nombre_vip_guru") || "Titán VIP";
+    const localXP = parseInt(localStorage.getItem("guru_user_xp")) || 0;
+    let localBoveda = [];
+    try {
+        localBoveda = JSON.parse(localStorage.getItem("guru_boveda_logros")) || [];
+    } catch(e) { 
+        localBoveda = []; 
+    }
+    
+    // Pintamos la máscara de inmediato para evitar CLS (saltos de pantalla)
+    pintarHUD(localName, localXP, localBoveda);
+    
+    const email = localStorage.getItem("email_vip_guru");
+    if (!email) {
+        console.warn("GURU OS: Sesión ausente. El portero redirigirá.");
+        return;
+    }
+    
+    try {
+        // 🚀 ROMPE-CACHÉ Y ENRUTAMIENTO DE ELITE: Llamamos a obtener-perfil con Cache Buster
+        const cacheBuster = Date.now();
+        const response = await fetch(`https://n8n.mentedigitalia.com/webhook/obtener-perfil?cb=${cacheBuster}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email: email })
+        });
+        
+        if (response.ok) {
+            const db = await response.json();
+            console.log("🚀 GURU OS: Datos de perfil rehidratados con éxito de Postgres:", db);
+            
+            // Sincronizamos las variables globales estrictas en LocalStorage
+            if (db.guru_user_xp !== undefined) {
+                localStorage.setItem("guru_user_xp", db.guru_user_xp.toString());
+            }
+            if (db.guru_boveda_logros) {
+                localStorage.setItem("guru_boveda_logros", JSON.stringify(db.guru_boveda_logros));
+            }
+            if (db.nombre_completo) {
+                localStorage.setItem("nombre_vip_guru", db.nombre_completo);
+            }
+            
+            // Extraemos la verdad absoluta de Postgres
+            const finalXP = db.guru_user_xp !== undefined ? parseInt(db.guru_user_xp) : localXP;
+            const finalBoveda = db.guru_boveda_logros || localBoveda;
+            const finalName = db.nombre_completo || localName;
+            
+            // Pintamos el HUD final con los datos reales en tiempo de ejecución
+            pintarHUD(finalName, finalXP, finalBoveda);
+        }
+    } catch (error) {
+        console.warn("GURU OS: Sincronización offline. Utilizando búfer local seguro.", error);
+    }
+}
+
+     function pintarHUD(nombre, xp, boveda) {
+    // 1. Pintar primer nombre en el header
+    const primerNombre = nombre.trim().split(/\s+/).shift();
+    const nameEl = document.getElementById("nombre-usuario-header");
+    if (nameEl) nameEl.innerText = primerNombre;
+
+    // 2. Pintar XP
+    const xpEl = document.getElementById("hero-xp-display");
+    if (xpEl) xpEl.innerText = `${xp.toLocaleString()} XP`;
+
+    // 3. Mapeo oficial y purificado de lecciones del curso (Sin medallas, solo lecciones reales)
+    const logrosMapeados = {
+        'logro-intro': [
+            'completado_auditor_introduccion', 
+            'completado_auditor_intro',
+            'clase_completada_auditor-m1-l1', 
+            'clase_completada_auditor-m1-l2', 
+            'clase_completada_auditor-m1-l3', 
+            'clase_completada_auditor-m1-l4'
+        ],
+        'logro-mod1': [
+            'completado_auditor_m1', 
+            'clase_completada_auditor-m1p1-l1', 
+            'clase_completada_auditor-m1p1-l2'
+        ],
+        'logro-mod2': [
+            'completado_auditor_m2', 
+            'clase_completada_auditor-m2-l1', 
+            'clase_completada_auditor-m2-l2'
+        ],
+        'logro-mod3': [
+            'completado_auditor_m3', 
+            'clase_completada_auditor-m3-l1', 'clase_completada_auditor-m3-l2', 
+            'clase_completada_auditor-m3-l3', 'clase_completada_auditor-m3-l4', 
+            'clase_completada_auditor-m3-l5', 'clase_completada_auditor-m3-l6', 
+            'clase_completada_auditor-m3-l7', 'clase_completada_auditor-m3-l8', 
+            'clase_completada_auditor-m3-l9', 'clase_completada_auditor-m3-l10', 
+            'clase_completada_auditor-m3-l11', 'clase_completada_auditor-m3-l12'
+        ],
+        'logro-mod4': [
+            'completado_auditor_m4', 
+            'clase_completada_auditor-m4-l1', 
+            'clase_completada_auditor-m4-l2'
+        ],
+        'logro-mod5': [
+            'completado_auditor_m5', 
+            'clase_completada_auditor-m5-l1'
+        ],
+        'logro-mod6': [
+            'completado_auditor_m6', 
+            'clase_completada_auditor-m6-l1'
+        ],
+        'logro-mod7': [
+            'completado_auditor_m7', 
+            'clase_completada_auditor-m7-l1'
+        ]
+    };
+
+
+    let misionesCompletadas = 0;
+    const totalMisiones = Object.keys(logrosMapeados).length;
+
+    // 4. Evaluar y pintar el estado de cada tarjeta en el carrusel (3 Estados Inteligentes)
+    Object.keys(logrosMapeados).forEach(id => {
+        const badge = document.getElementById(id);
+        if (badge) {
+            const llavesBuscadas = logrosMapeados[id];
+            
+            // Filtrar únicamente las lecciones reales o casos prácticos de cada módulo
+            const leccionesModulo = llavesBuscadas.filter(k => k.startsWith('clase_completada_') || k.startsWith('auditor_caso_'));
+            const totalLecciones = leccionesModulo.length || 1;
+            
+            // Contar cuántas lecciones ha completado el alumno en este módulo específico
+            const leccionesHechas = Array.isArray(boveda) 
+                ? leccionesModulo.filter(k => boveda.includes(k)).length 
+                : 0;
+
+            // Verificar si existe bandera explícita de módulo completado
+            const tieneBandera = Array.isArray(boveda) && llavesBuscadas.some(k => k.startsWith('completado_') && boveda.includes(k));
+
+            if (leccionesHechas === totalLecciones || tieneBandera) {
+                badge.innerHTML = `<span class="text-guru-green font-black"><i class="fa-solid fa-circle-check"></i> COMPLETADO</span>`;
+                misionesCompletadas++;
+            } else if (leccionesHechas > 0) {
+                badge.innerHTML = `<span class="text-guru-cyan font-bold"><i class="fa-solid fa-spinner animate-pulse"></i> ${leccionesHechas} de ${totalLecciones} COMPLETA</span>`;
+            } else {
+                badge.innerHTML = `<span class="text-slate-500 font-bold"><i class="fa-solid fa-clock"></i> PENDIENTE</span>`;
+            }
+        }
+    });
+
+
+     /// 📊 CÁLCULO DE ÉLITE ARQUITECTURA GURU OS 2.0 (25 LECCIONES EXACTAS)
+  const TOTAL_LECCIONES_CURSO = 25;
+  
+  // Filtro explícito: 24 lecciones estándar ('clase_completada_') + lección de Introducción ('completado_auditor_intro')
+  const leccionesHechas = Array.isArray(boveda) 
+    ? boveda.filter(k => k.startsWith('clase_completada_') || k === 'completado_auditor_intro').length 
+    : 0;
+  
+  const porcentajeLecciones = Math.min(100, Math.round((leccionesHechas / TOTAL_LECCIONES_CURSO) * 100));
+  const porcentajeMisiones = Math.round((misionesCompletadas / totalMisiones) * 100);
+  
+  // Progreso oficial homologado (25 / 25 = 100%)
+  const porcentajeProgreso = porcentajeLecciones;
+
+
+    // 6. Pintar el porcentaje dinámico en el HUD principal
+    const progressEl = document.getElementById("hero-progress-display");
+    if (progressEl) {
+        progressEl.innerText = `${porcentajeProgreso}%`;
+    }
+
+    // 📊 7. Actualización dinámica de la Barra de Neón
+    const progressBar = document.getElementById("hero-progress-bar");
+    if (progressBar) {
+        progressBar.style.width = `${porcentajeProgreso}%`;
+    }
+    const barTextDisplay = document.getElementById("hero-bar-text-display");
+    if (barTextDisplay) {
+        barTextDisplay.innerText = `${porcentajeProgreso}% Completado`;
+    }
+}
+
+        // Control del Acordeón Bento
+        function toggleObjetivoBento(num) {
+            const content = document.getElementById(`content-obj-${num}`);
+            const arrow = document.getElementById(`arrow-obj-${num}`);
+
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                arrow.style.transform = 'rotate(0deg)';
+            } else {
+                // Cerrar otros
+                [1,2,3].forEach(n => {
+                    const c = document.getElementById(`content-obj-${n}`);
+                    const a = document.getElementById(`arrow-obj-${n}`);
+                    if (c && n !== num) {
+                        c.style.maxHeight = '0px';
+                        if (a) a.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                content.style.maxHeight = content.scrollHeight + 'px';
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Control Deslizable del Carrusel de Módulos
+        function slideCarouselV14(direction) {
+            const container = document.getElementById("subtab-v14-cursos-container");
+            if (!container) return;
+            const scrollAmount = 360;
+            if (direction === 'left') {
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        // Cierre de Sesión Universal
+        function cerrarSesion() {
+            localStorage.clear();
+            window.location.href = "https://vip.andreacastrosst.com/login/";
+        }
+
+        // =========================================================================
+        // 🌌 EFECTO CYBERPUNK: CANVAS DE CONSTELACIONES INTERACTIVAS
+        // =========================================================================
+        function inicializarConstelaciones() {
+            const canvas = document.getElementById("constellation-canvas");
+            if (!canvas) return;
+            const ctx = canvas.getContext("2d");
+
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            const numNodes = width < 640 ? 25 : 55;
+            const nodes = [];
+
+            for (let i = 0; i < numNodes; i++) {
+                nodes.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    r: Math.random() * 2 + 1
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.fillStyle = "rgba(0, 243, 255, 0.4)";
+                ctx.strokeStyle = "rgba(0, 243, 255, 0.08)";
+
+                nodes.forEach((node, idx) => {
+                    node.x += node.vx;
+                    node.y += node.vy;
+
+                    if (node.x < 0 || node.x > width) node.vx *= -1;
+                    if (node.y < 0 || node.y > height) node.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    for (let j = idx + 1; j < numNodes; j++) {
+                        const other = nodes[j];
+                        const dist = Math.hypot(node.x - other.x, node.y - other.y);
+                        if (dist < 120) {
+                            ctx.beginPath();
+                            ctx.moveTo(node.x, node.y);
+                            ctx.lineTo(other.x, other.y);
+                            ctx.stroke();
+                        }
+                    }
+                });
+
+                requestAnimationFrame(animate);
+            }
+
+            window.addEventListener("resize", () => {
+                if (!canvas) return;
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            });
+
+            animate();
+        }
+    </script>
+</body>
+</html>
