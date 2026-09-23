@@ -367,7 +367,7 @@
         <!-- Logo y Badge de curso -->
         <div class="p-5 border-b border-slate-800/60 flex flex-col items-center justify-center bg-slate-950/20 relative overflow-hidden">
             <img src="/img/logo-guru.png" alt="GURU SST VIP" height="64" style="max-height: 64px; width: auto;" class="h-16 w-auto object-contain mb-3 drop-shadow-[0_0_15px_rgba(0,243,255,0.2)] hover:scale-105 transition-transform" id="main-logo">
-            <span class="text-[9px] font-black text-guru-cyan tracking-[0.2em] uppercase border border-guru-cyan/30 px-3 py-1 rounded-full bg-guru-cyan/10" id="rango-badge">INDUCCIÓN SIG</span>
+            <span class="text-[9px] font-black text-guru-cyan tracking-[0.2em] uppercase border border-guru-cyan/30 px-3 py-1 rounded-full bg-guru-cyan/10" id="rango-badge">Contextualización SIG</span>
         </div>
 
         
@@ -436,7 +436,7 @@
                     
                     <!-- 1. Introducción (Carpeta /introduccion/) -->
                     <a href="/cursos/auditor-interno-1072/introduccion/" class="flex items-center justify-between px-3 py-2 rounded-xl bg-guru-cyan/15 border border-guru-cyan/30 text-guru-cyan text-xs font-bold transition-all">
-                        <span class="truncate">Introducción: Fundamentos del SG-SST</span>
+                        <span class="truncate">Inducción: Fundamentos del SIG</span>
                         <i class="fa-solid fa-play text-[9px] shrink-0"></i>
                     </a>
                     
@@ -624,7 +624,7 @@
       "curso_titulo": "Auditor Interno en Decreto 1072 de 2015 y Resolución 0312",
       "modulos": [{
               "modulo_id": "modulo-1",
-              "modulo_titulo": "INTRODUCCIÓN: Fundamentos del SG-SST",
+              "modulo_titulo": "INDUCCIÓN: Fundamentos del SIG",
               "lecciones": [{
                             "id": "auditor-m1-l1",
                             "titulo": "Contexto Organizacional",
@@ -1428,114 +1428,237 @@
                                 <i class="fa-solid fa-book-open"></i> Lección 3
                             </span>
                             <h3 class="text-white font-montserrat font-extrabold text-base sm:text-lg uppercase tracking-wide mt-2">
-                                <i class="fa-solid fa-tags text-guru-cyan"></i> Glosario de Conceptos de Ley
+                                <i class="fa-solid fa-tags text-guru-cyan"></i> Planificación Estratégica
                             </h3>
                         </div>
                         
-                        <!-- Barra de Búsqueda de IA en Tiempo Real -->
-                        <div class="relative w-full md:w-72 shrink-0">
-                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-500 pointer-events-none">
-                                <i class="fa-solid fa-magnifying-glass text-xs"></i>
-                            </span>
-                            <input type="text" id="glosario-search" oninput="filtrarGlosarioGURU()" placeholder="Buscar definición legal..." 
-                                   class="w-full pl-9 pr-4 py-2 bg-slate-950/80 border border-slate-800 focus:border-guru-cyan rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none transition-all shadow-inner">
+                      
                         </div>
                     </div>
 
-                    <!-- BOTONERA DE CATEGORÍAS TÁCTICAS -->
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 bg-slate-950/40 p-1.5 rounded-2xl border border-slate-800/40 relative z-10">
-                        <button onclick="cambiarCategoriaGlosario('gestion')" id="btn-glos-gestion" class="btn-glos py-2 px-1.5 text-center rounded-xl font-montserrat font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-1.5 border border-guru-cyan/30 bg-guru-cyan text-slate-950 shadow-[0_0_10px_rgba(0,243,255,0.2)] outline-none">
-                            <i class="fa-solid fa-scale-balanced"></i> Gestión
-                        </button>
-                        <button onclick="cambiarCategoriaGlosario('riesgos')" id="btn-glos-riesgos" class="btn-glos py-2 px-1.5 text-center rounded-xl font-montserrat font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-1.5 border border-slate-800 text-slate-400 hover:text-white outline-none">
-                            <i class="fa-solid fa-triangle-exclamation"></i> Riesgos
-                        </button>
-                        <button onclick="cambiarCategoriaGlosario('salud')" id="btn-glos-salud" class="btn-glos py-2 px-1.5 text-center rounded-xl font-montserrat font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-1.5 border border-slate-800 text-slate-400 hover:text-white outline-none">
-                            <i class="fa-solid fa-heart-pulse"></i> Salud
-                        </button>
-                        <button onclick="cambiarCategoriaGlosario('gobernanza')" id="btn-glos-gobernanza" class="btn-glos py-2 px-1.5 text-center rounded-xl font-montserrat font-bold text-[10px] sm:text-xs transition-all flex items-center justify-center gap-1.5 border border-slate-800 text-slate-400 hover:text-white outline-none">
-                            <i class="fa-solid fa-building-user"></i> Gobernanza
-                        </button>
-                    </div>
+                    <!-- ========================================================================= -->
+<!-- 🎯 SECCIÓN ESTRATÉGICA: POLÍTICA Y OBJETIVOS DEL SIG                      -->
+<!-- ========================================================================= -->
 
-                    <!-- CONTENEDOR DINÁMICO DE TARJETAS EXPANSIBLES -->
-                    <div id="glosario-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10 min-h-[350px]">
-                        <!-- Las tarjetas se inyectarán de manera interactiva por JavaScript -->
-                    </div>
-
-                    <!-- NOTIFICACIÓN DE DOPAMINA XP INTEGRADA -->
-                    <div id="glosario-xp-toast" class="fixed bottom-5 right-5 z-50 p-3.5 bg-gradient-to-r from-slate-950 to-slate-900 border border-guru-cyan/40 rounded-2xl shadow-[0_0_20px_rgba(0,243,255,0.25)] flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none hidden max-w-xs animate-bounce">
-                        <div class="w-8 h-8 rounded-xl bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan text-xs">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <span class="text-[10px] font-montserrat font-black text-white uppercase tracking-wider" id="glosario-xp-text">+0 XP</span>
-                    </div>
-                </div>
-                <!-- ⚡ COMPONENTE MAESTRO: DILEMA DE LA LECCIÓN 3 (PELIGRO VS RIESGO - ART. 2.2.4.6.2) -->
-<div class="mt-8 pt-6 border-t border-slate-800/80">
-    <div class="w-full bg-slate-950/90 border border-slate-800 hover:border-guru-cyan/40 rounded-2xl sm:rounded-3xl p-4 sm:p-5 transition-all shadow-2xl">
-        
-       <!-- Botón Desplegable (Lección 3) con Identificadores Dinámicos -->
-<button type="button" onclick="toggleDilemaContenedor('m1-l3')" class="w-full flex items-center justify-between text-left group outline-none cursor-pointer">
-    <div class="space-y-1 pr-2">
-        <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-guru-cyan animate-ping"></span>
-            <!-- Línea 1 ajustada con su id -->
-            <span id="dilema-badge-m1-l3" class="text-xs sm:text-sm font-black text-guru-cyan uppercase tracking-wider">
-                🎯 DESAFÍA TU CRITERIO PROFESIONAL (+5 XP)
-            </span>
-        </div>
-        <!-- Línea 2 ajustada con su id -->
-        <p id="dilema-frase-m1-l3" class="text-[11px] sm:text-xs text-slate-400 font-medium leading-relaxed">
-            Cualquiera puede leer la norma; muy pocos saben aplicarla cuando el escenario es real.
-        </p>
-    </div>
-    <div class="w-8 h-8 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 group-hover:text-guru-cyan group-hover:border-guru-cyan/40 transition-all shrink-0">
-        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300" id="chevron-m1-l3"></i>
-    </div>
-</button>
-
-        <!-- Contenedor del Caso Práctico (Oculto por defecto) -->
-        <div id="dilema-box-m1-l3" class="hidden mt-5 pt-4 border-t border-slate-800 space-y-4 animate-fade-in text-left">
-            <div class="p-4 bg-slate-900/80 border border-slate-800 rounded-xl sm:rounded-2xl space-y-2">
-                <span class="text-[9px] font-black text-guru-gold tracking-widest uppercase flex items-center gap-1.5">
-                    <i class="fa-solid fa-scale-balanced"></i> Caso Real en Campo • Decreto 1072 (Art. 2.2.4.6.2)
-                </span>
-                <p class="text-xs text-slate-300 leading-relaxed text-justify">
-                    Al auditar la Matriz de Peligros de una maderera, observa que en el puesto de corte registraron en la columna de Peligro: <em>"Amputación de mano y muerte por atrapamiento"</em>. El prevencionista sostiene que está perfecto porque <em>"ese es el daño máximo y por ende el peligro real"</em>.
-                </p>
-                <span class="block text-xs font-bold text-white pt-1">
-                    Como Auditor de Élite, ¿cuál es su dictamen técnico?
-                </span>
-            </div>
-
-            <!-- Opciones de Decisión -->
-            <div class="grid grid-cols-1 gap-2.5">
-                <button type="button" onclick="evaluarRespuestaDilema('m1-l3', 'A', 'B', 5, '¡Criterio técnico impecable! Conforme al Artículo 2.2.4.6.2 del Decreto 1072, el Peligro es la FUENTE, SITUACIÓN O ACTO (la máquina sin guarda o piezas en movimiento), mientras que la amputación es la consecuencia o severidad del Riesgo. Confundirlos anula la jerarquía de controles de ingeniería.', '¡Cuidado con la trampa conceptual, colega! Recuerde que en SST la amputación o lesión corporal es el EFECTO o daño sobre la salud, no el peligro de origen. El Decreto 1072 (Art. 2.2.4.6.2) define el peligro como la fuente física o condición intrínseca. ¡Analícelo y vuelva a intentar!')" 
-                        class="btn-opcion-m1-l3 w-full p-3.5 bg-slate-900/50 border border-slate-800 hover:border-guru-cyan/50 hover:bg-slate-900 rounded-xl sm:rounded-2xl text-left text-xs text-slate-300 transition-all cursor-pointer">
-                    <span class="font-bold text-guru-cyan mr-1.5">A.</span> Conformidad: La metodología permite redactar las lesiones médicas más críticas directamente como peligros.
-                </button>
-
-                <button type="button" onclick="evaluarRespuestaDilema('m1-l3', 'B', 'B', 5, '¡Criterio técnico impecable! Conforme al Artículo 2.2.4.6.2 del Decreto 1072, el Peligro es la FUENTE, SITUACIÓN O ACTO (la máquina sin guarda o piezas en movimiento), mientras que la amputación es la consecuencia o severidad del Riesgo. Confundirlos anula la jerarquía de controles de ingeniería.', '¡Cuidado con la trampa conceptual, colega! Recuerde que en SST la amputación o lesión corporal es el EFECTO o daño sobre la salud, no el peligro de origen. El Decreto 1072 (Art. 2.2.4.6.2) define el peligro como la fuente física o condición intrínseca. ¡Analícelo y vuelva a intentar!')" 
-                        class="btn-opcion-m1-l3 w-full p-3.5 bg-slate-900/50 border border-slate-800 hover:border-guru-cyan/50 hover:bg-slate-900 rounded-xl sm:rounded-2xl text-left text-xs text-slate-300 transition-all cursor-pointer">
-                    <span class="font-bold text-guru-cyan mr-1.5">B.</span> No Conformidad: Confunden peligro (fuente o acto) con consecuencia (lesión médica), distorsionando el Art. 2.2.4.6.2 y la aplicación de controles en la fuente.
-                </button>
-
-                <button type="button" onclick="evaluarRespuestaDilema('m1-l3', 'C', 'B', 5, '¡Criterio técnico impecable! Conforme al Artículo 2.2.4.6.2 del Decreto 1072, el Peligro es la FUENTE, SITUACIÓN O ACTO (la máquina sin guarda o piezas en movimiento), mientras que la amputación es la consecuencia o severidad del Riesgo. Confundirlos anula la jerarquía de controles de ingeniería.', '¡Cuidado con la trampa conceptual, colega! Recuerde que en SST la amputación o lesión corporal es el EFECTO o daño sobre la salud, no el peligro de origen. El Decreto 1072 (Art. 2.2.4.6.2) define el peligro como la fuente física o condición intrínseca. ¡Analícelo y vuelva a intentar!')" 
-                        class="btn-opcion-m1-l3 w-full p-3.5 bg-slate-900/50 border border-slate-800 hover:border-guru-cyan/50 hover:bg-slate-900 rounded-xl sm:rounded-2xl text-left text-xs text-slate-300 transition-all cursor-pointer">
-                    <span class="font-bold text-guru-cyan mr-1.5">C.</span> Oportunidad de Mejora: Solicitar que añadan una foto de una mano vendada en la matriz para ilustrar el peligro.
-                </button>
-            </div>
-
-            <!-- Caja de Feedback Dinámico -->
-            <div id="feedback-m1-l3" class="hidden"></div>
-        </div>
-    </div>
+<!-- 1. BOTONERA MAESTRA (POLÍTICA VS OBJETIVOS) -->
+<div class="grid grid-cols-2 gap-3 bg-slate-950/40 p-2 rounded-2xl border border-slate-800/40 relative z-10 max-w-2xl mx-auto mb-6">
+    <button onclick="
+        document.querySelectorAll('.btn-sig').forEach(b => b.className = 'btn-sig py-3 px-2 text-center rounded-xl font-montserrat font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border border-slate-800 text-slate-400 hover:text-white outline-none');
+        this.className = 'btn-sig py-3 px-2 text-center rounded-xl font-montserrat font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border border-guru-gold/50 bg-guru-gold/10 text-guru-gold shadow-[0_0_15px_rgba(197,160,89,0.3)] outline-none';
+        document.querySelectorAll('.pane-sig').forEach(p => p.classList.add('hidden'));
+        document.getElementById('pane-politica').classList.remove('hidden');
+        if(typeof playSound === 'function') playSound('pop');
+    " class="btn-sig py-3 px-2 text-center rounded-xl font-montserrat font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border border-guru-gold/50 bg-guru-gold/10 text-guru-gold shadow-[0_0_15px_rgba(197,160,89,0.3)] outline-none">
+        <i class="fa-solid fa-scroll"></i> 1. Política SIG
+    </button>
+    
+    <button onclick="
+        document.querySelectorAll('.btn-sig').forEach(b => b.className = 'btn-sig py-3 px-2 text-center rounded-xl font-montserrat font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border border-slate-800 text-slate-400 hover:text-white outline-none');
+        this.className = 'btn-sig py-3 px-2 text-center rounded-xl font-montserrat font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border border-guru-cyan/50 bg-guru-cyan/10 text-guru-cyan shadow-[0_0_15px_rgba(0,243,255,0.3)] outline-none';
+        document.querySelectorAll('.pane-sig').forEach(p => p.classList.add('hidden'));
+        document.getElementById('pane-objetivos').classList.remove('hidden');
+        if(typeof playSound === 'function') playSound('pop');
+    " class="btn-sig py-3 px-2 text-center rounded-xl font-montserrat font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 border border-slate-800 text-slate-400 hover:text-white outline-none">
+        <i class="fa-solid fa-bullseye"></i> 2. Objetivos SIG
+    </button>
 </div>
+
+<!-- 2. CONTENEDOR DINÁMICO DE LA ESTRATEGIA -->
+<div class="relative z-10 bg-slate-900/40 p-5 sm:p-7 border border-slate-800 rounded-3xl min-h-[400px]">
+
+    <!-- ========================================== -->
+    <!-- PANEL 1: LA POLÍTICA SIG (El Manifiesto)   -->
+    <!-- ========================================== -->
+    <div id="pane-politica" class="pane-sig space-y-6 fade-in block">
+        
+        <!-- Contexto Inicial (Caja VIP) -->
+        <div class="bg-[#0b1329]/80 border-l-4 border-guru-gold p-4 sm:p-6 rounded-r-2xl shadow-md relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl text-guru-gold pointer-events-none"><i class="fa-solid fa-plane"></i></div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify relative z-10">
+                <strong class="text-white font-montserrat">SIS SOLUCIONES INTEGRALES GNSS SAS</strong> presta servicio aéreo comercial de transporte público no regular, taxi aéreo y servicio especial de carga externa, en cumplimiento de los requisitos legales aplicables y otros requisitos que suscriba la organización, con la finalidad de garantizar la satisfacción de las partes interesadas, para cual emplea personal altamente capacitado, competente y licenciado, así como equipos y herramientas debidamente certificados, dentro de una adecuada infraestructura que brinde un ambiente sano para el trabajo realizado; por lo tanto la alta dirección se compromete con:
+            </p>
+        </div>
+
+        <!-- Los Compromisos (Cuadrícula Interactiva) -->
+        <div>
+            <h4 class="text-[10px] font-black text-guru-gold tracking-widest uppercase mb-4 text-center border-b border-slate-800 pb-2"><i class="fa-solid fa-handshake-angle"></i> Nuestro compromiso incluye:</h4>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <!-- Compromiso 1 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-shield-halved text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">La seguridad y protección de nuestras operaciones.</p>
+                </div>
+                <!-- Compromiso 2 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-gears text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">El mantenimiento y mejoramiento continuo del Sistema Integrado de Gestión (SIG).</p>
+                </div>
+                <!-- Compromiso 3 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start md:col-span-2 lg:col-span-1">
+                    <i class="fa-solid fa-heart-pulse text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">La prevención de lesiones, accidentes, enfermedades laborales a través de la identificación de los peligros, evaluación, valoración de los riesgos y la implementación de los respectivos controles que permitan la eliminación de peligros y reducción de riesgos.</p>
+                </div>
+                <!-- Compromiso 4 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-leaf text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">Prevención de la contaminación, daños a la propiedad e impactos negativos al medio ambiente.</p>
+                </div>
+                <!-- Compromiso 5 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-coins text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">Asignación de los recursos (económicos, tecnológicos, personal, infraestructura, y demás que se requieran.) que sean necesarios para mantener el SIG.</p>
+                </div>
+                <!-- Compromiso 6 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-users-viewfinder text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">Involucrar a las partes interesadas (clientes, proveedores, subcontratistas y demás grupos de interés) en el SIG.</p>
+                </div>
+                <!-- Compromiso 7 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-bullhorn text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">Comunicar permanentemente a las partes interesadas el desempeño del SIG.</p>
+                </div>
+                <!-- Compromiso 8 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-lightbulb text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">Informar e incentivar a los trabajadores en la toma de conciencia, la participación y consulta para el desarrollo de buenas prácticas de seguridad, salud en el trabajo y socio ambiental, aplicable a las actividades propias de la organización.</p>
+                </div>
+                <!-- Compromiso 9 -->
+                <div class="bg-slate-950/50 p-4 border border-slate-800 rounded-xl hover:border-guru-gold/40 hover:-translate-y-1 transition-all group flex gap-3 items-start">
+                    <i class="fa-solid fa-face-smile text-guru-gold mt-1"></i>
+                    <p class="text-[11px] text-slate-300 leading-relaxed group-hover:text-white transition-colors">Promoción de la calidad de la vida laboral.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner de Obligatoriedad (Alerta Visual Neón) -->
+        <div class="mt-6 p-4 bg-guru-red/10 border border-guru-red/40 rounded-xl shadow-[0_0_15px_rgba(255,49,49,0.2)] text-center animate-pulse">
+            <p class="text-[10px] sm:text-xs font-black text-guru-red uppercase tracking-widest leading-relaxed">
+                <i class="fa-solid fa-triangle-exclamation mr-1"></i> “ESTA POLÍTICA APLICA A TODOS LOS CENTROS DE TRABAJO, TODOS LOS TRABAJADORES, INDEPENDIENTE DE SU FORMA DE CONTRATACIÓN E INCLUYE A CONTRATISTAS Y SUBCONTRATISTAS”
+            </p>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- PANEL 2: LOS OBJETIVOS SIG (El Plan)       -->
+    <!-- ========================================== -->
+    <div id="pane-objetivos" class="pane-sig space-y-6 fade-in hidden">
+        
+        <div class="text-center mb-8 border-b border-slate-800 pb-4">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-guru-cyan/10 border border-guru-cyan/20 text-guru-cyan font-bold text-[10px] tracking-widest uppercase mb-3 shadow-[0_0_15px_rgba(0,243,255,0.2)]">
+                <i class="fa-solid fa-rocket animate-pulse"></i> Plan de Acción
+            </span>
+            <h4 class="text-lg sm:text-xl font-black text-white uppercase tracking-wide">Objetivos Estratégicos del SIG</h4>
+            <p class="text-[11px] sm:text-xs text-slate-400 mt-2 max-w-xl mx-auto">Las metas trazadas para dar cumplimiento a nuestra política integral. Cada objetivo es un pilar fundamental de nuestra operación.</p>
+        </div>
+
+        <!-- Cuadrícula Premium de 6 Tarjetas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            
+            <!-- Obj 1: Excelencia (ORO) -->
+            <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-6 border border-slate-800 border-t-4 border-t-guru-gold rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(197,160,89,0.25)] hover:-translate-y-2 transition-all duration-300">
+                <div class="absolute -bottom-4 -right-2 text-[120px] font-black text-slate-800/30 group-hover:text-guru-gold/15 transition-colors pointer-events-none leading-none z-0">1</div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-guru-gold/10 border border-guru-gold/30 flex items-center justify-center text-guru-gold text-xl group-hover:scale-110 group-hover:bg-guru-gold group-hover:text-slate-900 transition-all shadow-[0_0_10px_rgba(197,160,89,0.2)]">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h5 class="text-white font-montserrat font-bold text-xs uppercase tracking-wide">Excelencia</h5>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed text-justify group-hover:text-white transition-colors">
+                        Asegurar la excelencia en la prestación del servicio cumpliendo con las especificaciones de cada cliente y garantizando su satisfacción a través de operaciones seguras, integrando y comprometiendo a todas las partes interesadas en el SIG.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Obj 2: Peligros (ROJO ALERTA) -->
+            <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-6 border border-slate-800 border-t-4 border-t-guru-red rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(255,49,49,0.25)] hover:-translate-y-2 transition-all duration-300">
+                <div class="absolute -bottom-4 -right-2 text-[120px] font-black text-slate-800/30 group-hover:text-guru-red/15 transition-colors pointer-events-none leading-none z-0">2</div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-guru-red/10 border border-guru-red/30 flex items-center justify-center text-guru-red text-xl group-hover:scale-110 group-hover:bg-guru-red group-hover:text-slate-900 transition-all shadow-[0_0_10px_rgba(255,49,49,0.2)]">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <h5 class="text-white font-montserrat font-bold text-xs uppercase tracking-wide">Gestión de Riesgos</h5>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed text-justify group-hover:text-white transition-colors">
+                        Identificar, evaluar y valorar los peligros existentes en los lugares de trabajo y proponer las medidas de control para intervenir los peligros evitando la materialización del riesgo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Obj 3: Ambiental (VERDE) -->
+            <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-6 border border-slate-800 border-t-4 border-t-guru-green rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(57,255,20,0.2)] hover:-translate-y-2 transition-all duration-300">
+                <div class="absolute -bottom-4 -right-2 text-[120px] font-black text-slate-800/30 group-hover:text-guru-green/15 transition-colors pointer-events-none leading-none z-0">3</div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-guru-green/10 border border-guru-green/30 flex items-center justify-center text-guru-green text-xl group-hover:scale-110 group-hover:bg-guru-green group-hover:text-slate-900 transition-all shadow-[0_0_10px_rgba(57,255,20,0.2)]">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h5 class="text-white font-montserrat font-bold text-xs uppercase tracking-wide">Medio Ambiente</h5>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed text-justify group-hover:text-white transition-colors">
+                        Prevenir y controlar la contaminación ocasionada por el desarrollo de las actividades.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Obj 4: Mejora (AZUL ELÉCTRICO) -->
+            <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-6 border border-slate-800 border-t-4 border-t-guru-electric rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(67,154,231,0.25)] hover:-translate-y-2 transition-all duration-300">
+                <div class="absolute -bottom-4 -right-2 text-[120px] font-black text-slate-800/30 group-hover:text-guru-electric/15 transition-colors pointer-events-none leading-none z-0">4</div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-guru-electric/10 border border-guru-electric/30 flex items-center justify-center text-guru-electric text-xl group-hover:scale-110 group-hover:bg-guru-electric group-hover:text-slate-900 transition-all shadow-[0_0_10px_rgba(67,154,231,0.2)]">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                        <h5 class="text-white font-montserrat font-bold text-xs uppercase tracking-wide">Mejora Continua</h5>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed text-justify group-hover:text-white transition-colors">
+                        Evaluar y mejorar continuamente el desempeño del sistema de Gestión de calidad, Seguridad y Salud en el trabajo y medio ambiente, garantizando los recursos necesarios.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Obj 5: Participación (MORADO) -->
+            <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-6 border border-slate-800 border-t-4 border-t-purple-500 rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(168,85,247,0.25)] hover:-translate-y-2 transition-all duration-300">
+                <div class="absolute -bottom-4 -right-2 text-[120px] font-black text-slate-800/30 group-hover:text-purple-500/15 transition-colors pointer-events-none leading-none z-0">5</div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-500 text-xl group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all shadow-[0_0_10px_rgba(168,85,247,0.2)]">
+                            <i class="fa-solid fa-users-rays"></i>
+                        </div>
+                        <h5 class="text-white font-montserrat font-bold text-xs uppercase tracking-wide">Participación</h5>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed text-justify group-hover:text-white transition-colors">
+                        Garantizar la participación activa, la consulta y la toma de conciencia de todo el personal en materia de calidad, seguridad, salud en el trabajo y medio ambiente, asegurando el cumplimiento de los lineamientos legales en todas las actividades de la organización.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Obj 6: Sistema de Gestión (CYAN GURU) -->
+            <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-6 border border-slate-800 border-t-4 border-t-guru-cyan rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(0,243,255,0.25)] hover:-translate-y-2 transition-all duration-300">
+                <div class="absolute -bottom-4 -right-2 text-[120px] font-black text-slate-800/30 group-hover:text-guru-cyan/15 transition-colors pointer-events-none leading-none z-0">6</div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-guru-cyan/10 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan text-xl group-hover:scale-110 group-hover:bg-guru-cyan group-hover:text-slate-900 transition-all shadow-[0_0_10px_rgba(0,243,255,0.2)]">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h5 class="text-white font-montserrat font-bold text-xs uppercase tracking-wide">Sistema Integrado</h5>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed text-justify group-hover:text-white transition-colors">
+                        Diseñar, implementar y mantener un Sistema de Gestión en calidad, Seguridad y la Salud en el Trabajo y medio ambiente, garantizando las condiciones necesarias para prevenir la ocurrencia de accidentes de trabajo y/o enfermedades laborales al igual que incidentes ambientales, promoviendo una cultura de autocuidado y prevención.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
               `
                         }, {
                             "id": "auditor-m1-l4",
-                            "titulo": "Los 7 Pasos para Auditar el SG-SST",
+                            "titulo": "Próximas Auditorias",
                             "tipo": "custom_html",
                             "content": `
                 <div class="space-y-6 text-left relative">
@@ -1543,71 +1666,76 @@
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-4 gap-4 relative z-10">
                         <div>
                             <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-guru-cyan/15 border border-guru-cyan/30 text-guru-cyan font-bold text-[9px] tracking-widest uppercase">
-                                <i class="fa-solid fa-map-location-dot"></i> Protocolo ISO 19011:2026
+                                <i class="fa-solid fa-map-location-dot"></i> Lección 4
                             </span>
                             <h3 class="text-white font-montserrat font-extrabold text-base sm:text-lg uppercase tracking-wide mt-2">
-                                <i class="fa-solid fa-route text-guru-cyan"></i> Mapa de Ruta del Auditor de Élite
+                                <i class="fa-solid fa-route text-guru-cyan"></i> Mapa de Ruta próximas Auditorías
                             </h3>
                         </div>
                     </div>
 
-                    <!-- LÍNEA DE TIEMPO INTERACTIVA (7 PASOS) -->
-                    <div class="relative bg-slate-950/40 p-4 rounded-3xl border border-slate-800/40 z-10 overflow-hidden">
-                        <!-- Línea de fondo decorativa (Sólo PC) -->
-                        <div class="absolute top-[42px] left-10 right-10 h-0.5 bg-slate-800 hidden md:block z-0"></div>
-                        
-                        <div class="grid grid-cols-4 md:grid-cols-7 gap-3 relative z-10">
-                            <!-- PASO 1 BUTTON -->
-                            <button onclick="seleccionarPasoAuditor(1)" id="btn-step-1" class="btn-step flex flex-col items-center gap-2 group focus:outline-none">
-                                <div class="w-10 h-10 rounded-full border border-guru-cyan bg-guru-cyan text-slate-950 font-black text-xs flex items-center justify-center transition-all duration-300 shadow-[0_0_10px_rgba(0,243,255,0.3)]" id="num-step-1">1</div>
-                                <span class="text-[9px] font-black text-white uppercase tracking-wider text-center group-hover:text-guru-cyan transition-colors">Planear</span>
-                            </button>
-                            <!-- PASO 2 BUTTON -->
-                            <button onclick="seleccionarPasoAuditor(2)" id="btn-step-2" class="btn-step flex flex-col items-center gap-2 group focus:outline-none">
-                                <div class="w-10 h-10 rounded-full border border-slate-800 bg-slate-900 text-slate-400 font-black text-xs flex items-center justify-center transition-all duration-300" id="num-step-2">2</div>
-                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-wider text-center group-hover:text-white transition-colors">Preparar</span>
-                            </button>
-                            <!-- PASO 3 BUTTON -->
-                            <button onclick="seleccionarPasoAuditor(3)" id="btn-step-3" class="btn-step flex flex-col items-center gap-2 group focus:outline-none">
-                                <div class="w-10 h-10 rounded-full border border-slate-800 bg-slate-900 text-slate-400 font-black text-xs flex items-center justify-center transition-all duration-300" id="num-step-3">3</div>
-                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-wider text-center group-hover:text-white transition-colors">Apertura</span>
-                            </button>
-                            <!-- PASO 4 BUTTON -->
-                            <button onclick="seleccionarPasoAuditor(4)" id="btn-step-4" class="btn-step flex flex-col items-center gap-2 group focus:outline-none">
-                                <div class="w-10 h-10 rounded-full border border-slate-800 bg-slate-900 text-slate-400 font-black text-xs flex items-center justify-center transition-all duration-300" id="num-step-4">4</div>
-                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-wider text-center group-hover:text-white transition-colors">Ejecutar</span>
-                            </button>
-                            <!-- PASO 5 BUTTON -->
-                            <button onclick="seleccionarPasoAuditor(5)" id="btn-step-5" class="btn-step flex flex-col items-center gap-2 group focus:outline-none">
-                                <div class="w-10 h-10 rounded-full border border-slate-800 bg-slate-900 text-slate-400 font-black text-xs flex items-center justify-center transition-all duration-300" id="num-step-5">5</div>
-                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-wider text-center group-hover:text-white transition-colors">Hallazgos</span>
-                            </button>
-                            <!-- PASO 6 BUTTON -->
-                            <button onclick="seleccionarPasoAuditor(6)" id="btn-step-6" class="btn-step flex flex-col items-center gap-2 group focus:outline-none">
-                                <div class="w-10 h-10 rounded-full border border-slate-800 bg-slate-900 text-slate-400 font-black text-xs flex items-center justify-center transition-all duration-300" id="num-step-6">6</div>
-                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-wider text-center group-hover:text-white transition-colors">Cierre</span>
-                            </button>
-                            <!-- PASO 7 BUTTON -->
-                            <button onclick="seleccionarPasoAuditor(7)" id="btn-step-7" class="btn-step flex flex-col items-center gap-2 group focus:outline-none col-span-4 md:col-span-1">
-                                <div class="w-10 h-10 rounded-full border border-slate-800 bg-slate-900 text-slate-400 font-black text-xs flex items-center justify-center transition-all duration-300 mx-auto" id="num-step-7">7</div>
-                                <span class="text-[9px] font-black text-slate-400 uppercase tracking-wider text-center group-hover:text-white transition-colors block">Informe</span>
-                            </button>
-                        </div>
-                    </div>
+                    <!-- ========================================================================= -->
+<!-- 🗓️ DASHBOARD DE PRÓXIMAS AUDITORÍAS (INTERNA Y EXTERNA)                   -->
+<!-- ========================================================================= -->
+<div class="relative bg-slate-900/40 p-6 md:p-8 rounded-3xl border border-slate-800 shadow-2xl z-10 overflow-hidden">
+    
+    <!-- Encabezado de la Sección -->
+    <div class="text-center mb-8 border-b border-slate-800 pb-4">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-guru-cyan/10 border border-guru-cyan/20 text-guru-cyan font-bold text-[10px] tracking-widest uppercase mb-3 shadow-[0_0_15px_rgba(0,243,255,0.2)]">
+            <i class="fa-regular fa-calendar-check animate-pulse"></i> Programación Oficial
+        </span>
+        <h4 class="text-lg sm:text-xl font-black text-white uppercase tracking-wide">Próximas Fechas de Auditorías</h4>
+        <p class="text-[11px] sm:text-xs text-slate-400 mt-2 max-w-xl mx-auto">Prepárate para los próximos ciclos de evaluación de nuestro Sistema Integrado de Gestión. Marca estas fechas en tu calendario.</p>
+    </div>
 
-                    <!-- PANEL DINÁMICO DEL PASO ACTIVO (RENDERIZADO EN CALIENTE) -->
-                    <div id="step-content-panel" class="relative z-10 bg-slate-900/40 p-5 border border-slate-800 rounded-3xl min-h-[250px] transition-all duration-300">
-                        <!-- Se inyectará dinámicamente mediante JS -->
-                    </div>
-
-                    <!-- TOAST DE DOPAMINA XP INTEGRADO -->
-                    <div id="step-xp-toast" class="fixed bottom-5 right-5 z-50 p-3.5 bg-gradient-to-r from-slate-950 to-slate-900 border border-guru-cyan/40 rounded-2xl shadow-[0_0_20px_rgba(0,243,255,0.25)] flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none hidden max-w-xs animate-bounce">
-                        <div class="w-8 h-8 rounded-xl bg-guru-cyan/15 border border-guru-cyan/30 flex items-center justify-center text-guru-cyan text-xs">
-                            <i class="fa-solid fa-trophy"></i>
-                        </div>
-                         <span class="text-[10px] font-montserrat font-black text-white uppercase tracking-wider" id="step-xp-text">+0 XP</span>
-                    </div>
+    <!-- Contenedor de las Tarjetas -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- TARJETA 1: AUDITORÍA INTERNA (CYAN) -->
+        <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-5 sm:p-6 border border-slate-800 border-l-4 border-l-guru-cyan rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(0,243,255,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+            <!-- Icono de Calendario (Fecha) -->
+            <div class="shrink-0 flex flex-col items-center justify-center w-24 h-24 bg-slate-950 border border-guru-cyan/30 rounded-xl shadow-[0_0_15px_rgba(0,243,255,0.15)] group-hover:bg-guru-cyan/10 transition-colors">
+                <span class="text-[10px] font-black text-guru-cyan uppercase tracking-widest border-b border-guru-cyan/20 w-full text-center pb-1 mb-1">Octubre</span>
+                <span class="text-2xl font-black text-white leading-none">6 y 7</span>
+            </div>
+            <!-- Información -->
+            <div class="flex-grow text-center sm:text-left w-full">
+                <h5 class="text-white font-montserrat font-bold text-sm uppercase tracking-wide mb-2 flex items-center justify-center sm:justify-start gap-2">
+                    <i class="fa-solid fa-microscope text-guru-cyan"></i> Auditoría Interna
+                </h5>
+                <p class="text-[11px] text-slate-300 leading-relaxed mb-3">Evaluación integral preparatoria para medir la madurez y cumplimiento del SIG antes de la revisión oficial.</p>
+                <!-- Etiquetas (Badges) de Normas -->
+                <div class="flex flex-wrap justify-center sm:justify-start gap-2">
+                    <span class="px-2.5 py-1 text-[9px] font-bold bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan rounded-md uppercase tracking-wider">ISO 9001</span>
+                    <span class="px-2.5 py-1 text-[9px] font-bold bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan rounded-md uppercase tracking-wider">ISO 14001</span>
+                    <span class="px-2.5 py-1 text-[9px] font-bold bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan rounded-md uppercase tracking-wider">RUC</span>
                 </div>
+            </div>
+        </div>
+
+        <!-- TARJETA 2: AUDITORÍA EXTERNA (ORO/GOLD) -->
+        <div class="bg-gradient-to-br from-[#0b1329] to-slate-900 p-5 sm:p-6 border border-slate-800 border-l-4 border-l-guru-gold rounded-2xl relative overflow-hidden group hover:shadow-[0_0_25px_rgba(197,160,89,0.2)] hover:-translate-y-1 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+            <!-- Icono de Calendario (Fecha) -->
+            <div class="shrink-0 flex flex-col items-center justify-center w-24 h-24 bg-slate-950 border border-guru-gold/30 rounded-xl shadow-[0_0_15px_rgba(197,160,89,0.15)] group-hover:bg-guru-gold/10 transition-colors">
+                <span class="text-[10px] font-black text-guru-gold uppercase tracking-widest border-b border-guru-gold/20 w-full text-center pb-1 mb-1">Octubre</span>
+                <span class="text-2xl font-black text-white leading-none">26 y 27</span>
+            </div>
+            <!-- Información -->
+            <div class="flex-grow text-center sm:text-left w-full">
+                <h5 class="text-white font-montserrat font-bold text-sm uppercase tracking-wide mb-2 flex items-center justify-center sm:justify-start gap-2">
+                    <i class="fa-solid fa-stamp text-guru-gold"></i> Auditoría Externa
+                </h5>
+                <p class="text-[11px] text-slate-300 leading-relaxed mb-3">Revisión oficial por parte del ente certificador para validar y mantener el cumplimiento de nuestros estándares.</p>
+                <!-- Etiquetas (Badges) de Normas -->
+                <div class="flex flex-wrap justify-center sm:justify-start gap-2">
+                    <span class="px-2.5 py-1 text-[9px] font-bold bg-guru-gold/10 border border-guru-gold/30 text-guru-gold rounded-md uppercase tracking-wider"><i class="fa-solid fa-award mr-1"></i> Auditoría de Seguimiento</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
                
               `
                         }
