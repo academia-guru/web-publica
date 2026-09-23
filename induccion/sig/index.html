@@ -383,22 +383,7 @@
                 <!-- Cargado dinámicamente -->
             </div>
 
-           
-
-        <!-- Perfil del Alumno (Informativo y Estático VIP) -->
-        <div class="p-4 border-t border-slate-800/80 bg-slate-950/40">
-            <div class="flex items-center gap-3 p-3 bg-slate-900/40 border border-slate-800/80 rounded-2xl">
-                <div class="w-10 h-10 rounded-full border-2 border-guru-cyan/40 overflow-hidden shrink-0 shadow-[0_0_10px_rgba(0,243,255,0.2)]">
-                    <img src="/img/titan-masculino.png" id="sidebar-user-avatar" class="w-full h-full object-cover" alt="Avatar Usuario" onerror="this.src='https://ui-avatars.com/api/?name=Auditor+VIP&background=020617&color=00f3ff'">
-                </div>
-                <div class="flex flex-col min-w-0 flex-1 justify-center">
-                    <span class="text-xs font-black text-white tracking-wide truncate" id="sidebar-user-name">Cargando...</span>
-                   <span class="text-[9px] font-bold text-guru-cyan uppercase tracking-widest flex items-center gap-1.5 mt-0.5">
-    <i class="fa-solid fa-user-shield text-[8px]"></i> Auditor en Formación
-</span>
-                </div>
-            </div>
-        </div>
+    
 
     </aside>
 
@@ -411,93 +396,65 @@
         <!-- CABECERA SUPERIOR DE NAVEGACIÓN COMPLETA UNIFICADA GURU SST VIP -->
         <header class="h-16 border-b border-slate-800/80 bg-[#0f172a]/90 backdrop-blur-md flex items-center justify-between px-3 md:px-6 shrink-0 z-30 relative">
             
-            <!-- Botón Volver al Portal del Curso (Ruta de Raíz de su GitHub) -->
-            <a href="/cursos/auditor-interno-1072/" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-guru-cyan/40 text-slate-300 hover:text-white transition-all text-xs font-bold uppercase tracking-wider group shrink-0" title="Volver al Portal del Curso">
-                <i class="fa-solid fa-arrow-left text-guru-cyan group-hover:-translate-x-1 transition-transform"></i>
-                <span class="hidden sm:inline">Portal del Curso</span>
-                <span class="inline sm:hidden">Portal</span>
-            </a>
-
-            <!-- Selector Central de los 8 Módulos Oficiales del Curso (Sin Candados - Navegación Libre) -->
-            <div class="relative" id="btn-dropdown-modulos">
-                <button onclick="toggleModalModulos()" class="flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan hover:bg-guru-cyan/20 hover:border-guru-cyan/50 rounded-xl text-xs font-bold uppercase tracking-wider transition-all">
-                    <i class="fa-solid fa-layer-group text-guru-cyan"></i>
-                    <span class="hidden md:inline text-slate-400 font-normal">Módulo:</span> 
-                    <span class="font-extrabold text-white truncate max-w-[120px] sm:max-w-none">Introducción al SG-SST</span>
-                    <i class="fa-solid fa-chevron-down text-[10px] ml-1 text-slate-500 transition-transform duration-300" id="dropdown-modulo-arrow"></i>
-                </button>
-
-                <!-- Menú Desplegable con los Módulos de su GitHub Real (Cyber-Glass) -->
-                <div id="dropdown-modulos" class="hidden absolute left-1/2 -translate-x-1/2 mt-2 w-72 max-h-96 overflow-y-auto custom-scrollbar bg-slate-950/95 border border-slate-800/80 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.9)] p-2 z-50 space-y-1 backdrop-blur-md">
-                    <div class="px-3 py-1.5 text-[9px] font-black text-slate-500 uppercase tracking-widest border-b border-slate-800/60 flex items-center justify-between">
-                        <span>Contenido del Curso</span>
-                        <span class="text-guru-cyan text-[8px]">GURU VIP</span>
-                    </div>
-                    
-                    <!-- 1. Introducción (Carpeta /introduccion/) -->
-                    <a href="/cursos/auditor-interno-1072/introduccion/" class="flex items-center justify-between px-3 py-2 rounded-xl bg-guru-cyan/15 border border-guru-cyan/30 text-guru-cyan text-xs font-bold transition-all">
-                        <span class="truncate">Inducción: Fundamentos del SIG</span>
-                        <i class="fa-solid fa-play text-[9px] shrink-0"></i>
-                    </a>
-                    
-                    <!-- 2. Módulo 1 (Carpeta /modulo-1/) -->
-                    <a href="/cursos/auditor-interno-1072/modulo-1/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all">
-                        <span class="truncate">Módulo 1: Conceptos y Principios</span>
-                        <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <!-- 3. Módulo 2 (Carpeta /modulo-2/) -->
-                    <a href="/cursos/auditor-interno-1072/modulo-2/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all">
-                        <span class="truncate">Módulo 2: Planificación</span>
-                        <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <!-- 4. Módulo 3 (Carpeta /modulo-3/) -->
-                    <a href="/cursos/auditor-interno-1072/modulo-3/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all">
-                        <span class="truncate">Módulo 3: Realización y Ejecución</span>
-                        <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <!-- 5. Módulo 4 (Carpeta /modulo-4/) -->
-                    <a href="/cursos/auditor-interno-1072/modulo-4/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all">
-                        <span class="truncate">Módulo 4: Generación de Hallazgos</span>
-                        <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <!-- 6. Módulo 5 (Carpeta /modulo-5/) -->
-                    <a href="/cursos/auditor-interno-1072/modulo-5/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all">
-                        <span class="truncate">Módulo 5: Definición de Conclusiones</span>
-                        <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <!-- 7. Módulo 6 (Carpeta /modulo-6/) -->
-                    <a href="/cursos/auditor-interno-1072/modulo-6/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all">
-                        <span class="truncate">Módulo 6: Reunión de Cierre</span>
-                        <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0"></i>
-                    </a>
-
-                    <!-- 8. Módulo 7 (Carpeta /modulo-7/) -->
-                    <a href="/cursos/auditor-interno-1072/modulo-7/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all">
-                        <span class="truncate">Módulo 7: Informe de Auditoría</span>
-                        <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0"></i>
-                    </a>
-                    
-                       <!-- Material de Descarga (Carpeta /maletin/) -->
-<a href="/cursos/auditor-interno-1072/maletin/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all border-t border-slate-800/80 mt-1.5 group">
-    <span class="truncate font-bold text-amber-400">Material de Descarga</span>
-    <!-- Icono de descarga premium vectorial inline (Inmune a fallos de CDN) -->
-    <svg class="w-3.5 h-3.5 text-amber-400 shrink-0 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"></path>
-    </svg>
+            <!-- Botón Volver al INICIO (Ruta de Raíz de su GitHub) -->
+            <a href="https://andreacastrosst.com/induccion/" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-guru-cyan/40 text-slate-300 hover:text-white transition-all text-xs font-bold uppercase tracking-wider group shrink-0" title="Volver al INICIO">
+    <i class="fa-solid fa-arrow-left text-guru-cyan group-hover:-translate-x-1 transition-transform"></i>
+    <span class="hidden sm:inline">INICIO</span>
+    <span class="inline sm:hidden">INICIO</span>
 </a>
 
-                    <!-- Examen Final (Carpeta /evaluacion/) -->
-                    <a href="/cursos/auditor-interno-1072/evaluacion/" class="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all border-t border-slate-800/80 mt-1.5">
-                        <span class="truncate font-bold text-emerald-400">Examen de Certificación</span>
-                        <i class="fa-solid fa-graduation-cap text-[10px] text-emerald-400 shrink-0 animate-pulse"></i>
-                    </a>
-                </div>
-            </div>
+            <!-- Selector Central de las 4 Lecciones de la Inducción -->
+<div class="relative" id="btn-dropdown-modulos">
+    <!-- Botón Principal del Desplegable -->
+    <button onclick="toggleModalModulos()" class="flex items-center gap-2 px-3 sm:px-4 py-1.5 bg-guru-cyan/10 border border-guru-cyan/30 text-guru-cyan hover:bg-guru-cyan/20 hover:border-guru-cyan/50 rounded-xl text-xs font-bold uppercase tracking-wider transition-all">
+        <i class="fa-solid fa-layer-group text-guru-cyan"></i>
+        <span class="hidden md:inline text-slate-400 font-normal">Módulo:</span> 
+        <span class="font-extrabold text-white truncate max-w-[120px] sm:max-w-none">Inducción SIG</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1 text-slate-500 transition-transform duration-300" id="dropdown-modulo-arrow"></i>
+    </button>
+
+    <!-- Menú Desplegable Adaptado a las Lecciones -->
+    <div id="dropdown-modulos" class="hidden absolute left-1/2 -translate-x-1/2 mt-2 w-72 max-h-96 overflow-y-auto custom-scrollbar bg-slate-950/95 border border-slate-800/80 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.9)] p-2 z-50 space-y-1 backdrop-blur-md">
+        
+        <div class="px-3 py-1.5 text-[9px] font-black text-slate-500 uppercase tracking-widest border-b border-slate-800/60 flex items-center justify-between mb-1">
+            <span>Contenido de Inducción</span>
+            <span class="text-guru-cyan text-[8px]">GURU VIP</span>
+        </div>
+        
+        <!-- Lección 1: Contexto Organizacional -->
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(1);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+            <span class="truncate flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-chart group-hover:text-guru-cyan transition-colors"></i> 1. Contexto Organizacional</span>
+            <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
+        </button>
+        
+        <!-- Lección 2: Mapa de Procesos -->
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(2);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+            <span class="truncate flex items-center gap-2"><i class="fa-solid fa-sitemap group-hover:text-guru-cyan transition-colors"></i> 2. Mapa de Procesos</span>
+            <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
+        </button>
+
+        <!-- Lección 3: Direccionamiento Estratégico -->
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(3);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+            <span class="truncate flex items-center gap-2"><i class="fa-solid fa-bullseye group-hover:text-guru-cyan transition-colors"></i> 3. Dirección Estratégica</span>
+            <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
+        </button>
+
+        <!-- Lección 4: Próximas Auditorías -->
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(4);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+            <span class="truncate flex items-center gap-2"><i class="fa-solid fa-calendar-check group-hover:text-guru-cyan transition-colors"></i> 4. Próximas Auditorías</span>
+            <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
+        </button>
+
+        <!-- Separador -->
+        <div class="my-1 border-t border-slate-800/80"></div>
+
+        <!-- Botón para finalizar / Evaluación -->
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); alert('Has completado la Inducción SIG. ¡Excelente trabajo!');" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all mt-1">
+            <span class="truncate font-bold text-emerald-400 flex items-center gap-2"><i class="fa-solid fa-check-double"></i> Finalizar Inducción</span>
+            <i class="fa-solid fa-graduation-cap text-[10px] text-emerald-400 shrink-0 animate-pulse"></i>
+        </button>
+    </div>
+</div>
 
             <!-- Progreso y Contador del Módulo (Inicia en 0 / 4 en la Welcome View) -->
             <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0 bg-slate-950/60 px-2.5 sm:px-3 py-1.5 rounded-xl border border-slate-800/80 shadow-inner">
@@ -2159,143 +2116,7 @@ function iniciarPrimeraLeccionModulo() {
 }
         
        
-        // =========================================================================
-        // ⚙️ BASE DE DATOS DEL MOTOR DEL CICLO DEMING (PHVA - MANTENIMIENTO)
-        // =========================================================================
-        const DATA_PHVA_LECCION_1 = {
-            P: {
-                audio: "/cursos/auditor-interno-1072/audios/auditor-1072-intro4.mp3",
-                titulo: "PLANEAR (Fase de Planificación)",
-                color: "guru-cyan",
-                rgb: "0, 243, 255",
-                descripcion: "Se debe planificar la forma de mejorar la seguridad y salud de los trabajadores, encontrando qué cosas se están haciendo incorrectamente o se pueden mejorar y determinando ideas para solucionar esos problemas.",
-                elementos: [{
-                        text: "Evaluación inicial del SST (Estándares Mínimos)",
-                        tip: "No te fíes del porcentaje. Pide el documento soporte físico de la autoevaluación radicada ante la ARL y verifica que los soportes coincidan estrictamente con el archivo digital."
-                    },
-                    {
-                        text: "Establecer el plan de trabajo anual",
-                        tip: "Cruza las fechas del plan de trabajo con el presupuesto asignado y las actas de reunión. Si el plan exige exámenes médicos en febrero pero el presupuesto se aprobó en abril, hay una no conformidad de recursos."
-                    },
-                    {
-                        text: "Definir o fortalecer Política",
-                        tip: "La política debe estar firmada por el representante legal actual. Si cambió de gerente en el último año y la firma es del anterior, el documento carece de validez legal vigente."
-                    },
-                    {
-                        text: "Definir o fortalecer objetivos del Sistema",
-                        tip: "Los objetivos deben ser medibles, coherentes con la política y comunicados al COPASST. Verifica que existan metas numéricas claras."
-                    },
-                    {
-                        text: "Asignación y Comunicación de Responsabilidades",
-                        tip: "Solicita los memorandos o cartas de asignación individuales firmados por cada trabajador, no solo el manual general de funciones."
-                    },
-                    {
-                        text: "Identificación de Peligros, Evaluación y Valoración de los Riesgos (Matriz)",
-                        tip: "Camina por la planta de producción con la matriz GTC 45 en mano. Si la matriz dice que el riesgo está controlado pero los operarios no usan protección, la valoración es falsa."
-                    },
-                    {
-                        text: "Identificación y cumplimiento legislación nacional vigente",
-                        tip: "Exige la matriz legal actualizada. Asegúrate de que incluya las últimas normativas nacionales expedidas en el año en curso, no solo las históricas."
-                    },
-                    {
-                        text: "Recursos financieros, humanos, técnicos y otra índole",
-                        tip: "Verifica el perfil del responsable del diseño. Si es una empresa de más de 50 trabajadores con riesgo IV o V, el sistema debe estar firmado por un profesional con licencia vigente."
-                    },
-                    {
-                        text: "Participación de los Trabajadores / COPASST",
-                        tip: "Revisa las actas mensuales de reunión del COPASST. Si faltan reuniones de algún mes o las actas tienen exactamente las mismas firmas copiadas, es un hallazgo."
-                    },
-                    {
-                        text: "Definir competencias de SST para los trabajadores",
-                        tip: "Verifica las hojas de vida del personal crítico. Exige los certificados de alturas, espacios confinados o manejo de sustancias químicas de los trabajadores."
-                    },
-                    {
-                        text: "Programa de Capacitación en SST, (Inducción)",
-                        tip: "El programa debe ejecutarse según lo planeado. Compara los registros de asistencia con el listado de personal activo de la nómina."
-                    },
-                    {
-                        text: "Control de Documentos y Registros / Comunicación",
-                        tip: "Pide los registros de entrega de elementos de protección personal (EPP). Deben estar firmados a mano o digitalmente por cada operario indicando fecha exacta y tipo de EPP."
-                    }
-                ]
-            },
-            H: {
-                audio: "/cursos/auditor-interno-1072/audios/auditor-1072-intro5.mp3",
-                titulo: "HACER (Fase de Implementación)",
-                color: "guru-green",
-                rgb: "57, 255, 20",
-                descripcion: "Implementación de las medidas planificadas para mitigar peligros y ejecutar la prevención en la fuente de trabajo.",
-                elementos: [{
-                        text: "Gestión de los Peligros y Riesgos (Prioridades)",
-                        tip: "Confirma la aplicación de la jerarquía de controles (Eliminación, Sustitución, Ingeniería, Administrativos y EPP)."
-                    },
-                    {
-                        text: "Medidas de prevención, control y promoción de Riesgos Laborales",
-                        tip: "Pide las evidencias de ejecución de las pausas activas y las campañas de salud. El registro fotográfico y la lista de asistencia son indispensables."
-                    },
-                    {
-                        text: "Prevención, preparación y respuesta ante emergencias",
-                        tip: "Solicita el plan de emergencias y las actas del simulacro anual obligatorio. Si la empresa tiene sedes en varias ciudades, cada sede debe tener su propio simulacro."
-                    },
-                    {
-                        text: "Gestión del cambio",
-                        tip: "Si la empresa compró maquinaria nueva recientemente, pide el acta de análisis de riesgos previos a su puesta en marcha."
-                    },
-                    {
-                        text: "Adquisiciones",
-                        tip: "Verifica que los insumos y equipos adquiridos cuenten con fichas técnicas y certificados de calidad o de seguridad industrial de fábrica."
-                    },
-                    {
-                        text: "Contratación",
-                        tip: "Exige las planillas PILA de afiliación a seguridad social de los contratistas externos que prestan servicios en las instalaciones."
-                    }
-                ]
-            },
-            V: {
-                audio: "/cursos/auditor-interno-1072/audios/auditor-1072-intro6.mp3",
-                titulo: "VERIFICAR (Fase de Evaluación)",
-                color: "guru-gold",
-                rgb: "197, 160, 89",
-                descripcion: "Revisar que los procedimientos y acciones implementados están consiguiendo los resultados deseados mediante auditorías y revisiones gerenciales.",
-                elementos: [{
-                        text: "Indicadores del SG-SST",
-                        tip: "Audita las fórmulas de cálculo de los indicadores de estructura, proceso y resultado. Cruza el número de accidentes reportados en la ARL con los datos de sus planillas."
-                    },
-                    {
-                        text: "Auditoría de cumplimiento del SST",
-                        tip: "Verifica la independencia del auditor interno. Quien audite el sistema no puede ser el mismo que lo diseñó o lo ejecuta a diario en la empresa."
-                    },
-                    {
-                        text: "Rendición de cuentas al interior de la empresa",
-                        tip: "La rendición de cuentas debe ser anual y abarcar a todos los niveles de la organización, incluyendo la gerencia y mandos medios."
-                    },
-                    {
-                        text: "Revisión por la alta dirección",
-                        tip: "El informe de revisión de la gerencia debe incluir compromisos presupuestales explícitos para el año siguiente. No basta con una firma de recibido."
-                    },
-                    {
-                        text: "Investigación de incidentes, accidentes de trabajo y enfermedades laborales",
-                        tip: "Cruza las fechas: los accidentes graves deben investigarse dentro de los 15 días calendario siguientes a su ocurrencia con la participación del COPASST."
-                    }
-                ]
-            },
-            A: {
-                audio: "/cursos/auditor-interno-1072/audios/auditor-1072-intro7.mp3",
-                titulo: "ACTUAR (Fase de Mejora Continua)",
-                color: "guru-green",
-                rgb: "57, 255, 20",
-                descripcion: "Realizar acciones de mejora para obtener los mayores beneficios en la seguridad y salud de los trabajadores.",
-                elementos: [{
-                        text: "Acciones preventivas y correctivas",
-                        tip: "Audita el cierre de acciones de la auditoría anterior. Si las no conformidades del año pasado siguen abiertas sin un plan de acción ejecutado, el ciclo de mejora continua está roto."
-                    },
-                    {
-                        text: "Mejora continua",
-                        tip: "Pide el histórico de planes de mejora anuales y constata el incremento en el porcentaje de cumplimiento de los estándares mínimos de la Resolución 0312."
-                    }
-                ]
-            }
-        };
+        
 
         // VARIABLES DE CONTROL LOCAL PARA LA LECCIÓN 1 (PERSISTENTES)
         let L1AudiosListened = JSON.parse(localStorage.getItem("L1AudiosListened")) || [];
@@ -3399,41 +3220,7 @@ function actualizarContadorLeccion() {
     }
   }
 }
-/* ==========================================================================
-   🧠 MOTOR UNIVERSAL DE DILEMAS TÁCTICOS (GAMIFICACIÓN GURU OS)
-   ========================================================================== */
 
-// 1. Carga Asíncrona Resiliente de Confeti (Cero etiquetas HTML, Cero fallos)
-(function cargarLibreriaConfeti() {
-    if (typeof confetti === 'undefined') {
-        const scriptConfetti = document.createElement('script');
-        scriptConfetti.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js';
-        scriptConfetti.defer = true;
-        document.head.appendChild(scriptConfetti);
-    }
-})();
-
-// 2. Disparador de Confeti Neón Corporativo (Cian, Esmeralda y Oro)
-function dispararConfetiGuru() {
-    if (typeof confetti === 'function') {
-        confetti({
-            particleCount: 75,
-            spread: 65,
-            origin: { y: 0.7 },
-            colors: ['#00f3ff', '#10b981', '#ffffff', '#fbbf24']
-        });
-    }
-}
-
-// 3. Desplegable Suave del Dilema (Opción B)
-function toggleDilemaContenedor(idDilema) {
-    const box = document.getElementById(`dilema-box-${idDilema}`);
-    const chevron = document.getElementById(`chevron-${idDilema}`);
-    if (box) {
-        box.classList.toggle('hidden');
-        if (chevron) chevron.classList.toggle('rotate-180');
-    }
-}
 
 // 🔊 SINTETIZADOR NATIVO WEB AUDIO API GURU OS (0 KB - Cero Latencia)
 function reproducirEfectoSonoro(tipo) {
