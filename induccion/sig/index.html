@@ -422,25 +422,25 @@
         </div>
         
         <!-- Lección 1: Contexto Organizacional -->
-        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(1);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); loadLeccion('modulo-1', 'auditor-m1-l1');" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
             <span class="truncate flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-chart group-hover:text-guru-cyan transition-colors"></i> 1. Contexto Organizacional</span>
             <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
         </button>
         
         <!-- Lección 2: Mapa de Procesos -->
-        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(2);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); loadLeccion('modulo-1', 'auditor-m1-l2');" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
             <span class="truncate flex items-center gap-2"><i class="fa-solid fa-sitemap group-hover:text-guru-cyan transition-colors"></i> 2. Mapa de Procesos</span>
             <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
         </button>
 
         <!-- Lección 3: Direccionamiento Estratégico -->
-        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(3);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); loadLeccion('modulo-1', 'auditor-m1-l3');" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
             <span class="truncate flex items-center gap-2"><i class="fa-solid fa-bullseye group-hover:text-guru-cyan transition-colors"></i> 3. Dirección Estratégica</span>
             <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
         </button>
 
         <!-- Lección 4: Próximas Auditorías -->
-        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); mostrarLeccion(4);" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
+        <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); loadLeccion('modulo-1', 'auditor-m1-l4');" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all group">
             <span class="truncate flex items-center gap-2"><i class="fa-solid fa-calendar-check group-hover:text-guru-cyan transition-colors"></i> 4. Próximas Auditorías</span>
             <i class="fa-solid fa-arrow-right text-[9px] text-slate-500 shrink-0 group-hover:text-guru-cyan transition-colors"></i>
         </button>
@@ -448,7 +448,7 @@
         <!-- Separador -->
         <div class="my-1 border-t border-slate-800/80"></div>
 
-        <!-- Botón para finalizar / Evaluación -->
+        <!-- Botón para finalizar -->
         <button onclick="document.getElementById('dropdown-modulos').classList.add('hidden'); alert('Has completado la Inducción SIG. ¡Excelente trabajo!');" class="w-full text-left flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-900/60 text-slate-300 hover:text-white text-xs font-medium transition-all mt-1">
             <span class="truncate font-bold text-emerald-400 flex items-center gap-2"><i class="fa-solid fa-check-double"></i> Finalizar Inducción</span>
             <i class="fa-solid fa-graduation-cap text-[10px] text-emerald-400 shrink-0 animate-pulse"></i>
@@ -2269,7 +2269,7 @@ function iniciarPrimeraLeccionModulo() {
                 <div class="absolute -top-10 -right-10 w-20 h-24 bg-guru-gold/5 rounded-full blur-[20px] pointer-events-none"></div>
                 <div class="flex items-center justify-between border-b border-slate-800/60 pb-1.5 mb-2 relative z-10">
                     <span class="text-[9px] font-black text-guru-gold uppercase tracking-widest flex items-center gap-1.5">
-                        <i class="fa-solid fa-stamp animate-pulse"></i> Tip de Campo GURU VIP (ISO 19011:2026)
+                        <i class="fa-solid fa-stamp animate-pulse"></i> Tip de Campo SIS (ISO 19011:2026)
                     </span>
                     <button onclick="cerrarTipL1()" class="text-[9px] font-black text-slate-500 hover:text-white uppercase tracking-widest outline-none">Cerrar</button>
                 </div>
