@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisión por la Dirección SIG 2026 | SIS SOLUCIONES INTEGRALES GNSS S.A.S.</title>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome 6.4.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS Nativo Compilado - UI/UX Executive Pro (0% Tailwind CDN) -->
+    <!-- ESTILOS CSS COMPILADOS (NATIVO 100%) -->
     <style>
         :root {
             --bg-fondo: #05080f;
@@ -40,7 +38,7 @@
             color: var(--text-main);
             font-family: var(--font-poppins);
             line-height: 1.5;
-            padding-top: 130px; /* Colchón para Header Fijo */
+            padding-top: 130px;
             padding-bottom: 40px;
             padding-left: 16px;
             padding-right: 16px;
@@ -56,7 +54,7 @@
             gap: 20px;
         }
 
-        /* 🏛️ 1. ENCABEZADO FIJO (STICKY / FIXED HEADER) */
+        /* 🏛️ HEADER FIJO */
         .sticky-header {
             position: fixed;
             top: 0;
@@ -162,53 +160,113 @@
             box-shadow: 0 0 8px var(--guru-green);
         }
 
-        /* 📊 TOP HUD MACRO KPIs */
+        /* 🌟 TOP HUD PREMIUM VIP (GLASSMORPHISM + GLOW FX) */
         .hud-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 8px;
         }
 
-        .hud-card {
-            background: var(--bg-card);
+        .hud-card-vip {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(3, 7, 18, 0.95) 100%);
             border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 12px 14px;
+            border-radius: 18px;
+            padding: 16px 20px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(12px);
+            cursor: default;
         }
 
-        .hud-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            background: rgba(0, 243, 255, 0.1);
-            border: 1px solid rgba(0, 243, 255, 0.3);
+        .hud-card-vip::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--glow-color, rgba(0,243,255,0.15)) 0%, transparent 60%);
+            opacity: 0.15;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            pointer-events: none;
+        }
+
+        .hud-card-vip:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: var(--theme-color, var(--guru-cyan));
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 25px var(--glow-color, rgba(0, 243, 255, 0.35));
+        }
+
+        .hud-card-vip:hover::before {
+            opacity: 0.35;
+            transform: scale(1.1);
+        }
+
+        .hud-icon-vip {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--theme-color, var(--guru-cyan));
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--guru-cyan);
-            font-size: 16px;
+            color: var(--theme-color, var(--guru-cyan));
+            font-size: 20px;
             flex-shrink: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 12px var(--glow-color, rgba(0, 243, 255, 0.2));
         }
 
-        .hud-info .label {
-            font-size: 9px;
+        .hud-card-vip:hover .hud-icon-vip {
+            background: var(--theme-color, var(--guru-cyan));
+            color: #05080f;
+            box-shadow: 0 0 20px var(--theme-color, var(--guru-cyan));
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        .hud-info-vip .label-vip {
+            font-size: 10px;
             text-transform: uppercase;
             color: var(--text-muted);
-            font-weight: 700;
+            font-weight: 800;
+            font-family: var(--font-montserrat);
+            letter-spacing: 0.8px;
             display: block;
+            margin-bottom: 2px;
         }
 
-        .hud-info .value {
+        .hud-info-vip .value-vip {
             font-family: var(--font-montserrat);
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 900;
             color: var(--text-white);
+            letter-spacing: -0.5px;
+            line-height: 1;
         }
 
-        /* 🎛️ NAVEGACIÓN PRINCIPAL (3 CAJAS) */
+        .hud-status-badge {
+            font-size: 9px;
+            font-weight: 800;
+            font-family: var(--font-montserrat);
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--theme-color, var(--guru-cyan));
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 6px;
+        }
+
+        /* 🎛️ MÓDULOS DE NAVEGACIÓN */
         .modules-hub {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -235,6 +293,12 @@
             box-shadow: 0 10px 25px rgba(0, 243, 255, 0.18);
         }
 
+        .hub-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .hub-tag {
             font-size: 10px;
             font-weight: 800;
@@ -251,7 +315,7 @@
             text-transform: uppercase;
         }
 
-        /* 🎴 GRID DE NUMERALES (SELECTORES SUPERIORES) */
+        /* 🎴 SELECTORES DE NUMERALES */
         .flashcard-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -325,7 +389,7 @@
             box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
         }
 
-        /* 🖼️ 2. GRAN CONTENEDOR INFERIOR DE DETALLE (VISOR AMPLIO PRO) */
+        /* 🖼️ VISOR DETALLADO INFERIOR */
         .master-detail-viewport {
             background: var(--bg-glass);
             border: 2px solid var(--guru-cyan);
@@ -376,7 +440,7 @@
             gap: 16px;
         }
 
-        /* 📊 MÉTRICAS Y BARRAS DE PROGRESO */
+        /* METRICAS & BARRAS */
         .metric-box {
             background: rgba(3, 7, 18, 0.7);
             border: 1px solid rgba(148, 163, 184, 0.15);
@@ -424,7 +488,7 @@
         .fill-cyan { background: linear-gradient(90deg, #0284c7, var(--guru-cyan)); }
         .fill-gold { background: linear-gradient(90deg, #d97706, var(--guru-gold)); }
 
-        /* 📋 TABLAS ADAPTATIVAS (RESPONSIVE EN CELULAR) */
+        /* TABLAS RESPONSIVAS */
         .table-wrapper {
             overflow-x: auto;
             border-radius: 14px;
@@ -457,7 +521,7 @@
             background: rgba(15, 23, 42, 0.6);
         }
 
-        /* ✍️ FIRMA DIGITAL CANVAS */
+        /* FIRMA DIGITAL */
         .signature-section {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -508,7 +572,7 @@
         .hidden { display: none !important; }
 
         @media (max-width: 640px) {
-            body { padding-top: 150px; }
+            body { padding-top: 200px; }
             .sticky-header { padding: 10px 14px; }
             .company-titles h1 { font-size: 13px; }
             .viewport-title { font-size: 15px; }
@@ -517,7 +581,7 @@
 </head>
 <body>
 
-    <!-- 🏛️ 1. ENCABEZADO FIJO EN PANTALLA (STICKY HEADER) -->
+    <!-- 🏛️ HEADER FIJO -->
     <header class="sticky-header">
         <div class="header-content">
             <div class="brand-container">
@@ -540,27 +604,46 @@
 
 <div class="container">
 
-    <!-- 📊 TOP HUD MACRO KPIs -->
+    <!-- 📊 TOP HUD MACRO KPIs VIP -->
     <section class="hud-grid">
-        <div class="hud-card">
-            <div class="hud-icon"><i class="fa-solid fa-chart-line"></i></div>
-            <div class="hud-info"><span class="label">Salud del SIG</span><div class="value" style="color: var(--guru-cyan);">93.98%</div></div>
+        <div class="hud-card-vip" style="--theme-color: var(--guru-cyan); --glow-color: rgba(0, 243, 255, 0.35);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Cumplimiento Global del SIG</span>
+                <div class="value-vip" style="color: var(--guru-cyan);">93.98%</div>
+                <span class="hud-status-badge"><i class="fa-solid fa-arrow-trend-up"></i> Óptimo</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-chart-line"></i></div>
         </div>
-        <div class="hud-card">
-            <div class="hud-icon" style="color: var(--guru-green); border-color: rgba(57, 255, 20, 0.3);"><i class="fa-solid fa-face-smile"></i></div>
-            <div class="hud-info"><span class="label">Satisfacción Cliente</span><div class="value" style="color: var(--guru-green);">100%</div></div>
+
+        <div class="hud-card-vip" style="--theme-color: var(--guru-green); --glow-color: rgba(57, 255, 20, 0.35);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Satisfacción Cliente</span>
+                <div class="value-vip" style="color: var(--guru-green);">100%</div>
+                <span class="hud-status-badge" style="color: var(--guru-green);"><i class="fa-solid fa-award"></i> Excelente</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-face-smile"></i></div>
         </div>
-        <div class="hud-card">
-            <div class="hud-icon" style="color: var(--guru-gold); border-color: rgba(197, 160, 89, 0.3);"><i class="fa-solid fa-scale-balanced"></i></div>
-            <div class="hud-info"><span class="label">Cumplimiento Legal</span><div class="value" style="color: var(--guru-gold);">99.9%</div></div>
+
+        <div class="hud-card-vip" style="--theme-color: var(--guru-gold); --glow-color: rgba(197, 160, 89, 0.35);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Cumplimiento Legal</span>
+                <div class="value-vip" style="color: var(--guru-gold);">99.9%</div>
+                <span class="hud-status-badge" style="color: var(--guru-gold);"><i class="fa-solid fa-shield-check"></i> Blindado</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-scale-balanced"></i></div>
         </div>
-        <div class="hud-card">
-            <div class="hud-icon" style="color: var(--guru-purple); border-color: rgba(168, 85, 247, 0.3);"><i class="fa-solid fa-check-double"></i></div>
-            <div class="hud-info"><span class="label">Eficacia Acciones</span><div class="value" style="color: var(--guru-purple);">83.3%</div></div>
+
+        <div class="hud-card-vip" style="--theme-color: var(--guru-purple); --glow-color: rgba(168, 85, 247, 0.35);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Eficacia Acciones</span>
+                <div class="value-vip" style="color: var(--guru-purple);">83.3%</div>
+                <span class="hud-status-badge" style="color: var(--guru-purple);"><i class="fa-solid fa-circle-check"></i> En Meta</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-check-double"></i></div>
         </div>
     </section>
 
-    <!-- 🎛️ NAVEGACIÓN PRINCIPAL (3 CAJAS DE MÓDULO) -->
+    <!-- 🎛️ NAVEGACIÓN DE MÓDULOS -->
     <section class="modules-hub">
         <div class="hub-box active" id="box-entradas" onclick="filtrarModulo('entradas')">
             <div class="hub-box-header">
@@ -590,33 +673,33 @@
         </div>
     </section>
 
-    <!-- 🎴 SELECTORES DE NUMERALES (TARJETAS SUPERIORES) -->
+    <!-- 🎴 SELECTORES DE NUMERALES -->
     <section id="selector-numerales-container" class="flashcard-grid">
-        <!-- Numerales inyectados o visibles por módulo -->
+        <!-- Renderizado dinámico -->
     </section>
 
-    <!-- 🖼️ 2. GRAN MARCO / CONTENEDOR DE DETALLE INFERIOR (VISOR PRINCIPAL) -->
+    <!-- 🖼️ VISOR INFERIOR PRINCIPAL DE DETALLE -->
     <section class="master-detail-viewport" id="master-viewport">
         <div class="viewport-header">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <span class="card-num-badge" id="vp-badge">NUMERAL 1</span>
                 <h3 class="viewport-title" id="vp-title">Seleccione un Numeral</h3>
             </div>
-            <span class="badge-pill" id="vp-status">Análisis en Pantalla Inferior</span>
+            <span class="badge-pill" id="vp-status">Análisis en Pantalla</span>
         </div>
 
         <div class="viewport-body" id="vp-body">
-            <!-- El contenido dinámico se renderiza aquí al dar clic -->
+            <!-- Contenido dinámico -->
         </div>
     </section>
 
-    <!-- ✍️ FIRMA DIGITAL Y CIERRE DE ACTA -->
+    <!-- ✍️ FIRMA DIGITAL -->
     <section class="signature-section">
         <h2 style="font-family: var(--font-montserrat); color: var(--guru-cyan); font-size: 15px; text-transform: uppercase;">
             <i class="fa-solid fa-signature mr-1"></i> Firma Digital y Cierre de Acta Gerencial
         </h2>
         <p style="font-size: 11px; color: var(--text-muted); max-width: 500px;">
-            Firme directamente sobre el recuadro para respaldar la conformidad del Acta de Revisión Gerencial 2026.
+            Firme directamente sobre el recuadro para validar la conformidad del Acta de Revisión Gerencial 2026.
         </p>
 
         <div class="signature-box">
@@ -641,8 +724,8 @@
 
 </div>
 
+<!-- INTERACTIVIDAD Y DATOS -->
 <script>
-    /* 💾 BANCO DE DATOS OFICIAL DE LA REVISIÓN GERENCIAL SIS 2026 */
     const datosNumerales = {
         n1: {
             modulo: 'entradas',
@@ -751,13 +834,11 @@
             titulo: '4. Información sobre el desempeño y eficacia del SGC y SGA',
             status: 'Madurez SIG 93.98%',
             html: `
-                <!-- 4.1 -->
                 <div class="metric-box">
                     <div class="metric-header"><span style="font-weight:700; color:var(--guru-green);">4.1 Satisfacción del cliente</span><span class="metric-badge badge-green">100% (Meta 80%)</span></div>
-                    <p style="font-size:11px;">Encuestas aplicadas a supervisores de batallón bajo Contrato No. 116-CENACAVIACION-2026 (Ejército Nacional).</p>
+                    <p style="font-size:11px;">Encuestas aplicadas a supervisores de batallón bajo Contrato (Ejército Nacional).</p>
                 </div>
 
-                <!-- 4.2 OBJETIVOS EN ORDEN SECUENCIAL -->
                 <div class="metric-box" style="border-color: var(--guru-cyan);">
                     <div class="metric-header"><span style="font-weight:700; color:var(--guru-cyan);">4.2 Objetivos de calidad y medio ambiente</span><span class="metric-badge badge-cyan">93.98% Global</span></div>
                     <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
@@ -766,7 +847,7 @@
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
                         </div>
                         <div>
-                            <div class="metric-header"><span>Obj 2: Control de Peligros y Riesgos</span><span class="metric-badge badge-cyan">14.89% (En curso)</span></div>
+                            <div class="metric-header"><span>Obj 2: Control de Peligros y Riesgos</span><span class="metric-badge badge-cyan">14.89% (Proyectado 16%)</span></div>
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-cyan" style="width: 75%;"></div></div>
                         </div>
                         <div>
@@ -782,37 +863,32 @@
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
                         </div>
                         <div>
-                            <div class="metric-header"><span>Obj 6: Estructura y Madurez del Sistema</span><span class="metric-badge badge-cyan">15.94% (En curso)</span></div>
+                            <div class="metric-header"><span>Obj 6: Estructura y Madurez del Sistema</span><span class="metric-badge badge-cyan">15.94% (Proyectado 18%)</span></div>
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-cyan" style="width: 80%;"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4.3 -->
                 <div class="metric-box">
                     <div class="metric-header"><span style="font-weight:700; color:var(--guru-green);">4.3 Desempeño de procesos y conformidad</span><span class="metric-badge badge-green">100% Conformidad</span></div>
                     <p style="font-size:11px;">Cero servicios no conformes gracias a la prevención activa y disciplina en cumplimiento de reglamentación RAC.</p>
                 </div>
 
-                <!-- 4.4 -->
                 <div class="metric-box">
                     <div class="metric-header"><span style="font-weight:700; color:var(--guru-purple);">4.4 No conformidades y acciones correctivas</span><span class="metric-badge badge-purple">83.3% Cierre</span></div>
                     <p style="font-size:11px;">6 acciones documentadas (3 preventivas, 2 correctivas). 5 cerradas con eficacia, 1 en fase final de cierre.</p>
                 </div>
 
-                <!-- 4.5 -->
                 <div class="metric-box">
                     <div class="metric-header"><span style="font-weight:700;">4.5 Resultado de auditorías</span><span class="metric-badge badge-cyan">Auditoría Interna OK</span></div>
                     <p style="font-size:11px;">Auditoría ejecutada el 6-7 de Octubre (ISO 9001/14001/RUC) previa a visita de Bureau Veritas (26-27 Oct).</p>
                 </div>
 
-                <!-- 4.6 -->
                 <div class="metric-box">
                     <div class="metric-header"><span style="font-weight:700; color:var(--guru-green);">4.6 Desempeño de proveedores externos</span><span class="metric-badge badge-green">100% Excelente</span></div>
                     <p style="font-size:11px;">10 proveedores reevaluados con calificación máxima del 100%.</p>
                 </div>
 
-                <!-- 4.7 -->
                 <div class="metric-box">
                     <div class="metric-header"><span style="font-weight:700; color:var(--guru-gold);">4.7 Cumplimiento legal y otros requisitos</span><span class="metric-badge badge-gold">99.9% SST | 100% Ambient.</span></div>
                     <p style="font-size:11px;">• SST: 607/608 normas cumplidas (pendiente Decreto 1040/2026).<br>• Ambiental: 130/130 normas cumplidas al 100%.</p>
@@ -876,7 +952,6 @@
         }
     };
 
-    /* 🎛️ NAVEGACIÓN Y RENDERIZADO EN EL MARCO INFERIOR */
     let moduloActual = 'entradas';
 
     function filtrarModulo(modulo) {
@@ -895,7 +970,6 @@
 
         selectorContainer.style.display = 'grid';
 
-        // Filtrar y crear tarjetas de selección superiores
         Object.keys(datosNumerales).forEach(key => {
             const num = datosNumerales[key];
             if (num.modulo === modulo) {
@@ -915,7 +989,6 @@
             }
         });
 
-        // Cargar el primer numeral del módulo por defecto
         const primerKey = modulo === 'entradas' ? 'n1' : 'n7';
         verDetalleInInferior(primerKey);
     }
@@ -928,7 +1001,7 @@
         const data = datosNumerales[numKey];
         const viewport = document.getElementById('master-viewport');
         viewport.classList.remove('viewport-anim-fade');
-        void viewport.offsetWidth; // Trigger reflow
+        void viewport.offsetWidth;
         viewport.classList.add('viewport-anim-fade');
 
         document.getElementById('vp-badge').innerText = data.badge;
@@ -936,7 +1009,6 @@
         document.getElementById('vp-status').innerText = data.status;
         document.getElementById('vp-body').innerHTML = data.html;
 
-        // Desplazamiento suave al visor en móviles
         viewport.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
@@ -982,7 +1054,7 @@
         `;
     }
 
-    /* ✍️ CANVAS PARA LA FIRMA DIGITAL */
+    /* FIRMA DIGITAL */
     let canvas, ctx, dibujando = false;
 
     function initCanvas() {
@@ -1007,7 +1079,7 @@
         canvas.onmousemove = (e) => {
             if (dibujando) {
                 const r = canvas.getBoundingClientRect();
-                ctx.lineTo(e.clientX - r.left, e.clientY - r.top);
+                ctx.lineTo(e.offsetX || (e.clientX - r.left), e.offsetY || (e.clientY - r.top));
                 ctx.stroke();
             }
         };
