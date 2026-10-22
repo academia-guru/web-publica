@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divulgación Oficial SIG 2026 | SIS SOLUCIONES INTEGRALES GNSS S.A.S.</title>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ESTILOS CSS COMPILADOS NATIVOS (RESPONSIVO VIP) -->
+    <style>
+        :root {
+            --bg-fondo: #05080f;
+            --bg-card: #0f172a;
+            --bg-card-hover: #1e293b;
+            --bg-glass: rgba(15, 23, 42, 0.85);
+            --border-color: rgba(0, 243, 255, 0.22);
+            --guru-cyan: #00f3ff;
+            --guru-green: #39ff14;
+            --guru-gold: #C5A059;
+            --guru-red: #ff3131;
+            --guru-purple: #a855f7;
+            --text-main: #cbd5e1;
+            --text-white: #ffffff;
+            --text-muted: #94a3b8;
+            --font-montserrat: 'Montserrat', sans-serif;
+            --font-poppins: 'Poppins', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-fondo);
+            color: var(--text-main);
+            font-family: var(--font-poppins);
+            line-height: 1.5;
+            padding-top: 130px;
+            padding-bottom: 40px;
+            padding-left: 16px;
+            padding-right: 16px;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 🏛️ HEADER FIJO CON DISTINTIVO AERONÁUTICO */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(3, 7, 18, 0.98) 100%);
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 243, 255, 0.12);
+            padding: 12px 20px;
+        }
+
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-wrapper::before {
+            content: '';
+            position: absolute;
+            width: 110px;
+            height: 40px;
+            background: var(--guru-cyan);
+            opacity: 0.18;
+            filter: blur(18px);
+            border-radius: 50%;
+        }
+
+        .logo-img {
+            height: 42px;
+            width: auto;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 0 8px rgba(0, 243, 255, 0.4));
+        }
+
+        .company-titles h1 {
+            font-family: var(--font-montserrat);
+            font-weight: 900;
+            font-size: 15px;
+            color: var(--text-white);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .company-titles h2 {
+            font-family: var(--font-montserrat);
+            font-weight: 700;
+            font-size: 11px;
+            color: var(--guru-cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 10px;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 243, 255, 0.08);
+            border: 1px solid rgba(0, 243, 255, 0.25);
+            color: var(--guru-cyan);
+            padding: 4px 10px;
+            border-radius: 99px;
+            font-size: 10px;
+            font-weight: 800;
+            font-family: var(--font-montserrat);
+            text-transform: uppercase;
+        }
+
+        .dot-pulse {
+            width: 6px;
+            height: 6px;
+            background-color: var(--guru-green);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--guru-green);
+        }
+
+        /* 🌟 TOP HUD PREMIUM VIP */
+        .hud-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .hud-card-vip {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(3, 7, 18, 0.95) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(12px);
+        }
+
+        .hud-icon-vip {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--theme-color, var(--guru-cyan));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--theme-color, var(--guru-cyan));
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 0 12px var(--glow-color, rgba(0, 243, 255, 0.2));
+        }
+
+        .hud-info-vip .label-vip {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 800;
+            font-family: var(--font-montserrat);
+            letter-spacing: 0.8px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .hud-info-vip .value-vip {
+            font-family: var(--font-montserrat);
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--text-white);
+            line-height: 1;
+        }
+
+        .hud-status-badge {
+            font-size: 9px;
+            font-weight: 800;
+            font-family: var(--font-montserrat);
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--theme-color, var(--guru-cyan));
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 6px;
+        }
+
+        /* 🎛️ MÓDULOS DE NAVEGACIÓN */
+        .modules-hub {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+        }
+
+        .hub-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .hub-box:hover, .hub-box.active {
+            border-color: var(--guru-cyan);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 243, 255, 0.18);
+        }
+
+        .hub-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hub-tag {
+            font-size: 10px;
+            font-weight: 800;
+            font-family: var(--font-montserrat);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hub-title {
+            font-family: var(--font-montserrat);
+            font-size: 14px;
+            color: var(--text-white);
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        /* 🎴 SELECTORES DE NUMERALES */
+        .flashcard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+        }
+
+        .num-selector-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .num-selector-card:hover, .num-selector-card.selected {
+            border-color: var(--guru-cyan);
+            background: rgba(0, 243, 255, 0.08);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .card-num-badge {
+            font-family: var(--font-montserrat);
+            font-size: 9px;
+            font-weight: 900;
+            color: var(--guru-cyan);
+            background: rgba(0, 243, 255, 0.1);
+            padding: 3px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 243, 255, 0.25);
+            text-transform: uppercase;
+            width: fit-content;
+        }
+
+        .card-title-text {
+            font-family: var(--font-montserrat);
+            font-weight: 800;
+            font-size: 12px;
+            color: var(--text-white);
+            text-transform: uppercase;
+        }
+
+        .btn-view-detail {
+            width: 100%;
+            min-height: 44px;
+            padding: 10px 14px;
+            background: rgba(0, 243, 255, 0.08);
+            border: 1px solid var(--guru-cyan);
+            color: var(--guru-cyan);
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 800;
+            font-family: var(--font-montserrat);
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        /* 🖼️ VISOR DETALLADO INFERIOR */
+        .master-detail-viewport {
+            background: var(--bg-glass);
+            border: 2px solid var(--guru-cyan);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 243, 255, 0.25);
+            backdrop-filter: blur(16px);
+            margin-top: 10px;
+            min-height: 280px;
+        }
+
+        .viewport-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.25);
+            padding-bottom: 14px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .viewport-title {
+            font-family: var(--font-montserrat);
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--text-white);
+            text-transform: uppercase;
+        }
+
+        .viewport-body {
+            font-size: 13px;
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* METRICAS & BARRAS */
+        .metric-box {
+            background: rgba(3, 7, 18, 0.7);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 12px;
+            padding: 12px 16px;
+        }
+
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .metric-badge {
+            font-family: var(--font-montserrat);
+            font-weight: 800;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+        .badge-green { background: rgba(57, 255, 20, 0.15); color: var(--guru-green); border: 1px solid rgba(57, 255, 20, 0.3); }
+        .badge-cyan { background: rgba(0, 243, 255, 0.15); color: var(--guru-cyan); border: 1px solid rgba(0, 243, 255, 0.3); }
+        .badge-gold { background: rgba(197, 160, 89, 0.15); color: var(--guru-gold); border: 1px solid rgba(197, 160, 89, 0.3); }
+        .badge-purple { background: rgba(168, 85, 247, 0.15); color: var(--guru-purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+
+        .progress-bar-track {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 99px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+
+        .progress-bar-fill { height: 100%; border-radius: 99px; }
+        .fill-green { background: linear-gradient(90deg, #10b981, var(--guru-green)); }
+        .fill-cyan { background: linear-gradient(90deg, #0284c7, var(--guru-cyan)); }
+        .fill-gold { background: linear-gradient(90deg, #d97706, var(--guru-gold)); }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            margin-top: 10px;
+        }
+
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            text-align: left;
+            min-width: 520px;
+        }
+
+        .table-custom th {
+            background: rgba(0, 243, 255, 0.12);
+            color: var(--guru-cyan);
+            font-family: var(--font-montserrat);
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table-custom td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            color: var(--text-main);
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        /* 🤖 MÓDULO VIP DE IA PARA DESCRESTE GENERAL (GURU IA) */
+        .ai-assistant-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(3, 7, 18, 0.98) 100%);
+            border: 1px solid var(--guru-cyan);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.15);
+            margin-top: 20px;
+        }
+
+        .chip-btn {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            color: var(--guru-cyan);
+            padding: 8px 16px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: var(--font-montserrat);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chip-btn:hover {
+            background: var(--guru-cyan);
+            color: #05080f;
+            box-shadow: 0 0 12px rgba(0, 243, 255, 0.4);
+        }
+
+        .input-chat {
+            width: 100%;
+            background: rgba(5, 8, 15, 0.9);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: #fff;
+            font-family: var(--font-poppins);
+            font-size: 12px;
+            outline: none;
+        }
+
+        .input-chat:focus { border-color: var(--guru-cyan); }
+
+        .hidden { display: none !important; }
+/* 📱 CORRECCIÓN DE SOLAPAMIENTO EN CELULAR */
+        @media (max-width: 900px) {
+            body { 
+                padding-top: 170px !important; /* 👈 Espacio perfecto: ni deja huecos grandes ni se monta sobre la cabecera */
+            } 
+            .sticky-header { 
+                padding: 10px 14px; 
+            }
+            .company-titles h1 { 
+                font-size: 13px; 
+            }
+            .viewport-title { 
+                font-size: 15px; 
+            }
+            .master-detail-viewport { 
+                padding: 16px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🏛️ HEADER FIJO CON DISTINTIVO AERONÁUTICO -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="brand-container">
+                <div class="logo-wrapper">
+                    <img src="/img/sislogo1.png" alt="SIS Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/160x45/0f172a/00f3ff?text=SIS+GNSS'">
+                </div>
+                <div class="company-titles">
+                    <h1>SIS SOLUCIONES INTEGRALES GNSS S.A.S.</h1>
+                    <h2>
+                        <i class="fa-solid fa-helicopter text-guru-cyan"></i> Revisión por la Dirección SIG • Vigencia 2026
+                    </h2>
+                </div>
+            </div>
+            <div class="header-meta">
+                <span class="badge-pill"><span class="dot-pulse"></span> ISO 9001 & ISO 14001</span>
+                <div><i class="fa-solid fa-user-tie text-guru-cyan"></i> <strong>Oscar Cagua</strong> (Gerente)</div>
+                <div><i class="fa-solid fa-user-shield text-guru-cyan"></i> <strong>Andrea Castro</strong> (Dir. HSEQ)</div>
+                <div><span class="badge-pill" style="border-color: var(--guru-green); color: var(--guru-green);"><i class="fa-solid fa-plane-up"></i> Divulgación Oficial</span></div>
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+
+    <!-- 📊 TOP HUD MACRO KPIs VIP -->
+    <section class="hud-grid">
+        <div class="hud-card-vip" style="--theme-color: var(--guru-cyan);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Cumplimiento Global del SIG</span>
+                <div class="value-vip" style="color: var(--guru-cyan);">93.98%</div>
+                <span class="hud-status-badge"><i class="fa-solid fa-arrow-trend-up"></i> Óptimo</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-chart-line"></i></div>
+        </div>
+
+        <div class="hud-card-vip" style="--theme-color: var(--guru-green);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Satisfacción Cliente</span>
+                <div class="value-vip" style="color: var(--guru-green);">100%</div>
+                <span class="hud-status-badge" style="color: var(--guru-green);"><i class="fa-solid fa-award"></i> Excelente</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-face-smile"></i></div>
+        </div>
+
+        <div class="hud-card-vip" style="--theme-color: var(--guru-gold);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Cumplimiento Legal</span>
+                <div class="value-vip" style="color: var(--guru-gold);">99.9%</div>
+                <span class="hud-status-badge" style="color: var(--guru-gold);"><i class="fa-solid fa-shield-check"></i> Blindado</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-scale-balanced"></i></div>
+        </div>
+
+        <div class="hud-card-vip" style="--theme-color: var(--guru-purple);">
+            <div class="hud-info-vip">
+                <span class="label-vip">Eficacia Acciones</span>
+                <div class="value-vip" style="color: var(--guru-purple);">83.3%</div>
+                <span class="hud-status-badge" style="color: var(--guru-purple);"><i class="fa-solid fa-circle-check"></i> En Meta</span>
+            </div>
+            <div class="hud-icon-vip"><i class="fa-solid fa-check-double"></i></div>
+        </div>
+    </section>
+
+    <!-- 🎛️ NAVEGACIÓN DE MÓDULOS -->
+    <section class="modules-hub">
+        <div class="hub-box active" id="box-entradas" onclick="filtrarModulo('entradas')">
+            <div class="hub-box-header">
+                <span class="hub-tag" style="color: var(--guru-cyan);">MÓDULO 01</span>
+                <i class="fa-solid fa-right-to-bracket text-guru-cyan"></i>
+            </div>
+            <h3 class="hub-title">1. ENTRADAS (1 AL 6)</h3>
+            <span class="hub-tag" style="color: var(--text-muted);">Ver Numerales de Entrada</span>
+        </div>
+
+        <div class="hub-box" id="box-salidas" onclick="filtrarModulo('salidas')">
+            <div class="hub-box-header">
+                <span class="hub-tag" style="color: var(--guru-gold);">MÓDULO 02</span>
+                <i class="fa-solid fa-right-from-bracket text-guru-gold"></i>
+            </div>
+            <h3 class="hub-title">2. SALIDAS (7 Y 8)</h3>
+            <span class="hub-tag" style="color: var(--text-muted);">Ver Requerimientos de Cambio</span>
+        </div>
+
+        <div class="hub-box" id="box-acciones" onclick="filtrarModulo('acciones')">
+            <div class="hub-box-header">
+                <span class="hub-tag" style="color: var(--guru-green);">MÓDULO 03</span>
+                <i class="fa-solid fa-list-check text-guru-green"></i>
+            </div>
+            <h3 class="hub-title">3. ACCIONES RESULTANTES</h3>
+            <span class="hub-tag" style="color: var(--text-muted);">Ver Compromisos Gerenciales</span>
+        </div>
+    </section>
+
+    <!-- 🎴 SELECTORES DE NUMERALES -->
+    <section id="selector-numerales-container" class="flashcard-grid">
+        <!-- Renderizado dinámico -->
+    </section>
+
+    <!-- 🖼️ VISOR INFERIOR PRINCIPAL DE DETALLE -->
+    <section class="master-detail-viewport" id="master-viewport">
+        <div class="viewport-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span class="card-num-badge" id="vp-badge">NUMERAL 1</span>
+                <h3 class="viewport-title" id="vp-title">Seleccione un Numeral</h3>
+            </div>
+            <span class="badge-pill" id="vp-status">Análisis en Pantalla</span>
+        </div>
+
+        <div class="viewport-body" id="vp-body">
+            <!-- Contenido dinámico -->
+        </div>
+    </section>
+
+    <!-- 🤖 MÓDULO HIGH-TECH DE IA PARA DESCRESTE (GURU IA SIG) -->
+    <section class="ai-assistant-card">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+            <div style="width: 44px; height: 44px; border-radius: 14px; background: rgba(0,243,255,0.15); border: 1px solid var(--guru-cyan); display: flex; align-items: center; justify-content: center; color: var(--guru-cyan); font-size: 20px; box-shadow: 0 0 15px rgba(0,243,255,0.3);">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+            <div>
+                <h3 style="font-family: var(--font-montserrat); color: #fff; font-size: 15px; text-transform: uppercase;">
+                    Asistente de Consulta Virtual • SIG 2026
+                </h3>
+                <p style="font-size: 11px; color: var(--text-muted);">
+                    Consulte en vivo cualquier meta, resultado o compromiso del Sistema Integrado de Gestión de SIS GNSS S.A.S.
+                </p>
+            </div>
+        </div>
+
+        <!-- BOTONES DE ACCESO RÁPIDO (CHIPS) -->
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
+            <button class="chip-btn" onclick="consultarIA('¿Cuáles son los objetivos ambientales y siembra de árboles?')"><i class="fa-solid fa-leaf"></i> Gestión Ambiental</button>
+            <button class="chip-btn" onclick="consultarIA('¿Cuál fue la satisfacción del cliente Ejército Nacional?')"><i class="fa-solid fa-award"></i> Satisfacción Cliente</button>
+            <button class="chip-btn" onclick="consultarIA('¿Cuáles son los compromisos y proyectos para 2027?')"><i class="fa-solid fa-rocket"></i> Compromisos 2027</button>
+            <button class="chip-btn" onclick="consultarIA('¿Cómo vamos en cumplimiento legal SST y Ambiental?')"><i class="fa-solid fa-scale-balanced"></i> Cumplimiento Legal</button>
+        </div>
+
+        <!-- BUSCADOR INTERACTIVO MEJORADO -->
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="input-pregunta-ia" class="input-chat" placeholder="Escriba su consulta sobre la Revisión por la Dirección..." onkeypress="if(event.key === 'Enter') preguntarDirectoIA()">
+            <button onclick="preguntarDirectoIA()" type="button" class="btn-sig" style="background: var(--guru-cyan); color: #05080f; padding: 0 20px; font-weight: 800;">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+
+        <!-- CONTENEDOR DE RESPUESTA AUTOMÁTICA -->
+        <div id="box-respuesta-ia" class="hidden" style="margin-top: 14px; padding: 16px; background: rgba(0, 243, 255, 0.05); border: 1px solid var(--guru-cyan); border-radius: 14px; font-size: 12px; color: #fff; line-height: 1.6;">
+            <div style="font-size: 10px; color: var(--guru-cyan); font-weight: 800; font-family: var(--font-montserrat); text-transform: uppercase; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                <i class="fa-solid fa-sparkles"></i> RESPUESTA EN VIVO DEL SISTEMA SIG:
+            </div>
+            <div id="texto-respuesta-ia"></div>
+        </div>
+    </section>
+
+</div>
+
+<!-- INTERACTIVIDAD Y DATOS -->
+<script>
+    const datosNumerales = {
+        n1: {
+            modulo: 'entradas',
+            badge: 'NUMERAL 1',
+            titulo: '1. Seguimiento a compromisos de la revisión anterior (2025)',
+            status: 'Entrada Cumplida',
+            html: `
+                <p><strong>Certificación ISO 9001:2015 e ISO 14001:2015:</strong> Finalización exitosa de la auditoría externa de certificación en septiembre de 2025, validando la conformidad del Sistema de Gestión Integrado.</p>
+                <p><strong>Estrategia de expansión de mercado:</strong> En fase de revisión estratégica, dado que la demanda operativa actual del cliente principal (Ejército) absorbe el 100% de la capacidad instalada. Se incluye evaluar la viabilidad de incorporar una aeronave adicional a mediano plazo para diversificar la cartera sin comprometer compromisos vigentes.</p>
+            `
+        },
+        n2: {
+            modulo: 'entradas',
+            badge: 'NUMERAL 2',
+            titulo: '2. Cuestiones internas y externas pertinentes al SGC y SGA',
+            status: 'Análisis Estratégico',
+            html: `
+                <p><strong>Análisis de Oportunidades Emergentes (Visión 2026-2027):</strong> Integración de O5 (Huella Ambiental) y O6 (Digitalización) para reducir huella ambiental y agilizar auditorías.</p>
+
+                <strong style="color: var(--guru-cyan); margin-top: 8px; display: block; uppercase;">Matriz de Partes Interesadas vs. Fortalezas SIS</strong>
+                <div class="table-wrapper">
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Parte Interesada</th>
+                                <th>Expectativa Clave</th>
+                                <th>Fortaleza SIS que la Satisface</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Autoridad Aeronáutica</strong></td>
+                                <td>Cumplimiento normativo y seguridad operacional.</td>
+                                <td><span style="color: var(--guru-green); font-weight: 700;">F3, F4:</span> Tripulaciones licenciadas y estricto cumplimiento RAC.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Clientes Externos</strong></td>
+                                <td>Servicios confiables y competitivos.</td>
+                                <td><span style="color: var(--guru-green); font-weight: 700;">F1, F2:</span> Personal competente y entrenamiento continuo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comunidad / Entorno</strong></td>
+                                <td>Mitigación de impacto ambiental y seguridad.</td>
+                                <td><span style="color: var(--guru-green); font-weight: 700;">F7, F8:</span> Cumplimiento legal ambiental y trayectoria sólida.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Proveedores</strong></td>
+                                <td>Relaciones transparentes y oportunas.</td>
+                                <td><span style="color: var(--guru-cyan); font-weight: 700;">O2:</span> Implementación de control y auditorías a proveedores.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <strong style="color: var(--guru-red); margin-top: 12px; display: block; uppercase;">Matriz de Control Estratégico de Amenazas</strong>
+                <div class="table-wrapper">
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Amenaza</th>
+                                <th>Parte Afectada</th>
+                                <th>Impacto Crítico</th>
+                                <th>Acción Estratégica</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color: var(--guru-red);">A1: Alteración Orden Público</strong></td>
+                                <td>Comunidad / Clientes</td>
+                                <td>Interrupción operativa</td>
+                                <td>Blindaje de aeronaves y chalecos antibalas para tripulación.</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--guru-red);">A4: Fluctuación del Dólar</strong></td>
+                                <td>Proveedores / Clientes</td>
+                                <td>Riesgo financiero en repuestos</td>
+                                <td>(O1) Ajuste dinámico en modelos de facturación.</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--guru-red);">A3: Repuestos Sin Soporte</strong></td>
+                                <td>Autoridad Aeronáutica</td>
+                                <td>Riesgo de seguridad y sanciones</td>
+                                <td>Reforzar auditorías directas y evaluación de proveedores.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            `
+        },
+        n3: {
+            modulo: 'entradas',
+            badge: 'NUMERAL 3',
+            titulo: '3. Aspectos ambientales significativos',
+            status: 'Control Ambiental OK',
+            html: `
+                <div class="metric-box">
+                    <div class="metric-header"><span style="font-weight: 700;">Siembra de Árboles (Ley 2173)</span><span class="metric-badge badge-green">100% Cumplido</span></div>
+                    <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
+                </div>
+                <p>• <strong>Huella de Carbono:</strong> Medición activa para optimización del consumo de combustible.<br>• <strong>Ruido de Motores:</strong> Certificados de ruido de aeronaves actualizados para blindaje legal comunitario.<br>• <strong>Transición Energética:</strong> Estructuración técnica y financiera del proyecto fotovoltaico para 2027.</p>
+            `
+        },
+        n4: {
+            modulo: 'entradas',
+            badge: 'NUMERAL 4',
+            titulo: '4. Información sobre el desempeño y eficacia del SGC y SGA',
+            status: 'Madurez SIG 93.98%',
+            html: `
+                <div class="metric-box">
+                    <div class="metric-header"><span style="font-weight:700; color:var(--guru-green);">4.1 Satisfacción del cliente</span><span class="metric-badge badge-green">100% (Meta 80%)</span></div>
+                    <p style="font-size:11px;">Encuestas aplicadas a supervisores de batallón bajo Contrato (Ejército Nacional).</p>
+                </div>
+
+                <div class="metric-box" style="border-color: var(--guru-cyan);">
+                    <div class="metric-header"><span style="font-weight:700; color:var(--guru-cyan);">4.2 Objetivos de calidad y medio ambiente</span><span class="metric-badge badge-cyan">93.98% Global</span></div>
+                    <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
+                        <div>
+                            <div class="metric-header"><span>Obj 1: Excelencia en la Prestación del Servicio</span><span class="metric-badge badge-green">16% (Logrado 100%)</span></div>
+                            <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="metric-header"><span>Obj 2: Control de Peligros y Riesgos</span><span class="metric-badge badge-cyan">14.89% (Proyectado 16%)</span></div>
+                            <div class="progress-bar-track"><div class="progress-bar-fill fill-cyan" style="width: 75%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="metric-header"><span>Obj 3: Prevención de la Contaminación</span><span class="metric-badge badge-green">8% (Logrado 100%)</span></div>
+                            <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="metric-header"><span>Obj 4: Desempeño del Sistema Integrado SIG</span><span class="metric-badge badge-gold">27.15% (Proyectado 30%)</span></div>
+                            <div class="progress-bar-track"><div class="progress-bar-fill fill-gold" style="width: 90%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="metric-header"><span>Obj 5: Participación y Toma de Conciencia SST</span><span class="metric-badge badge-green">12% (Logrado 100%)</span></div>
+                            <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="metric-header"><span>Obj 6: Estructura y Madurez del Sistema</span><span class="metric-badge badge-cyan">15.94% (Proyectado 18%)</span></div>
+                            <div class="progress-bar-track"><div class="progress-bar-fill fill-cyan" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-box">
+                    <div class="metric-header"><span style="font-weight:700; color:var(--guru-green);">4.3 Desempeño de procesos y conformidad</span><span class="metric-badge badge-green">100% Conformidad</span></div>
+                    <p style="font-size:11px;">Cero servicios no conformes gracias a la prevención activa y disciplina en cumplimiento de reglamentación RAC.</p>
+                </div>
+
+                <div class="metric-box">
+                    <div class="metric-header"><span style="font-weight:700; color:var(--guru-purple);">4.4 No conformidades y acciones correctivas</span><span class="metric-badge badge-purple">83.3% Cierre</span></div>
+                    <p style="font-size:11px;">6 acciones documentadas (3 preventivas, 2 correctivas). 5 cerradas con eficacia, 1 en fase final de cierre.</p>
+                </div>
+
+                <div class="metric-box">
+                    <div class="metric-header"><span style="font-weight:700;">4.5 Resultado de auditorías</span><span class="metric-badge badge-cyan">Auditoría Interna OK</span></div>
+                    <p style="font-size:11px;">Auditoría ejecutada el 6-7 de Octubre (ISO 9001/14001/RUC) previa a visita de Bureau Veritas (26-27 Oct).</p>
+                </div>
+
+                <div class="metric-box">
+                    <div class="metric-header"><span style="font-weight:700; color:var(--guru-green);">4.6 Desempeño de proveedores externos</span><span class="metric-badge badge-green">100% Excelente</span></div>
+                    <p style="font-size:11px;">10 proveedores reevaluados con calificación máxima del 100%.</p>
+                </div>
+
+                <div class="metric-box">
+                    <div class="metric-header"><span style="font-weight:700; color:var(--guru-gold);">4.7 Cumplimiento legal y otros requisitos</span><span class="metric-badge badge-gold">99.9% SST | 100% Ambient.</span></div>
+                    <p style="font-size:11px;">• SST: 607/608 normas cumplidas (pendiente Decreto 1040/2026).<br>• Ambiental: 130/130 normas cumplidas al 100%.</p>
+                </div>
+            `
+        },
+        n5: {
+            modulo: 'entradas',
+            badge: 'NUMERAL 5',
+            titulo: '5. Adecuación de recursos para el SGC y SGA',
+            status: 'Recursos II Semestre 90%',
+            html: `
+                <div class="metric-box">
+                    <div class="metric-header"><span>I Semestre (Ejecución Afectada por Empalme HSEQ)</span><span class="metric-badge badge-gold">45% ($23.9M / $52.7M)</span></div>
+                    <div class="progress-bar-track"><div class="progress-bar-fill fill-gold" style="width: 45%;"></div></div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-header"><span>II Semestre (Consolidación de Ejecución)</span><span class="metric-badge badge-cyan">90% ($47.4M / $52.7M)</span></div>
+                    <div class="progress-bar-track"><div class="progress-bar-fill fill-cyan" style="width: 90%;"></div></div>
+                </div>
+            `
+        },
+        n6: {
+            modulo: 'entradas',
+            badge: 'NUMERAL 6',
+            titulo: '6. Eficacia de acciones ante riesgos y oportunidades',
+            status: 'Eficacia Global 87%',
+            html: `
+                <div class="metric-header"><span style="color:var(--guru-cyan); font-weight:700;">Eficacia Global Consolidada</span><span class="metric-badge badge-cyan">87% (Meta 80%)</span></div>
+                <div class="metric-box">
+                    <div class="metric-header"><span>Operaciones Aéreas</span><span class="metric-badge badge-green">94%</span></div>
+                    <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 94%;"></div></div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-header"><span>Talento Humano & Financiera</span><span class="metric-badge badge-green">92%</span></div>
+                    <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 92%;"></div></div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-header"><span>HSEQ, Aeronavegabilidad, QA & Comercial</span><span class="metric-badge badge-cyan">83%</span></div>
+                    <div class="progress-bar-track"><div class="progress-bar-fill fill-cyan" style="width: 83%;"></div></div>
+                </div>
+            `
+        },
+        n7: {
+            modulo: 'salidas',
+            badge: 'NUMERAL 7',
+            titulo: '7. Necesidades de cambio en el SGC y SGA',
+            status: 'Salida de Dirección',
+            html: `
+                <p>• <strong>Estabilidad del Líder HSEQ:</strong> Garantizar la continuidad directiva para asegurar la sostenibilidad del SIG.<br>• <strong>Sensibilización del Personal:</strong> Asegurar disponibilidad y participación activa en los comités del sistema.<br>• <strong>Estrategia Digital:</strong> Implementar micro-aprendizaje a través de videos cortos de 60 segundos.</p>
+            `
+        },
+        n8: {
+            modulo: 'salidas',
+            badge: 'NUMERAL 8',
+            titulo: '8. Implicaciones para la dirección estratégica',
+            status: 'Estrategia Corporativa',
+            html: `
+                <p><strong>1. Área de Compras Dedicada:</strong> Estudio de viabilidad para centralizar adquisiciones y asegurar cumplimiento legal, financiero y HSEQ antes de cada compra.<br><strong>2. Adopción Corporativa de Inteligencia Artificial (IA):</strong> Adquisición de licencias corporativas para estandarizar la elaboración de informes, análisis normativo y automatización de procesos.</p>
+            `
+        }
+    };
+
+    let moduloActual = 'entradas';
+
+    function filtrarModulo(modulo) {
+        moduloActual = modulo;
+        document.querySelectorAll('.hub-box').forEach(box => box.classList.remove('active'));
+        document.getElementById(`box-${modulo}`).classList.add('active');
+
+        const selectorContainer = document.getElementById('selector-numerales-container');
+        selectorContainer.innerHTML = '';
+
+        if (modulo === 'acciones') {
+            selectorContainer.style.display = 'none';
+            renderizarAccionesEnViewport();
+            return;
+        }
+
+        selectorContainer.style.display = 'grid';
+
+        Object.keys(datosNumerales).forEach(key => {
+            const num = datosNumerales[key];
+            if (num.modulo === modulo) {
+                const card = document.createElement('div');
+                card.className = 'num-selector-card';
+                card.id = `sel-${key}`;
+                card.onclick = () => verDetalleInInferior(key);
+                card.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="card-num-badge">${num.badge}</span>
+                        <i class="fa-solid fa-arrow-down text-guru-cyan"></i>
+                    </div>
+                    <h3 class="card-title-text">${num.titulo}</h3>
+                    <button class="btn-view-detail"><span>Ver Detalle en Marco Inferior</span> <i class="fa-solid fa-circle-chevron-down"></i></button>
+                `;
+                selectorContainer.appendChild(card);
+            }
+        });
+
+        const primerKey = modulo === 'entradas' ? 'n1' : 'n7';
+        verDetalleInInferior(primerKey);
+    }
+
+    function verDetalleInInferior(numKey) {
+        document.querySelectorAll('.num-selector-card').forEach(card => card.classList.remove('selected'));
+        const selCard = document.getElementById(`sel-${numKey}`);
+        if (selCard) selCard.classList.add('selected');
+
+        const data = datosNumerales[numKey];
+        const viewport = document.getElementById('master-viewport');
+        viewport.classList.remove('viewport-anim-fade');
+        void viewport.offsetWidth;
+        viewport.classList.add('viewport-anim-fade');
+
+        document.getElementById('vp-badge').innerText = data.badge;
+        document.getElementById('vp-title').innerText = data.titulo;
+        document.getElementById('vp-status').innerText = data.status;
+        document.getElementById('vp-body').innerHTML = data.html;
+
+        viewport.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function renderizarAccionesEnViewport() {
+        const viewport = document.getElementById('master-viewport');
+        viewport.classList.remove('viewport-anim-fade');
+        void viewport.offsetWidth;
+        viewport.classList.add('viewport-anim-fade');
+
+        document.getElementById('vp-badge').innerText = 'MÓDULO 03';
+        document.getElementById('vp-title').innerText = 'ACCIONES RESULTANTES DE LA REVISIÓN GERENCIAL 2026';
+        document.getElementById('vp-status').innerText = 'Compromisos de Cierre';
+
+        document.getElementById('vp-body').innerHTML = `
+            <div class="table-wrapper">
+                <table class="table-custom">
+                    <thead>
+                        <tr>
+                            <th>Acción Resultante</th>
+                            <th>Responsable</th>
+                            <th>Fecha Compromiso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Optimización del Plan de Sensibilización del SIG:</strong> Migración a estrategia de Micro-learning (Videos de máximo 60 segundos producidos con IA) y Dashboard mensual de logros.</td>
+                            <td>Dirección HSEQ</td>
+                            <td><span class="metric-badge badge-cyan">Febrero 2027</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Hoja de Ruta Fotovoltaica:</strong> Continuar la implementación del sistema de energía solar fotovoltaica para reducir la huella de carbono y los costos operativos fijos.</td>
+                            <td>Dirección HSEQ / Gerencia</td>
+                            <td><span class="metric-badge badge-cyan">Junio 2027</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Plan de Adopción de IA:</strong> Adquisición de licencias corporativas de IA para estandarizar la redacción de informes, análisis normativo y automatización en todas las áreas.</td>
+                            <td>Dirección HSEQ / Gerencia</td>
+                            <td><span class="metric-badge badge-cyan">Enero 2027</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+
+    /* 🤖 MOTOR DE CONSULTAS GURU IA (100% AUTÓNOMO Y ULTRA RÁPIDO) */
+    const baseConocimientoIA = [
+        {
+            keywords: ['ambiental', 'árboles', 'huella', 'ruido', 'fotovoltaica', 'ley 2173'],
+            respuesta: '🌱 <strong>Gestión Ambiental 2026:</strong><br>• Siembra de Árboles (Ley 2173): 100% Cumplida.<br>• Medición activa de Huella de Carbono y certificados de ruido aeronáutico actualizados.<br>• Transición Energética: Desarrollo del proyecto fotovoltaico proyectado para junio de 2027.'
+        },
+        {
+            keywords: ['cliente', 'satisfacción', 'ejército', 'encuesta', 'batallón'],
+            respuesta: '⭐ <strong>Satisfacción del Cliente:</strong><br>Logramos una calificación del <strong>100% de satisfacción</strong> (Meta 80%) en las encuestas aplicadas a los supervisores de batallón bajo Contrato con el Ejército Nacional.'
+        },
+        {
+            keywords: ['compromisos', '2027', 'futuro', 'acciones', 'micro-learning', 'ia'],
+            respuesta: '🚀 <strong>Compromisos Clave SIG 2027:</strong><br>1. Estrategia de Micro-learning (videos cortos de 60s con IA).<br>2. Sistema de Energía Solar Fotovoltaica.<br>3. Adopción corporativa de Inteligencia Artificial para automatización de informes y análisis normativo.'
+        },
+        {
+            keywords: ['legal', 'normas', 'decreto', 'sst', 'cumplimiento', '607'],
+            respuesta: '⚖️ <strong>Cumplimiento Legal y Reglamentario:</strong><br>• <strong>SST:</strong> 99.9% de cumplimiento (607/608 normas aplicables).<br>• <strong>Ambiental:</strong> 100% de cumplimiento (130/130 normas aplicables).'
+        },
+        {
+            keywords: ['proveedores', 'evaluación', 'compras'],
+            respuesta: '📦 <strong>Desempeño de Proveedores:</strong><br>10 proveedores externos reevaluados con una calificación máxima del 100% excelente. Se incluye la viabilidad de estructurar un área de compras dedicada.'
+        }
+    ];
+
+    function consultarIA(preguntaPredefinida) {
+        const input = document.getElementById('input-pregunta-ia');
+        input.value = preguntaPredefinida;
+        preguntarDirectoIA();
+    }
+
+    function preguntarDirectoIA() {
+        const input = document.getElementById('input-pregunta-ia');
+        const query = input.value.toLowerCase().trim();
+        const boxResp = document.getElementById('box-respuesta-ia');
+        const txtResp = document.getElementById('texto-respuesta-ia');
+
+        if (!query) return;
+
+        txtResp.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-guru-cyan"></i> Procesando datos del informe oficial SIG 2026...';
+        boxResp.classList.remove('hidden');
+
+        setTimeout(() => {
+            let hallado = baseConocimientoIA.find(item => 
+                item.keywords.some(k => query.includes(k))
+            );
+
+            if (hallado) {
+                txtResp.innerHTML = hallado.respuesta;
+            } else {
+                txtResp.innerHTML = `🤖 <strong>Resumen General del SIG 2026 (SIS GNSS):</strong><br>El Sistema Integrado de Gestión registra un <strong>cumplimiento global del 93.98%</strong>, con 100% de satisfacción del cliente y 0 servicios no conformes bajo reglamentación RAC. Puede navegar arriba por los Módulos de Entradas y Salidas para verificar cada numeral en detalle.`;
+            }
+        }, 400);
+    }
+
+    window.onload = () => {
+        if (typeof filtrarModulo === 'function') {
+            filtrarModulo('entradas');
+        }
+    };
+</script>
+
+</body>
+</html>
