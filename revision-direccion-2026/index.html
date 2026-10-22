@@ -706,11 +706,11 @@
         n1: {
             modulo: 'entradas',
             badge: 'NUMERAL 1',
-            titulo: '1. Seguimiento a compromisos de la revisión anterior (2025)',
+            titulo: '1. Seguimiento a compromisos de la revisión anterior (2026)',
             status: 'Entrada Cumplida',
             html: `
-                <p><strong>Certificación ISO 9001:2015 e ISO 14001:2015:</strong> Finalización exitosa de la auditoría externa de certificación en septiembre de 2025, validando la conformidad del Sistema de Gestión Integrado.</p>
-                <p><strong>Estrategia de expansión de mercado:</strong> En fase de revisión estratégica, dado que la demanda operativa actual del cliente principal (Ejército) absorbe el 100% de la capacidad instalada. Se incluye evaluar la viabilidad de incorporar una aeronave adicional a mediano plazo para diversificar la cartera sin comprometer compromisos vigentes.</p>
+                <p><strong>Certificación ISO 9001:2015 e ISO 14001:2015:</strong> Convalidación y seguimiento del Sistema de Gestión Integrado.</p>
+                <p><strong>Estrategia de expansión de mercado & Operación:</strong> Ante el inicio del nuevo contrato con el Ejército Nacional en junio de 2026, se incorporó una tercera aeronave a la operación exclusiva. Dicha aeronave, que anteriormente estaba destinada como unidad de respaldo (back-up) durante el contrato previo, fue integrada para dar cumplimiento a las necesidades operativas actuales.</p>
             `
         },
         n2: {
@@ -734,7 +734,7 @@
                         <tbody>
                             <tr>
                                 <td><strong>Autoridad Aeronáutica</strong></td>
-                                <td>Cumplimiento normativo y seguridad operacional.</td>
+                                <td>Cumplimiento normativo.</td>
                                 <td><span style="color: var(--guru-green); font-weight: 700;">F3, F4:</span> Tripulaciones licenciadas y estricto cumplimiento RAC.</td>
                             </tr>
                             <tr>
@@ -819,7 +819,7 @@
                     <div class="metric-header"><span style="font-weight:700; color:var(--guru-cyan);">4.2 Objetivos de calidad y medio ambiente</span><span class="metric-badge badge-cyan">93.98% Global</span></div>
                     <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
                         <div>
-                            <div class="metric-header"><span>Obj 1: Excelencia en la Prestación del Servicio</span><span class="metric-badge badge-green">16% (Logrado 100%)</span></div>
+                            <div class="metric-header"><span>Obj 1: Excelencia en la Prestación del Servicio</span><span class="metric-badge badge-green">16% (Proyectado 16%)</span></div>
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
                         </div>
                         <div>
@@ -827,7 +827,7 @@
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-cyan" style="width: 75%;"></div></div>
                         </div>
                         <div>
-                            <div class="metric-header"><span>Obj 3: Prevención de la Contaminación</span><span class="metric-badge badge-green">8% (Logrado 100%)</span></div>
+                            <div class="metric-header"><span>Obj 3: Prevención de la Contaminación</span><span class="metric-badge badge-green">8% (proyectado 8%)</span></div>
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
                         </div>
                         <div>
@@ -835,7 +835,7 @@
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-gold" style="width: 90%;"></div></div>
                         </div>
                         <div>
-                            <div class="metric-header"><span>Obj 5: Participación y Toma de Conciencia SST</span><span class="metric-badge badge-green">12% (Logrado 100%)</span></div>
+                            <div class="metric-header"><span>Obj 5: Participación y Toma de Conciencia SST</span><span class="metric-badge badge-green">12% (proyectado 12%)</span></div>
                             <div class="progress-bar-track"><div class="progress-bar-fill fill-green" style="width: 100%;"></div></div>
                         </div>
                         <div>
@@ -923,7 +923,7 @@
             titulo: '8. Implicaciones para la dirección estratégica',
             status: 'Estrategia Corporativa',
             html: `
-                <p><strong>1. Área de Compras Dedicada:</strong> Estudio de viabilidad para centralizar adquisiciones y asegurar cumplimiento legal, financiero y HSEQ antes de cada compra.<br><strong>2. Adopción Corporativa de Inteligencia Artificial (IA):</strong> Adquisición de licencias corporativas para estandarizar la elaboración de informes, análisis normativo y automatización de procesos.</p>
+                <p><strong>1. Centralización del área de compras:</strong> Analizar la viabilidad financiera y estratégica de esta propuesta.<br><strong>2. Adopción Corporativa de Inteligencia Artificial (IA):</strong> Adquisición de licencias corporativas para estandarizar la elaboración de informes, análisis normativo y automatización de procesos.</p>
             `
         }
     };
@@ -1030,14 +1030,22 @@
         `;
     }
 
-    /* 🤖 MOTOR DE CONSULTAS GURU IA (100% AUTÓNOMO Y ULTRA RÁPIDO) */
+   /* 🤖 MOTOR DE CONSULTAS GURU IA (100% AUTÓNOMO Y ULTRA RÁPIDO) */
     const baseConocimientoIA = [
+        {
+            keywords: ['aeronave', 'aeronaves', 'flota', 'tercera', 'expansión', 'respaldo', 'back-up', 'ejército', 'helicóptero'],
+            respuesta: '🚁 <strong>Flota y Operación Contrato Ejército (2026):</strong><br>Ante el inicio del nuevo contrato con el Ejército Nacional en junio de 2026, se incorporó una <strong>tercera aeronave</strong> a la operación exclusiva (unidad que anteriormente funcionaba como respaldo/back-up), garantizando el cumplimiento total de las necesidades operativas.'
+        },
+        {
+            keywords: ['compras', 'centralización', 'viabilidad', 'proveedores'],
+            respuesta: '🛍️ <strong>Área de Compras y Proveedores:</strong><br>• Se analiza la viabilidad financiera y estratégica para la <strong>centralización del área de compras</strong>.<br>• Reevaluación de 10 proveedores externos con calificación máxima del 100% excelente.'
+        },
         {
             keywords: ['ambiental', 'árboles', 'huella', 'ruido', 'fotovoltaica', 'ley 2173'],
             respuesta: '🌱 <strong>Gestión Ambiental 2026:</strong><br>• Siembra de Árboles (Ley 2173): 100% Cumplida.<br>• Medición activa de Huella de Carbono y certificados de ruido aeronáutico actualizados.<br>• Transición Energética: Desarrollo del proyecto fotovoltaico proyectado para junio de 2027.'
         },
         {
-            keywords: ['cliente', 'satisfacción', 'ejército', 'encuesta', 'batallón'],
+            keywords: ['cliente', 'satisfacción', 'encuesta', 'batallón'],
             respuesta: '⭐ <strong>Satisfacción del Cliente:</strong><br>Logramos una calificación del <strong>100% de satisfacción</strong> (Meta 80%) en las encuestas aplicadas a los supervisores de batallón bajo Contrato con el Ejército Nacional.'
         },
         {
@@ -1047,10 +1055,6 @@
         {
             keywords: ['legal', 'normas', 'decreto', 'sst', 'cumplimiento', '607'],
             respuesta: '⚖️ <strong>Cumplimiento Legal y Reglamentario:</strong><br>• <strong>SST:</strong> 99.9% de cumplimiento (607/608 normas aplicables).<br>• <strong>Ambiental:</strong> 100% de cumplimiento (130/130 normas aplicables).'
-        },
-        {
-            keywords: ['proveedores', 'evaluación', 'compras'],
-            respuesta: '📦 <strong>Desempeño de Proveedores:</strong><br>10 proveedores externos reevaluados con una calificación máxima del 100% excelente. Se incluye la viabilidad de estructurar un área de compras dedicada.'
         }
     ];
 
