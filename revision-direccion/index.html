@@ -1166,10 +1166,18 @@ function limpiarFirma(rol) {
     }
 }
 
+// 🟢 FUNCIÓN QUE FALTABA
+function estaCanvasVacio(canvas) {
+    const blank = document.createElement('canvas');
+    blank.width = canvas.width;
+    blank.height = canvas.height;
+    return canvas.toDataURL() === blank.toDataURL();
+}
+
 function guardarFirma(rol) {
     const canvas = (rol === 'gerente') ? canvasG : canvasH;
     
-    // 1. Validar si el cuadro está vacío
+    // Validar si el cuadro está vacío
     if (!canvas || estaCanvasVacio(canvas)) {
         alert("Por favor realice su firma sobre el recuadro antes de confirmar.");
         return;
@@ -1184,7 +1192,6 @@ function guardarFirma(rol) {
         document.getElementById('timestamp-firma-gerente').innerText = timestampText;
         document.getElementById('box-firma-gerente').classList.remove('hidden');
         
-        // Ocultar caja de dibujo usando su clase exacta
         const boxEdicionG = canvasG.closest('.signature-box');
         if (boxEdicionG) boxEdicionG.style.display = 'none';
         
@@ -1198,7 +1205,6 @@ function guardarFirma(rol) {
         document.getElementById('timestamp-firma-hseq').innerText = timestampText;
         document.getElementById('box-firma-hseq').classList.remove('hidden');
         
-        // Ocultar caja de dibujo usando su clase exacta
         const boxEdicionH = canvasH.closest('.signature-box');
         if (boxEdicionH) boxEdicionH.style.display = 'none';
         
@@ -1210,18 +1216,17 @@ function guardarFirma(rol) {
     }
 }
 
-// Función corregida para reabrir el área de dibujo y volver a firmar
 function editarFirma(rol) {
     if (rol === 'gerente') {
         bloqueadoG = false;
         const boxEdicionG = canvasG.closest('.signature-box');
-        if (boxEdicionG) boxEdicionG.style.display = 'block'; // Vuelve a mostrar el canvas
-        document.getElementById('box-firma-gerente').classList.add('hidden'); // Oculta confirmación
+        if (boxEdicionG) boxEdicionG.style.display = 'block';
+        document.getElementById('box-firma-gerente').classList.add('hidden');
     } else if (rol === 'hseq') {
         bloqueadoH = false;
         const boxEdicionH = canvasH.closest('.signature-box');
-        if (boxEdicionH) boxEdicionH.style.display = 'block'; // Vuelve a mostrar el canvas
-        document.getElementById('box-firma-hseq').classList.add('hidden'); // Oculta confirmación
+        if (boxEdicionH) boxEdicionH.style.display = 'block';
+        document.getElementById('box-firma-hseq').classList.add('hidden');
     }
 }
 
