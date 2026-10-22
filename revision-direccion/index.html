@@ -721,6 +721,9 @@
                 <span style="font-size: 9px; color: var(--guru-green); font-weight: 800; display: block;">✓ FIRMADO POR GERENCIA</span>
                 <img id="img-firma-gerente" style="max-height: 50px; margin: 4px auto; display: block;" src="" alt="Firma Gerente">
                 <span id="timestamp-firma-gerente" style="font-family: monospace; font-size: 8px; color: var(--guru-cyan); display: block;"></span>
+                <button onclick="editarFirma('gerente')" type="button" style="background: transparent; border: none; color: var(--guru-cyan); font-size: 9px; cursor: pointer; text-decoration: underline; margin-top: 6px; display: inline-block;">
+        ✏️ Modificar o repetir firma
+    </button>
             </div>
         </div>
 
@@ -740,6 +743,9 @@
                 <span style="font-size: 9px; color: var(--guru-green); font-weight: 800; display: block;">✓ FIRMADO POR DIRECCIÓN HSEQ</span>
                 <img id="img-firma-hseq" style="max-height: 50px; margin: 4px auto; display: block;" src="" alt="Firma HSEQ">
                 <span id="timestamp-firma-hseq" style="font-family: monospace; font-size: 8px; color: var(--guru-cyan); display: block;"></span>
+                <button onclick="editarFirma('hseq')" type="button" style="background: transparent; border: none; color: var(--guru-cyan); font-size: 9px; cursor: pointer; text-decoration: underline; margin-top: 6px; display: inline-block;">
+        ✏️ Modificar o repetir firma
+    </button>
             </div>
         </div>
 
@@ -1085,135 +1091,160 @@
         `;
     }
 
-   /* FIRMA DIGITAL INMUTABLE - REVISIÓN GERENCIAL */
-    let canvas, ctx, dibujando = false;
-    let firmaBloqueada = false; // Estado para evitar modificaciones tras confirmar
+   /* FIRMA DIGITAL DOBLE INMUTABLE (GERENTE Y DIRECTORA HSEQ) */
+let canvasG, ctxG, dibujandoG = false, bloqueadoG = false;
+let canvasH, ctxH, dibujandoH = false, bloqueadoH = false;
 
-    function initCanvas() {
-        canvas = document.getElementById('canvas-firma');
-        if (!canvas) return;
-        
-        const rect = canvas.getBoundingClientRect();
-        canvas.width = rect.width || 440;
-        canvas.height = 150;
+function initCanvas() {
+    // 1. Inicializar Canvas Gerente
+    canvasG = document.getElementById('canvas-firma-gerente');
+    if (canvasG) {
+        ctxG = canvasG.getContext('2d');
+        ctxG.strokeStyle = '#00f3ff';
+        ctxG.lineWidth = 2.5;
+        ctxG.lineCap = 'round';
 
-        ctx = canvas.getContext('2d');
-        ctx.strokeStyle = '#00f3ff';
-        ctx.lineWidth = 2.5;
-        ctx.lineCap = 'round';
+        canvasG.onmousedown = (e) => { if (!bloqueadoG) { dibujandoG = true; ctxG.beginPath(); ctxG.moveTo(e.offsetX, e.offsetY); } };
+        canvasG.onmousemove = (e) => { if (dibujandoG && !bloqueadoG) { ctxG.lineTo(e.offsetX, e.offsetY); ctxG.stroke(); } };
+        canvasG.onmouseup = () => dibujandoG = false;
 
-        // Verificar si ya existe una firma previa guardada
-        cargarFirmaGuardada();
-
-        // Eventos de dibujo (bloqueados si ya se confirmó la firma)
-        canvas.onmousedown = (e) => {
-            if (firmaBloqueada) return;
-            dibujando = true;
-            ctx.beginPath();
-            const r = canvas.getBoundingClientRect();
-            ctx.moveTo(e.clientX - r.left, e.clientY - r.top);
-        };
-        canvas.onmousemove = (e) => {
-            if (dibujando && !firmaBloqueada) {
-                const r = canvas.getBoundingClientRect();
-                ctx.lineTo(e.offsetX || (e.clientX - r.left), e.offsetY || (e.clientY - r.top));
-                ctx.stroke();
-            }
-        };
-        canvas.onmouseup = () => dibujando = false;
-
-        canvas.addEventListener('touchstart', (e) => {
-            if (firmaBloqueada) return;
-            dibujando = true;
-            const r = canvas.getBoundingClientRect();
-            ctx.beginPath();
-            ctx.moveTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+        canvasG.addEventListener('touchstart', (e) => {
+            if (bloqueadoG) return;
+            dibujandoG = true;
+            const r = canvasG.getBoundingClientRect();
+            ctxG.beginPath();
+            ctxG.moveTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
         });
-        canvas.addEventListener('touchmove', (e) => {
-            if (dibujando && !firmaBloqueada) {
-                const r = canvas.getBoundingClientRect();
-                ctx.lineTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
-                ctx.stroke();
+        canvasG.addEventListener('touchmove', (e) => {
+            if (dibujandoG && !bloqueadoG) {
+                const r = canvasG.getBoundingClientRect();
+                ctxG.lineTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+                ctxG.stroke();
             }
         });
-        canvas.addEventListener('touchend', () => dibujando = false);
+        canvasG.addEventListener('touchend', () => dibujandoG = false);
     }
 
-    function limpiarFirma() {
-        // Solo permite limpiar si NO ha sido confirmada y bloqueada
-        if (firmaBloqueada) {
-            alert("Esta firma ya fue confirmada e inmovilizada oficialmente. No se puede borrar.");
-            return;
-        }
-        if (ctx && canvas) ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // 2. Inicializar Canvas HSEQ
+    canvasH = document.getElementById('canvas-firma-hseq');
+    if (canvasH) {
+        ctxH = canvasH.getContext('2d');
+        ctxH.strokeStyle = '#00f3ff';
+        ctxH.lineWidth = 2.5;
+        ctxH.lineCap = 'round';
+
+        canvasH.onmousedown = (e) => { if (!bloqueadoH) { dibujandoH = true; ctxH.beginPath(); ctxH.moveTo(e.offsetX, e.offsetY); } };
+        canvasH.onmousemove = (e) => { if (dibujandoH && !bloqueadoH) { ctxH.lineTo(e.offsetX, e.offsetY); ctxH.stroke(); } };
+        canvasH.onmouseup = () => dibujandoH = false;
+
+        canvasH.addEventListener('touchstart', (e) => {
+            if (bloqueadoH) return;
+            dibujandoH = true;
+            const r = canvasH.getBoundingClientRect();
+            ctxH.beginPath();
+            ctxH.moveTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+        });
+        canvasH.addEventListener('touchmove', (e) => {
+            if (dibujandoH && !bloqueadoH) {
+                const r = canvasH.getBoundingClientRect();
+                ctxH.lineTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+                ctxH.stroke();
+            }
+        });
+        canvasH.addEventListener('touchend', () => dibujandoH = false);
     }
 
-    async function guardarFirma() {
-        if (!canvas || firmaBloqueada) return;
+    cargarFirmasGuardadas();
+}
 
-        const dataURL = canvas.toDataURL(); // Convierte la firma a imagen Base64
-        const imgFinal = document.getElementById('img-firma-final');
-        const box = document.getElementById('box-firma-confirmada');
-        const tsBox = document.getElementById('timestamp-firma');
+function limpiarFirma(rol) {
+    if (rol === 'gerente' && ctxG && canvasG && !bloqueadoG) {
+        ctxG.clearRect(0, 0, canvasG.width, canvasG.height);
+    }
+    if (rol === 'hseq' && ctxH && canvasH && !bloqueadoH) {
+        ctxH.clearRect(0, 0, canvasH.width, canvasH.height);
+    }
+}
 
-        const ahora = new Date();
-        const timestampText = `STAMP: ${ahora.toLocaleDateString()} - ${ahora.toLocaleTimeString()} (UTC-5)`;
-
-        // 1. Mostrar el resultado con el sello de tiempo
-        imgFinal.src = dataURL;
-        tsBox.innerText = timestampText;
-        box.classList.remove('hidden');
-
-        // 2. BLOQUEO DEFINITIVO: Se inmoviliza el lienzo para que no se pueda alterar
-        firmaBloqueada = true;
-        const boxEdicion = document.querySelector('.signature-box');
-        if (boxEdicion) boxEdicion.style.display = 'none'; // Oculta el cuadro interactivo y sus botones
-
-        // 3. RESPALDO LOCAL DE EMERGENCIA
-        try {
-            localStorage.setItem('firma_revision_sis_2026', dataURL);
-            localStorage.setItem('stamp_revision_sis_2026', timestampText);
-        } catch(e) {}
-
-        // 4. ENVÍO A LA NUBE (Webhook n8n / Base de Datos PostgreSQL)
-        try {
-            await fetch('HTTPS://TU-DOMINIO-O-N8N.COM/WEBHOOK/GUARDAR-FIRMA', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    acta_id: 'REVISION_GERENCIAL_SIS_2026',
-                    firma_base64: dataURL,
-                    timestamp: timestampText,
-                    firmantes: 'Oscar Cagua & Andrea Castro Higuera'
-                })
-            });
-        } catch(err) {
-            console.log("Servidor local / enviando respaldo...");
-        }
+function guardarFirma(rol) {
+    const canvas = (rol === 'gerente') ? canvasG : canvasH;
+    
+    // 1. Validar si el cuadro está vacío
+    if (!canvas || estaCanvasVacio(canvas)) {
+        alert("Por favor realice su firma sobre el recuadro antes de confirmar.");
+        return;
     }
 
-    function cargarFirmaGuardada() {
-        const firmaPrevia = localStorage.getItem('firma_revision_sis_2026');
-        const stampPrevio = localStorage.getItem('stamp_revision_sis_2026');
+    const dataURL = canvas.toDataURL();
+    const ahora = new Date();
+    const timestampText = `STAMP LEY 527: ${ahora.toLocaleDateString()} - ${ahora.toLocaleTimeString()} (UTC-5)`;
 
-        if (firmaPrevia) {
-            firmaBloqueada = true;
-            const imgFinal = document.getElementById('img-firma-final');
-            const box = document.getElementById('box-firma-confirmada');
-            const tsBox = document.getElementById('timestamp-firma');
-            const boxEdicion = document.querySelector('.signature-box');
+    if (rol === 'gerente') {
+        document.getElementById('img-firma-gerente').src = dataURL;
+        document.getElementById('timestamp-firma-gerente').innerText = timestampText;
+        document.getElementById('box-firma-gerente').classList.remove('hidden');
+        document.getElementById('box-canvas-gerente').style.display = 'none'; // Oculta edición
+        bloqueadoG = true;
+    } else if (rol === 'hseq') {
+        document.getElementById('img-firma-hseq').src = dataURL;
+        document.getElementById('timestamp-firma-hseq').innerText = timestampText;
+        document.getElementById('box-firma-hseq').classList.remove('hidden');
+        document.getElementById('box-canvas-hseq').style.display = 'none'; // Oculta edición
+        bloqueadoH = true;
+    }
+}
 
-            imgFinal.src = firmaPrevia;
-            tsBox.innerText = stampPrevio || 'STAMP REGISTRADO';
-            box.classList.remove('hidden');
-            if (boxEdicion) boxEdicion.style.display = 'none'; // Oculta el área de edición
-        }
+// Función para permitir corregir o volver a firmar si se equivocaron
+function editarFirma(rol) {
+    if (rol === 'gerente') {
+        bloqueadoG = false;
+        document.getElementById('box-canvas-gerente').style.display = 'block'; // Muestra edición
+        document.getElementById('box-firma-gerente').classList.add('hidden'); // Oculta resultado
+    } else if (rol === 'hseq') {
+        bloqueadoH = false;
+        document.getElementById('box-canvas-hseq').style.display = 'block';
+        document.getElementById('box-firma-hseq').classList.add('hidden');
+    }
+}
+
+// Función auxiliar para saber si el lienzo está en blanco
+function estaCanvasVacio(canvas) {
+    const blank = document.createElement('canvas');
+    blank.width = canvas.width;
+    blank.height = canvas.height;
+    return canvas.toDataURL() === blank.toDataURL();
+}
+
+function cargarFirmasGuardadas() {
+    const fG = localStorage.getItem('firma_gerente_sis_2026');
+    const sG = localStorage.getItem('stamp_gerente_sis_2026');
+    if (fG && canvasG) {
+        bloqueadoG = true;
+        document.getElementById('img-firma-gerente').src = fG;
+        document.getElementById('timestamp-firma-gerente').innerText = sG || 'STAMP REGISTRADO';
+        document.getElementById('box-firma-gerente').classList.remove('hidden');
+        const boxEdicionG = canvasG.closest('.signature-box');
+        if (boxEdicionG) boxEdicionG.style.display = 'none';
     }
 
-    window.onload = () => {
+    const fH = localStorage.getItem('firma_hseq_sis_2026');
+    const sH = localStorage.getItem('stamp_hseq_sis_2026');
+    if (fH && canvasH) {
+        bloqueadoH = true;
+        document.getElementById('img-firma-hseq').src = fH;
+        document.getElementById('timestamp-firma-hseq').innerText = sH || 'STAMP REGISTRADO';
+        document.getElementById('box-firma-hseq').classList.remove('hidden');
+        const boxEdicionH = canvasH.closest('.signature-box');
+        if (boxEdicionH) boxEdicionH.style.display = 'none';
+    }
+}
+
+window.onload = () => {
+    if (typeof filtrarModulo === 'function') {
         filtrarModulo('entradas');
-        initCanvas();
-    };
+    }
+    initCanvas();
+};
 </script>
 
 </body>
