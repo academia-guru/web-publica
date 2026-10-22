@@ -1183,36 +1183,46 @@ function guardarFirma(rol) {
         document.getElementById('img-firma-gerente').src = dataURL;
         document.getElementById('timestamp-firma-gerente').innerText = timestampText;
         document.getElementById('box-firma-gerente').classList.remove('hidden');
-        document.getElementById('box-canvas-gerente').style.display = 'none'; // Oculta edición
+        
+        // Ocultar caja de dibujo usando su clase exacta
+        const boxEdicionG = canvasG.closest('.signature-box');
+        if (boxEdicionG) boxEdicionG.style.display = 'none';
+        
         bloqueadoG = true;
+        try {
+            localStorage.setItem('firma_gerente_sis_2026', dataURL);
+            localStorage.setItem('stamp_gerente_sis_2026', timestampText);
+        } catch(e){}
     } else if (rol === 'hseq') {
         document.getElementById('img-firma-hseq').src = dataURL;
         document.getElementById('timestamp-firma-hseq').innerText = timestampText;
         document.getElementById('box-firma-hseq').classList.remove('hidden');
-        document.getElementById('box-canvas-hseq').style.display = 'none'; // Oculta edición
+        
+        // Ocultar caja de dibujo usando su clase exacta
+        const boxEdicionH = canvasH.closest('.signature-box');
+        if (boxEdicionH) boxEdicionH.style.display = 'none';
+        
         bloqueadoH = true;
+        try {
+            localStorage.setItem('firma_hseq_sis_2026', dataURL);
+            localStorage.setItem('stamp_hseq_sis_2026', timestampText);
+        } catch(e){}
     }
 }
 
-// Función para permitir corregir o volver a firmar si se equivocaron
+// Función corregida para reabrir el área de dibujo y volver a firmar
 function editarFirma(rol) {
     if (rol === 'gerente') {
         bloqueadoG = false;
-        document.getElementById('box-canvas-gerente').style.display = 'block'; // Muestra edición
-        document.getElementById('box-firma-gerente').classList.add('hidden'); // Oculta resultado
+        const boxEdicionG = canvasG.closest('.signature-box');
+        if (boxEdicionG) boxEdicionG.style.display = 'block'; // Vuelve a mostrar el canvas
+        document.getElementById('box-firma-gerente').classList.add('hidden'); // Oculta confirmación
     } else if (rol === 'hseq') {
         bloqueadoH = false;
-        document.getElementById('box-canvas-hseq').style.display = 'block';
-        document.getElementById('box-firma-hseq').classList.add('hidden');
+        const boxEdicionH = canvasH.closest('.signature-box');
+        if (boxEdicionH) boxEdicionH.style.display = 'block'; // Vuelve a mostrar el canvas
+        document.getElementById('box-firma-hseq').classList.add('hidden'); // Oculta confirmación
     }
-}
-
-// Función auxiliar para saber si el lienzo está en blanco
-function estaCanvasVacio(canvas) {
-    const blank = document.createElement('canvas');
-    blank.width = canvas.width;
-    blank.height = canvas.height;
-    return canvas.toDataURL() === blank.toDataURL();
 }
 
 function cargarFirmasGuardadas() {
