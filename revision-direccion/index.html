@@ -544,15 +544,16 @@
             max-width: 480px;
         }
 
-        canvas#canvas-firma {
-            background: #05080f;
-            border-radius: 10px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            cursor: crosshair;
-            touch-action: none;
-            width: 100%;
-            height: 150px;
-        }
+        canvas#canvas-firma-gerente,
+canvas#canvas-firma-hseq {
+    background: #05080f;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    cursor: crosshair;
+    touch-action: none !important; /* 👈 Bloquea el scroll del celular sobre el canvas */
+    width: 100%;
+    height: 130px;
+}
 
         .btn-sig {
             min-height: 44px;
@@ -1108,20 +1109,25 @@ function initCanvas() {
         canvasG.onmousemove = (e) => { if (dibujandoG && !bloqueadoG) { ctxG.lineTo(e.offsetX, e.offsetY); ctxG.stroke(); } };
         canvasG.onmouseup = () => dibujandoG = false;
 
+        // Eventos táctiles para celular (Gerente)
         canvasG.addEventListener('touchstart', (e) => {
             if (bloqueadoG) return;
+            e.preventDefault(); // 👈 Detiene el movimiento de la pantalla
             dibujandoG = true;
             const r = canvasG.getBoundingClientRect();
             ctxG.beginPath();
             ctxG.moveTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
-        });
+        }, { passive: false });
+
         canvasG.addEventListener('touchmove', (e) => {
             if (dibujandoG && !bloqueadoG) {
+                e.preventDefault(); // 👈 Mantiene congelada la pantalla mientras firmas
                 const r = canvasG.getBoundingClientRect();
                 ctxG.lineTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
                 ctxG.stroke();
             }
-        });
+        }, { passive: false });
+
         canvasG.addEventListener('touchend', () => dibujandoG = false);
     }
 
@@ -1137,20 +1143,25 @@ function initCanvas() {
         canvasH.onmousemove = (e) => { if (dibujandoH && !bloqueadoH) { ctxH.lineTo(e.offsetX, e.offsetY); ctxH.stroke(); } };
         canvasH.onmouseup = () => dibujandoH = false;
 
+        // Eventos táctiles para celular (HSEQ)
         canvasH.addEventListener('touchstart', (e) => {
             if (bloqueadoH) return;
+            e.preventDefault(); // 👈 Detiene el movimiento de la pantalla
             dibujandoH = true;
             const r = canvasH.getBoundingClientRect();
             ctxH.beginPath();
             ctxH.moveTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
-        });
+        }, { passive: false });
+
         canvasH.addEventListener('touchmove', (e) => {
             if (dibujandoH && !bloqueadoH) {
+                e.preventDefault(); // 👈 Mantiene congelada la pantalla mientras firmas
                 const r = canvasH.getBoundingClientRect();
                 ctxH.lineTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
                 ctxH.stroke();
             }
-        });
+        }, { passive: false });
+
         canvasH.addEventListener('touchend', () => dibujandoH = false);
     }
 
