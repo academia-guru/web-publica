@@ -693,34 +693,65 @@
         </div>
     </section>
 
-    <!-- ✍️ FIRMA DIGITAL -->
-    <section class="signature-section">
-        <h2 style="font-family: var(--font-montserrat); color: var(--guru-cyan); font-size: 15px; text-transform: uppercase;">
-            <i class="fa-solid fa-signature mr-1"></i> Firma Digital y Cierre de Acta Gerencial
-        </h2>
-        <p style="font-size: 11px; color: var(--text-muted); max-width: 500px;">
-            Firme directamente sobre el recuadro para validar la conformidad del Acta de Revisión Gerencial 2026.
-        </p>
+    <!-- ✍️ MÓDULO DOBLE DE FIRMA DIGITAL Y EXPORTACIÓN PDF -->
+<section class="signature-section">
+    <h2 style="font-family: var(--font-montserrat); color: var(--guru-cyan); font-size: 15px; text-transform: uppercase;">
+        <i class="fa-solid fa-signature mr-1"></i> Firma Digital y Aprobación del Acta Gerencial
+    </h2>
+   <p style="font-size: 11px; color: var(--text-muted); max-width: 600px; margin: 0 auto 14px auto;">
+    <strong>Declaración de Conformidad y Firma Electrónica:</strong> De conformidad con la <strong>Ley 527 de 1999</strong> (Equivalencia Funcional de Firma Electrónica), los suscritos aprueban en su totalidad los resultados, hallazgos y compromisos plasmados en el presente informe oficial de Revisión por la Dirección SIG 2026.
+</p>
 
-        <div class="signature-box">
-            <canvas id="canvas-firma" width="440" height="150"></canvas>
-            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 10px;">
-                <button class="btn-sig btn-sig-clear" onclick="limpiarFirma()"><i class="fa-solid fa-eraser"></i> Limpiar</button>
-                <button class="btn-sig btn-sig-confirm" onclick="guardarFirma()"><i class="fa-solid fa-check"></i> Estampar Firma</button>
+    <!-- GRID DE 2 FIRMANTES -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; width: 100%; max-width: 900px; margin-top: 10px;">
+        
+        <!-- FIRMA 1: GERENTE GENERAL (OSCAR CAGUA) -->
+        <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid var(--border-color); border-radius: 16px; padding: 16px; text-align: center;">
+            <span style="font-size: 11px; font-weight: 800; color: var(--guru-cyan); font-family: var(--font-montserrat); text-transform: uppercase; block;">
+                1. Oscar Cagua (Gerente General)
+            </span>
+            <div class="signature-box" style="margin: 10px auto;">
+                <canvas id="canvas-firma-gerente" width="380" height="130"></canvas>
+            </div>
+            <div style="display: flex; gap: 8px; justify-content: center;">
+                <button class="btn-sig btn-sig-clear" onclick="limpiarFirma('gerente')"><i class="fa-solid fa-eraser"></i> Limpiar</button>
+                <button class="btn-sig btn-sig-confirm" onclick="guardarFirma('gerente')"><i class="fa-solid fa-check"></i> Firmar Gerencia</button>
+            </div>
+            <div id="box-firma-gerente" class="hidden" style="margin-top: 8px; padding: 8px; background: rgba(57,255,20,0.05); border: 1px solid var(--guru-green); border-radius: 10px;">
+                <span style="font-size: 9px; color: var(--guru-green); font-weight: 800; display: block;">✓ FIRMADO POR GERENCIA</span>
+                <img id="img-firma-gerente" style="max-height: 50px; margin: 4px auto; display: block;" src="" alt="Firma Gerente">
+                <span id="timestamp-firma-gerente" style="font-family: monospace; font-size: 8px; color: var(--guru-cyan); display: block;"></span>
             </div>
         </div>
 
-        <div id="box-firma-confirmada" class="hidden" style="background: rgba(0, 243, 255, 0.05); border: 1px solid var(--guru-cyan); border-radius: 14px; padding: 14px; width: 100%; max-width: 480px;">
-            <div style="font-size: 10px; color: var(--guru-green); font-weight: 800; font-family: var(--font-montserrat); text-transform: uppercase;">
-                <i class="fa-solid fa-certificate"></i> FIRMA REGISTRADA EN SISTEMA
+        <!-- FIRMA 2: DIRECTORA HSEQ (ANDREA CASTRO HIGUERA) -->
+        <div style="background: rgba(15, 23, 42, 0.9); border: 1px solid var(--border-color); border-radius: 16px; padding: 16px; text-align: center;">
+            <span style="font-size: 11px; font-weight: 800; color: var(--guru-cyan); font-family: var(--font-montserrat); text-transform: uppercase; block;">
+                2. Andrea Castro Higuera (Directora HSEQ)
+            </span>
+            <div class="signature-box" style="margin: 10px auto;">
+                <canvas id="canvas-firma-hseq" width="380" height="130"></canvas>
             </div>
-            <img id="img-firma-final" style="max-height: 80px; margin: 8px auto; display: block;" src="" alt="Firma">
-            <div id="timestamp-firma" style="font-family: monospace; font-size: 10px; color: var(--guru-cyan);"></div>
-            <div style="font-size: 11px; color: #fff; font-weight: 700; margin-top: 4px;">
-                Oscar Cagua (Gerente General) & Andrea Castro Higuera (Asesora SIG)
+            <div style="display: flex; gap: 8px; justify-content: center;">
+                <button class="btn-sig btn-sig-clear" onclick="limpiarFirma('hseq')"><i class="fa-solid fa-eraser"></i> Limpiar</button>
+                <button class="btn-sig btn-sig-confirm" onclick="guardarFirma('hseq')"><i class="fa-solid fa-check"></i> Firmar HSEQ</button>
+            </div>
+            <div id="box-firma-hseq" class="hidden" style="margin-top: 8px; padding: 8px; background: rgba(57,255,20,0.05); border: 1px solid var(--guru-green); border-radius: 10px;">
+                <span style="font-size: 9px; color: var(--guru-green); font-weight: 800; display: block;">✓ FIRMADO POR DIRECCIÓN HSEQ</span>
+                <img id="img-firma-hseq" style="max-height: 50px; margin: 4px auto; display: block;" src="" alt="Firma HSEQ">
+                <span id="timestamp-firma-hseq" style="font-family: monospace; font-size: 8px; color: var(--guru-cyan); display: block;"></span>
             </div>
         </div>
-    </section>
+
+    </div>
+
+    <!-- BOTÓN DE IMPRESIÓN / DESCARGA PDF AUDITABLE -->
+    <div style="margin-top: 16px;">
+        <button onclick="window.print()" class="btn-sig btn-sig-confirm" style="background: var(--guru-cyan); color: #05080f; padding: 12px 24px; font-size: 12px;">
+            <i class="fa-solid fa-file-pdf mr-1"></i> Descargar / Imprimir Acta Oficial Firmada (PDF)
+        </button>
+    </div>
+</section>
 
 </div>
 
@@ -1054,8 +1085,9 @@
         `;
     }
 
-    /* FIRMA DIGITAL */
+   /* FIRMA DIGITAL INMUTABLE - REVISIÓN GERENCIAL */
     let canvas, ctx, dibujando = false;
+    let firmaBloqueada = false; // Estado para evitar modificaciones tras confirmar
 
     function initCanvas() {
         canvas = document.getElementById('canvas-firma');
@@ -1070,14 +1102,19 @@
         ctx.lineWidth = 2.5;
         ctx.lineCap = 'round';
 
+        // Verificar si ya existe una firma previa guardada
+        cargarFirmaGuardada();
+
+        // Eventos de dibujo (bloqueados si ya se confirmó la firma)
         canvas.onmousedown = (e) => {
+            if (firmaBloqueada) return;
             dibujando = true;
             ctx.beginPath();
             const r = canvas.getBoundingClientRect();
             ctx.moveTo(e.clientX - r.left, e.clientY - r.top);
         };
         canvas.onmousemove = (e) => {
-            if (dibujando) {
+            if (dibujando && !firmaBloqueada) {
                 const r = canvas.getBoundingClientRect();
                 ctx.lineTo(e.offsetX || (e.clientX - r.left), e.offsetY || (e.clientY - r.top));
                 ctx.stroke();
@@ -1086,13 +1123,14 @@
         canvas.onmouseup = () => dibujando = false;
 
         canvas.addEventListener('touchstart', (e) => {
+            if (firmaBloqueada) return;
             dibujando = true;
             const r = canvas.getBoundingClientRect();
             ctx.beginPath();
             ctx.moveTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
         });
         canvas.addEventListener('touchmove', (e) => {
-            if (dibujando) {
+            if (dibujando && !firmaBloqueada) {
                 const r = canvas.getBoundingClientRect();
                 ctx.lineTo(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
                 ctx.stroke();
@@ -1102,12 +1140,18 @@
     }
 
     function limpiarFirma() {
+        // Solo permite limpiar si NO ha sido confirmada y bloqueada
+        if (firmaBloqueada) {
+            alert("Esta firma ya fue confirmada e inmovilizada oficialmente. No se puede borrar.");
+            return;
+        }
         if (ctx && canvas) ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 
-    function guardarFirma() {
-        if (!canvas) return;
-        const dataURL = canvas.toDataURL();
+    async function guardarFirma() {
+        if (!canvas || firmaBloqueada) return;
+
+        const dataURL = canvas.toDataURL(); // Convierte la firma a imagen Base64
         const imgFinal = document.getElementById('img-firma-final');
         const box = document.getElementById('box-firma-confirmada');
         const tsBox = document.getElementById('timestamp-firma');
@@ -1115,13 +1159,55 @@
         const ahora = new Date();
         const timestampText = `STAMP: ${ahora.toLocaleDateString()} - ${ahora.toLocaleTimeString()} (UTC-5)`;
 
+        // 1. Mostrar el resultado con el sello de tiempo
         imgFinal.src = dataURL;
         tsBox.innerText = timestampText;
         box.classList.remove('hidden');
 
+        // 2. BLOQUEO DEFINITIVO: Se inmoviliza el lienzo para que no se pueda alterar
+        firmaBloqueada = true;
+        const boxEdicion = document.querySelector('.signature-box');
+        if (boxEdicion) boxEdicion.style.display = 'none'; // Oculta el cuadro interactivo y sus botones
+
+        // 3. RESPALDO LOCAL DE EMERGENCIA
         try {
             localStorage.setItem('firma_revision_sis_2026', dataURL);
+            localStorage.setItem('stamp_revision_sis_2026', timestampText);
         } catch(e) {}
+
+        // 4. ENVÍO A LA NUBE (Webhook n8n / Base de Datos PostgreSQL)
+        try {
+            await fetch('HTTPS://TU-DOMINIO-O-N8N.COM/WEBHOOK/GUARDAR-FIRMA', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    acta_id: 'REVISION_GERENCIAL_SIS_2026',
+                    firma_base64: dataURL,
+                    timestamp: timestampText,
+                    firmantes: 'Oscar Cagua & Andrea Castro Higuera'
+                })
+            });
+        } catch(err) {
+            console.log("Servidor local / enviando respaldo...");
+        }
+    }
+
+    function cargarFirmaGuardada() {
+        const firmaPrevia = localStorage.getItem('firma_revision_sis_2026');
+        const stampPrevio = localStorage.getItem('stamp_revision_sis_2026');
+
+        if (firmaPrevia) {
+            firmaBloqueada = true;
+            const imgFinal = document.getElementById('img-firma-final');
+            const box = document.getElementById('box-firma-confirmada');
+            const tsBox = document.getElementById('timestamp-firma');
+            const boxEdicion = document.querySelector('.signature-box');
+
+            imgFinal.src = firmaPrevia;
+            tsBox.innerText = stampPrevio || 'STAMP REGISTRADO';
+            box.classList.remove('hidden');
+            if (boxEdicion) boxEdicion.style.display = 'none'; // Oculta el área de edición
+        }
     }
 
     window.onload = () => {
